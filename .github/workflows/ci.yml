@@ -4,10 +4,12 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    - cron: '17 2 * * 1'
   workflow_dispatch:
     inputs:
       scope:
-        description: Verification profile
+        description: Verification profile (all requires a dedicated runner)
         required: true
         default: core
         type: choice
@@ -17,21 +19,24 @@ permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: ci-${{ github.workflow }}-${{ github.ref }}-${{ inputs.scope || github.event_name }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  LEAN_NUM_THREADS: 2
+  PYTHONDONTWRITEBYTECODE: 1
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && inputs.scope == 'core')
+    runs-on: ubuntu-24.04
     timeout-minutes: 360
-    env:
-      LEAN_NUM_THREADS: 2
-      PYTHONDONTWRITEBYTECODE: 1
-      VERIFY_SCOPE: ${{ inputs.scope || 'core' }}
     steps:
-      - name: Checkout
+      - name: Checkout tested commit
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - name: Install Lean and restore cache
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean
         uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6 # v1
         with:
           auto-config: 'false'
@@ -39,17 +44,158 @@ jobs:
           test: 'false'
           lint: 'false'
           use-mathlib-cache: 'false'
-      - name: Check public documentation
-        run: python3 scripts/check_public_docs.py
-      - name: Check verifier regressions
-        run: python3 -m unittest discover -s tests -v
-      - name: Retrieve locked dependency artifacts
-        run: ./scripts/lake exe cache get
-      - name: Verify selected source and declaration closure
-        run: python3 scripts/verify.py --scope "$VERIFY_SCOPE" --workers 2
-      - name: Compile public examples
+          use-github-cache: 'false'
+      - name: Check documentation, generated API, and regressions
         run: |
-          ./scripts/lake lean docs/examples/RelationalCounting.lean
-          ./scripts/lake lean docs/examples/GraphReduction.lean
-          ./scripts/lake lean docs/examples/Interpolation.lean
+          python3 scripts/check_public_docs.py
+          python3 scripts/build_api_site.py --check
+          python3 -m unittest discover -s tests -v
+      - name: Make room on the disposable hosted runner
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
+          free -h
+          df -h .
+      - name: Restore matching source and dependency caches
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: |
+            .lake
+            projects/*/.lake/build
+          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-core-${{ github.sha }}
+          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-core-
+      - name: Retrieve locked external artifacts
+        run: ./scripts/lake exe cache get
+      - name: Exercise real Lean audit rejection fixtures
+        run: python3 scripts/verify.py --self-test --workers 2
+      - name: Verify core source and declaration closure
+        run: python3 scripts/verify.py --scope core --workers 2
+      - name: Compile and audit three fresh tutorial clients
+        run: python3 scripts/check_examples.py --scope core --workers 2
+      - name: Install tested Git SHA in a fresh downstream project
+        env:
+          TESTED_REPOSITORY: https://github.com/${{ github.repository }}
+          TESTED_SHA: ${{ github.sha }}
+        run: >-
+          python3 scripts/check_downstream.py
+          --repository "$TESTED_REPOSITORY" --revision "$TESTED_SHA"
+          --work-dir .cache/downstream --tier core
+          --reuse-external-cache --copy-checkout-builds
+      - name: Retain verification evidence, including failed attempts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: core-${{ github.sha }}-${{ github.run_attempt }}
+          retention-days: 30
+          include-hidden-files: true
+          path: |
+            validation/core/
+            validation/selftest/
+            validation/examples/
+            .cache/downstream/result.json
+            .cache/downstream/*.log
 
+  extended:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.scope == 'algorithms' || inputs.scope == 'reuse'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        scope: ${{ fromJSON(inputs.scope == 'algorithms' && '["algorithms"]' || inputs.scope == 'reuse' && '["reuse"]' || '["algorithms","reuse"]') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean
+        uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6 # v1
+        with:
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'false'
+          use-github-cache: 'false'
+      - name: Make room and record hosted resources
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
+          free -h
+          df -h .
+      - name: Restore matching source and dependency caches
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: |
+            .lake
+            projects/*/.lake/build
+          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-${{ matrix.scope }}-${{ github.sha }}
+          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-${{ matrix.scope }}-
+      - name: Retrieve locked external artifacts
+        run: ./scripts/lake exe cache get
+      - name: Build and audit extended profile
+        env:
+          VERIFY_SCOPE: ${{ matrix.scope }}
+        run: python3 scripts/verify.py --scope "$VERIFY_SCOPE" --workers 2
+      - name: Retain profile evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ${{ matrix.scope }}-${{ github.sha }}-${{ github.run_attempt }}
+          retention-days: 30
+          include-hidden-files: true
+          path: validation/${{ matrix.scope }}/
+
+  full-configuration:
+    if: github.event_name == 'workflow_dispatch' && inputs.scope == 'all' && (vars.COUNTINGLIB_FULL_RUNNER == '' || github.ref != 'refs/heads/main')
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Explain dedicated resource requirement
+        run: |
+          echo 'Full verification runs only on main and requires COUNTINGLIB_FULL_RUNNER (JSON runner labels).'
+          echo 'Alternatively run scripts/check_release.py on the documented local release host.'
+          exit 1
+
+  full:
+    if: github.event_name == 'workflow_dispatch' && inputs.scope == 'all' && vars.COUNTINGLIB_FULL_RUNNER != '' && github.ref == 'refs/heads/main'
+    runs-on: ${{ fromJSON(vars.COUNTINGLIB_FULL_RUNNER || '["ubuntu-24.04"]') }}
+    timeout-minutes: 1440
+    steps:
+      - name: Checkout trusted main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean
+        uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6 # v1
+        with:
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'false'
+          use-github-cache: 'false'
+      - name: Run serial full release gate and seven clients
+        env:
+          TESTED_SHA: ${{ github.sha }}
+          TESTED_REPOSITORY: https://github.com/${{ github.repository }}
+        run: >-
+          python3 scripts/check_release.py --commit "$TESTED_SHA"
+          --repository "$TESTED_REPOSITORY" --output .cache/release-checks --workers 2
+      - name: Retain full evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: full-${{ github.sha }}-${{ github.run_attempt }}
+          retention-days: 30
+          include-hidden-files: true
+          path: |
+            .cache/release-checks/result.json
+            .cache/release-checks/*-result.json
+            .cache/release-checks/*.log
+            .cache/release-checks/downstream/result.json
+            .cache/release-checks/downstream/*.log
+            validation/core/
+            validation/selftest/
+            validation/algorithms/
+            validation/reuse/
+            validation/all/
+            validation/examples/
