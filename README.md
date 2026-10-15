@@ -8,6 +8,9 @@ concrete polynomial-time machines. Weighted CSP, Holant, and graph homomorphism
 models share partition-function semantics while retaining their own input and
 output representations.
 
+[Search the public API](https://liuchliuch.github.io/countinglib/) for full Lean
+types, source locations, and research references.
+
 The library includes Boolean Holant dichotomies, complex-weighted CSP
 classification and effective recognition, nonnegative planar graph homomorphism
 dichotomies, and matchgate-width results.
@@ -56,7 +59,7 @@ Select an entry point for the result you need:
 | `Counting.Library` | Core, algorithm, reuse, and flagship aggregates with selected machine adapters |
 
 The [getting started guide](docs/getting-started.md) covers downstream installation
-and three runnable examples. The Lake package name remains `countingComplexity`;
+and seven runnable examples. The Lake package name remains `countingComplexity`;
 the public Lean namespace is `Counting`.
 
 ## Read
@@ -67,7 +70,9 @@ the public Lean namespace is `Counting`.
 - [Classification results](docs/flagships.md): precise mathematical scope.
 - [Verification](docs/verification.md): builds, declaration audits, and recorded acceptance.
 - [References](docs/references.md): papers, pinned original Lean repositories, and library entry points.
+- [API browser](docs/api-site.md): search, complete types, and static reference generation.
 - [API reference](docs/reference.md): source entry points and extracted Lean types.
+- [Continuous integration](docs/continuous-integration.md): checks, resources, and release gates.
 - [Contributing](CONTRIBUTING.md), [roadmap](docs/roadmap.md), and [source provenance](PROVENANCE.md).
 
 ## License

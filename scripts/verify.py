@@ -746,8 +746,9 @@ def verify(args) -> int:
             raise RuntimeError('Toolchain executables changed during verification')
         if artifact_map(selected, locked, sysroot) != artifacts or hash_artifacts(artifacts, args.workers) != fingerprints:
             raise RuntimeError('Compiled artifacts changed during audit')
-        report.update(status='passed', **audited, project_artifacts_copied=False,
-                      build_mode='Lake source build with locked existing external caches and valid incremental artifacts; no project cache copying',
+        report.update(status='passed', **audited, project_artifacts_copied_by_verifier=False,
+                      cache_history='Preparation before this invocation is not inferred; record any cache bootstrap separately.',
+                      build_mode='Lake source build with locked external caches and valid incremental artifacts; no cold-build claim',
                       artifact_inventory=relative(out / 'artifact-sha256.json'))
         outputs = [p for p in out.iterdir() if p.is_file() and p != result_path and not p.name.endswith('.tmp')]
         report['output_sha256'] = {relative(p): sha(p) for p in sorted(outputs)}

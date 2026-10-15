@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Search CountingLib's selected Lean interfaces, complete elaborated types, source locations, and mathematical contracts.">
+  <meta name="color-scheme" content="light">
+  <title>CountingLib — API browser</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to declarations</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="CountingLib API home"><span class="brand-mark" aria-hidden="true">#</span>CountingLib<span class="brand-section">API</span></a>
+    <nav class="header-links" aria-label="Project navigation">
+      <a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/docs/getting-started.md">Get started</a>
+      <a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/docs/references.md">Papers &amp; sources</a>
+      <a href="https://github.com/liuchliuch/countinglib">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow">COUNTING COMPLEXITY IN LEAN <span class="version">v0.1.1</span></div>
+      <h1 id="page-title">Explore the public API.</h1>
+      <p class="intro-copy">Find a definition or theorem, inspect its full Lean type, and follow its source and mathematical contract.</p>
+      <div class="metrics" aria-label="Catalog scope"><span><strong>333</strong> selected declarations</span><span><strong>80</strong> provider modules</span><span>Lean <strong>4.34.1</strong></span></div>
+    </section>
+    <form id="search-form" class="search-box" role="search">
+      <label for="query" class="sr-only">Search declaration names, modules, and full Lean types</label>
+      <span class="search-symbol" aria-hidden="true">⌕</span>
+      <input id="query" type="search" placeholder="Search names, modules, or full Lean types…" autocomplete="off" spellcheck="false" aria-describedby="search-hint">
+      <kbd aria-hidden="true">/</kbd>
+      <button class="search-submit" type="submit">Search</button>
+    </form>
+    <p id="search-hint" class="search-hint">All words must match. Try <button class="text-button query-example" type="button" data-query="structural_collapse">structural_collapse</button>, <button class="text-button query-example" type="button" data-query="fp_addition">fp_addition</button>, or <button class="text-button query-example" type="button" data-query="CommSemiring">CommSemiring</button>.</p>
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Catalog filters">
+        <div class="sidebar-heading"><h2>Refine results</h2><button id="reset" class="text-button" type="button">Reset</button></div>
+        <div class="field"><label for="category">Collection</label><select id="category"><option value="">All collections</option><option value="flagships">Flagship results</option><option value="tools">Intermediate tools</option><option value="core">Core &amp; algorithms</option></select></div>
+        <div class="field"><label for="family">Contract family</label><select id="family"><option value="">All families</option></select></div>
+        <div class="field"><label for="module">Provider module</label><select id="module"><option value="">All modules</option></select></div>
+        <div class="field"><label for="kind">Declaration kind</label><select id="kind"><option value="">All kinds</option></select></div>
+        <section class="quick-start" aria-labelledby="quick-title"><h3 id="quick-title">Flagship directions</h3><div class="quick-links"><button type="button" data-family="holant-full">Holant <span aria-hidden="true">↗</span></button><button type="button" data-family="complex-csp">ComplexCSP <span aria-hidden="true">↗</span></button><button type="button" data-family="planar-homomorphisms">PlanarHom <span aria-hidden="true">↗</span></button><button type="button" data-family="matchgate-width">Matchgate Width <span aria-hidden="true">↗</span></button></div></section>
+        <section class="scope-note"><h3>A selected reference</h3><p>This browser covers recorded core, algorithm, intermediate-tool, and flagship interfaces. It does not list every declaration in the library.</p><p>Types come from Lean environment exports. Always read the promises and cost model alongside a complexity result.</p><a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/docs/reference.md">Reference scope <span aria-hidden="true">↗</span></a></section>
+      </aside>
+      <section class="result-panel" aria-label="Declarations">
+        <div class="results-heading"><h2 id="results-title">Declarations</h2><p id="result-count" role="status" aria-live="polite">Loading catalog…</p></div>
+        <div id="family-context" hidden></div>
+        <div id="results" tabindex="-1" aria-labelledby="results-title" aria-busy="true"></div>
+        <div class="load-row"><button id="load-more" type="button" hidden>Show more declarations</button></div>
+        <p id="load-error" role="alert" hidden>The API catalog could not be loaded. Serve this directory over HTTP, or visit the source reference on GitHub.</p>
+        <noscript><p class="notice">JavaScript enables local search. Read the <a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/docs/reference.md">source reference</a> or download <a href="api-data.json">the API data</a>.</p></noscript>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><span>CountingLib · v0.1.1</span><nav aria-label="Reference resources"><a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/docs/architecture.md">Architecture</a><a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/docs/verification.md">Verification</a><a href="api-data.json">API data</a><a href="manifest.json">Build manifest</a></nav><p>Original component attribution and license scopes are retained in the <a href="https://github.com/liuchliuch/countinglib/blob/v0.1.1/LICENSE.md">repository</a>.</p></footer>
+</body>
+</html>

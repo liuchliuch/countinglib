@@ -15,9 +15,10 @@ DOCS = (
     'docs/algorithms.md', 'docs/flagships.md', 'docs/coverage.md',
     'docs/verification.md', 'docs/roadmap.md', 'docs/release.md',
     'docs/reference.md',
-    'docs/references.md',
+    'docs/references.md', 'docs/api-site.md', 'docs/continuous-integration.md',
 )
-EXAMPLES = ('RelationalCounting', 'GraphReduction', 'Interpolation')
+EXAMPLES = ('RelationalCounting', 'GraphReduction', 'Interpolation',
+            'Holant', 'ComplexCSP', 'PlanarHom', 'MatchgateWidth')
 CJK = re.compile(r'[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]')
 LINK = re.compile(r'!?\[[^\]\n]*\]\(([^)\n]+)\)')
 

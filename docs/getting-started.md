@@ -37,7 +37,7 @@ Add the versioned release to your downstream `lakefile.toml`:
 [[require]]
 name = "countingComplexity"
 git = "https://github.com/liuchliuch/countinglib"
-rev = "v0.1.0"
+rev = "v0.1.1"
 ```
 
 For local development, replace `git` and `rev` with `path = "../countinglib"`
@@ -67,8 +67,25 @@ From the CountingLib checkout:
 | [Graph reduction](examples/GraphReduction.lean) | A loop, parallel edges, and an isolated vertex survive a natural-weight graph-to-CSP reduction. Both partitions are `5298`; the actual transformer takes `51` transitions on a source encoding of length `24`. |
 | [Interpolation](examples/Interpolation.lean) | Three rational samples recover the coefficient `3` of `3X² + 2X + 5`. The measured execution uses three queries and eighteen field operations. Duplicate nodes are rejected. |
 
-The examples import public interfaces rather than classification aggregates.
-Their semantic equalities and machine or operation bounds are separate theorems.
+The three introductory examples use small public interfaces. Four additional
+tutorials apply actual flagship results to explicit data:
+
+| Example | Result applied |
+| --- | --- |
+| [Holant](examples/Holant.lean) | Unary weights `[1, 2]` and binary equality satisfy the tractable branch and admit fixed-language exact evaluation. |
+| [ComplexCSP](examples/ComplexCSP.lean) | A Boolean binary weight-2 language satisfies joint Block Orthogonality and fixed-basis tractability; repeated occurrences give partition `16`. |
+| [PlanarHom](examples/PlanarHom.lean) | The positive rank-one matrix `[[1, 2], [2, 4]]` satisfies the planar homomorphism classification's tractability criterion. |
+| [Matchgate Width](examples/MatchgateWidth.lean) | A concrete rational qutrit family member admits no width-two exact replacement, even with a different finite competitor domain. |
+
+Compile and audit the introductory or complete tutorial set with:
+
+```sh
+python3 scripts/check_examples.py --scope core --workers 2
+python3 scripts/check_examples.py --scope all --workers 2
+```
+
+The complete set reaches the larger classification closures. Each tutorial keeps
+semantic, representation, and machine-runtime conclusions at their stated scope.
 
 ## Choose a narrower import
 

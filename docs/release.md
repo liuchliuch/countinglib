@@ -14,7 +14,7 @@ These names can differ without changing theorem identifiers.
 | `projects/` | Component production sources, configurations, validation inputs, notices, and provenance metadata |
 | `scripts/`, `tests/`, `validation/` | Fresh-build verification tools and their fixtures |
 | `data/` | Fixed source inventory and public declaration metadata |
-| `.github/workflows/ci.yml` | Core verification and tutorial CI; broader profiles are manual |
+| `.github/workflows/ci.yml` | Core CI, scheduled extended profiles, and an optional full gate |
 
 Development history, internal reports, source working copies, project caches,
 and generated large ledgers stay outside the publication tree. Historical
@@ -23,18 +23,24 @@ and reference index provide the current English interface.
 
 ## Versions and dependencies
 
-The initial source release is [v0.1.0](https://github.com/liuchliuch/countinglib/releases/tag/v0.1.0)
-on the repository's `main` branch. Pin a tag or commit in downstream projects.
+The current release is [v0.1.1](https://github.com/liuchliuch/countinglib/releases/tag/v0.1.1)
+on the repository's `main` branch. The initial v0.1.0 tag remains available. Pin a tag or commit in downstream projects.
 The toolchain remains Lean 4.34.1 with the committed mathlib and Lake locks.
 Future toolchain updates require separate compatibility work and fresh acceptance.
 
 ## Verification policy
 
-CI runs the core profile and public examples on pushes and pull requests. Manual
-runs select `algorithms`, `reuse`, or `all`. Full profiles require a runner
-provisioned for their larger closure. Record the exact source commit and actual
-outcomes; an in-progress workflow is not a passing verification result.
+CI checks the core, fresh introductory tutorials, and an actual downstream Git
+installation on pushes and pull requests. Algorithms and reusable tools run
+weekly or on manual request. Full release verification runs serially on a
+suitable local host or explicitly configured dedicated runner. The
+[CI guide](continuous-integration.md) specifies triggers, resources, retained
+evidence, and Pages deployment.
 
+The release gate requires all four profiles, fresh compilation and declaration
+auditing of seven tutorials, and installation from the exact public Git commit.
+Only a `release-ready` result and passed corresponding hosted core CI support
+creating the release tag.
 Before a release, check source ownership, dependency locks, public documentation,
 client compilation, declaration audits, and the supported installation path.
 Retain original source notices and apply the [license scope](../LICENSE.md).

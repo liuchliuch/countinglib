@@ -14,6 +14,11 @@ arXiv link, original Lean GitHub release, and corresponding library entry.
 | `Counting.Flagships.PlanarHom` | Nonnegative symmetric algebraic-real interaction matrices on ordinary planar multigraphs, with unit or strictly positive algebraic-real vertex weights | Fixed-language bit machines and charged promised hardness; loops, parallel edges, and isolated vertices remain in the input model |
 | `Counting.Flagships.MatchgateWidth` | Qutrit support trichotomy, width lower bounds, exact field-preserving realizations, and compression under the specified rank/deficiency/presentation premises | Representation and compression theorems; no generic bit-time evaluation guarantee is attached to the headline statements |
 
+Concrete applications are available in the [Holant](examples/Holant.lean),
+[ComplexCSP](examples/ComplexCSP.lean), [PlanarHom](examples/PlanarHom.lean), and
+[Matchgate Width](examples/MatchgateWidth.lean) tutorials. They prove the stated
+premises for explicit data before applying the corresponding public endpoint.
+
 ## Fixed data and runtime input
 
 A fixed-language evaluator may depend on the language, represented number field,

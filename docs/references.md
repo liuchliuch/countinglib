@@ -51,6 +51,6 @@ not a claim that every result in each paper has been formalized. The
 Cite the relevant paper and identify the original Lean source commit when using
 one of its results. The original releases contain `CITATION.cff` metadata.
 Identify the CountingLib commit or release separately when using its public
-bridges, algorithms, or assembled interfaces. The initial source release is
-[CountingLib v0.1.0](https://github.com/liuchliuch/countinglib/releases/tag/v0.1.0);
+bridges, algorithms, or assembled interfaces. The current source release is
+[CountingLib v0.1.1](https://github.com/liuchliuch/countinglib/releases/tag/v0.1.1);
 repository citation metadata is in [CITATION.cff](../CITATION.cff).

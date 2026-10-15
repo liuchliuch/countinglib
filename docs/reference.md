@@ -1,5 +1,9 @@
 # Reference
 
+[Search the public API](https://liuchliuch.github.io/countinglib/) by declaration,
+module, or full Lean type. The generated reference covers selected public tool
+and flagship declarations; it does not enumerate every internal proof.
+
 Use Lean's `#check` and editor navigation after importing the corresponding
 public module. The sources below contain the precise hypotheses and theorem
 statements.

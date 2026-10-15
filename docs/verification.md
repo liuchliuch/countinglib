@@ -63,3 +63,16 @@ historical results. Large audit ledgers and development history are regenerated
 by a new verifier run; the candidate does not contain the complete old evidence
 chain. A source build and axiom audit are distinct from an independent kernel
 replay or a paper-to-statement correspondence review.
+
+## Tutorials and continuous checks
+
+`python3 scripts/check_examples.py --scope all --workers 2` builds the required
+entry modules, compiles seven tutorials into fresh artifacts, and audits all of
+their private/generated declarations and transitive axioms. Use `--scope core`
+for the three introductory tutorials. This client audit is separate from the
+production profile counts above.
+
+The [CI guide](continuous-integration.md) describes exact-commit downstream
+installation, scheduled profiles, resource limits, and the serial release gate.
+Matching incremental caches may be used; any private cache preparation is
+recorded separately and does not establish a new cold build.

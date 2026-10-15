@@ -6,10 +6,17 @@ closures remain the foundation of this work.
 
 ## Public release
 
-- Publish a reproducible source repository with clear licensing and attribution.
-- Maintain concise guides, compiled examples, and a searchable API reference.
-- Test ordinary downstream Lake dependencies and automate relevant build profiles.
-- Establish a version policy that separates dependency updates from mathematical changes.
+The source repository, versioned Lake installation, English guides, and citation
+index are available. Version 0.1.1 adds a searchable selected-API reference,
+flagship tutorials, and continuous installation and profile checks.
+
+- Extend the API reference when a new public interface is accepted.
+- Add examples driven by concrete downstream uses.
+- Calibrate broader CI profiles against their actual memory and storage needs.
+- Clarify the remaining component-specific license decisions with rights holders.
+
+Toolchain updates remain separate from mathematical changes and require fresh
+compatibility verification.
 
 ## Reusable infrastructure
 
