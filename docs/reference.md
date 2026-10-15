@@ -1,6 +1,6 @@
 # Reference
 
-[Search the public API](https://liuchliuch.github.io/countinglib/) by declaration,
+[Search the public API](https://liuchliuch.github.io/countinglib/docs/api.html) by declaration,
 module, or full Lean type. The generated reference covers selected public tool
 and flagship declarations; it does not enumerate every internal proof.
 

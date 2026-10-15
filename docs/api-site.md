@@ -1,6 +1,6 @@
 # API browser
 
-The [searchable API browser](https://liuchliuch.github.io/countinglib/) presents
+The [searchable API browser](https://liuchliuch.github.io/countinglib/docs/api.html) presents
 333 selected declarations from 80 provider modules. It covers foundations and
 algorithms, intermediate tools, and the Holant, ComplexCSP, PlanarHom, and
 Matchgate Width flagship interfaces. Thirty contract families record their scope.

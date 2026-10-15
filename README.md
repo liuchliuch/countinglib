@@ -2,14 +2,17 @@
 
 **Counting complexity in Lean.**
 
+[Website](https://liuchliuch.github.io/countinglib/) ·
+[Documentation](https://liuchliuch.github.io/countinglib/docs/) ·
+[API reference](https://liuchliuch.github.io/countinglib/docs/api.html) ·
+[Examples](https://liuchliuch.github.io/countinglib/docs/examples.html) ·
+[Papers and sources](https://liuchliuch.github.io/countinglib/docs/references.html)
+
 CountingLib provides reusable counting semantics, reductions, algorithms, and
 classification theorems. Its foundations connect finite witness counting to
 concrete polynomial-time machines. Weighted CSP, Holant, and graph homomorphism
 models share partition-function semantics while retaining their own input and
 output representations.
-
-[Search the public API](https://liuchliuch.github.io/countinglib/) for full Lean
-types, source locations, and research references.
 
 The library includes Boolean Holant dichotomies, complex-weighted CSP
 classification and effective recognition, nonnegative planar graph homomorphism
