@@ -61,8 +61,8 @@ jobs:
           path: |
             .lake
             projects/*/.lake/build
-          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-core-${{ github.sha }}
-          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-core-
+          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'projects/*/lake-manifest.json') }}-core-${{ github.sha }}
+          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'projects/*/lake-manifest.json') }}-core-
       - name: Retrieve locked external artifacts
         run: ./scripts/lake exe cache get
       - name: Exercise real Lean audit rejection fixtures
@@ -128,8 +128,8 @@ jobs:
           path: |
             .lake
             projects/*/.lake/build
-          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-${{ matrix.scope }}-${{ github.sha }}
-          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}-${{ matrix.scope }}-
+          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'projects/*/lake-manifest.json') }}-${{ matrix.scope }}-${{ github.sha }}
+          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'projects/*/lake-manifest.json') }}-${{ matrix.scope }}-
       - name: Retrieve locked external artifacts
         run: ./scripts/lake exe cache get
       - name: Build and audit extended profile
