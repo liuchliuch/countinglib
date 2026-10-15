@@ -1,0 +1,105 @@
+{
+  "work_kind": "thin canonical aliases and new independently named consumers",
+  "original_components_modified": false,
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_rev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "references": [
+    {
+      "module": "PlanarHom.FixedFieldArithmeticMachines",
+      "provider": "planar-machines",
+      "source_path": "projects/planar-machines/PlanarHom/FixedFieldArithmeticMachines.lean",
+      "sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+      "declarations": [
+        "fp_coordinate",
+        "fp_of_coordinates",
+        "fp_addition",
+        "fp_negation",
+        "fp_subtraction",
+        "fp_multiplication",
+        "fp_inverse",
+        "fp_division",
+        "fp_equality"
+      ]
+    },
+    {
+      "module": "PlanarHom.UniformFieldArithmeticHeights",
+      "provider": "planar-algorithms",
+      "source_path": "projects/planar-algorithms/PlanarHom/UniformFieldArithmeticHeights.lean",
+      "sha256": "d2d572ec025eb6571d1900a1c53115c2fbc7443bc2f5829090b11d924eb36431",
+      "declarations": [
+        "canonical_bounded",
+        "encoding_length_uniform",
+        "inverse_neg_encoding_bound",
+        "operations_encoding_bound"
+      ]
+    },
+    {
+      "module": "PlanarHom.MaterializedFieldListMachines",
+      "provider": "planar-machines",
+      "source_path": "projects/planar-machines/PlanarHom/MaterializedFieldListMachines.lean",
+      "sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+      "declarations": [
+        "fp_sum",
+        "fp_product"
+      ]
+    },
+    {
+      "module": "PlanarHom.MaterializedFieldHeights",
+      "provider": "planar-machines",
+      "source_path": "projects/planar-machines/PlanarHom/MaterializedFieldHeights.lean",
+      "sha256": "55874f77d003407cb8758774a86e2423812727c2e8a26707503033536f0bd5ab",
+      "declarations": [
+        "exists_polynomial_prefix_encoding_bound"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.InterpolationMachine.Materialized.Machine",
+      "provider": "interpolation-machine",
+      "source_path": "projects/interpolation-machine/Counting/Algorithm/InterpolationMachine/Materialized/Machine.lean",
+      "sha256": "285d0892f97a66b5362b30800b176d615aed4e78f47bc167a90d08aca779bcc5",
+      "declarations": [
+        "fp_otherNodes",
+        "fp_denominator",
+        "fp_rowTerm",
+        "fp_rows",
+        "fp_recover",
+        "denominator_prefix_bound",
+        "sum_prefix_bound",
+        "computer",
+        "outputs_coefficient",
+        "intermediate_stack_bound"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.InterpolationMachine.Materialized.Semantics",
+      "provider": "interpolation-machine",
+      "source_path": "projects/interpolation-machine/Counting/Algorithm/InterpolationMachine/Materialized/Semantics.lean",
+      "sha256": "47d5185fd8d783845ceddc54fe47fcabfa73e6dcc0d4dbabd59a03a8981a96ea",
+      "declarations": [
+        "Table",
+        "otherNodes",
+        "denominator",
+        "rowTerm",
+        "recover",
+        "recover_eq_coefficient"
+      ]
+    },
+    {
+      "module": "PlanarHom.Complexity",
+      "provider": "planar-homomorphisms",
+      "source_path": "projects/planar-homomorphisms/PlanarHom/Complexity.lean",
+      "sha256": "4d394f0d7794ac66ac1205d0148654e9c8b375fa6cdc9c0c8ae8ab854a5d6a60",
+      "declarations": [
+        "BitEncoding",
+        "numberFieldEncoding",
+        "FP",
+        "FP.comp"
+      ]
+    }
+  ],
+  "client_mapping": {
+    "Clients.Composition": "New composition of canonical FP subtraction, division and equality, using existing actual pairing/projection/composition compiler; retains original TM2/time type.",
+    "Clients.Interpolation": "Reconstructs the existing Materialized.Machine proof with public arithmetic aliases in a new namespace; canonical semantic program shared; original source unchanged.",
+    "Acceptance.originalQuadraticViaPublicEntry": "Original materialized quadratic input and value proof used with the new public-entry-derived computer."
+  }
+}

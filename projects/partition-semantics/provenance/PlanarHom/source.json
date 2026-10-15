@@ -1,0 +1,53 @@
+{
+  "repository": "https://github.com/liuchliuch/planar-homomorphisms-lean",
+  "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+  "original_path": "PlanarHom/Basic.lean",
+  "raw_url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Basic.lean",
+  "retrieval_date": "2026-10-13",
+  "verification": "Retrieved exact commit-addressed source with curl --fail --location; byte comparison against the local read-only original succeeded. The original local directory is not a git repository, so local HEAD was not used as evidence.",
+  "sha256": "d0edf2b6c8fa92b1bb442e171417f77d22aed5b2e431d3bffd2e55beb4ab7eae",
+  "pinned_source_copy": "provenance/PlanarHom/Basic.lean.original",
+  "vendored_path": "Counting/Upstream/PlanarHom.lean",
+  "vendoring": "Complete original source file, byte-for-byte unchanged; original PlanarHom namespace retained.",
+  "source_dependency_closure": [
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Matrix.Basic"
+  ],
+  "upstream_lean_toolchain": "leanprover/lean4:v4.24.0",
+  "target_lean_toolchain": "leanprover/lean4:v4.34.1",
+  "target_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "declaration_mapping": {
+    "PlanarHom.MultiGraph": "PlanarHom.MultiGraph (unchanged vendored declaration); Counting.Bridge.PlanarHom.toModel maps to Counting.Model.MultiGraph",
+    "PlanarHom.MultiGraph.assignmentWeight": "PlanarHom.MultiGraph.assignmentWeight (unchanged vendored declaration); Counting.Bridge.PlanarHom.assignmentWeight_eq proves model equality",
+    "PlanarHom.MultiGraph.partition": "PlanarHom.MultiGraph.partition (unchanged vendored declaration); Counting.Bridge.PlanarHom.partition_eq proves model equality; Counting.Bridge.PlanarHom.partition_toOpenInstance proves CSP equality"
+  },
+  "license_note": "No new source attribution or licensing claim is introduced. Repository provenance is retained; licensing was not inferred from authorship.",
+  "target_validation": {
+    "date": "2026-10-13",
+    "lean_version": "4.34.1",
+    "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+    "working_directory": "/Users/liuch/draft-pinkfold/counting-complexity/projects/partition-semantics",
+    "commands": [
+      "./scripts/lake env lean -o .lake/build/lib/lean/Counting/Model/Graph.olean Counting/Model/Graph.lean",
+      "./scripts/lake env lean -o .lake/build/lib/lean/Counting/Upstream/PlanarHom.olean Counting/Upstream/PlanarHom.lean",
+      "./scripts/lake env lean -o .lake/build/lib/lean/Counting/Bridge/PlanarHom.olean Counting/Bridge/PlanarHom.lean",
+      "./scripts/lake env lean provenance/PlanarHom/Audit.lean > provenance/PlanarHom/axioms.txt",
+      "cmp Counting/Upstream/PlanarHom.lean provenance/PlanarHom/Basic.lean.original",
+      "shasum -a 256 Counting/Upstream/PlanarHom.lean provenance/PlanarHom/Basic.lean.original"
+    ],
+    "result": "All commands exited 0; all three module artifacts generated; vendored original remains byte-identical.",
+    "audit_declarations": 35,
+    "audit_theorems": 21,
+    "axioms_observed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx_observed": false,
+    "audit_source": "provenance/PlanarHom/Audit.lean",
+    "audit_output": "provenance/PlanarHom/axioms.txt",
+    "scope": "Individual modules and their explicit declarations; full package build belongs to coordinator."
+  }
+}

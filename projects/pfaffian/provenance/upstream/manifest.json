@@ -1,0 +1,1021 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/liuchliuch/planar-homomorphisms-lean",
+  "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+  "file_count": 144,
+  "total_bytes": 1372917,
+  "source_inventory": "../../audit/source-inventory.json",
+  "source_inventory_sha256": "270af3dded98c74a13c62b1669b142263a50427919083f3f4ea18f3151bac038",
+  "license_status": "Upstream license was not identified in the recorded source metadata. These are byte-preserved provenance copies; no new license or copyright claim is made.",
+  "verification": "Each source was matched against the preexisting audit/source-inventory.json using both SHA-256 and Git blob SHA-1 before copying; destination bytes checked again. No Lean build or kernel check performed by this packaging step.",
+  "files": [
+    {
+      "path": "PlanarHom/AlphabetCoordinateCertificates.lean",
+      "sha256": "8b008d381d28beb5698fdd362c558b535cc71da6df1f57c000385d233e142934",
+      "git_blob_sha1": "aa2db5624b780f9fe82224599f45ca4b3359dad0",
+      "bytes": 3205,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/AlphabetCoordinateCertificates.lean"
+    },
+    {
+      "path": "PlanarHom/ArithmeticCircuitPrimitives.lean",
+      "sha256": "f1f43d194b15b478f3b637ec1e34c6d714090f44ed6820d279f94bc752aed0cf",
+      "git_blob_sha1": "cd7ef81fa1ec54ac5eb191c9d5612b572154a541",
+      "bytes": 5952,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ArithmeticCircuitPrimitives.lean"
+    },
+    {
+      "path": "PlanarHom/Basic.lean",
+      "sha256": "d0edf2b6c8fa92b1bb442e171417f77d22aed5b2e431d3bffd2e55beb4ab7eae",
+      "git_blob_sha1": "cba53da433c9e4da76ddcd46caa4ca5dd12b378f",
+      "bytes": 5285,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Basic.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryAdditionBits.lean",
+      "sha256": "cc406eed0798f49a4ef8c860e60a304152ba69fa55a037eaa77e796ae26e3527",
+      "git_blob_sha1": "48a6d5e7d8b324149fb831584c40b1146bc5ffda",
+      "bytes": 4519,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryAdditionBits.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryAdditionMachine.lean",
+      "sha256": "e7c007e4b414c665b9a7bd807dcbe52471738d47abfa16b5099bcfea010f9576",
+      "git_blob_sha1": "740c32d3cd8f43b9efbcb68996a8ed0eb8587adb",
+      "bytes": 14318,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryAdditionMachine.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryArithmetic.lean",
+      "sha256": "394b2fd8b085520394da6fb93934972e4187d1d497f1e256a8bccb8dc24f65d8",
+      "git_blob_sha1": "d563daed7acb364fa0f9b6f63a7e7c2ed7ecd649",
+      "bytes": 7909,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryArithmetic.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryDivisionBits.lean",
+      "sha256": "7275aa5cd23b9eb2b218bb6bd45240ced41a7c00a17bc9e2617b31050ed9dff9",
+      "git_blob_sha1": "71ed5c3c3a3e3794b65ad86237c08d54c14d9d0c",
+      "bytes": 6749,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryDivisionBits.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryDivisionMachine.lean",
+      "sha256": "8f080c260812e3d67d7d2aaf557e9d9bff073a9532a74d0c63f38a4c037d8166",
+      "git_blob_sha1": "6cff3cfb1b85b58418e61d55044d1ea8cf37df03",
+      "bytes": 47066,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryDivisionMachine.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryGcdBits.lean",
+      "sha256": "0a3b9675517ceb8c7e74a22a852db00e4e78a31f024c61bc265d46ef248ce46f",
+      "git_blob_sha1": "86c0651e8aeadf63fed809f63a526b2a329250fd",
+      "bytes": 1864,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryGcdBits.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryGcdMachine.lean",
+      "sha256": "991db19204d78555c868cc00f08d47e6e5b9a3929b2bbf3a41abd4155235e74f",
+      "git_blob_sha1": "97ac85bf1ae9c6ff91ade7f75f962b448bf3f442",
+      "bytes": 45279,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryGcdMachine.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryMultiplicationBits.lean",
+      "sha256": "b1da7d09f500ab78e06d6cce0a7f01ba43e617b62adaa3fe3ab9bb4e940ee7e0",
+      "git_blob_sha1": "a46b269c08bc5c7402b3891db5dc40ba0fda7533",
+      "bytes": 4214,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryMultiplicationBits.lean"
+    },
+    {
+      "path": "PlanarHom/BinaryMultiplicationMachine.lean",
+      "sha256": "b28cf7b906e8ed8d90c586490e44f7ad0cb0857092b660d70e6cc67ab56f38d1",
+      "git_blob_sha1": "f2849d17ee88336dde81cd92466623686481ca4e",
+      "bytes": 23848,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinaryMultiplicationMachine.lean"
+    },
+    {
+      "path": "PlanarHom/BinarySubtractionBits.lean",
+      "sha256": "b260e8beca1f77d63b097ae54bd0169eefbeb27bb88ffe6bd26b35d1b71e1842",
+      "git_blob_sha1": "0e000959b3c8573363e349ebebe4bccabeba964d",
+      "bytes": 9117,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinarySubtractionBits.lean"
+    },
+    {
+      "path": "PlanarHom/BinarySubtractionMachine.lean",
+      "sha256": "1fe5ec5527556833c83200714c31cab00ca22059d8d179725ffe1b5072b65bf6",
+      "git_blob_sha1": "da04077f37296e1d21da40d1256084d5f41a11bc",
+      "bytes": 21411,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BinarySubtractionMachine.lean"
+    },
+    {
+      "path": "PlanarHom/BitMachineSubroutine.lean",
+      "sha256": "51474be788380abebeccc8acc1053e93eda796edfdd5fee54c9e2a4a9f221da5",
+      "git_blob_sha1": "ba5fc94716d323f45ab748254b88ffef0cf8f03c",
+      "bytes": 2380,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BitMachineSubroutine.lean"
+    },
+    {
+      "path": "PlanarHom/Boolean.lean",
+      "sha256": "6a12e8f41bf07f22f5ff936055339c22d5607fef74aaa8150c453153cd8a16fb",
+      "git_blob_sha1": "14ef31dddc9142df85d44f97af5ad80551fbae7a",
+      "bytes": 14983,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Boolean.lean"
+    },
+    {
+      "path": "PlanarHom/BoundedIterationMachine.lean",
+      "sha256": "7a8e2efa22483b3f17389ef7372790a478595f55eb451a51c4a3b53af9f7b509",
+      "git_blob_sha1": "2e457d8c5a3b5667264c2976df33e5e9fdf60927",
+      "bytes": 10923,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BoundedIterationMachine.lean"
+    },
+    {
+      "path": "PlanarHom/BoundedUnaryMachineCore.lean",
+      "sha256": "2c324c2963b2cea604f85ad956fb6cec93f69c3ef6e4b7e7456656f8364cb2fc",
+      "git_blob_sha1": "914d46f7934437dbace5f1b6ee5e2b1d67d38044",
+      "bytes": 6483,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BoundedUnaryMachineCore.lean"
+    },
+    {
+      "path": "PlanarHom/BoundedUnaryMachines.lean",
+      "sha256": "702ad3bc700fc39a0082e57c4b236b6ab7453ce29a958ad071e01bff88b9270d",
+      "git_blob_sha1": "f1d056ad50c9f1d6d4e3c267317f794f5a2d551b",
+      "bytes": 8658,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/BoundedUnaryMachines.lean"
+    },
+    {
+      "path": "PlanarHom/CanonicalCoordinateHeights.lean",
+      "sha256": "e5343eeb71e94a453701c984fb81a718b603d2c9ddac4ddca2e2a313d4bd71d6",
+      "git_blob_sha1": "28e18b5a2bc83f5e368a0ac5d93836e4898d4856",
+      "bytes": 6193,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/CanonicalCoordinateHeights.lean"
+    },
+    {
+      "path": "PlanarHom/CodecDecodingBounds.lean",
+      "sha256": "2c33286754b06d7606f6e9b8bc5f32b0cc540d891bcfdfa7ece067d3266c3937",
+      "git_blob_sha1": "5d1e8a3ccb4110b954cd3eb8fa16c95e8390c43c",
+      "bytes": 9525,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/CodecDecodingBounds.lean"
+    },
+    {
+      "path": "PlanarHom/CodecSizeBounds.lean",
+      "sha256": "092ab404dfe1570f54a6bd7ecac0df5fa057677a970511700ad240e7ee79ebc0",
+      "git_blob_sha1": "c1c42f19bdeea8431f39ec0ab2aac94763d6b6f6",
+      "bytes": 1147,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/CodecSizeBounds.lean"
+    },
+    {
+      "path": "PlanarHom/CoefficientListHeights.lean",
+      "sha256": "641ba1e897fe3dccc3c8ca2dcbcf636d277df4f4328da8d39e002b9a9ac32312",
+      "git_blob_sha1": "3f9ba49fcbe7c25176d9ed22c4e6e9c50a46f182",
+      "bytes": 2686,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/CoefficientListHeights.lean"
+    },
+    {
+      "path": "PlanarHom/Complexity.lean",
+      "sha256": "889aef0247e5c21096c3c3b377a09561940cce8482e3ca7c4e4adafb4033b616",
+      "git_blob_sha1": "285abd88c06d54ef1b7d3bd9e7858a6a76b2d6c7",
+      "bytes": 27714,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Complexity.lean"
+    },
+    {
+      "path": "PlanarHom/ConditionalMachines.lean",
+      "sha256": "fa894a03b713714d2a6938369aac4294e4c37070ddb2e938789c65b9344e35db",
+      "git_blob_sha1": "8e57c02dd54b20b6c55b465c72d84fa30f1691f2",
+      "bytes": 5170,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ConditionalMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ConstantMachines.lean",
+      "sha256": "fb8f9b666380971f1a7337e7fc9c083c4c420f38574828f2a06b562b472ef273",
+      "git_blob_sha1": "58206f00d38a8f0fc59e8ac70eff1431e01cff64",
+      "bytes": 3670,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ConstantMachines.lean"
+    },
+    {
+      "path": "PlanarHom/EncodingSizeBounds.lean",
+      "sha256": "387f383d5d5ec57a9cf25eea0ff5a3651cc74a96be47c182dded12b754245d1f",
+      "git_blob_sha1": "2ccab0a7f94d9b7142b0a4b30ddc721e59242bcd",
+      "bytes": 5770,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/EncodingSizeBounds.lean"
+    },
+    {
+      "path": "PlanarHom/FieldCoordinateCertificates.lean",
+      "sha256": "70480ef650538a47d1d255c045ccf8020359f4cc814e19df0f38081bc662a480",
+      "git_blob_sha1": "8bac452b352d2c7cf97d7f5e91a637aad2c9b3ad",
+      "bytes": 8673,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FieldCoordinateCertificates.lean"
+    },
+    {
+      "path": "PlanarHom/FieldCoordinateHeights.lean",
+      "sha256": "d64cbe1a28508df257297d0a81ae01a88e7eb6e1084384151ad03eee5d9a9588",
+      "git_blob_sha1": "ee2a87f27480196855b0f29fe7f967b373e7394c",
+      "bytes": 5457,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FieldCoordinateHeights.lean"
+    },
+    {
+      "path": "PlanarHom/FieldExpressionHeights.lean",
+      "sha256": "1e5b1ddf1eb3c77a2649e9e22b7ab1f3579f22d914fe6a6bb8118d43c6423b6e",
+      "git_blob_sha1": "d085b7ae5cf800981a16cf3b9bce5288b177395d",
+      "bytes": 4856,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FieldExpressionHeights.lean"
+    },
+    {
+      "path": "PlanarHom/FiniteLabelLookupMachines.lean",
+      "sha256": "8a4f9c123d854216485e5175155574e46dc7bb47f3e358073803f2d6f8aa5100",
+      "git_blob_sha1": "b9a0a3081cb990cdd9a4e2ac54e055a505ea7b91",
+      "bytes": 1233,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FiniteLabelLookupMachines.lean"
+    },
+    {
+      "path": "PlanarHom/FiniteRationalCircuits.lean",
+      "sha256": "cfedae983f8424cb02e453b239ef13f73de344386bd096538dd688bb19d1693e",
+      "git_blob_sha1": "a023ccb60421f9c71d1f650136adaf95875802f7",
+      "bytes": 3349,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FiniteRationalCircuits.lean"
+    },
+    {
+      "path": "PlanarHom/FixedAlphabetOutputBounds.lean",
+      "sha256": "6702226e4f1b0641866e3a69d8418fa5f8117ab16c60d06a32f9055252894358",
+      "git_blob_sha1": "bdd2d8349652975d56b5104280b13f87b6f6aa61",
+      "bytes": 3152,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FixedAlphabetOutputBounds.lean"
+    },
+    {
+      "path": "PlanarHom/FixedFieldArithmeticBits.lean",
+      "sha256": "5eeb2976693fc27d835322be12925662f9ad6b790229e1daedb1d8478111a674",
+      "git_blob_sha1": "b4b187e303b51b052f43045c5d80a8f4ccf09176",
+      "bytes": 2283,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FixedFieldArithmeticBits.lean"
+    },
+    {
+      "path": "PlanarHom/FixedFieldArithmeticMachines.lean",
+      "sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+      "git_blob_sha1": "403450f91aebf92e82db6a7a6e86ce582cede5b3",
+      "bytes": 5821,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FixedFieldArithmeticMachines.lean"
+    },
+    {
+      "path": "PlanarHom/FixedVectorMachines.lean",
+      "sha256": "b71376bec6fce5c6ede30bc623c12e8092b666648112f638c8100c6c79e9c5c7",
+      "git_blob_sha1": "ba212daaa90ae7556cf5c9d046170e8cfbb64be2",
+      "bytes": 3777,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/FixedVectorMachines.lean"
+    },
+    {
+      "path": "PlanarHom/Gadgets.lean",
+      "sha256": "0ffaf6175beec9006faeb70496155a2e6a1d447a8693b42ca4d819ac46bc532d",
+      "git_blob_sha1": "0881b81f478994fbf63bb764818493dabb00fed1",
+      "bytes": 12169,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Gadgets.lean"
+    },
+    {
+      "path": "PlanarHom/GraphCodeNormalization.lean",
+      "sha256": "5a6a269472aefdcf8df291af7702b02afcc0f8859334deff3ff63598e6b13639",
+      "git_blob_sha1": "3598dc5909bb3e7e7fdbf83a941b04e68084d83f",
+      "bytes": 4324,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/GraphCodeNormalization.lean"
+    },
+    {
+      "path": "PlanarHom/GraphParallelCode.lean",
+      "sha256": "692110f2e702b9db9e5353f07ebc693fc0f6900c1f5e3621b730ba8a06b24c67",
+      "git_blob_sha1": "a67ae158fac79b53ac08ab07bb726145899ec816",
+      "bytes": 4318,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/GraphParallelCode.lean"
+    },
+    {
+      "path": "PlanarHom/GraphParallelSemantics.lean",
+      "sha256": "4973e062309f6175d5c3b49510c324a22e6c229fc7f2955a3b174495198f8a20",
+      "git_blob_sha1": "6f0fdc2bb38ebaa1c4089b3898a25f5cfb25fb0d",
+      "bytes": 2707,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/GraphParallelSemantics.lean"
+    },
+    {
+      "path": "PlanarHom/GraphStretchCode.lean",
+      "sha256": "307a449b5255675ad48104dabac0579eb0c0dc7b7b0cbd88cf1188f90c5efb94",
+      "git_blob_sha1": "d4fff6a59a527ebc9665b1e76322650cdd883ea5",
+      "bytes": 8774,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/GraphStretchCode.lean"
+    },
+    {
+      "path": "PlanarHom/InputLengthMachine.lean",
+      "sha256": "62e7d8a093286dbb0d57e17817db245a571fa02787f18ba3096291334cfdbd0b",
+      "git_blob_sha1": "dd5c83b599e1ed656f710406ac71007e961e2856",
+      "bytes": 3122,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/InputLengthMachine.lean"
+    },
+    {
+      "path": "PlanarHom/IntegerCoordinateBounds.lean",
+      "sha256": "445db4e1a4c0395a1616f9e7dbd47f01f8843a731820bfd6e2fa8faa15c6a313",
+      "git_blob_sha1": "bb5ca2962ddddf6445648c80800a6a599ab02953",
+      "bytes": 9777,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/IntegerCoordinateBounds.lean"
+    },
+    {
+      "path": "PlanarHom/IntegerLinearSystemBounds.lean",
+      "sha256": "bfec1f2ae2297510257d35d13fae15c8a9e53f9104a05130506d8c2ec1adaff8",
+      "git_blob_sha1": "5a65ae32f3720da961802ee0d61c74714f4c2ba2",
+      "bytes": 4394,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/IntegerLinearSystemBounds.lean"
+    },
+    {
+      "path": "PlanarHom/Interpolation.lean",
+      "sha256": "2e268d14ed41f807ba1e3f4d05b162a1afe64643d32312382c0aeaeddbc7a986",
+      "git_blob_sha1": "9e2d08fcd61b498d1582db49163fb057b2b022e9",
+      "bytes": 5811,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Interpolation.lean"
+    },
+    {
+      "path": "PlanarHom/IsingEvenSubgraph.lean",
+      "sha256": "446bfa8fb100aea122d553447474a26b911aa19380c0fd20acbab4bb7957f378",
+      "git_blob_sha1": "7ed1f8581b7310666c759c7a63a2020133d728fe",
+      "bytes": 6793,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/IsingEvenSubgraph.lean"
+    },
+    {
+      "path": "PlanarHom/LagrangeCoefficientHeights.lean",
+      "sha256": "2ed1d8c2b81959c67c48dfaa8a8305be570ea4d70d7b93b6f8c5cbebf5dc16b0",
+      "git_blob_sha1": "a21df55b9a3db9435f3247a507ef0f77891b14bb",
+      "bytes": 4605,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/LagrangeCoefficientHeights.lean"
+    },
+    {
+      "path": "PlanarHom/LagrangeCoefficientMachines.lean",
+      "sha256": "9195af282c1cb12d4d9dd96a0178a66e867258af0003be3a459a134f8763612a",
+      "git_blob_sha1": "3f4d08facce46f88a154337f9abdde683059acef",
+      "bytes": 8551,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/LagrangeCoefficientMachines.lean"
+    },
+    {
+      "path": "PlanarHom/LagrangeRecovery.lean",
+      "sha256": "43e36c13c0d7e97b0464a5e6cf32bc223b280ab417ea5a9e2402fa8820891132",
+      "git_blob_sha1": "e50f0dfe63daefaf3b52dec8a30bc4c4dc20387e",
+      "bytes": 4532,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/LagrangeRecovery.lean"
+    },
+    {
+      "path": "PlanarHom/LinearFactorCoefficientMachines.lean",
+      "sha256": "b76aea9872acd4124f0cae7bd545a40c2ae87764ee8801b45d38392c8494e26d",
+      "git_blob_sha1": "6a20dc64501fcde838c3ec2ec99c0856a3279f64",
+      "bytes": 11584,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/LinearFactorCoefficientMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListCodecMachines.lean",
+      "sha256": "3a7824ace258fe788d6e1e32936020baf6288acb872da09adde0bd74ccfcd45d",
+      "git_blob_sha1": "0b26e1370fce48dadba79a2633de1841773deb3b",
+      "bytes": 4994,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListCodecMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListContextMachines.lean",
+      "sha256": "315ea85e8e40f918f0e49d2689a51d43991ac63908b5791f473fd35a384b7dea",
+      "git_blob_sha1": "43de622c5d605d8bc4ebc153a704effafce06953",
+      "bytes": 5192,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListContextMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListDecompositionMachines.lean",
+      "sha256": "6703245a03b094e7e6d460863f55154df1bebf6985283acd490d815ca40c3115",
+      "git_blob_sha1": "552f809a12f689d31efe56d6ef5a346095b3f3c2",
+      "bytes": 3880,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListDecompositionMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListDedupMachines.lean",
+      "sha256": "057ad400b5b57d12430d5d157e62dfae9ecf768d4917a4414ed5c5c73870bc01",
+      "git_blob_sha1": "3112ba58e090aee20492ac2471d778ec1521073d",
+      "bytes": 9570,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListDedupMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListDropMachines.lean",
+      "sha256": "c04f0b346b3240fec8eca06f257b60042c61bb8e8a02bba2b45efde8d3709ec9",
+      "git_blob_sha1": "dd84b807dd9b3dfdbe62f9fe55adf0407981776e",
+      "bytes": 2539,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListDropMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListFilterMachines.lean",
+      "sha256": "8ef4f254f1c6850a498921b54a57d8ab7b586bcb47b1411c211f94970a520e83",
+      "git_blob_sha1": "55f36346fcd50471d76ecb44a7713275e78bd9cc",
+      "bytes": 3549,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListFilterMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListFlattenMachines.lean",
+      "sha256": "d75167c79861d614976405a75895f4c4763139132cb1f18ddab5359367be8861",
+      "git_blob_sha1": "2073eb9ebfdc977ad3c38d18f0c26664aa960c98",
+      "bytes": 4841,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListFlattenMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListFoldMachines.lean",
+      "sha256": "a5aaf2902e5318259027adde508b746d30e3c08b684c62f0c3fc3a080f72c702",
+      "git_blob_sha1": "9bf96a488e50da75230178d58b72f4d1cd1db7de",
+      "bytes": 26180,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListFoldMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListHeaderNormalization.lean",
+      "sha256": "0456dcc9278220dea5d691fa95295d1f597d4e1b02b4820556881546c1de8783",
+      "git_blob_sha1": "2259340b0549528a1af74c72fb8e101c1625a4bb",
+      "bytes": 1781,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListHeaderNormalization.lean"
+    },
+    {
+      "path": "PlanarHom/ListIndexMachines.lean",
+      "sha256": "477461332aef45eef133a611bbba17e5b1eb130b17c353d45ab00e34fcf54e5f",
+      "git_blob_sha1": "77d03e31a3af7937cb4f05b464c185cbf8aee041",
+      "bytes": 4246,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListIndexMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListMapMachines.lean",
+      "sha256": "d2d4b9ae41e5701c3754666ce52f5c6da118f71772fa86b63f55c93f2db9f33b",
+      "git_blob_sha1": "1f14575ed550921b629f44e51d0f39d8505c0477",
+      "bytes": 19196,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListMapMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListMutationMachines.lean",
+      "sha256": "cef27dcb4ac68076c6a87d0817fb0bc77ed2b16e019ef62625f60fe9a7252593",
+      "git_blob_sha1": "9a6673ce609cb4f2bc6fc8d0bf6bf7eeb9220b97",
+      "bytes": 2162,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListMutationMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListPredicateMachines.lean",
+      "sha256": "c4a67730b1050977b36fbe826c88d3d5bdaffda3189ed5a99fc8fcd0f8b2d7ba",
+      "git_blob_sha1": "9e4c18de5b2042dfdffbaff7926f176526058f03",
+      "bytes": 1768,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListPredicateMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListReverseMachines.lean",
+      "sha256": "9db299773f5dbe11d59daa5044f7ae9c1ecc5d5f7ac7ac43256e3555786e5e9b",
+      "git_blob_sha1": "e7ad1b4a0620b7f89fa144ef0a92981f1340b37d",
+      "bytes": 1652,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListReverseMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ListUnaryLengthMachine.lean",
+      "sha256": "82b6274ac154f8b9fc8795333ce90b5b09c0dd8dbd9648c2c0a74a03eef49694",
+      "git_blob_sha1": "dc01918d8f75a47973073ba9882a1e9cbc5a9192",
+      "bytes": 866,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ListUnaryLengthMachine.lean"
+    },
+    {
+      "path": "PlanarHom/MachineCodeTransport.lean",
+      "sha256": "0fd5eb1a6b3abc4d701d9c4a6d19083609d230adfa3572f3bbf14242011d557e",
+      "git_blob_sha1": "e82b6a7f40223c0c0d0325a7ae9af73655ae203d",
+      "bytes": 1684,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MachineCodeTransport.lean"
+    },
+    {
+      "path": "PlanarHom/MachineComposition.lean",
+      "sha256": "fc52820eeb8f1102723d961d76a7e65ab22e750ee3670a483e2cbc69ccdfa40b",
+      "git_blob_sha1": "72246016d1133e70c55de398199cc297a9034a11",
+      "bytes": 33542,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MachineComposition.lean"
+    },
+    {
+      "path": "PlanarHom/MachineOutputTransport.lean",
+      "sha256": "0797dd0e85eec1efb4b92e9c862de76abf83e96bd5db0f8c4c277433943030d2",
+      "git_blob_sha1": "5fd4138ae325a4aa8f243ade9a983e7657a22cee",
+      "bytes": 1473,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MachineOutputTransport.lean"
+    },
+    {
+      "path": "PlanarHom/MachinePairing.lean",
+      "sha256": "052c9df76368db81601d8cb9f95a301936da7dc525bb8b5ea7de21afddb81ae7",
+      "git_blob_sha1": "fbc4b71a6f132c008d376bc377e6e9909663b68f",
+      "bytes": 18535,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MachinePairing.lean"
+    },
+    {
+      "path": "PlanarHom/MaterializedCoefficientHeights.lean",
+      "sha256": "19ddcdcec91d3fad42affe42d9252cf5a0b8d1bfda71056c39f44935984648d7",
+      "git_blob_sha1": "ea7ca17188290c547530def4669583013582853f",
+      "bytes": 11707,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MaterializedCoefficientHeights.lean"
+    },
+    {
+      "path": "PlanarHom/MaterializedFieldHeights.lean",
+      "sha256": "f29a469af06f38968e4c9529e83c72e4ce2ff877b88ebe5846929e21f2cf0df7",
+      "git_blob_sha1": "5bb96989d188616d38a40c83dbda39a277f559c0",
+      "bytes": 7984,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MaterializedFieldHeights.lean"
+    },
+    {
+      "path": "PlanarHom/MaterializedFieldListMachines.lean",
+      "sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+      "git_blob_sha1": "fa5cfef8dd37102a6a1ac91ce7c78faf4978daf5",
+      "bytes": 3648,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MaterializedFieldListMachines.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelCode.lean",
+      "sha256": "aeaf2b97fda0ca8cf360620802380b4490757fa0838979af5b3ce61b3ce1df25",
+      "git_blob_sha1": "f55a27cf2176476931ec5438b2b5d30d0b498630",
+      "bytes": 4749,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelCode.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelFinalize.lean",
+      "sha256": "d463998f642d0f3301148a3c6ca743c46a5aa72c13b78a29976dcae339df1b6d",
+      "git_blob_sha1": "9624de84bf90a58f49cf458da605a5a77a596f14",
+      "bytes": 5850,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelFinalize.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelLoops.lean",
+      "sha256": "e8fc178233790fc3b3679d9d80499718b3553045eb317da41621b8ca3af87365",
+      "git_blob_sha1": "48a85f1721f27343b16dcb21361525ff6c3ea057",
+      "bytes": 15151,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelLoops.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelMachineCore.lean",
+      "sha256": "5db9127622a25b52fdb66d77333d44d73826335fbd8798323a04c3a3e617b5fd",
+      "git_blob_sha1": "e852138456fc7b3ec03be485c7b8f93740545e45",
+      "bytes": 9936,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelMachineCore.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelMachines.lean",
+      "sha256": "f4676fb2050a2f2edbe9b194c38366245011991e951be627878ff6923938e707",
+      "git_blob_sha1": "3e4bed7273a098c5bd56cef900944b23799c8e43",
+      "bytes": 8438,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelMachines.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelRuns.lean",
+      "sha256": "aba1b59730152be1c3d831be02d09b132a91aca683a580c741503fae85317dbf",
+      "git_blob_sha1": "c2cb20c8bc586919d5534bb83979e13c03e0af0e",
+      "bytes": 14666,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelRuns.lean"
+    },
+    {
+      "path": "PlanarHom/MixedParallelSemantics.lean",
+      "sha256": "a2beb0092d8fd170fef0f367f305b1a4aa554381398b56aaf1565fdaa233c8b4",
+      "git_blob_sha1": "b6aef3eb10a4996dd563db26617aae3f8b110642",
+      "bytes": 2956,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedParallelSemantics.lean"
+    },
+    {
+      "path": "PlanarHom/MixedPlanarCode.lean",
+      "sha256": "a5726354a8efddcaefcf6df17a61e34de3d6df2135e70791baa57a8bb1bb7dbb",
+      "git_blob_sha1": "0efd7fadd40b1bd16b4765360c3442b23cb12180",
+      "bytes": 3343,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedPlanarCode.lean"
+    },
+    {
+      "path": "PlanarHom/MixedProductSemantics.lean",
+      "sha256": "cb3172cd5617f70ea31ead82af9718d20979e9317b0ef8e554b9f001ce6d6b36",
+      "git_blob_sha1": "b2e0c031b093aa56bbc638b3739a8124cd600792",
+      "bytes": 9457,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedProductSemantics.lean"
+    },
+    {
+      "path": "PlanarHom/MixedRelabelMachines.lean",
+      "sha256": "5f6d7b6d875519ed2203bb961bbb183b10565af93f0844d01f93a5a0113c4b91",
+      "git_blob_sha1": "93742ffe93f96830c00008c5668f2f81c88d4a61",
+      "bytes": 3043,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedRelabelMachines.lean"
+    },
+    {
+      "path": "PlanarHom/MixedUnaryParallelMachines.lean",
+      "sha256": "4fed89524187aa88fcb295affc6854d4e2921cf86f40d079c495a463db94ce20",
+      "git_blob_sha1": "3bb436e628644f3c709f8a2b67798831127ae160",
+      "bytes": 4738,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/MixedUnaryParallelMachines.lean"
+    },
+    {
+      "path": "PlanarHom/Moments.lean",
+      "sha256": "c0453223943140164f02592fa7a5bf1d7a0c860021d3a38126e014d1000cfa33",
+      "git_blob_sha1": "7800a996a82f2b2602dab551055d46ee71568b19",
+      "bytes": 4335,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Moments.lean"
+    },
+    {
+      "path": "PlanarHom/NatCanonicalizationMachine.lean",
+      "sha256": "76c0b8b52b63e4ea0797e7f136ad531da3315a88bb5375f6dd25679c18c3da5a",
+      "git_blob_sha1": "a95231d402c5fbd69d0e7892d3904ca1727369cc",
+      "bytes": 6381,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/NatCanonicalizationMachine.lean"
+    },
+    {
+      "path": "PlanarHom/NatListSumMachines.lean",
+      "sha256": "73636cfe56903bcd61cddc1571d33032ce654b50792478f015fa27d9a5a5f8b2",
+      "git_blob_sha1": "f5c2dc96a9c36315275da5ed0cb8f2a9c40b0f56",
+      "bytes": 3376,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/NatListSumMachines.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrenceMatchings.lean",
+      "sha256": "3d25f7fd23dd7c985cfb6d9a330f866f755d31ea2b6a9c116dadee7dcf91ca21",
+      "git_blob_sha1": "622e28e5cbe596799d1954fe39004ede9889d8b0",
+      "bytes": 1844,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrenceMatchings.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianEliminationAlgorithm.lean",
+      "sha256": "a5109eb321c7ffd16edf2d87ca986a87050346c3b7f5ec62520086be056ccee5",
+      "git_blob_sha1": "e52e44d1a4d3c67a83eb224384e9be8389af27c7",
+      "bytes": 17484,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianEliminationAlgorithm.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianEvaluationMachines.lean",
+      "sha256": "f908423a63c2df9702a8640acaf6baca11953e18e492b131eccc2d0ab83f4366",
+      "git_blob_sha1": "6b80be799548f8d2b76da9274ffe1385e1178ce4",
+      "bytes": 6194,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianEvaluationMachines.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianEvaluationProgram.lean",
+      "sha256": "72bdee1cf6985dc2b2bf141ef22bf304e5b99560fc8bdf15562de945b36af637",
+      "git_blob_sha1": "8ba00c179275af4cc9846e8044d9609c6391864c",
+      "bytes": 4677,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianEvaluationProgram.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianExpansion.lean",
+      "sha256": "264109ef5cb3e674f1b8729e02145e889b599bfa78946d363d69b2a41db53c4c",
+      "git_blob_sha1": "13503ef49df7cdb93e29265ff7148c37371d7ce0",
+      "bytes": 12214,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianExpansion.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianExpansionSigns.lean",
+      "sha256": "8ad2f1a851d4b999d7cf0d374e06fa0bb64b441bde177af9c3f0e79f0523417d",
+      "git_blob_sha1": "a2e7a12e4c4a35364e7cfbb10c05eb171ce7ac87",
+      "bytes": 12121,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianExpansionSigns.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianGridNormalization.lean",
+      "sha256": "39a353287b3be2d98a2a5f935388716954b3e62a53755186a1c40e0f9ca3f93a",
+      "git_blob_sha1": "af5cf6674a29c4ab2c9f7b6875e0f11ed6575575",
+      "bytes": 2826,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianGridNormalization.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianIterationBounds.lean",
+      "sha256": "c449b32abd6d9a72aad4408b33771b8e36ef0455da74ca0f29ddaa95750076d8",
+      "git_blob_sha1": "eac930920b5c9330cef821bd17e8bd4b298842bd",
+      "bytes": 4198,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianIterationBounds.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianIterationInvariant.lean",
+      "sha256": "8ab07d6dc121d490d71c91917d0c8b148d77273fd26f4e5d2d04d372dcb7fe33",
+      "git_blob_sha1": "52133d93902d72dd15bc586e6006ebc8a09cc14d",
+      "bytes": 5093,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianIterationInvariant.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianListPrimitives.lean",
+      "sha256": "6fa3b3996657ffecdb9202b287ff2b8771422358fab849f4552c3433462383b7",
+      "git_blob_sha1": "754e4cab0c541c6947e9b56ac54dc752da61ba43",
+      "bytes": 6928,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianListPrimitives.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianListStep.lean",
+      "sha256": "d7234567731a63c1209c723a4580e41480ac2c973101808e9e3339c02adc7e6d",
+      "git_blob_sha1": "e8236f6be8a9e76b4b9e56528af783012ca14bd3",
+      "bytes": 8881,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianListStep.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianMatrix.lean",
+      "sha256": "8801669a391803c296dcf1c580e283932674588ac44c5b423e8be013f91bb03d",
+      "git_blob_sha1": "ef1b6a78581637a134286b376cf357d6d5b01fd6",
+      "bytes": 11146,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianMatrix.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianPairExchange.lean",
+      "sha256": "7ebd5f8e64bb9d700277f4ab8061cbbe6ec03ba302c619863ca1451d3ce83764",
+      "git_blob_sha1": "984879db9366b379becabbee97cb7509e0166932",
+      "bytes": 26480,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianPairExchange.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianPairings.lean",
+      "sha256": "1c2e39a631bbc90f1a93e9b9e78fe646210657a51adf48f75ed6df1ac75c0d95",
+      "git_blob_sha1": "fefa2dc7e8e5c316796ffd804d54d55df3e4a87c",
+      "bytes": 17947,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianPairings.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianProgramBridge.lean",
+      "sha256": "86451813d758dddc1f43746ff7a67e07cf4d7d156605f72ce18b435013a69e9a",
+      "git_blob_sha1": "a26276518c2bdddecc4569ad3b77301f9f145279",
+      "bytes": 5286,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianProgramBridge.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianShear.lean",
+      "sha256": "0f8c0d2ab97cc08f220023b17caaacafe2a63b95c5621ae6d51c75233b1a1625",
+      "git_blob_sha1": "0f21ec6f9ae531e1d7c1471632bb75af353cdb3c",
+      "bytes": 20045,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianShear.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianStateBounds.lean",
+      "sha256": "216fa53503be7978a446f2bdcfbcd355a9cdbd6942dda0fe5d223d72f8cad24f",
+      "git_blob_sha1": "1adadabb0ea8cf4d5ca642ce0f735a78bbf9e835",
+      "bytes": 3602,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianStateBounds.lean"
+    },
+    {
+      "path": "PlanarHom/OccurrencePfaffianVertexLinearity.lean",
+      "sha256": "5140d56121fd7c5ee82c0dc5f80ea8b4921d994daf9af3abf63234b6102023a9",
+      "git_blob_sha1": "c66a169e2f6c25fb100809fabd65e5495c9e7f0e",
+      "bytes": 3985,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OccurrencePfaffianVertexLinearity.lean"
+    },
+    {
+      "path": "PlanarHom/OracleAccounting.lean",
+      "sha256": "b012b3ce93f07614ce1d7e22df8134ff224bad6145aca4a0f74fadd3d8afde0a",
+      "git_blob_sha1": "e085e164cbfaabb9f169a17361d2793dfb79d350",
+      "bytes": 5505,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OracleAccounting.lean"
+    },
+    {
+      "path": "PlanarHom/OracleReductionComposition.lean",
+      "sha256": "8d3227e205c853bb3e8e7073db49c9a09f42f2366a4b7153e55fd17d6eee4d61",
+      "git_blob_sha1": "2fca3eedd30b07d41f1c2729139dafb6ec655e93",
+      "bytes": 16737,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OracleReductionComposition.lean"
+    },
+    {
+      "path": "PlanarHom/OracleRunAccounting.lean",
+      "sha256": "ebb42bdd0f9a7c6318847fc43036af1fdb4fd5880161ef5f5d363603605262cc",
+      "git_blob_sha1": "92482190b7d82b7eee40fb370a330da6d887fa27",
+      "bytes": 6167,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OracleRunAccounting.lean"
+    },
+    {
+      "path": "PlanarHom/OracleSubstitution.lean",
+      "sha256": "55a3d0348daeec79f60e7bb3944184b0134bf239315505e49693cd7fad9780d8",
+      "git_blob_sha1": "6d09304092d27c55e9f88f89194e8d39ce783015",
+      "bytes": 23859,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OracleSubstitution.lean"
+    },
+    {
+      "path": "PlanarHom/OracleSubstitutionOnTrace.lean",
+      "sha256": "0b23b627f4cb6d067d45dcf38c218f6814e8d8a2f0a91729448c927638f0e479",
+      "git_blob_sha1": "5b1fe4319d0c36d1dbd2ccd146812737522e9099",
+      "bytes": 4945,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OracleSubstitutionOnTrace.lean"
+    },
+    {
+      "path": "PlanarHom/PairProjectionMachines.lean",
+      "sha256": "aa5190d78fbd122d7e8e5f6e074b1c7dc79157feb8553fb5be2973e35bed9241",
+      "git_blob_sha1": "2d63b113af2676a1f53b4c061c661401ae32096e",
+      "bytes": 12838,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PairProjectionMachines.lean"
+    },
+    {
+      "path": "PlanarHom/PfaffianEliminationHeights.lean",
+      "sha256": "4b7ea2063cbe8b4e94f5dbb77ab4fffbcf4b0d27a395f61e5dad4984d9484e3f",
+      "git_blob_sha1": "bbec693914301dfffb5b68d9225a126b708c1fff",
+      "bytes": 5093,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PfaffianEliminationHeights.lean"
+    },
+    {
+      "path": "PlanarHom/PfaffianMinorHeights.lean",
+      "sha256": "fb2dd548da67b6092a8d584ba4ecc3dfb9b821e73a1275fbb94ee861fa6c59c5",
+      "git_blob_sha1": "caacc575adaeb5025ff3e63511077fd0b704a88f",
+      "bytes": 16216,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PfaffianMinorHeights.lean"
+    },
+    {
+      "path": "PlanarHom/PfaffianPivotSemantics.lean",
+      "sha256": "df2ef037884a39f8863768cdc5bc12aa97f7e48d7bab09201d18951717eec1bd",
+      "git_blob_sha1": "cc94f9c687a5fbdb2c37582d4b146c67406c67f8",
+      "bytes": 4881,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PfaffianPivotSemantics.lean"
+    },
+    {
+      "path": "PlanarHom/PfaffianPivotShear.lean",
+      "sha256": "95063b35f3a4b2c1be58618ddacf9d30fffa0968c4a4fa544d06010cb20823e8",
+      "git_blob_sha1": "41773769e7d019bec4c7eadc72d8f049fab24c26",
+      "bytes": 5251,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PfaffianPivotShear.lean"
+    },
+    {
+      "path": "PlanarHom/PfaffianSchurComplement.lean",
+      "sha256": "df79559d448caf26badcaeaf75aae6cc8d4a4315056d51aba2a5add2887c88df",
+      "git_blob_sha1": "b840bae994721d0c8c7f1a99dc6092767fd4b9fe",
+      "bytes": 2284,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PfaffianSchurComplement.lean"
+    },
+    {
+      "path": "PlanarHom/PfaffianSchurMinors.lean",
+      "sha256": "0ff0c74df5798019e3ce2092e0b61f43d8652bedb51c98e0e9bcdd2dbfcf0166",
+      "git_blob_sha1": "5da12a8b8bc2d4521db6dccba902a7bd5c942082",
+      "bytes": 5702,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PfaffianSchurMinors.lean"
+    },
+    {
+      "path": "PlanarHom/PlanarEmbedding.lean",
+      "sha256": "aa92820a4a6dffdbcd561794c1efc5253647a146f2efd7a7ab784b9a22ac3a0a",
+      "git_blob_sha1": "4b49078c54331d05e2c737d8b37619c3a32fe1dc",
+      "bytes": 9830,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PlanarEmbedding.lean"
+    },
+    {
+      "path": "PlanarHom/PlanarGraphCode.lean",
+      "sha256": "658d746f41d337ca67158063e46db2e4e9eda57a402c0be8ceadf906a847ef5b",
+      "git_blob_sha1": "53c8e0573c5537b808c1d56871211b905c356c81",
+      "bytes": 2181,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PlanarGraphCode.lean"
+    },
+    {
+      "path": "PlanarHom/PlanarStretch.lean",
+      "sha256": "4071f1bc00287ec7a9176610caf16969181a1829f438ee801bd303709c5f6329",
+      "git_blob_sha1": "ff1f0e1b9d717a4ca29db7f2f85fc23fde81ed7e",
+      "bytes": 9614,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PlanarStretch.lean"
+    },
+    {
+      "path": "PlanarHom/PlanarTransport.lean",
+      "sha256": "01aa23e0b1adbd74251def3626c5ce0adbc5e647aead37908fe1496b872c89ac",
+      "git_blob_sha1": "45f21b6e87b69ea9b6905b74dbe9b676d7d57551",
+      "bytes": 4762,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PlanarTransport.lean"
+    },
+    {
+      "path": "PlanarHom/PolynomialChoiceExpansion.lean",
+      "sha256": "707ac745438100a01c5a0db101f00ddfbcdf8cb034878b484a459f99258c0fcb",
+      "git_blob_sha1": "7b37e6eb2f4f20a3dba1c5febc084292bcfda56d",
+      "bytes": 1760,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/PolynomialChoiceExpansion.lean"
+    },
+    {
+      "path": "PlanarHom/RationalCircuits.lean",
+      "sha256": "acddd0edb48ccf7873c4bf87f88296c60f96d2a08f745e18b70e09696c361a42",
+      "git_blob_sha1": "940b805391492064af082e9b560b292ab48e11ec",
+      "bytes": 4702,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RationalCircuits.lean"
+    },
+    {
+      "path": "PlanarHom/RationalMultiplicationBits.lean",
+      "sha256": "1f98671592e67ff55797e4e767ee297dff509250cfe2a8a5d3886e10090be673",
+      "git_blob_sha1": "4147b331b011f08f8fdd15f8d3fd307ef3ba47bc",
+      "bytes": 2386,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RationalMultiplicationBits.lean"
+    },
+    {
+      "path": "PlanarHom/RationalMultiplicationMachine.lean",
+      "sha256": "7284719fefd387cae7676050cbaaa2fb7dfe13fa71b79199cac93ae6cc229b12",
+      "git_blob_sha1": "cec319977440ce6ce2a5367e1241f73c5d3ac982",
+      "bytes": 112092,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RationalMultiplicationMachine.lean"
+    },
+    {
+      "path": "PlanarHom/RationalNormalizationBits.lean",
+      "sha256": "7bda449c96229c7012a463de0c7433dbe5a3658f4de34aed9588a38674c5df8a",
+      "git_blob_sha1": "51f398271bb4a944b17872c4724617abc3a9221a",
+      "bytes": 3422,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RationalNormalizationBits.lean"
+    },
+    {
+      "path": "PlanarHom/RationalNormalizationMachine.lean",
+      "sha256": "95ac8d85bfe7e374711ba0e5c27f5f523e208d8ca804812ee5e420cafc44b2a4",
+      "git_blob_sha1": "1a52e1e8d23e04cc1b65be537b7ca4284e945931",
+      "bytes": 111101,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RationalNormalizationMachine.lean"
+    },
+    {
+      "path": "PlanarHom/RawGraphTransformMachines.lean",
+      "sha256": "5af129b6ecc6473cb291fd6376ad23a627c5f3ab9f6739ce8c2895e24602b1f3",
+      "git_blob_sha1": "e7baff6795b8f1697729c42061d18b7a82cc032b",
+      "bytes": 1732,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RawGraphTransformMachines.lean"
+    },
+    {
+      "path": "PlanarHom/RelationalStackTransfer.lean",
+      "sha256": "68f06fb98bf1afa5598b62ae0f46543979a17561178295d309b85a957ddac0ba",
+      "git_blob_sha1": "84024305bb8087f71df5882ff4affe0fe98ab375",
+      "bytes": 6343,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RelationalStackTransfer.lean"
+    },
+    {
+      "path": "PlanarHom/RestrictedIterationMachine.lean",
+      "sha256": "ecaed4bcefac8643b99bdc5b6d4b3249d65563056825ea7d8df04ccdb7911ace",
+      "git_blob_sha1": "8034cc1166506d4e3efa9367ad96203ddea0a23f",
+      "bytes": 4299,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RestrictedIterationMachine.lean"
+    },
+    {
+      "path": "PlanarHom/RestrictedListFoldMachines.lean",
+      "sha256": "c5e486f37161adc06e93f6357972a14cd33973b3d89eaf1a1435edcd2fad61d7",
+      "git_blob_sha1": "1bb6176c366fed0f5c8e3fd8b22ddacd1fc090f8",
+      "bytes": 4641,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/RestrictedListFoldMachines.lean"
+    },
+    {
+      "path": "PlanarHom/ReturningBitSubroutine.lean",
+      "sha256": "7882aedebbfaf9ceca48899291168599aef7d6db26164f5b36dede246754ac9c",
+      "git_blob_sha1": "e1150319991ad18e9b49d6cbe869b62e53fc8e85",
+      "bytes": 5600,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ReturningBitSubroutine.lean"
+    },
+    {
+      "path": "PlanarHom/SelectedLabelOracleMachine.lean",
+      "sha256": "e00f66ed51065e1e21358863e5575fe32b01df72cdddfc8ec7d4ca4872bc83cb",
+      "git_blob_sha1": "c6bab74d3dc381dfaa51157d219169cdb2db6e3d",
+      "bytes": 14817,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/SelectedLabelOracleMachine.lean"
+    },
+    {
+      "path": "PlanarHom/SelectedStretchCode.lean",
+      "sha256": "c0c8082eb93d5ffcddb991a5dab29e9077d036ee21a2ea17ce586f53a269052c",
+      "git_blob_sha1": "14b3cb79900622ebe0650c1cca8d86521d0db6e9",
+      "bytes": 6563,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/SelectedStretchCode.lean"
+    },
+    {
+      "path": "PlanarHom/SelectedStretchMachines.lean",
+      "sha256": "fafeee35ca9ba67f9de3a38971dc1f5f0aed2e74e13f718cc2f91c8db0676b18",
+      "git_blob_sha1": "de04d5639258f0c85305ad79e8a67726a54ef5e4",
+      "bytes": 12103,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/SelectedStretchMachines.lean"
+    },
+    {
+      "path": "PlanarHom/SignedIntegerAdditionBits.lean",
+      "sha256": "f3c22d28f408023b7d62b1a820ef35e230e83677d09c91a652d1654b3090df2a",
+      "git_blob_sha1": "2c3e438d19d1bde0a138f30ce836c5f4d742252e",
+      "bytes": 6026,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/SignedIntegerAdditionBits.lean"
+    },
+    {
+      "path": "PlanarHom/SignedIntegerAdditionMachine.lean",
+      "sha256": "1f65c16ba826d1a7e145907c4c6fc043e314c02844c373da833c1b2a15df4d26",
+      "git_blob_sha1": "99fa5400b2af5b008355183c7f9d54f65220d896",
+      "bytes": 19434,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/SignedIntegerAdditionMachine.lean"
+    },
+    {
+      "path": "PlanarHom/StackTransfer.lean",
+      "sha256": "e81eb49b97d6e4aa07bfc27b240b926872cc596b0ea7276bd4bd42e314e23482",
+      "git_blob_sha1": "69c82d63cba14e75ab9a3165aac647af0025faed",
+      "bytes": 14009,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/StackTransfer.lean"
+    },
+    {
+      "path": "PlanarHom/StructuralCodeNormalizers.lean",
+      "sha256": "fbddb573c8d7cbf80104dc00e03fbeef2b581c53cf3feb8460e32d558e6b65f9",
+      "git_blob_sha1": "5c6a1907e96c169a26c0833fc27cda787d621ef9",
+      "bytes": 5241,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/StructuralCodeNormalizers.lean"
+    },
+    {
+      "path": "PlanarHom/UnaryNatConversionMachine.lean",
+      "sha256": "ed6af3caf61dde44c34784aa734c69c759942dfeef297451aed113ab7fe00135",
+      "git_blob_sha1": "61bdb16e16f9bc74904a77e18f00564d960cc1f6",
+      "bytes": 1028,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/UnaryNatConversionMachine.lean"
+    },
+    {
+      "path": "PlanarHom/UnaryRangeMachines.lean",
+      "sha256": "4e771a9795ad2b88dabdc959bdb1473a0d7d6fa9d95ce199dd06994d57e40e72",
+      "git_blob_sha1": "18717b40755e54bc14f321b0cb3bbc121028bb5c",
+      "bytes": 4365,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/UnaryRangeMachines.lean"
+    },
+    {
+      "path": "PlanarHom/UniformFieldArithmeticHeights.lean",
+      "sha256": "d2d572ec025eb6571d1900a1c53115c2fbc7443bc2f5829090b11d924eb36431",
+      "git_blob_sha1": "aae7d45cac203e86b9ba63a1bb8b0550663e6595",
+      "bytes": 8280,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/UniformFieldArithmeticHeights.lean"
+    },
+    {
+      "path": "PlanarHom/UniformFieldHeights.lean",
+      "sha256": "2b4c82af71d2cef696034cbc1751aec6d48b3379bb8bd3f5f49a4270514e5008",
+      "git_blob_sha1": "cefe2048f3a74018855ad1daf2565d8ff8b465dc",
+      "bytes": 7127,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/UniformFieldHeights.lean"
+    },
+    {
+      "path": "PlanarHom/ValidEncodedLists.lean",
+      "sha256": "16e2cd6b4a4c1899e69e5154b7cf22a759043f12e7c64995cf2f66a74c084a3e",
+      "git_blob_sha1": "16f0cde7c26e0401f1500380a68c43e52bcc668c",
+      "bytes": 2673,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ValidEncodedLists.lean"
+    },
+    {
+      "path": "PlanarHom/ValidEncodedWords.lean",
+      "sha256": "19740fa5c1257294431b1e0459c6c04103e5fb0b7b719463490745028b32373d",
+      "git_blob_sha1": "ed2abfade8dc9abb3fdaa3022b049035fa39a532",
+      "bytes": 2849,
+      "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/ValidEncodedWords.lean"
+    }
+  ]
+}

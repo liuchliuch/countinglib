@@ -1,0 +1,5 @@
+import Counting.Examples.PlanarHomSharpP
+
+#check PlanarHom.Complexity.sharpP_iff_certificateSharpP
+#check Counting.Bridge.PlanarHomSharpP.fp_iff_finiteFP
+#check Counting.Examples.PlanarHomSharpP.allCertificatesMachine_count

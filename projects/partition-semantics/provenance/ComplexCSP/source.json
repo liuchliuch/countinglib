@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/liuchliuch/complex-csp-decidability-lean",
+  "commit": "c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec",
+  "path": "ComplexCSP/Instances/Basic.lean",
+  "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/ComplexCSP/Instances/Basic.lean",
+  "sha256": "50f08e3d338fe2784a1dcf6cbb69406c8b987f3a5bd0db8c2f47920e798be4df",
+  "local_reference": "/Users/liuch/draft-pinkfold/complex-csp-decidability/ComplexCSP/Instances/Basic.lean",
+  "local_reference_sha256": "50f08e3d338fe2784a1dcf6cbb69406c8b987f3a5bd0db8c2f47920e798be4df",
+  "local_reference_matches_fixed_source": true,
+  "retrieved_at_utc": "2026-10-13T02:43:54.869873+00:00",
+  "source_toolchain": "leanprover/lean4:v4.24.0",
+  "source_mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "target_toolchain": "leanprover/lean4:v4.34.1",
+  "target_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_license_in_catalog": null,
+  "migration_edits": [
+    "Added provenance header only. Entire source body, declarations, namespaces, statements, proofs and imports retained byte-for-byte."
+  ],
+  "declaration_namespace": "ComplexCSP",
+  "dependency_closure": "The whole source file, whose six imports are mathlib-only.",
+  "vendored_sha256": "cb4e178687326d375ac2b3388c2b162b20f9db6f43834748e927dfda204eeac5",
+  "verification": {
+    "date": "2026-10-13",
+    "source_body_unchanged": true,
+    "upstream_module_compile_exit_code": 0,
+    "bridge_module_compile_exit_code": 0,
+    "axiom_audit_exit_code": 0,
+    "axiom_audit_file": "notes/upstream/Audit.lean",
+    "axiom_audit_output": "notes/upstream/axioms.log",
+    "audited_declaration_count": 32,
+    "forbidden_axioms_found": false
+  }
+}

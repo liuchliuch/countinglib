@@ -1,0 +1,429 @@
+{
+  "upstream_commit": "da4f3a7beda4651a615638c361927820035e83d9",
+  "module_relocations": {
+    "PaperStatements": "Counting.MatchgateWidth.PaperStatements",
+    "PaperProofs": "Counting.MatchgateWidth.PaperProofs"
+  },
+  "contract_count": 41,
+  "proof_count": 41,
+  "contracts": [
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_1",
+      "current": "MatchgateWidth.Paper.claim_3_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_2",
+      "current": "MatchgateWidth.Paper.claim_3_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_3",
+      "current": "MatchgateWidth.Paper.claim_3_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_3_family",
+      "current": "MatchgateWidth.Paper.claim_3_3_family"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_1",
+      "current": "MatchgateWidth.Paper.claim_4_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_2",
+      "current": "MatchgateWidth.Paper.claim_4_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_3_transpose",
+      "current": "MatchgateWidth.Paper.claim_4_3_transpose"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_3_pin",
+      "current": "MatchgateWidth.Paper.claim_4_3_pin"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_1",
+      "current": "MatchgateWidth.Paper.claim_5_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_2",
+      "current": "MatchgateWidth.Paper.claim_5_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_3",
+      "current": "MatchgateWidth.Paper.claim_5_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_4",
+      "current": "MatchgateWidth.Paper.claim_5_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_1",
+      "current": "MatchgateWidth.Paper.claim_6_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_2",
+      "current": "MatchgateWidth.Paper.claim_6_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_3",
+      "current": "MatchgateWidth.Paper.claim_6_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_4",
+      "current": "MatchgateWidth.Paper.claim_6_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_7_1",
+      "current": "MatchgateWidth.Paper.claim_7_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_1",
+      "current": "MatchgateWidth.Paper.claim_8_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_2",
+      "current": "MatchgateWidth.Paper.claim_8_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_3",
+      "current": "MatchgateWidth.Paper.claim_8_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_4",
+      "current": "MatchgateWidth.Paper.claim_8_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_9_1",
+      "current": "MatchgateWidth.Paper.claim_9_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_1",
+      "current": "MatchgateWidth.Paper.claim_10_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_2",
+      "current": "MatchgateWidth.Paper.claim_10_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_3",
+      "current": "MatchgateWidth.Paper.claim_10_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_4",
+      "current": "MatchgateWidth.Paper.claim_10_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_5",
+      "current": "MatchgateWidth.Paper.claim_10_5"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_6",
+      "current": "MatchgateWidth.Paper.claim_10_6"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_7",
+      "current": "MatchgateWidth.Paper.claim_10_7"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_8",
+      "current": "MatchgateWidth.Paper.claim_10_8"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_9_lines",
+      "current": "MatchgateWidth.Paper.claim_10_9_lines"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_9_flag",
+      "current": "MatchgateWidth.Paper.claim_10_9_flag"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_10",
+      "current": "MatchgateWidth.Paper.claim_10_10"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_2_1",
+      "current": "MatchgateWidth.Paper.claim_2_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_2_2_existence",
+      "current": "MatchgateWidth.Paper.claim_2_2_existence"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_2_2_minimum",
+      "current": "MatchgateWidth.Paper.claim_2_2_minimum"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_4",
+      "current": "MatchgateWidth.Paper.claim_4_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_5_flag",
+      "current": "MatchgateWidth.Paper.claim_4_5_flag"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_5_prime",
+      "current": "MatchgateWidth.Paper.claim_4_5_prime"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_4",
+      "current": "MatchgateWidth.Paper.claim_3_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_5",
+      "current": "MatchgateWidth.Paper.claim_6_5"
+    }
+  ],
+  "proofs": [
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_1_verified",
+      "current": "MatchgateWidth.Paper.claim_3_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_3_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_2_verified",
+      "current": "MatchgateWidth.Paper.claim_3_2_verified",
+      "contract": "MatchgateWidth.Paper.claim_3_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_3_verified",
+      "current": "MatchgateWidth.Paper.claim_3_3_verified",
+      "contract": "MatchgateWidth.Paper.claim_3_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_3_family_verified",
+      "current": "MatchgateWidth.Paper.claim_3_3_family_verified",
+      "contract": "MatchgateWidth.Paper.claim_3_3_family"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_1_verified",
+      "current": "MatchgateWidth.Paper.claim_4_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_2_verified",
+      "current": "MatchgateWidth.Paper.claim_4_2_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_3_transpose_verified",
+      "current": "MatchgateWidth.Paper.claim_4_3_transpose_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_3_transpose"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_3_pin_verified",
+      "current": "MatchgateWidth.Paper.claim_4_3_pin_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_3_pin"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_1_verified",
+      "current": "MatchgateWidth.Paper.claim_5_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_5_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_2_verified",
+      "current": "MatchgateWidth.Paper.claim_5_2_verified",
+      "contract": "MatchgateWidth.Paper.claim_5_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_3_verified",
+      "current": "MatchgateWidth.Paper.claim_5_3_verified",
+      "contract": "MatchgateWidth.Paper.claim_5_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_5_4_verified",
+      "current": "MatchgateWidth.Paper.claim_5_4_verified",
+      "contract": "MatchgateWidth.Paper.claim_5_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_1_verified",
+      "current": "MatchgateWidth.Paper.claim_6_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_6_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_2_verified",
+      "current": "MatchgateWidth.Paper.claim_6_2_verified",
+      "contract": "MatchgateWidth.Paper.claim_6_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_3_verified",
+      "current": "MatchgateWidth.Paper.claim_6_3_verified",
+      "contract": "MatchgateWidth.Paper.claim_6_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_4_verified",
+      "current": "MatchgateWidth.Paper.claim_6_4_verified",
+      "contract": "MatchgateWidth.Paper.claim_6_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_7_1_verified",
+      "current": "MatchgateWidth.Paper.claim_7_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_7_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_1_verified",
+      "current": "MatchgateWidth.Paper.claim_8_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_8_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_2_verified",
+      "current": "MatchgateWidth.Paper.claim_8_2_verified",
+      "contract": "MatchgateWidth.Paper.claim_8_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_3_verified",
+      "current": "MatchgateWidth.Paper.claim_8_3_verified",
+      "contract": "MatchgateWidth.Paper.claim_8_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_8_4_verified",
+      "current": "MatchgateWidth.Paper.claim_8_4_verified",
+      "contract": "MatchgateWidth.Paper.claim_8_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_9_1_verified",
+      "current": "MatchgateWidth.Paper.claim_9_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_9_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_1_verified",
+      "current": "MatchgateWidth.Paper.claim_10_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_2_verified",
+      "current": "MatchgateWidth.Paper.claim_10_2_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_2"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_3_verified",
+      "current": "MatchgateWidth.Paper.claim_10_3_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_3"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_4_verified",
+      "current": "MatchgateWidth.Paper.claim_10_4_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_5_verified",
+      "current": "MatchgateWidth.Paper.claim_10_5_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_5"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_6_verified",
+      "current": "MatchgateWidth.Paper.claim_10_6_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_6"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_7_verified",
+      "current": "MatchgateWidth.Paper.claim_10_7_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_7"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_8_verified",
+      "current": "MatchgateWidth.Paper.claim_10_8_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_8"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_9_lines_verified",
+      "current": "MatchgateWidth.Paper.claim_10_9_lines_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_9_lines"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_9_flag_verified",
+      "current": "MatchgateWidth.Paper.claim_10_9_flag_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_9_flag"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_10_10_verified",
+      "current": "MatchgateWidth.Paper.claim_10_10_verified",
+      "contract": "MatchgateWidth.Paper.claim_10_10"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_2_1_verified",
+      "current": "MatchgateWidth.Paper.claim_2_1_verified",
+      "contract": "MatchgateWidth.Paper.claim_2_1"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_2_2_existence_verified",
+      "current": "MatchgateWidth.Paper.claim_2_2_existence_verified",
+      "contract": "MatchgateWidth.Paper.claim_2_2_existence"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_2_2_minimum_verified",
+      "current": "MatchgateWidth.Paper.claim_2_2_minimum_verified",
+      "contract": "MatchgateWidth.Paper.claim_2_2_minimum"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_4_verified",
+      "current": "MatchgateWidth.Paper.claim_4_4_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_5_flag_verified",
+      "current": "MatchgateWidth.Paper.claim_4_5_flag_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_5_flag"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_4_5_prime_verified",
+      "current": "MatchgateWidth.Paper.claim_4_5_prime_verified",
+      "contract": "MatchgateWidth.Paper.claim_4_5_prime"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_3_4_verified",
+      "current": "MatchgateWidth.Paper.claim_3_4_verified",
+      "contract": "MatchgateWidth.Paper.claim_3_4"
+    },
+    {
+      "upstream": "MatchgateWidth.Paper.claim_6_5_verified",
+      "current": "MatchgateWidth.Paper.claim_6_5_verified",
+      "contract": "MatchgateWidth.Paper.claim_6_5"
+    }
+  ],
+  "public_aliases": [
+    {
+      "name": "Counting.MatchgateWidth.integer_unbounded_width",
+      "contract": "MatchgateWidth.Paper.claim_3_1",
+      "proof": "MatchgateWidth.Paper.claim_3_1_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.no_domain_only_width_bound",
+      "contract": "MatchgateWidth.Paper.claim_3_2",
+      "proof": "MatchgateWidth.Paper.claim_3_2_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.qutrit_support_trichotomy",
+      "contract": "MatchgateWidth.Paper.claim_3_3",
+      "proof": "MatchgateWidth.Paper.claim_3_3_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.flag_family_unbounded",
+      "contract": "MatchgateWidth.Paper.claim_3_3_family",
+      "proof": "MatchgateWidth.Paper.claim_3_3_family_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.field_preserving_realization",
+      "contract": "MatchgateWidth.Paper.claim_4_2",
+      "proof": "MatchgateWidth.Paper.claim_4_2_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.transcendental_companion",
+      "contract": "MatchgateWidth.Paper.claim_9_1",
+      "proof": "MatchgateWidth.Paper.claim_9_1_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.labelwise_cover_compression",
+      "contract": "MatchgateWidth.Paper.claim_10_5",
+      "proof": "MatchgateWidth.Paper.claim_10_5_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.connection_prime_collapse",
+      "contract": "MatchgateWidth.Paper.claim_10_7",
+      "proof": "MatchgateWidth.Paper.claim_10_7_verified"
+    },
+    {
+      "name": "Counting.MatchgateWidth.binary_context_alternative",
+      "contract": "MatchgateWidth.Paper.claim_10_10",
+      "proof": "MatchgateWidth.Paper.claim_10_10_verified"
+    }
+  ]
+}

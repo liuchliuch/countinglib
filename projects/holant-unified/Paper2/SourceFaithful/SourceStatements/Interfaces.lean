@@ -1,0 +1,30 @@
+import Paper2.SourceFaithful.SourceStatements.AlgebraicWitnessEffective
+import Paper2.SourceFaithful.SourceStatements.FiniteGroupStatements
+import Paper2.SourceFaithful.SourceStatements.CommonKBasis
+import Paper2.SourceFaithful.SourceStatements.EightVertexBoundary
+import Paper2.SourceFaithful.SourceStatements.EqualityPinsStatement
+import Paper2.SourceFaithful.SourceStatements.WeightedEqualityStage
+import Paper2.SourceFaithful.SourceStatements.TypeParityStatement
+import Paper2.SourceFaithful.SourceStatements.TwoPointWalshStatement
+import Paper2.SourceFaithful.SourceStatements.ThreeMatchingLineStatement
+import Paper2.SourceFaithful.SourceStatements.DihedralRulingStatement
+import Paper2.SourceFaithful.SourceStatements.AppendixSupportStatement
+import Paper2.SourceFaithful.SourceStatements.OddDihedralSixPortStatement
+import Paper2.SourceFaithful.SourceStatements.CyclicDressingStatement
+import Paper2.SourceFaithful.SourceStatements.NormalizationLedgerInfinite
+import Paper2.SourceFaithful.SourceStatements.SixPortBinaryStatement
+import Paper2.SourceFaithful.SourceStatements.CyclicMinimumStatement
+import Paper2.SourceFaithful.SourceStatements.ReplicationStatement
+import Paper2.SourceFaithful.SourceStatements.FactorExtractionStatement
+import Paper2.SourceFaithful.SourceStatements.BinaryInterpolationStatement
+import Paper2.SourceFaithful.SourceStatements.RelativeEOAmbientStatement
+import Paper2.SourceFaithful.SourceStatements.PhaseProductContractionStatement
+import Paper2.SourceFaithful.SourceStatements.PhaseProductParityStatement
+import Paper2.SourceFaithful.SourceStatements.PhaseProductParityFactorCondition
+import Paper2.SourceFaithful.SourceStatements.PhaseProductParityLiteralCyclic
+import Paper2.CommonPhase
+
+/-! Individually checked manuscript interfaces beyond the public dichotomy.
+This aggregation exports only completed source endpoints. The externally
+cited CSP classifications 2.16 and 2.17 are optional in the current scope;
+their structural components are not exported as complete classifications. -/

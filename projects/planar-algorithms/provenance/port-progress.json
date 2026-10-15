@@ -1,0 +1,3463 @@
+{
+  "scope": "Current source snapshot only; compilation and acceptance are certified solely by explicitly scoped staged receipts.",
+  "modules": [
+    {
+      "module": "PlanarHom.AlternatingIndexWords",
+      "original_sha256": "c44725a534ee846412ae36d7a3d3f58a47197e1f7b3d595a3dce00f7e47cf1a7",
+      "production_sha256": "c44725a534ee846412ae36d7a3d3f58a47197e1f7b3d595a3dce00f7e47cf1a7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.Boolean",
+      "original_sha256": "6a12e8f41bf07f22f5ff936055339c22d5607fef74aaa8150c453153cd8a16fb",
+      "production_sha256": "6a12e8f41bf07f22f5ff936055339c22d5607fef74aaa8150c453153cd8a16fb",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.CircleBoundaryArcRanges",
+      "original_sha256": "0b3c5d3b826c7de46254cdeee014855c2de7b6826a77c148947639761292cdfc",
+      "production_sha256": "0b3c5d3b826c7de46254cdeee014855c2de7b6826a77c148947639761292cdfc",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.CircleBoundaryArcs",
+      "original_sha256": "b73b40a4528208f0e922cc979ab96945f5925d312927fa7f48da3924db894c24",
+      "production_sha256": "b73b40a4528208f0e922cc979ab96945f5925d312927fa7f48da3924db894c24",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.CirclePoleChart",
+      "original_sha256": "2cea3837dbec4bb51304baccdca304cd1111216cfb31d33143ae785f04ec91ff",
+      "production_sha256": "2cea3837dbec4bb51304baccdca304cd1111216cfb31d33143ae785f04ec91ff",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.ContextNatSortCorrectness",
+      "original_sha256": "29089d19babf36a97f9be3ea66e4a417c05657c069486c37c450be57ddd413b0",
+      "production_sha256": "6825e7e9ec37014de1cfc3a44c2fc49a2f4c1c16239f57431b8c3af4c2765eb1",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.ContextNatSortMachines",
+      "original_sha256": "8649a8ab3634b6fd50f3d92576be2c4f7f6310c452a990663f824c427f41cf95",
+      "production_sha256": "8649a8ab3634b6fd50f3d92576be2c4f7f6310c452a990663f824c427f41cf95",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.DynamicListIndexMachines",
+      "original_sha256": "354d98eb4c813bb67d1bf73bdd59f7beae4aeacba5932cc005e89d07fe3bd982",
+      "production_sha256": "354d98eb4c813bb67d1bf73bdd59f7beae4aeacba5932cc005e89d07fe3bd982",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.EmbeddedSegmentTree",
+      "original_sha256": "670b482ef2ca746fc7cd885416372720788bc1b5797bfec29db696c1fb049217",
+      "production_sha256": "670b482ef2ca746fc7cd885416372720788bc1b5797bfec29db696c1fb049217",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.EmbeddedSegmentTreeAttachment",
+      "original_sha256": "cd970b8bb02f1b881ecdbfb1e892d377d8dcedbdd811e8f875dffb4e73a4fbc0",
+      "production_sha256": "cd970b8bb02f1b881ecdbfb1e892d377d8dcedbdd811e8f875dffb4e73a4fbc0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.EmbeddedSegmentTreeCollapse",
+      "original_sha256": "23430d7dc68fe5132bda88ea7513dbf91f0d134289e9d435b9936eb89e7e7c89",
+      "production_sha256": "23430d7dc68fe5132bda88ea7513dbf91f0d134289e9d435b9936eb89e7e7c89",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FKTIsingCorrectness",
+      "original_sha256": "045628794274f701b41daa3ec4a15b168a7914ff19fb7803dde87345eb9d0007",
+      "production_sha256": "045628794274f701b41daa3ec4a15b168a7914ff19fb7803dde87345eb9d0007",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FKTIsingMachines",
+      "original_sha256": "d4e63469cb7caec998ff752309981f9be598c0a1a85d8b92206fe09b8c9e287a",
+      "production_sha256": "d4e63469cb7caec998ff752309981f9be598c0a1a85d8b92206fe09b8c9e287a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FKTIsingTractability",
+      "original_sha256": "32d1951f8ac8e08d851879f7bc8aed8fb772ebea20cfceb14a6589d886ac6d7f",
+      "production_sha256": "32d1951f8ac8e08d851879f7bc8aed8fb772ebea20cfceb14a6589d886ac6d7f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FKTIsingUniformMachines",
+      "original_sha256": "8bc61915cf3df65549bdf1aa508c1936bac7029d283160c7653fbbaee3f62208",
+      "production_sha256": "8bc61915cf3df65549bdf1aa508c1936bac7029d283160c7653fbbaee3f62208",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FKTIsingUniformRational",
+      "original_sha256": "c43df6f0135d11a15e6030d6d434ba74c64750058f23f38bff28703e5080f9a3",
+      "production_sha256": "c43df6f0135d11a15e6030d6d434ba74c64750058f23f38bff28703e5080f9a3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FiniteCircleFanGap",
+      "original_sha256": "0995575c7b4fa6a7af163c8571beec6505200de99bbce19d1bec56b8a880b173",
+      "production_sha256": "0995575c7b4fa6a7af163c8571beec6505200de99bbce19d1bec56b8a880b173",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FiniteGraphCycleDuality",
+      "original_sha256": "383fe13293a3745b8b223b70035e11707e4adf748f09c58556785be868d40f0c",
+      "production_sha256": "cae1d007027705eb0c435e866e773c5dfb600b859eade0673c71b8e6cfe95b5a",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FiniteLabelLookupMachines",
+      "original_sha256": "8a4f9c123d854216485e5175155574e46dc7bb47f3e358073803f2d6f8aa5100",
+      "production_sha256": "8a4f9c123d854216485e5175155574e46dc7bb47f3e358073803f2d6f8aa5100",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FiniteOrbitBoundary",
+      "original_sha256": "2de1687cc88c03eefa5e632f6576a7313b6708596a82b7271d81eedf7b0b9182",
+      "production_sha256": "2de1687cc88c03eefa5e632f6576a7313b6708596a82b7271d81eedf7b0b9182",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationArrowSubdivision",
+      "original_sha256": "e6f205031dd30320151a2c5b4f9de1b0d88cddb98e4843d6f93e444c44b11674",
+      "production_sha256": "e6f205031dd30320151a2c5b4f9de1b0d88cddb98e4843d6f93e444c44b11674",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCut",
+      "original_sha256": "ef154858e6bc74dacb137f4a0f7da1162675829fe7a68b4b2f42fe47092f3bb9",
+      "production_sha256": "ef154858e6bc74dacb137f4a0f7da1162675829fe7a68b4b2f42fe47092f3bb9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCutExistence",
+      "original_sha256": "845a4253de9eec5c25cba4db1091ff4ba1db5fd92cd64fc2652ea0b5f554c81a",
+      "production_sha256": "845a4253de9eec5c25cba4db1091ff4ba1db5fd92cd64fc2652ea0b5f554c81a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCutInterval",
+      "original_sha256": "d7649850454ec505785dad9acbe1022a722c06e2851aac1eeac25ae730373c39",
+      "production_sha256": "d7649850454ec505785dad9acbe1022a722c06e2851aac1eeac25ae730373c39",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCycleCount",
+      "original_sha256": "2dee2bffbd2ea358af3bf99ac6620bbc21e01b35978b262d44064202250824f8",
+      "production_sha256": "2dee2bffbd2ea358af3bf99ac6620bbc21e01b35978b262d44064202250824f8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCycleInsertion",
+      "original_sha256": "85045e562df75c879659c24f2b85c6fce1e221c42423b60268977a5bcaca79c8",
+      "production_sha256": "85045e562df75c879659c24f2b85c6fce1e221c42423b60268977a5bcaca79c8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCycleProducts",
+      "original_sha256": "6a374bc74589932412b4048c5dfdb904717a29bca436d875ba232dc3899de11c",
+      "production_sha256": "6a374bc74589932412b4048c5dfdb904717a29bca436d875ba232dc3899de11c",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCycleSigns",
+      "original_sha256": "48a09c225afa15554c3cb49f7712d4f98f899fbfcba4a738b8dff3636fa9a5bb",
+      "production_sha256": "48a09c225afa15554c3cb49f7712d4f98f899fbfcba4a738b8dff3636fa9a5bb",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCycleTransport",
+      "original_sha256": "c9cdcfca3414e36704c32155d9dd411296b5fdd52990447c8e22261707d87c94",
+      "production_sha256": "c9cdcfca3414e36704c32155d9dd411296b5fdd52990447c8e22261707d87c94",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationCycleWords",
+      "original_sha256": "f2ea8d1840159bab9d2680ce49fbd181c841672203fae240abc89d089d0c517a",
+      "production_sha256": "1d0c8db2e34fd531cd7504186f22a9a2bea4abbf81a985deb9cfc810e20e4d1b",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FinitePermutationFiberCount",
+      "original_sha256": "57a6d8b6d802016a37d024993aab8bbc07a703ab84db40d808469e1aac1d4de8",
+      "production_sha256": "57a6d8b6d802016a37d024993aab8bbc07a703ab84db40d808469e1aac1d4de8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationFixedCycle",
+      "original_sha256": "51b7aaf9d503cd142577fdb91a0889111f84ef621284a73a8f71621d24e64efd",
+      "production_sha256": "51b7aaf9d503cd142577fdb91a0889111f84ef621284a73a8f71621d24e64efd",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationFixedMarker",
+      "original_sha256": "98cf495ec1df3efa1c5f9717b8493bb6ca721821a163a4a2bec34b43c15282b1",
+      "production_sha256": "98cf495ec1df3efa1c5f9717b8493bb6ca721821a163a4a2bec34b43c15282b1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationFixedMarkerDeletion",
+      "original_sha256": "e670b862a39c1198704843f7bac774b26ad40e8524a3516f0b01bd8dd4742ec6",
+      "production_sha256": "e670b862a39c1198704843f7bac774b26ad40e8524a3516f0b01bd8dd4742ec6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FinitePermutationFixedMarkers",
+      "original_sha256": "3a4159fe4a6a4b013e03b25b0ddd5185b0237e05819a3c50be4fba186c0d291d",
+      "production_sha256": "4179f012f9dfe08dab8f47446267d0ddbd102b1e6310aa61061d9d561cb99272",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FinitePermutationReturnWords",
+      "original_sha256": "e8d9d275e49e1be2d5e296c52d594427cf3c31dcccc500bb4e3d1ff3275eb514",
+      "production_sha256": "e8d9d275e49e1be2d5e296c52d594427cf3c31dcccc500bb4e3d1ff3275eb514",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCodePipeline",
+      "original_sha256": "4601335e3e02bd69e03787618934363561f1d0630c00b26d770249435bd03643",
+      "production_sha256": "4601335e3e02bd69e03787618934363561f1d0630c00b26d770249435bd03643",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCodeProgram",
+      "original_sha256": "011053c984c662112b6bea275e20b69f252811fb453876bba4a25b0a24bdb986",
+      "production_sha256": "011053c984c662112b6bea275e20b69f252811fb453876bba4a25b0a24bdb986",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherComponentCounts",
+      "original_sha256": "26febcec0c10ba72c1ca91c7b420f8b96fad6652542496c40a4d592a983046c3",
+      "production_sha256": "26febcec0c10ba72c1ca91c7b420f8b96fad6652542496c40a4d592a983046c3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherContourOrdering",
+      "original_sha256": "4f4a220a3587a76d4e6307bd1fe4f5687d4ac7083e78a5bac37db49bf0df65e7",
+      "production_sha256": "4f4a220a3587a76d4e6307bd1fe4f5687d4ac7083e78a5bac37db49bf0df65e7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicCodeSemantics",
+      "original_sha256": "83d5643cb893dcee47d6be61870c9262fb897b9cd774b1b7d2d75b10d25197cc",
+      "production_sha256": "eb0b1c5c1fe11fcf6584f043235749b50cf6b7cb3387379aecdee5e1057dd79b",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicCodeSignSemantics",
+      "original_sha256": "b67311e31bde375178f13103422a9ab8fcd57d711e7e755014212984ae99c1c7",
+      "production_sha256": "165c64670d5bb6d73cbeec95917c5e7e8a752e05b2245b43c4d533a93fde219b",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicDecoration",
+      "original_sha256": "0925d8537c422a3f8ac893bc765639f1c8bb937e4015925d63ffabc3ea0f126f",
+      "production_sha256": "d62777da349bf81fc7416521fd13f6e67c5683997e12ed4958ba1ce0ccfacf83",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicMachines",
+      "original_sha256": "16ab558846568e59af8ad0d8d5a8bcd3b267bef9552875480037286f939fe39b",
+      "production_sha256": "16ab558846568e59af8ad0d8d5a8bcd3b267bef9552875480037286f939fe39b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicOrdering",
+      "original_sha256": "a0cfcc123a2f6d35366bbf033a19aa640eb0aa6ee14d803c33f8c7a2407f9c55",
+      "production_sha256": "98275ca21533c01ecb3635c452fdb9954da89c88b3700c4865c540ba24cd1541",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicPlanarity",
+      "original_sha256": "0d67cbe1a33085d9629061e608e5a4067d53d39bb86a5f9f17a8a16f4bb417c3",
+      "production_sha256": "0d67cbe1a33085d9629061e608e5a4067d53d39bb86a5f9f17a8a16f4bb417c3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicPortIndices",
+      "original_sha256": "9e9dbbc347452a4ce8cc6869d4c5ba028020efe0f116052c9b311e551d71a580",
+      "production_sha256": "4dd89c65a522ad9b88e13358e08190fec0f296b6760eecf75be7567e37bbed04",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicReferenceMatching",
+      "original_sha256": "2e9868c194e8ad4ce5e4e164c44b315ee7816865e4607829c6b812a35ad48ac9",
+      "production_sha256": "1d53c50d9094ae10a461754cc8b02cbbbea870bd304cfb3b40cd4209f56cc1fe",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicRotation",
+      "original_sha256": "81e03195cf2afb2db2ff4ae824b56928f62806733336bd2bdd85d0a38b58e3dd",
+      "production_sha256": "81e03195cf2afb2db2ff4ae824b56928f62806733336bd2bdd85d0a38b58e3dd",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicRowAddresses",
+      "original_sha256": "b7cd899fdc31d1725f433599ad1a4bf88505e129b1056df9c6471b8f7079ad3f",
+      "production_sha256": "b7cd899fdc31d1725f433599ad1a4bf88505e129b1056df9c6471b8f7079ad3f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicRowCycles",
+      "original_sha256": "009589f1e319dd79009148aec8049d5fa958599a1e2056f2ae72556c72097b64",
+      "production_sha256": "009589f1e319dd79009148aec8049d5fa958599a1e2056f2ae72556c72097b64",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicRowFormula",
+      "original_sha256": "9e031ee1b292918a1ba1d5df72036c971e01ba9ba6b331e29e1cf59cb13a5860",
+      "production_sha256": "9e031ee1b292918a1ba1d5df72036c971e01ba9ba6b331e29e1cf59cb13a5860",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherCubicRowSemantics",
+      "original_sha256": "c1516cc96d04bf121b9ab064c48db5021ceab6bcc0639da9bc42b67011c06ba1",
+      "production_sha256": "bffacfb2d2192a83e298dee0f65b5afd4ca1dd1cd89f80343b7046d54f4db214",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicWeightSemantics",
+      "original_sha256": "9b6539d6d11bcc3ce8bc0cb8dcfa552d5af489a846ab303425e244fc915a8474",
+      "production_sha256": "c6c5c2ceff9845498c693ea56457ded6c53b4d827bb9226e7751cc712897719a",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherCubicWeighted",
+      "original_sha256": "b56271e1f78211c5c20c2dd050284040f38f287ac6e6d0e65d8310c1ef0a6ebd",
+      "production_sha256": "b56271e1f78211c5c20c2dd050284040f38f287ac6e6d0e65d8310c1ef0a6ebd",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionCodeSemantics",
+      "original_sha256": "63aa7dabbfd7604d7576279e8ecf4561db42bf69e465a9375096a0d76e34d03e",
+      "production_sha256": "4aa45a3482c1877a82c6d3daba6761b513537ed414762a74b84aa7ad00b6f807",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionConnected",
+      "original_sha256": "ec992b23f45c8a91be7b97c3d43df7e95e54f98707f3622f6f1165d40a6d17c1",
+      "production_sha256": "ec992b23f45c8a91be7b97c3d43df7e95e54f98707f3622f6f1165d40a6d17c1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionCorrespondence",
+      "original_sha256": "6afea6382a7075d92d2f81aa53ae766147bccb6a78fdc3343966488fa57303f9",
+      "production_sha256": "6afea6382a7075d92d2f81aa53ae766147bccb6a78fdc3343966488fa57303f9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionEnumeration",
+      "original_sha256": "b017c47c846dc43aa6242b3867832cf03cfc4e0925dd9305a304a0600d280171",
+      "production_sha256": "ee9ec882f47c2f98ab1ebf0eed8e121f0bf7efb696f1630039cd39054e89ee46",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionEuler",
+      "original_sha256": "f638995950bb6d41045c2236fb4f22144f8936aeb0d4dd2649d6a4128cbdc0ba",
+      "production_sha256": "f638995950bb6d41045c2236fb4f22144f8936aeb0d4dd2649d6a4128cbdc0ba",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionFacePaths",
+      "original_sha256": "d9a9604cb15147f8a06241ce790565fb534339acd5a6b1ad6ee630eca53ebe0b",
+      "production_sha256": "d9a9604cb15147f8a06241ce790565fb534339acd5a6b1ad6ee630eca53ebe0b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionFaces",
+      "original_sha256": "fe0566ab44833d5bdd11e62da1f63c92985df7d2b1bce16943ed7f79a7821911",
+      "production_sha256": "fe0566ab44833d5bdd11e62da1f63c92985df7d2b1bce16943ed7f79a7821911",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionGlobalFaces",
+      "original_sha256": "e6e08d54a28121c3771996dc3dc2f4c4f5ab993dfd9a468c3bf31eaf255d12a7",
+      "production_sha256": "e6e08d54a28121c3771996dc3dc2f4c4f5ab993dfd9a468c3bf31eaf255d12a7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionGraph",
+      "original_sha256": "7c65b8ad743178b70bcec49cca60ac0201aacc1a282f0117122a618443a67101",
+      "production_sha256": "c7360ec86af7eb962c7836772e2a030572aa0fcd60521304f1a1565879368cc3",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionIsolates",
+      "original_sha256": "ec55119b86318595e86b1d018438bd7453c9bb1074c71103f9f3ef8568d3e4aa",
+      "production_sha256": "ec55119b86318595e86b1d018438bd7453c9bb1074c71103f9f3ef8568d3e4aa",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionLocalFaces",
+      "original_sha256": "f08f1e4f842761627a948359dffaeed3fedf8ad076404ef8e5615c27d7feb9b9",
+      "production_sha256": "f08f1e4f842761627a948359dffaeed3fedf8ad076404ef8e5615c27d7feb9b9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionMachines",
+      "original_sha256": "2cd7bd9fc2d143c4a48cbfbcb25b839c77b93c3794c87422cfc4a2d32b0e8ce0",
+      "production_sha256": "2cd7bd9fc2d143c4a48cbfbcb25b839c77b93c3794c87422cfc4a2d32b0e8ce0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionPlanarity",
+      "original_sha256": "320051f88785e4526f383d88beb8d45e6d529513910ddc7f26167367cd05b963",
+      "production_sha256": "74b33062421e518fe3f889ff800ca9415f4154d3dcf24f825433125c42ce6ef7",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionPortIndices",
+      "original_sha256": "30349baa659b0ea25b2f757fd8d7e6935ccf1e675bf2d3176f6b91b1ddf70ef5",
+      "production_sha256": "7df10b41e56940efdb045738f2a24e82851772d8d624033842e668d03f717abb",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionRotation",
+      "original_sha256": "ea74d6c03c1dfbfc49132b9c1449c997124c4078e957819b9d2d4bc993b817bc",
+      "production_sha256": "ea74d6c03c1dfbfc49132b9c1449c997124c4078e957819b9d2d4bc993b817bc",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherExpansionRowAddresses",
+      "original_sha256": "e41a6360ed036649bf3c228a9c3b563ea1a625a095e7142ee4dced5f04d077a6",
+      "production_sha256": "31cbf1b7b99ff8a97c846444cf3df1e7eb70bdce349ecfc249b864e4082c131e",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionRowSemantics",
+      "original_sha256": "5fea5fd126b1680ed644a6ad06a0b9258051acabcd68467976487454549c89b0",
+      "production_sha256": "7c09461fc0035af211fa77b31fcb18ef1e9d7791c70c6cd6594d916622f72684",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherExpansionWeightSemantics",
+      "original_sha256": "2782d5389d58b7312a6948968db83d4ef779c0cd8f5fee11574183e8e295c02d",
+      "production_sha256": "f7d28e37b0eab0faf2c487057055a8f8c4ecd98159fece239ace9371b2774c24",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherGlobalEuler",
+      "original_sha256": "2921f1dc8396def74773d2ce376a6af160613cbfe45fde3c6759aec10793db98",
+      "production_sha256": "2921f1dc8396def74773d2ce376a6af160613cbfe45fde3c6759aec10793db98",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherIncidenceAlgebra",
+      "original_sha256": "237dc0d2b29d611b612a225b5610eae316ac791fa61f27cfab07d2fc1c0183f8",
+      "production_sha256": "237dc0d2b29d611b612a225b5610eae316ac791fa61f27cfab07d2fc1c0183f8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherIncidenceOrdering",
+      "original_sha256": "0880aa94b20a88e9b31a37c5ffc22debca21582fbb1f1b8447c58692e6d8423e",
+      "production_sha256": "0880aa94b20a88e9b31a37c5ffc22debca21582fbb1f1b8447c58692e6d8423e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherInheritedEuler",
+      "original_sha256": "46ef25d33f091b98fca83fc1452820fe7464b349b104173a9b36c990ba551953",
+      "production_sha256": "46ef25d33f091b98fca83fc1452820fe7464b349b104173a9b36c990ba551953",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherInheritedRowCorrectness",
+      "original_sha256": "06b2fcd7c09162bde26668f8c5f596c67b46a4f1398512990cb4c58f447f5b77",
+      "production_sha256": "06b2fcd7c09162bde26668f8c5f596c67b46a4f1398512990cb4c58f447f5b77",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherInheritedRowMachines",
+      "original_sha256": "205837403ac444d2a5b6a5743144e29f74a574b4633130605bff267c66a6ed6a",
+      "production_sha256": "205837403ac444d2a5b6a5743144e29f74a574b4633130605bff267c66a6ed6a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherInheritedRowProgram",
+      "original_sha256": "372e61d44eb96c3eeca3719f9d779820d582286513ab8aa5b22d7bb352b1d742",
+      "production_sha256": "372e61d44eb96c3eeca3719f9d779820d582286513ab8aa5b22d7bb352b1d742",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherInheritedRowSemantics",
+      "original_sha256": "361fe4d0178cc22fb852f6d46682cc5b2b77f910137e814fb43400d543719f75",
+      "production_sha256": "361fe4d0178cc22fb852f6d46682cc5b2b77f910137e814fb43400d543719f75",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherIsingCodeIdentity",
+      "original_sha256": "aa14159dba0cb70fc628d980ca9a90081f025970d0bc09a3e1d42fb4d3b27ada",
+      "production_sha256": "aa14159dba0cb70fc628d980ca9a90081f025970d0bc09a3e1d42fb4d3b27ada",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherLeafAttachments",
+      "original_sha256": "63de6d9975a28deba9d538cad2436a8b6d96f61fbfb2a60ed552a0a717f336b0",
+      "production_sha256": "63de6d9975a28deba9d538cad2436a8b6d96f61fbfb2a60ed552a0a717f336b0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherLocalExpansion",
+      "original_sha256": "04851e93a62da12967b3680ef962b96799d0e3a14e7b5389eb56360c8eefd578",
+      "production_sha256": "04851e93a62da12967b3680ef962b96799d0e3a14e7b5389eb56360c8eefd578",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherMatchingBoundary",
+      "original_sha256": "34127f2805ff55a9b412b8317771a697ad941aa885e42fe9b70cf3e1a9f7b660",
+      "production_sha256": "34127f2805ff55a9b412b8317771a697ad941aa885e42fe9b70cf3e1a9f7b660",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherMonotonePath",
+      "original_sha256": "e215f6cb29a7f172d21e16a6dc42bc736f1e4f7c0cb21c401f4c66707b82981a",
+      "production_sha256": "e215f6cb29a7f172d21e16a6dc42bc736f1e4f7c0cb21c401f4c66707b82981a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherNumericEnumeration",
+      "original_sha256": "40dfcd7577f0153d5d5009449880f465c4cd92e8c468f0319061ebcc8a6b3c2f",
+      "production_sha256": "6f55323c44979bc864b15d8ba09fdc2750f3d7ec7fd22477c4c6d397cec89aa1",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherNumericInheritedEuler",
+      "original_sha256": "ce8f2e8f5247d1c84f687a302a56e445fdb4dafb07be82b4cfb79dda38feb979",
+      "production_sha256": "13e6bb50d0dff36993e7707112eea3b3287039c79b40f63ea2d3ca5aa411589b",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherNumericRotationTransport",
+      "original_sha256": "4755773fa50c748fec447d77d4b14b40c6624d32f3ac30f1af15f8228c2827e9",
+      "production_sha256": "4755773fa50c748fec447d77d4b14b40c6624d32f3ac30f1af15f8228c2827e9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherOrderedTriangle",
+      "original_sha256": "d057fcb80a6c1241cd49c5742a13ddf5e1ddc0453e07b506833eae2cd0586120",
+      "production_sha256": "d057fcb80a6c1241cd49c5742a13ddf5e1ddc0453e07b506833eae2cd0586120",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherParityPath",
+      "original_sha256": "d1954220839e0ae53f1fbca03733be7844be3edb4870ba9b5d35d905fc1cfe4d",
+      "production_sha256": "d1954220839e0ae53f1fbca03733be7844be3edb4870ba9b5d35d905fc1cfe4d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherPathCorePlanarity",
+      "original_sha256": "cc551e2dfc23e3c1e6edbd63cce7c0a595cb734cca8ec3d8c34ea67cafd9e312",
+      "production_sha256": "cc551e2dfc23e3c1e6edbd63cce7c0a595cb734cca8ec3d8c34ea67cafd9e312",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherPipelineComponents",
+      "original_sha256": "cc03187f8d7baa753a80ca67023df558f393a97cf7e8066a30cc45511ad096c5",
+      "production_sha256": "cc03187f8d7baa753a80ca67023df558f393a97cf7e8066a30cc45511ad096c5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherPipelineValidity",
+      "original_sha256": "35b9b61431423ac851d044b682ddce88b677d085b9ebef71d65ab7d7675e7b17",
+      "production_sha256": "35b9b61431423ac851d044b682ddce88b677d085b9ebef71d65ab7d7675e7b17",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherPlanarReduction",
+      "original_sha256": "162da6df1d81fdfe230aeb16cdbdfc152efca209b3bf0fa5450a0ee3d57ee661",
+      "production_sha256": "162da6df1d81fdfe230aeb16cdbdfc152efca209b3bf0fa5450a0ee3d57ee661",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherPolygonEuler",
+      "original_sha256": "5d27dd526d40366a69ba8289471668e90dad930177c6edc009e518c547d195b7",
+      "production_sha256": "5d27dd526d40366a69ba8289471668e90dad930177c6edc009e518c547d195b7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherPolygonRotation",
+      "original_sha256": "3a7719715d0598460ccb13563d859e21916e8c60c67719b1a4db09943e1759e9",
+      "production_sha256": "3a7719715d0598460ccb13563d859e21916e8c60c67719b1a4db09943e1759e9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherProjectedOrder",
+      "original_sha256": "b9984562eda7df83705090fafd9fb009829aed573d1e5cc383d5f298f1e01be0",
+      "production_sha256": "fbc8d0de2c7d79d433ec22acabd196f114c820a9b17aee5917ac537f75f54471",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.FisherReferenceMachines",
+      "original_sha256": "4a14e434583e8994949bfb0bae215fac3326c537459f6709e3dee75c29c73af2",
+      "production_sha256": "4a14e434583e8994949bfb0bae215fac3326c537459f6709e3dee75c29c73af2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherReferenceSignProducts",
+      "original_sha256": "74108a677ff136add71c4280a9633d82c230b2112495a2541c39b064c11c9e81",
+      "production_sha256": "74108a677ff136add71c4280a9633d82c230b2112495a2541c39b064c11c9e81",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherRootedFamily",
+      "original_sha256": "9eef618b98ca0709428eba93aa12a5ed02cf6419c3e901203fbc4993f1e316e9",
+      "production_sha256": "9eef618b98ca0709428eba93aa12a5ed02cf6419c3e901203fbc4993f1e316e9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherRotationConnected",
+      "original_sha256": "319105f8436c1c7d2de8e2e7b986ac3baee9ab852f40091703f5935147b0a4b1",
+      "production_sha256": "319105f8436c1c7d2de8e2e7b986ac3baee9ab852f40091703f5935147b0a4b1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherRotationOrdering",
+      "original_sha256": "72a9a3a59557a37f4ac25186ffa8c383cf6f16f88dfb4ca757b93330f7ec15b1",
+      "production_sha256": "72a9a3a59557a37f4ac25186ffa8c383cf6f16f88dfb4ca757b93330f7ec15b1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherSignedCalibration",
+      "original_sha256": "6196c2076081485186f59d86d9f5f6d6f02ba93a5e3a448f9e6d606b059d82ed",
+      "production_sha256": "6196c2076081485186f59d86d9f5f6d6f02ba93a5e3a448f9e6d606b059d82ed",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherTriangle",
+      "original_sha256": "5c073c291d61a8ed62cd36a384bbc5be8191881cb6d9ce22bfd511fc69e9ac93",
+      "production_sha256": "5c073c291d61a8ed62cd36a384bbc5be8191881cb6d9ce22bfd511fc69e9ac93",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherTriangleGeometry",
+      "original_sha256": "fa1aca572a201ba1dc9308327f0f9b3b24c3867a83a1a653ed9bedf69a50446e",
+      "production_sha256": "fa1aca572a201ba1dc9308327f0f9b3b24c3867a83a1a653ed9bedf69a50446e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherTrianglePermutation",
+      "original_sha256": "82e49aa5221a85654369d27c6f756cfa577a9669a86127c9d39d26b056c4611a",
+      "production_sha256": "82e49aa5221a85654369d27c6f756cfa577a9669a86127c9d39d26b056c4611a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherTrimmedCurves",
+      "original_sha256": "884909206d60e94259817558ac36b00ca294df4161c6b929df3f1dda5552c26b",
+      "production_sha256": "884909206d60e94259817558ac36b00ca294df4161c6b929df3f1dda5552c26b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FisherWeightMachines",
+      "original_sha256": "f35f12e1ea52d42924aa2d21275e831428884fb3e00a1b4591d5cd0f19f289f5",
+      "production_sha256": "f35f12e1ea52d42924aa2d21275e831428884fb3e00a1b4591d5cd0f19f289f5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.FixedFieldPolynomialMachines",
+      "original_sha256": "89c2382514639d279733c5aaeba5daa9907c59b4b0cd817d3bfee5e231d6f802",
+      "production_sha256": "800813e3d74478e84b48cc813e3f9a16ca032cd8a30e469f1e3976faf93b095c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and proof-port.diff."
+    },
+    {
+      "module": "PlanarHom.GraphComponentCode",
+      "original_sha256": "ba8c1a3b5018e0ddcf8670c3078bebaef40e969705d507817f2cf98689c34311",
+      "production_sha256": "ba8c1a3b5018e0ddcf8670c3078bebaef40e969705d507817f2cf98689c34311",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.GraphComponentMachines",
+      "original_sha256": "17b0eb11390a9e216e0967d1794efebcf5635e0cd12d3785366c86d76d4e20ad",
+      "production_sha256": "52e2185eaf96850d41e4139f7cb85bf318b1e063c5d466f48c26b929b3be9f7e",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "TM2 codec API now takes .encode functions; explicitly rewrite Equiv.invFun_as_coe in raw output proof. Codewords and runtime statement unchanged."
+    },
+    {
+      "module": "PlanarHom.GraphStretchCode",
+      "original_sha256": "307a449b5255675ad48104dabac0579eb0c0dc7b7b0cbd88cf1188f90c5efb94",
+      "production_sha256": "9dd6d29ee08575c130e7fb87e180c5107e1469495bd65699f1e13483bf3503d5",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.IncomingLaneComposition",
+      "original_sha256": "896aead0541b6db8c2165d64778be15a19247293044b8c1c76ca7647c2c4154b",
+      "production_sha256": "896aead0541b6db8c2165d64778be15a19247293044b8c1c76ca7647c2c4154b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.IncomingLaneConnection",
+      "original_sha256": "37f586e0705aa86d61c39b753cd727f42d63098bb680878eacc9961389fc3d10",
+      "production_sha256": "686370115807898d8c38a81c41c1874749b116302e3859b9bf63a49a516aacb6",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.IsingEvenSubgraph",
+      "original_sha256": "446bfa8fb100aea122d553447474a26b911aa19380c0fd20acbab4bb7957f378",
+      "production_sha256": "93ae2981a20dbb5b3990329d02241c6e7613b09f3617bd29ab5a22c515aa37a8",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.ListBlockSeparation",
+      "original_sha256": "f8cdd0ed24f6bc26ba9930d531bfaf0676a51516a2fb2a2cb0b001986cbc1ba0",
+      "production_sha256": "1f64e517a5a41c2b5fc82684afdf8ae1547a09989cad490678ba08e4f1af982d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.ListInfixRankInterval",
+      "original_sha256": "f62afcb0ebb047a4826c0934dbcd45761ba2b39db4c5e615145416c2905614dc",
+      "production_sha256": "1ca5b25a82fc25fb39011441c7a6d96cc58ba63c9c2fdbb74bc50f64da884959",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.ListPairSublistOrder",
+      "original_sha256": "5cc682065d54de9aa2308df1f075fb112d9a4d5b5e56c9f4cdd2663778fcbbce",
+      "production_sha256": "e717d04774871b578683d1f328c0dc29606a5bf6d54902ab99ad0380d5983097",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.ListPrefixMachines",
+      "original_sha256": "fdafbbfc86215d4e62dadab052b3bb1b2f27db45d922811de589d9908a5e1dd3",
+      "production_sha256": "fdafbbfc86215d4e62dadab052b3bb1b2f27db45d922811de589d9908a5e1dd3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.MaterializedCoefficientHeights",
+      "original_sha256": "19ddcdcec91d3fad42affe42d9252cf5a0b8d1bfda71056c39f44935984648d7",
+      "production_sha256": "d14a14bba55c97e676b1f3fd2ee852307c7e04a5a5d11d70a0ab60d9bbd8d5b7",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.MixedRelabelMachines",
+      "original_sha256": "5f6d7b6d875519ed2203bb961bbb183b10565af93f0844d01f93a5a0113c4b91",
+      "production_sha256": "5f6d7b6d875519ed2203bb961bbb183b10565af93f0844d01f93a5a0113c4b91",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.NatWordComparisonMachines",
+      "original_sha256": "06cb0b0dd6be046e99369f79d1685547b2266637570930199b98a7cd1a816fe4",
+      "production_sha256": "8cee85f913a6c57873e38480a30f2fde649eb8c4173546a63c97f9d54fb9f9d5",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.NatWordPrefixConvexity",
+      "original_sha256": "8e0b73069aa603f9c0ed4ecd5578a74b72ffe75818d6ec6a2077c74e24cf68e9",
+      "production_sha256": "8e0b73069aa603f9c0ed4ecd5578a74b72ffe75818d6ec6a2077c74e24cf68e9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.NoncrossingBouquetAdjacentPair",
+      "original_sha256": "0ed2077228a0229d68c78ce47ddb07516afa84e7be1e8660a0d4df17c79ebd3b",
+      "production_sha256": "6d1e0be49ea13da71f6d39e6046a3077784340189a797208963fd9a52418ba78",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.NoncrossingBouquetCarrier",
+      "original_sha256": "f5876eab8d9cd99ee438dfab4a2f14291741a0968d8d1004ea47c492905905d8",
+      "production_sha256": "f5876eab8d9cd99ee438dfab4a2f14291741a0968d8d1004ea47c492905905d8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.NoncrossingBouquetDeletionCount",
+      "original_sha256": "a5b36d8e8d15d1fd45df8b054efa855a923afb8656bf5deaddb9e67e55f20b31",
+      "production_sha256": "a5b36d8e8d15d1fd45df8b054efa855a923afb8656bf5deaddb9e67e55f20b31",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.NoncrossingBouquetErase",
+      "original_sha256": "7ce137e45b3289e708e5f4dc6fc63ca30cea6242431b80db8a49f47e395611db",
+      "production_sha256": "31532cda31e45acd6b0ea2c9e2689c77589954de87aa81dd94d6fc658ec27442",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.NoncrossingBouquetFaceCount",
+      "original_sha256": "df6e6d45856f2259631e98266e128e1757681f935eaa89974474253c63396fb4",
+      "production_sha256": "df6e6d45856f2259631e98266e128e1757681f935eaa89974474253c63396fb4",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.NoncrossingBouquetPairExtension",
+      "original_sha256": "9a782c964e4b8febe5a27023c01c6ad89b18c0f8bcd55d27b971904c6fe71290",
+      "production_sha256": "9a782c964e4b8febe5a27023c01c6ad89b18c0f8bcd55d27b971904c6fe71290",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceAlternatingCycleWords",
+      "original_sha256": "4a52c1db3f0a00da6ea97c6b969688f664d036ccdc29e736719e6a11564925ae",
+      "production_sha256": "e7ec63dbae220b45dbfbe5c88c18cf9dc7989fb93bf977976a5a48405054cf2d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceAlternatingWordPartition",
+      "original_sha256": "32c16dba9a3cbf37af3372dff8cdd117750d04268403bb2f86bd7995af7d50fa",
+      "production_sha256": "379190a04d9878f1a739a04f8142c8ec2560eccbc6d064cd7485fdeea74b8025",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceDegreeRows",
+      "original_sha256": "1fed21b02bb17788a5cea7ff2b416fa299cb18598212328d22cbee1be67db4e0",
+      "production_sha256": "1fed21b02bb17788a5cea7ff2b416fa299cb18598212328d22cbee1be67db4e0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceFiniteKasteleynCycle",
+      "original_sha256": "588a8b8c238dc5e8a8eab8c3da45f19b939039f568608fb0db695fdfb5578591",
+      "production_sha256": "588a8b8c238dc5e8a8eab8c3da45f19b939039f568608fb0db695fdfb5578591",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceIsolatedComponents",
+      "original_sha256": "e8a05b55e7ce41ab6d34890be7c13bcac12ed8b0f0fdb5ff885bf765ff2cf3e1",
+      "production_sha256": "e8a05b55e7ce41ab6d34890be7c13bcac12ed8b0f0fdb5ff885bf765ff2cf3e1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynArrivalLabelCoverage",
+      "original_sha256": "6c8ccaaa04a7a21c2a589659fdb6111b6ad3f40daf1f6f1b7df5a0c1fdbad73e",
+      "production_sha256": "6c8ccaaa04a7a21c2a589659fdb6111b6ad3f40daf1f6f1b7df5a0c1fdbad73e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynBandLanes",
+      "original_sha256": "34fd003aa3bd72b898a9115d77ccdf6942122da36d7994f4e3bad3deebadf14b",
+      "production_sha256": "34fd003aa3bd72b898a9115d77ccdf6942122da36d7994f4e3bad3deebadf14b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynBoundarySigns",
+      "original_sha256": "a19f75258628aff6ed397a0b726589aed8bf4d3ab374704fdaf059b8c434f2de",
+      "production_sha256": "a19f75258628aff6ed397a0b726589aed8bf4d3ab374704fdaf059b8c434f2de",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynCircleClippingBridge",
+      "original_sha256": "b08e099f001dcff8e39a69c454d269ca53ec1d546e25490ea10638d16eb6e3c8",
+      "production_sha256": "b08e099f001dcff8e39a69c454d269ca53ec1d546e25490ea10638d16eb6e3c8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynCircleCorners",
+      "original_sha256": "199e85f677446a046737f6537df80f57bfafbebe04acffb254a8c96e5caca7c3",
+      "production_sha256": "199e85f677446a046737f6537df80f57bfafbebe04acffb254a8c96e5caca7c3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynCircleFans",
+      "original_sha256": "0899a63ccab70197f987e1cca8f414b6f0efe986ef6011e0a6287eb9c2d75ff1",
+      "production_sha256": "e230bc306ab84d25f5d5754f47b719834a9ed0f326aa6584519c60d95bcbbc44",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynCirclePortOrder",
+      "original_sha256": "9a691a3aad89faa250e05aecc4d486566cecd30cf82839e6452ac5de0f663cc5",
+      "production_sha256": "9a691a3aad89faa250e05aecc4d486566cecd30cf82839e6452ac5de0f663cc5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynClippedRegions",
+      "original_sha256": "5888b6efba14957ab4540af81ea7cb61636be30c4566dfd36510cc1ac2be58d1",
+      "production_sha256": "5888b6efba14957ab4540af81ea7cb61636be30c4566dfd36510cc1ac2be58d1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynContourSides",
+      "original_sha256": "578aecac1f3d7e556e75f2597c45856c1b190a433ea3e0484f972283a05e5c6d",
+      "production_sha256": "578aecac1f3d7e556e75f2597c45856c1b190a433ea3e0484f972283a05e5c6d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynCycleFlipSigns",
+      "original_sha256": "40caf26b09010a5c449a8fa916be8b240eb06a4a848efadf8da6d7baee209f9b",
+      "production_sha256": "40caf26b09010a5c449a8fa916be8b240eb06a4a848efadf8da6d7baee209f9b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynDartWords",
+      "original_sha256": "7439ad84c1201ec9ab309cefc0462663f70f6337774eed2ee3c47041ad5f96c7",
+      "production_sha256": "05107cbec1cbd7193b8169de4aceef5ed2bc512f9068bda77ff1030eda2926b5",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynDual",
+      "original_sha256": "88fe4b4028f77b5f1291c58334e2b05b39d1ba8c9b4fda2d15aea743de010079",
+      "production_sha256": "88fe4b4028f77b5f1291c58334e2b05b39d1ba8c9b4fda2d15aea743de010079",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynEdgeCollars",
+      "original_sha256": "99b54fde8c6746c2f9060ecc8b9bc6dfa9c432629e53ab3806a90184c65884aa",
+      "production_sha256": "99b54fde8c6746c2f9060ecc8b9bc6dfa9c432629e53ab3806a90184c65884aa",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynFanCoordinates",
+      "original_sha256": "b3265667fad5fab06b11fb0e0004b18642a962773ce9c359707cd69f3e06317a",
+      "production_sha256": "b3265667fad5fab06b11fb0e0004b18642a962773ce9c359707cd69f3e06317a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynFanOrientation",
+      "original_sha256": "08b37eea63e79b99e0d61a848e6ad5c06e5b540fef07030d12c9f42fc77d460a",
+      "production_sha256": "ff9c72a0464f29c37f3e03cc65bb3489ddb3d8a152313174ab455e36b897afda",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynHostDiskRouting",
+      "original_sha256": "a0b0a683ebbdb79b704aa91b077e4f61337388bb2be9f65434f7a808423e14d3",
+      "production_sha256": "a0b0a683ebbdb79b704aa91b077e4f61337388bb2be9f65434f7a808423e14d3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynHostFanChart",
+      "original_sha256": "b8f2dd99dc84adf996ff4ab9899e3ecec951def34d77b2f54b4b075704e09a16",
+      "production_sha256": "d1a61d45c76aa0212fb2cc66f21eee8590794fa7d18773385d4ed0fb439c5842",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynIncomingRootward",
+      "original_sha256": "b2c6f930e55197b1d5a83c7250830b71334f6728db6e2c2309da0a30f3abafd6",
+      "production_sha256": "b2c6f930e55197b1d5a83c7250830b71334f6728db6e2c2309da0a30f3abafd6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynLocalLaneFamily",
+      "original_sha256": "0be326017d50df447fbdd3d4364cb51280ec92171b74cd6d4c8bcd1dc2eda303",
+      "production_sha256": "0be326017d50df447fbdd3d4364cb51280ec92171b74cd6d4c8bcd1dc2eda303",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynMatchingSigns",
+      "original_sha256": "3a952684163f7c7806f904fa19b0e8f3dc539c7ae41d57790e0275e021ee1fcb",
+      "production_sha256": "3a952684163f7c7806f904fa19b0e8f3dc539c7ae41d57790e0275e021ee1fcb",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynOrientationIteration",
+      "original_sha256": "67cb71652705dd9b23c7aa19bb15540e517e7c61d7ce40f414e1479c17fc54fd",
+      "production_sha256": "c085b740be0dbb85b4d49bc30da9d56feef28e3252240bd2b5ae7c753075e0a6",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Separate and normalize the pivot-stack length bound before transitivity; statement unchanged."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynOrientationLog",
+      "original_sha256": "04265454c8019900e2448c4725715764602d76e6bd354b7c01ac885ef8e79d92",
+      "production_sha256": "4545bc2c82a4c0f9ec36f7ab42092044e7aa1826c03af9d561275f17759e6b21",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Use the existing count simplification theorem at the empty list; definition unchanged."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynOrientationRuntimeBounds",
+      "original_sha256": "a9ebcc5d27ce291a4448b5cac5c08d8fe1f920168397067b368fd8fc157c38ce",
+      "production_sha256": "a9ebcc5d27ce291a4448b5cac5c08d8fe1f920168397067b368fd8fc157c38ce",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynOrientationStepMachines",
+      "original_sha256": "90c82acdc13f7a04e12d155d54cc8c360f41fd335d38a84f8083a6b5454f2c11",
+      "production_sha256": "90c82acdc13f7a04e12d155d54cc8c360f41fd335d38a84f8083a6b5454f2c11",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynPeeling",
+      "original_sha256": "1b27459a62523cffb29b1f3b721dc2a640c4875d24cfe0eb2047bb006612d060",
+      "production_sha256": "242f66e8606a18d0c4d9cfb248791015553dae685a41a7c186563f4860bfe0ec",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Use the existing countP simplification theorem at the empty list; definition unchanged."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynPeelingMachines",
+      "original_sha256": "a72a111f8d4c2e72180a4e2416231b61146a220047593ed62eba984c1c983f83",
+      "production_sha256": "a72a111f8d4c2e72180a4e2416231b61146a220047593ed62eba984c1c983f83",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynPeelingSemantics",
+      "original_sha256": "42932da7da1a0ac0d069af6db8cfc9653feb21a67d01aba92f4241b1283b8d28",
+      "production_sha256": "84e32dbc00021a2e1bd3b57862db37e7104dd25d2eaef87f5c88bcaa6192e719",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Prove function equality from logOrientation_nil after List.count abstraction changed."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynPivotMachines",
+      "original_sha256": "0b4ff17e69ecbac85269bae90b2ad7d271eec50f1bd55c021c63f6ce1b57546a",
+      "production_sha256": "0b4ff17e69ecbac85269bae90b2ad7d271eec50f1bd55c021c63f6ce1b57546a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynPolygonalCollars",
+      "original_sha256": "e8f41a951ed2acbac52041076987c3232cfe24f0aa05c8930fda304a9182db98",
+      "production_sha256": "e8f41a951ed2acbac52041076987c3232cfe24f0aa05c8930fda304a9182db98",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynPortArrivals",
+      "original_sha256": "3e3a0661d06c9be8b0e5741a2659a92c1750227f14c4883bdc9f454df9f038f1",
+      "production_sha256": "3e3a0661d06c9be8b0e5741a2659a92c1750227f14c4883bdc9f454df9f038f1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRecenteredCollars",
+      "original_sha256": "a0907093f1839527a1590ba917928625604dbfd1a5229aab529820af8a1d4d90",
+      "production_sha256": "606d556737fd398acb4932cb1be4f869eb0bddd89db6c1c666527c5c476e8b35",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootPortNoninterleaving",
+      "original_sha256": "aa42ed0a2dc045122548a97910dcff7d22fe6cace874c63a48dfd4fbacadfacf",
+      "production_sha256": "aa42ed0a2dc045122548a97910dcff7d22fe6cace874c63a48dfd4fbacadfacf",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootReturnPaths",
+      "original_sha256": "667f6c067e67500433cd942d1f70f58bb54ac64c757f9080c9795f2cf24240ec",
+      "production_sha256": "6cd013f3feb2c97dcd1751695fb432cd16119e29cdc840fd0940119a5b12568f",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootRouting",
+      "original_sha256": "9eae1911d67f1581d636118e2574b5195676ad3e31d332d806d54bfa4e123cf8",
+      "production_sha256": "b6e64c7800154068b5ef896c01deec97dc1b4cbdcb46ed133a897ef6e1d2adf6",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootRoutingConstruction",
+      "original_sha256": "6d02c87a346c2385aa9419c6755482509331400b8b6cdaaec214efbf3543bb8a",
+      "production_sha256": "6d02c87a346c2385aa9419c6755482509331400b8b6cdaaec214efbf3543bb8a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootRoutingLabels",
+      "original_sha256": "542a5d5da60ac915ddcc2daae1b424c8a00cd93ab4f7d110283a834e41a2836e",
+      "production_sha256": "26045f154255a6b5aca6a4e422fd02fee6cdb5cf78ac82a4760634af007e029d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootwardBoundary",
+      "original_sha256": "3e73896428af19126ba0df00e37ed637fd496076393d4f971d6c0b5a30c19da7",
+      "production_sha256": "3e73896428af19126ba0df00e37ed637fd496076393d4f971d6c0b5a30c19da7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRootwardSupport",
+      "original_sha256": "66a5a81797f2dc8d55dc6a27e6e30a00e849da881352eb80506b10a3a51fcf3c",
+      "production_sha256": "66a5a81797f2dc8d55dc6a27e6e30a00e849da881352eb80506b10a3a51fcf3c",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynRouteArrivalBlocks",
+      "original_sha256": "c51bb7376ec5e939f518ffac497c3e4d2d207b465319e079866a786e8965ef2d",
+      "production_sha256": "c51bb7376ec5e939f518ffac497c3e4d2d207b465319e079866a786e8965ef2d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynTablePrimitives",
+      "original_sha256": "5614f9be696abda490ad1797d8779d5f5b3338b7d4000142bf972fc02db60ebb",
+      "production_sha256": "5c431130e0247c71b16fe5f285bda43b71fc44af6b30e61e3a793fbdc7c5b958",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Use count simplification for the empty dart list; statement unchanged."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynTreePortWords",
+      "original_sha256": "811476541dfe4d93ad39522aca6003cf53e187db54c093ae2ffdfc3685ecb73a",
+      "production_sha256": "811476541dfe4d93ad39522aca6003cf53e187db54c093ae2ffdfc3685ecb73a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynTreeRouting",
+      "original_sha256": "6588eaae15830b0c13c2e16018fab69f8fbf7b66e84a7c6c31873e9ebf94ba05",
+      "production_sha256": "c83377d543577d8e0c969a4a3bf0e7ec4f47fab29675e18ee6d15efeb82df3db",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynTreeRoutingConstruction",
+      "original_sha256": "61819a963b24afb31146a4f8aafca68b59157f970cb5cc3fec00c727fa1bab4a",
+      "production_sha256": "61819a963b24afb31146a4f8aafca68b59157f970cb5cc3fec00c727fa1bab4a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynTreeRoutingLabels",
+      "original_sha256": "d93316d41c6874455e0b59a13ac3571c465a1c1d29fcfd7d998f99e372341f9a",
+      "production_sha256": "d93316d41c6874455e0b59a13ac3571c465a1c1d29fcfd7d998f99e372341f9a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynTreeRoutingStep",
+      "original_sha256": "4ae8fb51d29c9855234cd4d57f43daeb13aa67591aae502faaa9bfa1be6db4db",
+      "production_sha256": "4ae8fb51d29c9855234cd4d57f43daeb13aa67591aae502faaa9bfa1be6db4db",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynWordBase",
+      "original_sha256": "b85c5b9fdfd0360ccb70b8b1306b089f3b48a0c4a86126c9e412addb598da446",
+      "production_sha256": "b85c5b9fdfd0360ccb70b8b1306b089f3b48a0c4a86126c9e412addb598da446",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceKasteleynWordSigns",
+      "original_sha256": "11218d13a2d2dbcecbd42c7cdd14ef893c2fa9bd876ea24a827b8dcecd1d19c9",
+      "production_sha256": "11218d13a2d2dbcecbd42c7cdd14ef893c2fa9bd876ea24a827b8dcecd1d19c9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingAlternatingCycle",
+      "original_sha256": "879d4eaf1d02b880e5f3b3d543963cecdff1a81fa50501965d9ee8ab55210626",
+      "production_sha256": "0a59303d2210a06027fbc556efa500b8e1db4584298bf8845901186439e02373",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingCycleConfinement",
+      "original_sha256": "fc42c6d044dcc7aed05fdc4aac0e030ace274059c470aec52946d115810be632",
+      "production_sha256": "fc42c6d044dcc7aed05fdc4aac0e030ace274059c470aec52946d115810be632",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingCycleConnectivity",
+      "original_sha256": "d1811d3c74d292bdaa9ba5ecec4d725dc5272bbb4c29d2465bf73215203b710a",
+      "production_sha256": "d1811d3c74d292bdaa9ba5ecec4d725dc5272bbb4c29d2465bf73215203b710a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingCycleData",
+      "original_sha256": "e0a82992168a9c20d218a7c517402d96e0ed8d1d19a0bfa48d47563c910767a5",
+      "production_sha256": "e0a82992168a9c20d218a7c517402d96e0ed8d1d19a0bfa48d47563c910767a5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingCycleDegrees",
+      "original_sha256": "92ba918a6395d6cf0c735725ea72ffd4d506231d80e428458e29299eb58503b7",
+      "production_sha256": "92ba918a6395d6cf0c735725ea72ffd4d506231d80e428458e29299eb58503b7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingCycleIncidence",
+      "original_sha256": "68ca35510d822b22cb6e1e222c49594674313f61ba5aa89da9d7e2dbd02000c1",
+      "production_sha256": "68ca35510d822b22cb6e1e222c49594674313f61ba5aa89da9d7e2dbd02000c1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingCyclePatch",
+      "original_sha256": "f93914d261421f919e2a2c86669b6a0404e081b6deba4afd8adae1e4a6e48013",
+      "production_sha256": "f93914d261421f919e2a2c86669b6a0404e081b6deba4afd8adae1e4a6e48013",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingPorts",
+      "original_sha256": "52039fd21db74dab589640fc17594fa05fc4b69db308b8484c647bb42384e02a",
+      "production_sha256": "52039fd21db74dab589640fc17594fa05fc4b69db308b8484c647bb42384e02a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingRegionParity",
+      "original_sha256": "b30cc75a4f274993381f7cb9760d953079860426c9e4db53599d6118ff344a66",
+      "production_sha256": "b30cc75a4f274993381f7cb9760d953079860426c9e4db53599d6118ff344a66",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingWalk",
+      "original_sha256": "bc9fb6dfcf2b5a209ed8064ab84350a253fa0948267bf0d7145af320fea2eaee",
+      "production_sha256": "27148b34a988260f1ba16a89f5aa5756036723e757e75477ee80600cfa9b525c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingWalkCycle",
+      "original_sha256": "83ea1b4ed3776c03ab09bd6d3636cf470c8a00141355ebf9406fe5adedb11186",
+      "production_sha256": "73c6225242422fedb8c931b52aec6ad30edae7619df4966e956360e966c5d154",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchingWordNodup",
+      "original_sha256": "4ea6affc2c1a3d2cca0a1629f6ea9ed46ff767021146f3e62b1f1e7ba23f9c8f",
+      "production_sha256": "4ea6affc2c1a3d2cca0a1629f6ea9ed46ff767021146f3e62b1f1e7ba23f9c8f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceMatchings",
+      "original_sha256": "3d25f7fd23dd7c985cfb6d9a330f866f755d31ea2b6a9c116dadee7dcf91ca21",
+      "production_sha256": "3d25f7fd23dd7c985cfb6d9a330f866f755d31ea2b6a9c116dadee7dcf91ca21",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceOrientationLogMachines",
+      "original_sha256": "e87ef700e47cf609549f47b6e8cb9433801108a13615d7dd1dfb8eee66b81a80",
+      "production_sha256": "e87ef700e47cf609549f47b6e8cb9433801108a13615d7dd1dfb8eee66b81a80",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianCycleConstancy",
+      "original_sha256": "8698c2def4552265f4c020793fc265ca8b53b919727dc80a8fe0d2a11efaf92e",
+      "production_sha256": "8698c2def4552265f4c020793fc265ca8b53b919727dc80a8fe0d2a11efaf92e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianEliminationAlgorithm",
+      "original_sha256": "a5109eb321c7ffd16edf2d87ca986a87050346c3b7f5ec62520086be056ccee5",
+      "production_sha256": "fbb792fa2b7f32460ce59d0ef05b52b290d737774e9557e853858f71090d1b72",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianEvaluationMachines",
+      "original_sha256": "f908423a63c2df9702a8640acaf6baca11953e18e492b131eccc2d0ab83f4366",
+      "production_sha256": "f908423a63c2df9702a8640acaf6baca11953e18e492b131eccc2d0ab83f4366",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianEvaluationProgram",
+      "original_sha256": "72bdee1cf6985dc2b2bf141ef22bf304e5b99560fc8bdf15562de945b36af637",
+      "production_sha256": "98f9295282c322fe2ea4990dcf301983f3416fc0a988c3be9e4401518a11fdb6",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianExpansion",
+      "original_sha256": "264109ef5cb3e674f1b8729e02145e889b599bfa78946d363d69b2a41db53c4c",
+      "production_sha256": "264109ef5cb3e674f1b8729e02145e889b599bfa78946d363d69b2a41db53c4c",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianExpansionSigns",
+      "original_sha256": "8ad2f1a851d4b999d7cf0d374e06fa0bb64b441bde177af9c3f0e79f0523417d",
+      "production_sha256": "6eb197ba10561e25e1cab89c3d48816d325efc8004b423577619cc19d6d4da38",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianGridNormalization",
+      "original_sha256": "39a353287b3be2d98a2a5f935388716954b3e62a53755186a1c40e0f9ca3f93a",
+      "production_sha256": "39a353287b3be2d98a2a5f935388716954b3e62a53755186a1c40e0f9ca3f93a",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianIterationBounds",
+      "original_sha256": "c449b32abd6d9a72aad4408b33771b8e36ef0455da74ca0f29ddaa95750076d8",
+      "production_sha256": "a647d6b65cf5aef0fec5f35714dcfd1fdb31e3d6bb50b371a204733763dd745e",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianIterationInvariant",
+      "original_sha256": "8ab07d6dc121d490d71c91917d0c8b148d77273fd26f4e5d2d04d372dcb7fe33",
+      "production_sha256": "8ab07d6dc121d490d71c91917d0c8b148d77273fd26f4e5d2d04d372dcb7fe33",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianListStep",
+      "original_sha256": "d7234567731a63c1209c723a4580e41480ac2c973101808e9e3339c02adc7e6d",
+      "production_sha256": "d7234567731a63c1209c723a4580e41480ac2c973101808e9e3339c02adc7e6d",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianMatrix",
+      "original_sha256": "8801669a391803c296dcf1c580e283932674588ac44c5b423e8be013f91bb03d",
+      "production_sha256": "8801669a391803c296dcf1c580e283932674588ac44c5b423e8be013f91bb03d",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianPairExchange",
+      "original_sha256": "7ebd5f8e64bb9d700277f4ab8061cbbe6ec03ba302c619863ca1451d3ce83764",
+      "production_sha256": "7ebd5f8e64bb9d700277f4ab8061cbbe6ec03ba302c619863ca1451d3ce83764",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianPairings",
+      "original_sha256": "1c2e39a631bbc90f1a93e9b9e78fe646210657a51adf48f75ed6df1ac75c0d95",
+      "production_sha256": "1c2e39a631bbc90f1a93e9b9e78fe646210657a51adf48f75ed6df1ac75c0d95",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianProgramBridge",
+      "original_sha256": "86451813d758dddc1f43746ff7a67e07cf4d7d156605f72ce18b435013a69e9a",
+      "production_sha256": "86451813d758dddc1f43746ff7a67e07cf4d7d156605f72ce18b435013a69e9a",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianShear",
+      "original_sha256": "0f8c0d2ab97cc08f220023b17caaacafe2a63b95c5621ae6d51c75233b1a1625",
+      "production_sha256": "0f8c0d2ab97cc08f220023b17caaacafe2a63b95c5621ae6d51c75233b1a1625",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianStateBounds",
+      "original_sha256": "216fa53503be7978a446f2bdcfbcd355a9cdbd6942dda0fe5d223d72f8cad24f",
+      "production_sha256": "216fa53503be7978a446f2bdcfbcd355a9cdbd6942dda0fe5d223d72f8cad24f",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrencePfaffianVertexLinearity",
+      "original_sha256": "5140d56121fd7c5ee82c0dc5f80ea8b4921d994daf9af3abf63234b6102023a9",
+      "production_sha256": "5140d56121fd7c5ee82c0dc5f80ea8b4921d994daf9af3abf63234b6102023a9",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OccurrenceSkewCodeSemantics",
+      "original_sha256": "283e4226e63839e61d58086b8d40cc6798599382723965a1dce6db0a32884330",
+      "production_sha256": "9a59d2fb590435f03c0085705346dd927958e0a3426f29358f687e1a17b31d20",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.OrderedCycleAdjacentPorts",
+      "original_sha256": "47e578e5c636b3f0c27cd093fb2335b1c48d5b9385bedebe3ac5d646774a9155",
+      "production_sha256": "47e578e5c636b3f0c27cd093fb2335b1c48d5b9385bedebe3ac5d646774a9155",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OrderedPortIntervals",
+      "original_sha256": "b9e63e7f2b5217d6990b8a00b2bcefe1abbec02794aec195617cdc9ccefc7a65",
+      "production_sha256": "b9e63e7f2b5217d6990b8a00b2bcefe1abbec02794aec195617cdc9ccefc7a65",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.OrderedPortTransport",
+      "original_sha256": "b38ae0257c74b1f84f178112f6804f1d68556eff20b21c7d5e80171734d170ee",
+      "production_sha256": "b38ae0257c74b1f84f178112f6804f1d68556eff20b21c7d5e80171734d170ee",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PfaffianEliminationHeights",
+      "original_sha256": "4b7ea2063cbe8b4e94f5dbb77ab4fffbcf4b0d27a395f61e5dad4984d9484e3f",
+      "production_sha256": "4b7ea2063cbe8b4e94f5dbb77ab4fffbcf4b0d27a395f61e5dad4984d9484e3f",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PfaffianMinorHeights",
+      "original_sha256": "fb2dd548da67b6092a8d584ba4ecc3dfb9b821e73a1275fbb94ee861fa6c59c5",
+      "production_sha256": "23cfb1834a074603de1bb19c96aafb7f2ed0d93be9094eb3e137c9546f2010a7",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PfaffianPivotSemantics",
+      "original_sha256": "df2ef037884a39f8863768cdc5bc12aa97f7e48d7bab09201d18951717eec1bd",
+      "production_sha256": "df2ef037884a39f8863768cdc5bc12aa97f7e48d7bab09201d18951717eec1bd",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PfaffianPivotShear",
+      "original_sha256": "95063b35f3a4b2c1be58618ddacf9d30fffa0968c4a4fa544d06010cb20823e8",
+      "production_sha256": "f7c6625383d89eeba72a39609485ec52c9b820c116c4d87362e4bbd1edad49a1",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PfaffianSchurComplement",
+      "original_sha256": "df79559d448caf26badcaeaf75aae6cc8d4a4315056d51aba2a5add2887c88df",
+      "production_sha256": "df79559d448caf26badcaeaf75aae6cc8d4a4315056d51aba2a5add2887c88df",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PfaffianSchurMinors",
+      "original_sha256": "0ff0c74df5798019e3ce2092e0b61f43d8652bedb51c98e0e9bcdd2dbfcf0166",
+      "production_sha256": "d52dc54aa2e96a1a357b6c8e22947e13525d0d48029ce031cd34643f69acb38e",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarAxialCollapse",
+      "original_sha256": "f14b7ce16ffc113fd4872835e2fa0df91b043a4bc4cab63ce3236977f3d6ac36",
+      "production_sha256": "60c11402b5724e064acffa45c405181c0ba1a51937a693c944fe78f254bf35de",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarLocalizedSegmentCollapse",
+      "original_sha256": "2dc94c23e0ea19a93abaf9c32214e8e1591583a15f003f3b0283fe9a3561a35f",
+      "production_sha256": "2dc94c23e0ea19a93abaf9c32214e8e1591583a15f003f3b0283fe9a3561a35f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarProperLocalizedCollapse",
+      "original_sha256": "2515759fe3a7883a9501ef4745257af80a69c3eec15f2d233a6f09c118718ca5",
+      "production_sha256": "2515759fe3a7883a9501ef4745257af80a69c3eec15f2d233a6f09c118718ca5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarRootedTreeExtraction",
+      "original_sha256": "9db9a78320c89dda74ceb6cb5e09f392fb09e0f744ed83c8561f3851b9f034a7",
+      "production_sha256": "9db9a78320c89dda74ceb6cb5e09f392fb09e0f744ed83c8561f3851b9f034a7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarSegmentComplementHomeomorph",
+      "original_sha256": "280f4e2f34142efb22257cf8fb485250756e6fb5dc3bc04a44673a8634697a75",
+      "production_sha256": "280f4e2f34142efb22257cf8fb485250756e6fb5dc3bc04a44673a8634697a75",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarStretch",
+      "original_sha256": "4071f1bc00287ec7a9176610caf16969181a1829f438ee801bd303709c5f6329",
+      "production_sha256": "4071f1bc00287ec7a9176610caf16969181a1829f438ee801bd303709c5f6329",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityCircleCrossing",
+      "original_sha256": "482e50c853fc6bac7aa15eb0acde4406f55315051f7370befc36f11fe4d160a8",
+      "production_sha256": "75c23fe091f862a65acc2a4ed7fca8cd97caaa14d9540b837c68b7493f8bbb0e",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityContinuousAngleLift",
+      "original_sha256": "b7f90476de21e101e4a06afda6c3d40ec53f3d07edcd4f2a7a55a9bf00dcd62b",
+      "production_sha256": "b7f90476de21e101e4a06afda6c3d40ec53f3d07edcd4f2a7a55a9bf00dcd62b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchAncestors",
+      "original_sha256": "fa579290876df7bd4183cd044986ef06502236e50f51446583694f3f4ea71843",
+      "production_sha256": "cdf4110708b9e839aa6626246bc8fb705d993391a2ab7eef8feff46907f0987a",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchCodecs",
+      "original_sha256": "6598284a26ad0936b6dbb6aa7f668992768c5ec688863c8a43e4e894cb90aa1b",
+      "production_sha256": "6598284a26ad0936b6dbb6aa7f668992768c5ec688863c8a43e4e894cb90aa1b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchCoverage",
+      "original_sha256": "341c553af2daa5b19fa687d749f1fdb23ca62de68c1fe4b964447bbf8af0bb63",
+      "production_sha256": "341c553af2daa5b19fa687d749f1fdb23ca62de68c1fe4b964447bbf8af0bb63",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchMachines",
+      "original_sha256": "5f9efa879e5a25e454a6e646ccfe3d821ad2a5b89bb2004402f7a97fa1f97875",
+      "production_sha256": "5f9efa879e5a25e454a6e646ccfe3d821ad2a5b89bb2004402f7a97fa1f97875",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchNeighbours",
+      "original_sha256": "f372e4f4162f9f97793df93c16cb7bce547c77a4c8e15586d492b51b996da7c4",
+      "production_sha256": "f372e4f4162f9f97793df93c16cb7bce547c77a4c8e15586d492b51b996da7c4",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchProgram",
+      "original_sha256": "9a71b7a5be4bc2a3656d333d16f5e48c1f9c4729acb5346ff68f2585de1d6456",
+      "production_sha256": "9a71b7a5be4bc2a3656d333d16f5e48c1f9c4729acb5346ff68f2585de1d6456",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchRuntimeBounds",
+      "original_sha256": "003c6960e098a80caf1026f293be2b72c30a31c47584e2a8efad4c6d6d158918",
+      "production_sha256": "1843dd436430ab7ac4bab5531c9b34afb77fa4c1e6dfac298da01e521a85aa54",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchSources",
+      "original_sha256": "d4ff58c39b8d7f2202f8095bd5f6f0b52a8055ec086b36db81730fa0d3bdb6e4",
+      "production_sha256": "d4ff58c39b8d7f2202f8095bd5f6f0b52a8055ec086b36db81730fa0d3bdb6e4",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchStack",
+      "original_sha256": "08ccb3af5fb9bda30f705cad701d5ec3e1a2ef0cc84fada7c850b7c7b4090749",
+      "production_sha256": "08ccb3af5fb9bda30f705cad701d5ec3e1a2ef0cc84fada7c850b7c7b4090749",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchStepMachines",
+      "original_sha256": "318f460d09fe57023d2e5e1ff8befada67b9f885956da519505d621fd3acf564",
+      "production_sha256": "318f460d09fe57023d2e5e1ff8befada67b9f885956da519505d621fd3acf564",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchTermination",
+      "original_sha256": "b550ff243795d41962dc9c7a409dc5fb02fc49d702c976dbebdfefde2aefd5ab",
+      "production_sha256": "b550ff243795d41962dc9c7a409dc5fb02fc49d702c976dbebdfefde2aefd5ab",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityDepthFirstSearchWordBounds",
+      "original_sha256": "cbea18e54623a3bcb383d1fa856402a0d88aba9387f8e99e1d23d6df8af657a9",
+      "production_sha256": "cbea18e54623a3bcb383d1fa856402a0d88aba9387f8e99e1d23d6df8af657a9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceCodeMachines",
+      "original_sha256": "5fa604f214a09430e17c9fefa3e29b6fd2ad051fbec1c00f69c62bb2672626ba",
+      "production_sha256": "5fa604f214a09430e17c9fefa3e29b6fd2ad051fbec1c00f69c62bb2672626ba",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceCodeProgram",
+      "original_sha256": "2015fec49f9f0f0fe4ef3adc01a1efc4c01c41c753c94eb5bb9b35a7064f622f",
+      "production_sha256": "2015fec49f9f0f0fe4ef3adc01a1efc4c01c41c753c94eb5bb9b35a7064f622f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceDualConnectivity",
+      "original_sha256": "a0e812fce7b2300ab3c7fc16be7df570c4909025f83917e943971a5723effd1a",
+      "production_sha256": "a0e812fce7b2300ab3c7fc16be7df570c4909025f83917e943971a5723effd1a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceDualData",
+      "original_sha256": "002a653865c8f1995e67379e74cbd02f2e0f6b8daa018327110c96f45d036d95",
+      "production_sha256": "002a653865c8f1995e67379e74cbd02f2e0f6b8daa018327110c96f45d036d95",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceLabels",
+      "original_sha256": "45e5fbfbea848f3b9152951c12f457f24cdd52508bbfaa2bc70bebe5e1b1ff03",
+      "production_sha256": "d0566251fc239db92d646b3206b0a8eeca1a895766cee0e7580a472b4c6b5f1c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceOrbitMachines",
+      "original_sha256": "3271d4fcbf23a864c8e6b6bf83801fbb4a226b975b7b48117aa01b291490ba8a",
+      "production_sha256": "3271d4fcbf23a864c8e6b6bf83801fbb4a226b975b7b48117aa01b291490ba8a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceOrientationCorrectness",
+      "original_sha256": "99bf575865c11984a0b345b68346f7beb18290a1a67c17240dbda3cab5b8566e",
+      "production_sha256": "99bf575865c11984a0b345b68346f7beb18290a1a67c17240dbda3cab5b8566e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceRootMachines",
+      "original_sha256": "c878854d547d0da3a80c40ec1104fc0d9ad546defe55190646860711c32de016",
+      "production_sha256": "c878854d547d0da3a80c40ec1104fc0d9ad546defe55190646860711c32de016",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceRootProgram",
+      "original_sha256": "0b9c44a3c5f3c686940220d460a9b4a04f14bb841978cba539cd85f87d33d280",
+      "production_sha256": "0b9c44a3c5f3c686940220d460a9b4a04f14bb841978cba539cd85f87d33d280",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceRoots",
+      "original_sha256": "cf99c9bbb3b867ed274c5f76a5f29003c4e8907a2ab1bd1747ab511fc4adc21e",
+      "production_sha256": "cf99c9bbb3b867ed274c5f76a5f29003c4e8907a2ab1bd1747ab511fc4adc21e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceStepBounds",
+      "original_sha256": "82649c280fddc00d26c6c3898b2b3155bb9198c0c65d9a21ea26633c2c4fcfd8",
+      "production_sha256": "82649c280fddc00d26c6c3898b2b3155bb9198c0c65d9a21ea26633c2c4fcfd8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityFaceTableMaterialization",
+      "original_sha256": "b416cc700598d11744dbbe98ba93b8b57e69762b3846ce310c0ec262df63f67e",
+      "production_sha256": "e46064138410e3a8db01c0e2a859493867ce93c8954e1d913c4f6da2779c6c6c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityHalfPlaneCrossing",
+      "original_sha256": "e80a8a3d309fe40dd019291f0b23ad8052c02c7753f91546e99f3bd8efcf1c9d",
+      "production_sha256": "e80a8a3d309fe40dd019291f0b23ad8052c02c7753f91546e99f3bd8efcf1c9d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRAlignedForkOrder",
+      "original_sha256": "ec38171fe7fb4d78139c2d3b4528e19baceb903caaad1c42b96abecb82d4a672",
+      "production_sha256": "b423ca249a6fb315185ca5bc7eb151dbf54f6ce4b3b174f026a7c9cf19ab8b61",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRAlignment",
+      "original_sha256": "72e0ad7795286f3e82b34e7c43b992ffd295822b4e0013af70444ae6c200f6cd",
+      "production_sha256": "72e0ad7795286f3e82b34e7c43b992ffd295822b4e0013af70444ae6c200f6cd",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRAlignmentSafety",
+      "original_sha256": "b414e853c6df43856fce19e6af32c86afb41415b5a3d917c998951f0e8c77114",
+      "production_sha256": "ded6ed3d976b252c06abbffe507985406cbf0c6acd061a0e50e81e78393e1e2c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRAllPortNoncrossing",
+      "original_sha256": "0c35bbe126aa6b49cfbe0f1a960140da5bebe16f51ec8d6a909c1776fb9da8d3",
+      "production_sha256": "0c35bbe126aa6b49cfbe0f1a960140da5bebe16f51ec8d6a909c1776fb9da8d3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBackEdgeForks",
+      "original_sha256": "dc8f2526ef599c43fc38bf9d75a1676af016d4b4f100a03dc02a0b8a5249db83",
+      "production_sha256": "dc8f2526ef599c43fc38bf9d75a1676af016d4b4f100a03dc02a0b8a5249db83",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBackPortNoncrossing",
+      "original_sha256": "251f56b9b61ff8096c359aeca2bd3ca649f33282d877a709ebc9c82c7cb5f5f7",
+      "production_sha256": "4df7c4c5dd78e03d0f184f256e48c940778d56393ddc202493aa40eb8d1adc9b",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBackWords",
+      "original_sha256": "e876f27f3e7b9d03ea9623116d7be27013305fadd545ba327fa0a2b35c4816ac",
+      "production_sha256": "e0e92a31cf3e6d814ed591591834ea5a332342293534f3f0a9d3eecdc87890f5",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBlockRankOrder",
+      "original_sha256": "63eda2090735241ebbacb4736a8b72b545374382a8b43eea926da4210f50f041",
+      "production_sha256": "63eda2090735241ebbacb4736a8b72b545374382a8b43eea926da4210f50f041",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBranchEventOrder",
+      "original_sha256": "8228d7ea0eff8cc0df312d5458589a164bd1c0d35f617031227a3049ef5e8801",
+      "production_sha256": "59636f3c61d67922ab66b7f6a10dcaefa0cce3fdc5e8a66394a478b561f7f23d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBranchKeySeparation",
+      "original_sha256": "96ae08077fdfc016b3c8e040dea94ccff2728a6cbf765791dedaf93d14ed564f",
+      "production_sha256": "96ae08077fdfc016b3c8e040dea94ccff2728a6cbf765791dedaf93d14ed564f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRBranchPaths",
+      "original_sha256": "8436c66fe9b842b10426e8ed9a1da16f2cd10573ddd80c27309bf1aeeafb03a6",
+      "production_sha256": "8436c66fe9b842b10426e8ed9a1da16f2cd10573ddd80c27309bf1aeeafb03a6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRChildInduction",
+      "original_sha256": "0c0db73c7c4dccf6ff1630bb790a18c8fb47ac26a6db569ad856455cd0460844",
+      "production_sha256": "0c0db73c7c4dccf6ff1630bb790a18c8fb47ac26a6db569ad856455cd0460844",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentConnected",
+      "original_sha256": "ad779a4cd665b0e8c30b1f85a351f6dc91be37418cab27d35ccbf2ae70b29af3",
+      "production_sha256": "3a376a4b6742c1d08735c4fe2756a968746fba6e720e6a07d36af80a1d78932f",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentContour",
+      "original_sha256": "14ddd8133a6bc7353f67aa2cbd197f6ecd89d0b0089d04c1fc2f076faca11704",
+      "production_sha256": "14ddd8133a6bc7353f67aa2cbd197f6ecd89d0b0089d04c1fc2f076faca11704",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentCycleFlip",
+      "original_sha256": "c96436a36197e7a8be33b993f7179b71566476c192d051753b3de753db6581d2",
+      "production_sha256": "7096b438a3e28893037e08172bc3a516279146b3e634bf380bb22538432e49a6",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentFaceProducts",
+      "original_sha256": "aba6b338304b0f8509e79ba134c58611e8d639a17cf83ca9156099bae51117d2",
+      "production_sha256": "5030f01a883377b9b76e595cf2b54a768384f7a11e9dcbda47a8404d50bbe754",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentFaceRoot",
+      "original_sha256": "436d5386ab8f95ff0aac4de721dbcc4d5edd2e34b1b37148b14fba8b2e195895",
+      "production_sha256": "436d5386ab8f95ff0aac4de721dbcc4d5edd2e34b1b37148b14fba8b2e195895",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentFaceWords",
+      "original_sha256": "e723c5791fde7b0cd68c4f789b93a4b2469b0cc2514653d5213587077d3feb6b",
+      "production_sha256": "e723c5791fde7b0cd68c4f789b93a4b2469b0cc2514653d5213587077d3feb6b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentGraph",
+      "original_sha256": "4dd782a2a4f835f164b887be0bf055822260718f8127e202f3d0961ec3f25a7c",
+      "production_sha256": "4dd782a2a4f835f164b887be0bf055822260718f8127e202f3d0961ec3f25a7c",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentMatching",
+      "original_sha256": "9d5cb9cd42c00cff64249455d4382e04d9736b7e48ec418fb45ca5fdcba1cbcb",
+      "production_sha256": "5c70d5937a98c1ee9d6d0f3102478d4ae9a7d158bcf7cacdf79722b309e904d5",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentPortHeights",
+      "original_sha256": "8791f4a6c73f9f626c8e19ca23e8c9dfa0f73592799952f5c16075002974f30a",
+      "production_sha256": "8791f4a6c73f9f626c8e19ca23e8c9dfa0f73592799952f5c16075002974f30a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentRows",
+      "original_sha256": "ae037fab0e2f856c6b96f52ff2f2ec3989bb406a6b8118113906b74693eaecb6",
+      "production_sha256": "ae037fab0e2f856c6b96f52ff2f2ec3989bb406a6b8118113906b74693eaecb6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponentTreeCardinality",
+      "original_sha256": "aba93ca8e82eb6b0ba9b7eea849338e356ffd0228548c5ebe4bc2ac0c09d1b57",
+      "production_sha256": "aba93ca8e82eb6b0ba9b7eea849338e356ffd0228548c5ebe4bc2ac0c09d1b57",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComponents",
+      "original_sha256": "74b83efa4a96329870dba8fcdbc7392c8e5881e9379cb61434f2d1411fdf75f9",
+      "production_sha256": "74b83efa4a96329870dba8fcdbc7392c8e5881e9379cb61434f2d1411fdf75f9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComputedEuler",
+      "original_sha256": "3903df80d5c89e99844db68de39651f48e2aed9a2c9ea6acaf6afab83c707da5",
+      "production_sha256": "3903df80d5c89e99844db68de39651f48e2aed9a2c9ea6acaf6afab83c707da5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRComputedRootCircleRouting",
+      "original_sha256": "6c2d72f4818f1a7b2c2eccfb989135464af6e526f0a1bb3cc16da30363cf47af",
+      "production_sha256": "6c2d72f4818f1a7b2c2eccfb989135464af6e526f0a1bb3cc16da30363cf47af",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRConstraintBlocks",
+      "original_sha256": "db70dc80e6cd9dd200a6eedd4ed6d9f8404402510b87d14531ea0bdde48e3acb",
+      "production_sha256": "db70dc80e6cd9dd200a6eedd4ed6d9f8404402510b87d14531ea0bdde48e3acb",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRConstraintMachines",
+      "original_sha256": "eb10b725601300b17bf8b2501423d14298e76ea34781c8c06bf91e98370c1216",
+      "production_sha256": "eb10b725601300b17bf8b2501423d14298e76ea34781c8c06bf91e98370c1216",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRConstraints",
+      "original_sha256": "727c2e246002abfb4950642519e5e9b83fe12be7c9694771dd82d1f75d97a1f2",
+      "production_sha256": "727c2e246002abfb4950642519e5e9b83fe12be7c9694771dd82d1f75d97a1f2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourBackEvents",
+      "original_sha256": "87fa5472fa00772c0610c0ad8815324aeddb1da4910b864c10c5ce9d15452666",
+      "production_sha256": "87fa5472fa00772c0610c0ad8815324aeddb1da4910b864c10c5ce9d15452666",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourBlockWords",
+      "original_sha256": "b35e7e0598568c515b5eefe4e1ec517490fdb7504ea48f34dcf3f1bcfb1483ed",
+      "production_sha256": "b35e7e0598568c515b5eefe4e1ec517490fdb7504ea48f34dcf3f1bcfb1483ed",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourCycles",
+      "original_sha256": "808b7f09748e1f675a94ecda2bd70bc7c57e9d426d9061294dca8f81959c8333",
+      "production_sha256": "a8006050aada284860af6535ac8f6ce939cd312c359a45084bb534d397300f25",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourEventOrder",
+      "original_sha256": "b5d636fc984993f0f6f3778dae36731b71929ca6d40283abec8f4416d1f3e976",
+      "production_sha256": "12d394367ba6f9d5dd91db9a5ee8e2c90fd7200003e4744ec850adcdab15ab2c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourExcursions",
+      "original_sha256": "4c130641837d4fd7d542e7c6262e685b87d31e86cb46712f3fb313aa24cdd914",
+      "production_sha256": "4c130641837d4fd7d542e7c6262e685b87d31e86cb46712f3fb313aa24cdd914",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourKeyOrder",
+      "original_sha256": "57b82c10dd120e09ad5848c6bb1c1a1a9b3668ae8a9e70bec118a87e0f962855",
+      "production_sha256": "57b82c10dd120e09ad5848c6bb1c1a1a9b3668ae8a9e70bec118a87e0f962855",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourKeySteps",
+      "original_sha256": "3327ea13bd32578a1ddb64448f095b394f4914396233fbea7a1643051a19e78b",
+      "production_sha256": "904e4bdf202a7a61d3bbb5a6017294ae3f46b782e05a24e737fdac9fe04384d9",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourKeys",
+      "original_sha256": "533461134c3adf355c07d1413f8a44ee50c5972b31f8124ac978713bc1dbb9b2",
+      "production_sha256": "533461134c3adf355c07d1413f8a44ee50c5972b31f8124ac978713bc1dbb9b2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourPermutation",
+      "original_sha256": "3cbd8818447059da0f3b0c6fd8c31a79969e602d02050ce795aa5a861a8bf7bf",
+      "production_sha256": "3cbd8818447059da0f3b0c6fd8c31a79969e602d02050ce795aa5a861a8bf7bf",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourReorientation",
+      "original_sha256": "1d14110db1195be791bb2742760111b442e89c97cb9a2901955b3bb96479e1d7",
+      "production_sha256": "1d14110db1195be791bb2742760111b442e89c97cb9a2901955b3bb96479e1d7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourRowWords",
+      "original_sha256": "9dd0a64738ab02e5a98cc5ca324138fe3b043e929b8adda2408efb0dfb1a6e3b",
+      "production_sha256": "9dd0a64738ab02e5a98cc5ca324138fe3b043e929b8adda2408efb0dfb1a6e3b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourSubtreeIntervals",
+      "original_sha256": "603b497b4d21d54395e9355599063e379e18cf7de3d29a2cd890818520ed4190",
+      "production_sha256": "5cb1d79373be99b7837d1ceb971f15bf9e05869afa1e47da3eb81756be1efad0",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRContourTraversalOrder",
+      "original_sha256": "a71813f4f355976c00681f3512f9bbac26c24103d2f8760d0d995fa5393d9b19",
+      "production_sha256": "a71813f4f355976c00681f3512f9bbac26c24103d2f8760d0d995fa5393d9b19",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRCyclicBlockInputs",
+      "original_sha256": "3cd36792331db199fce283f61210d377bc8ad5615862b873f9bbb243885851f5",
+      "production_sha256": "3cd36792331db199fce283f61210d377bc8ad5615862b873f9bbb243885851f5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDartConnectivity",
+      "original_sha256": "418aabe414fb6c3f862cc2845890c4640a127dd4782d63679d35e60e7ad3bbcc",
+      "production_sha256": "42f1116d5696f88b499b168450433973ffcdd7874a2469d22e478fd2216b85ea",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirect",
+      "original_sha256": "90d348abef8fb689d320f5d569864f68527caecc284a4d12a4384ec5f7d328e6",
+      "production_sha256": "90d348abef8fb689d320f5d569864f68527caecc284a4d12a4384ec5f7d328e6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectMachines",
+      "original_sha256": "71b19aa846e6f381a4bc9aadb406333a66aedf6aa04ea0bdce311d314ba7055e",
+      "production_sha256": "71b19aa846e6f381a4bc9aadb406333a66aedf6aa04ea0bdce311d314ba7055e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedContourWords",
+      "original_sha256": "0d220649685a24e93ab044d1b070307f355e9cd6bfc0adcfd76ddc213c695da0",
+      "production_sha256": "0d220649685a24e93ab044d1b070307f355e9cd6bfc0adcfd76ddc213c695da0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedExcursions",
+      "original_sha256": "f362a9c3ec3cf6201b1b9c9505d4ef08efe819a72e180c2daa10c63bcbc6fc4a",
+      "production_sha256": "8e6210ec54d81b934d5d2ef32b814c05b46f142b790e73c179d282baaba1c527",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedNodeExpansion",
+      "original_sha256": "d0b31d062aaf250ea9094bf6d97494ba5798eaba5fa2db6d69ae32af6cc34384",
+      "production_sha256": "d0b31d062aaf250ea9094bf6d97494ba5798eaba5fa2db6d69ae32af6cc34384",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedRootExpansion",
+      "original_sha256": "0b9403c532d712c9609178ff116a118f6d4b166ab79709b66ab5f10d865cfeac",
+      "production_sha256": "0b9403c532d712c9609178ff116a118f6d4b166ab79709b66ab5f10d865cfeac",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedRootMembership",
+      "original_sha256": "22124deaa63eb2eb49d45bd2fce52942cca5f3f8de5ec052bdd59ff8f77f38de",
+      "production_sha256": "22124deaa63eb2eb49d45bd2fce52942cca5f3f8de5ec052bdd59ff8f77f38de",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedRowChildren",
+      "original_sha256": "e3a6b499e40ac3a0d7bbef6b0915384306ecc4a01995218cb0550aa6631acab0",
+      "production_sha256": "e3a6b499e40ac3a0d7bbef6b0915384306ecc4a01995218cb0550aa6631acab0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedSubtreeInfix",
+      "original_sha256": "c7964fdaa288336def38a23b82e56d9b2ca56b3a2e41a3eb910c091a423e08a4",
+      "production_sha256": "c7964fdaa288336def38a23b82e56d9b2ca56b3a2e41a3eb910c091a423e08a4",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDirectedSubtreeRanks",
+      "original_sha256": "7c332f15ffb0a6411e30c46c853079df2fb93a53761589f4d47dfec0588a2ffe",
+      "production_sha256": "7c332f15ffb0a6411e30c46c853079df2fb93a53761589f4d47dfec0588a2ffe",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDrawnTree",
+      "original_sha256": "b1309129c3b48f706c92ddb7d53ebea53119d5fff17bc28019985a8542631210",
+      "production_sha256": "b1309129c3b48f706c92ddb7d53ebea53119d5fff17bc28019985a8542631210",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRDualReachability",
+      "original_sha256": "5ddae160bfa02f0e9c0427675742e9c48495eb6ff27f0c76898f46a7a20501cc",
+      "production_sha256": "5ddae160bfa02f0e9c0427675742e9c48495eb6ff27f0c76898f46a7a20501cc",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLREscapeEventOrder",
+      "original_sha256": "73125c5e81c7960b38890857eaad8817d86014df5b4cf400cfb4c8e6b347e2a6",
+      "production_sha256": "ed89cdbaf0aff774a4d52c89c20349417a2acc1fb21260240b447aab3025e4a0",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLREventMachines",
+      "original_sha256": "57e089f0472a3d28e92cfee5dbb9ef7367c21984e6585f4b58fe620c7559a3cb",
+      "production_sha256": "57e089f0472a3d28e92cfee5dbb9ef7367c21984e6585f4b58fe620c7559a3cb",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLREventOrder",
+      "original_sha256": "59540a5f262edf3a794b062c7bffe02a7a4732ba2e10f34f570f4598cb4e7309",
+      "production_sha256": "59540a5f262edf3a794b062c7bffe02a7a4732ba2e10f34f570f4598cb4e7309",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRExcursionClassification",
+      "original_sha256": "9adbb2be1d0ced44a18d7c0cf896bf8c182cac7c4bb70c4bf1d887c0b43082cb",
+      "production_sha256": "49860c9eb64308ec34e42c3e76a2f66cba54af6eecc8ddaec9f6dbd8580c33a9",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRFaceBoundary",
+      "original_sha256": "5738743d515823bd2bcdbf75ba6ff6ac0eca9890ac039e67dd9f057b19dd614a",
+      "production_sha256": "5738743d515823bd2bcdbf75ba6ff6ac0eca9890ac039e67dd9f057b19dd614a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRFaceComponents",
+      "original_sha256": "d4d67519be23cd7d677c1ab07df8fafc36fe57567f6635fdbcd061998510d180",
+      "production_sha256": "d4d67519be23cd7d677c1ab07df8fafc36fe57567f6635fdbcd061998510d180",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRFacePermutation",
+      "original_sha256": "75ca358395e9fb0c42de3f5a08b262c7262d0548572eb867dd28916f8e1d2c09",
+      "production_sha256": "75ca358395e9fb0c42de3f5a08b262c7262d0548572eb867dd28916f8e1d2c09",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRFaceRepresentatives",
+      "original_sha256": "c5aa941422979f827a7cd28c82b7bd517ed622ef67dcb7ae7107da191f1c7d8d",
+      "production_sha256": "c5aa941422979f827a7cd28c82b7bd517ed622ef67dcb7ae7107da191f1c7d8d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRForestEuler",
+      "original_sha256": "b4db227ea7ee67695e3ea4af0c1811dbac9261cf3f042248498065886819f695",
+      "production_sha256": "b4db227ea7ee67695e3ea4af0c1811dbac9261cf3f042248498065886819f695",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRForestFaceCount",
+      "original_sha256": "4ad89a28c9e9b08a0815ab1779a8f944e0bd2f62aa3ae58718fc53ee56568679",
+      "production_sha256": "33c8c8bb3ba5940919547d55b69b2c8913279e41e2d24eb013705d9711260a0c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRForestFacts",
+      "original_sha256": "1c60bc373c48a1bcc687c927a345cda312f1607401886c44ab3933c2d5c38e75",
+      "production_sha256": "1c60bc373c48a1bcc687c927a345cda312f1607401886c44ab3933c2d5c38e75",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRForkOrderSemantics",
+      "original_sha256": "8980730fe0dd7172d6df965cbb4bf323ee59d35bb8c9ff05e06d1a76d20e96e8",
+      "production_sha256": "59f175d393aa8441bac56c480436561fba3395c687ab81049f8320872cdceea5",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRForwardRows",
+      "original_sha256": "7954642fbfdf2c7a06c056a02701f1ec243575a655f9e71904521d452a77f7e9",
+      "production_sha256": "7954642fbfdf2c7a06c056a02701f1ec243575a655f9e71904521d452a77f7e9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGeneralBranchOrder",
+      "original_sha256": "d48a408d41b2f312bc7523fb4c7a61019d16b1556243ba61dfad0c2cb9f1a67d",
+      "production_sha256": "fadf74d3d9eeba9c88e56f38415af9ea7ff951301a88a114e5df9eb7d02f9487",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGeometricContourIdentification",
+      "original_sha256": "dd583b1946070f9604c3ae453dfe4120c54b8bbe9809dcc2b178dc344b387489",
+      "production_sha256": "dd583b1946070f9604c3ae453dfe4120c54b8bbe9809dcc2b178dc344b387489",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGeometricRotationRows",
+      "original_sha256": "e71cbcf3f76f8364823917370a674242fe636127f0137b07e65ab14fdf6e02ae",
+      "production_sha256": "e71cbcf3f76f8364823917370a674242fe636127f0137b07e65ab14fdf6e02ae",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGeometricWordBlocks",
+      "original_sha256": "89563d35d8378cd6439d75b163a74f87a2805366ce9cc8ed75fc54b2fa4f9861",
+      "production_sha256": "89563d35d8378cd6439d75b163a74f87a2805366ce9cc8ed75fc54b2fa4f9861",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGlobalComponents",
+      "original_sha256": "331472077f5e846f353618f7140bbe1c5e1ae5a32611e6b60f2d4a1acff74bc0",
+      "production_sha256": "331472077f5e846f353618f7140bbe1c5e1ae5a32611e6b60f2d4a1acff74bc0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGlobalEuler",
+      "original_sha256": "0a349f0ba06659536ce3e25698ee9b9d8d8c7e01b0baf3824d6863681e35b229",
+      "production_sha256": "0a349f0ba06659536ce3e25698ee9b9d8d8c7e01b0baf3824d6863681e35b229",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRGlobalEulerIsolates",
+      "original_sha256": "847a26ffc0fdea699a238f73edb763779dcd28ecf7f467cacf1a186ea8ab6f04",
+      "production_sha256": "847a26ffc0fdea699a238f73edb763779dcd28ecf7f467cacf1a186ea8ab6f04",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRIncomingMateOrder",
+      "original_sha256": "a51400662ea8e110f20c59ba5acf6e101df6981530ffd03947a2d445c49c16ca",
+      "production_sha256": "fe8524d0e67d44a250dded5adf530946291700f546e1fce6080118f0ae591400",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRIncomingSubtreeBounds",
+      "original_sha256": "4a4d7896900b8ad2bf4277703e81b3e71a9711661454700d2e0d4bb1a243a209",
+      "production_sha256": "4a4d7896900b8ad2bf4277703e81b3e71a9711661454700d2e0d4bb1a243a209",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRIsolatedRoots",
+      "original_sha256": "8e2ef6b4dd1cb31f961ae4f1704e848fa22aaafabb0b0baec8c947021566a7e8",
+      "production_sha256": "8e2ef6b4dd1cb31f961ae4f1704e848fa22aaafabb0b0baec8c947021566a7e8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRLoopAdjacency",
+      "original_sha256": "cf39f9f1a23ecb2f794ac162967c094aa1efe9319d32dd14f2e123a31106b5ca",
+      "production_sha256": "cf39f9f1a23ecb2f794ac162967c094aa1efe9319d32dd14f2e123a31106b5ca",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRLoopPortNoncrossing",
+      "original_sha256": "73b4300b6d0a265a75c384bae0ceb2351486c78061c149f0691c06e179088c00",
+      "production_sha256": "73b4300b6d0a265a75c384bae0ceb2351486c78061c149f0691c06e179088c00",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRNecessityReturnCuts",
+      "original_sha256": "bf3b4c838280523ac39ff299cdb1ba426cc8e56bd74b105e1e87d5ec3a87c5ae",
+      "production_sha256": "96eadc0eab15206ce7c5e792c7155ffd938c7bcfcd228070baae476b3e86d855",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRNesting",
+      "original_sha256": "8e25e8d93110e8a09ffee2169cc1cef15e1977673e6fdc7281812d9ffde5453d",
+      "production_sha256": "4d6217c7b7a757c38470cd831824afe06594f30355265d02b7ecb89ea0f57364",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRNestingMachines",
+      "original_sha256": "89e846a1f3e60d2c97d58c216414bc894bd3e04ad6fd325178834b4f8768511d",
+      "production_sha256": "89e846a1f3e60d2c97d58c216414bc894bd3e04ad6fd325178834b4f8768511d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRNonalternatingRankForce",
+      "original_sha256": "6c0e5d3ddddc8059490fd01413817b088645954176e216023160f4d9a0b4f666",
+      "production_sha256": "6c0e5d3ddddc8059490fd01413817b088645954176e216023160f4d9a0b4f666",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLROutgoingOrder",
+      "original_sha256": "b143723cf5c7323c3a79a0f4344a49ed41847fb1342a2e78a6e7281f9080cc6e",
+      "production_sha256": "e0e5f8f25ad1442abd37ef5b1ef34260076b44076e1a1071bb612b9d0311ac35",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRPlanarContourNecessity",
+      "original_sha256": "bbad13eb98fad79cc8f66f707ea2416bc74e1e19b2229a37bc5c34253ca5005b",
+      "production_sha256": "bbad13eb98fad79cc8f66f707ea2416bc74e1e19b2229a37bc5c34253ca5005b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRPlanarEuler",
+      "original_sha256": "17458c9642de9a97f1e0186086f3dfa40e74cf6f1b92702d516e04620861719c",
+      "production_sha256": "17458c9642de9a97f1e0186086f3dfa40e74cf6f1b92702d516e04620861719c",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRPlanarSideAssignment",
+      "original_sha256": "3e046649749d15d9aa59732fef891562a08668226aad3200a068610423967c57",
+      "production_sha256": "3e046649749d15d9aa59732fef891562a08668226aad3200a068610423967c57",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRPortBranches",
+      "original_sha256": "492120039bcfab38e84cf0f8a452b778dbde53599e60a1569cfcc0830d8bbbfc",
+      "production_sha256": "492120039bcfab38e84cf0f8a452b778dbde53599e60a1569cfcc0830d8bbbfc",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRPortRankSublist",
+      "original_sha256": "8349fc4717fe2c727202b834601bbcbd9ad138aecb6e2b1810633a897e76b236",
+      "production_sha256": "8349fc4717fe2c727202b834601bbcbd9ad138aecb6e2b1810633a897e76b236",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRPrimitiveMachines",
+      "original_sha256": "938400073a946493cf572201b036781cc0a718ac328ee12c619cccf8187cefa7",
+      "production_sha256": "938400073a946493cf572201b036781cc0a718ac328ee12c619cccf8187cefa7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRawConstraints",
+      "original_sha256": "2e5e148baad64377a2a83ca503a4e5d838a54fc10befe5b0ef43c5927cafd5bd",
+      "production_sha256": "2e5e148baad64377a2a83ca503a4e5d838a54fc10befe5b0ef43c5927cafd5bd",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRawPortNoncrossing",
+      "original_sha256": "78ada70ad66978659946de52bae4b13dda335a5ea7768f47eedc2590161cf160",
+      "production_sha256": "78ada70ad66978659946de52bae4b13dda335a5ea7768f47eedc2590161cf160",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRealizationArches",
+      "original_sha256": "d4080b4d22a9d4dc34a473d189d1af5cadbdba9738c1778203c4b70b9a15bf56",
+      "production_sha256": "d4080b4d22a9d4dc34a473d189d1af5cadbdba9738c1778203c4b70b9a15bf56",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRealizationGermPieces",
+      "original_sha256": "eae39e0820a2f641ec6e5f77ebf355b0b44b45036e3a0b9406ed8daf93c88b6d",
+      "production_sha256": "eae39e0820a2f641ec6e5f77ebf355b0b44b45036e3a0b9406ed8daf93c88b6d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRealizationRotationSystem",
+      "original_sha256": "9c53a664e0d5b18a0e0b9a7c80db2fe3e1dd5070b89ed0b071bc73750fd6a438",
+      "production_sha256": "9c53a664e0d5b18a0e0b9a7c80db2fe3e1dd5070b89ed0b071bc73750fd6a438",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReturnBlockSeparation",
+      "original_sha256": "262299e8a99a672e0596a72d30cc72bd4a1187c13cc528fb80d1f4fe575ef528",
+      "production_sha256": "262299e8a99a672e0596a72d30cc72bd4a1187c13cc528fb80d1f4fe575ef528",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReturnEventOrder",
+      "original_sha256": "b010417e0a6b0e1ca5cd635352d688632474fd35c69962e9483359293f91a9ea",
+      "production_sha256": "3452d60270c04076e7a56622220cc3bf647e8d432f991f6c500dc8a0be5201c2",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReturnFacts",
+      "original_sha256": "616799ad8383a3b944a1ee9fbecce281e07c35b299b113dcb477c5f713fd3437",
+      "production_sha256": "616799ad8383a3b944a1ee9fbecce281e07c35b299b113dcb477c5f713fd3437",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReturnMachines",
+      "original_sha256": "c587730ba5cb36bf9c6c9ec69b535c38f5d42414340a8566dc5c886b90890dc2",
+      "production_sha256": "c587730ba5cb36bf9c6c9ec69b535c38f5d42414340a8566dc5c886b90890dc2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReturnPortRanks",
+      "original_sha256": "926ae46785c069d5c5d006d8eec042988e741e06116b4329632e0e6fb8ec172f",
+      "production_sha256": "926ae46785c069d5c5d006d8eec042988e741e06116b4329632e0e6fb8ec172f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReturnRankSides",
+      "original_sha256": "eb1b4c07115eb512a65e2ece936bd312a715e451a14a8d43f9780a5dbbe0edb2",
+      "production_sha256": "af08582c52d89693f016e2753e6533fc4d04c907df304e19bd562400f722a2d8",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRReversedSlots",
+      "original_sha256": "baf06cc39121916fcb5259f700fa83924dfd8ec3df4891af347733dd3d66042e",
+      "production_sha256": "baf06cc39121916fcb5259f700fa83924dfd8ec3df4891af347733dd3d66042e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRootedTreeComponents",
+      "original_sha256": "01180e1109837e29e8d8dee50be90ac89c5b6278e67733e1c196e5d2b4f6db4a",
+      "production_sha256": "01180e1109837e29e8d8dee50be90ac89c5b6278e67733e1c196e5d2b4f6db4a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRootedTreeMembership",
+      "original_sha256": "acb98b379c6e088630aba2b8e9be0ee77baa7e9f0f70fd1250380d2a0cc530c1",
+      "production_sha256": "acb98b379c6e088630aba2b8e9be0ee77baa7e9f0f70fd1250380d2a0cc530c1",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRootedTreeProgram",
+      "original_sha256": "cfd15765b885e44736c60c4a2c16167695ab7e23053e0b452aad47db835f9afe",
+      "production_sha256": "cfd15765b885e44736c60c4a2c16167695ab7e23053e0b452aad47db835f9afe",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRootedTreeValidity",
+      "original_sha256": "7aebb5b279e97f429ef9f4c82f7656dc5e6767792da3d9cb6f677489b09774f9",
+      "production_sha256": "7aebb5b279e97f429ef9f4c82f7656dc5e6767792da3d9cb6f677489b09774f9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRotationRowMachines",
+      "original_sha256": "65f2ddbf21f98a634130513baa54a5d4e4d63d1dd78181925fbec7cb9a67caae",
+      "production_sha256": "65f2ddbf21f98a634130513baa54a5d4e4d63d1dd78181925fbec7cb9a67caae",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRowIncidence",
+      "original_sha256": "a0a9fe067adab702513e8ceb05be987ab96fd2b93e732d0560d6c2732bde30a8",
+      "production_sha256": "a0a9fe067adab702513e8ceb05be987ab96fd2b93e732d0560d6c2732bde30a8",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRRowRelabel",
+      "original_sha256": "82cbf7a76bc9df1b716e5554d2541e8f9fa4e0d1ab1e6147eb3dc1a6fa38c1cb",
+      "production_sha256": "b6df09e570a03d47eee9096b5e5431356ad4b24615a7d605490a32f3dd0470d7",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRSubtreeIntervals",
+      "original_sha256": "5646d74e511a07528ec2f4e43ecb6add208d290b2a081d71567431baed0b8809",
+      "production_sha256": "bd8c3c206950453062ccca884fe50e91a975a90aa3661e66621a3978aac6505c",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRSubtreeWordStart",
+      "original_sha256": "82add7175f3902b85a3ab649152721a6f303d7a7ff8c959f246c95bdbc338dc6",
+      "production_sha256": "82add7175f3902b85a3ab649152721a6f303d7a7ff8c959f246c95bdbc338dc6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRTreeCuts",
+      "original_sha256": "41dcac9a0cadfe4aceb5a78dd53fb49b27afd706b36163a2d64caea300e81704",
+      "production_sha256": "41dcac9a0cadfe4aceb5a78dd53fb49b27afd706b36163a2d64caea300e81704",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRTreeInsertion",
+      "original_sha256": "5b142cc81134a8f9a3ced991d40ce5be04a2965f0514311f230051c742972368",
+      "production_sha256": "1b2b191a295d748e5c7b05c0680a77c817beb15ff6439956682dd33879f58779",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRTreePortWordUniqueness",
+      "original_sha256": "6753e59b840a9e96ee380d15ca9e71837e8bd49e916cca7f864e8c088b4e317a",
+      "production_sha256": "6753e59b840a9e96ee380d15ca9e71837e8bd49e916cca7f864e8c088b4e317a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRTreeWords",
+      "original_sha256": "7b8e43036fb89376ec1b5be4123325534f8dfd9480ace4f25a6c7e1177fc87f5",
+      "production_sha256": "e575246051bd761c780ae482c648d48211f602ea5d37a0c52733ca5891c47d79",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRVisitRanks",
+      "original_sha256": "6dbbfa59b7be44e8c22068425edfb387eddf86268207573609b7dbb25601bf1f",
+      "production_sha256": "3d8fdf0524bad082274f3652cea7deb0af3172523cb9896269046042a30dce0d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityLRVisitRows",
+      "original_sha256": "67a05dc63329bd649ba4836751eec63e1892675a315ef71741239a5eedbdab68",
+      "production_sha256": "67a05dc63329bd649ba4836751eec63e1892675a315ef71741239a5eedbdab68",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRVisitWordRelabel",
+      "original_sha256": "37a5c424b561c03ae771db62ee5a48f3c5f70cdb84fd73df77d5f7ac7ae8bf07",
+      "production_sha256": "37a5c424b561c03ae771db62ee5a48f3c5f70cdb84fd73df77d5f7ac7ae8bf07",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRWordPaths",
+      "original_sha256": "342a75f0b21082fa2a4f92405b1f167bd18770d579e57975bae9fd5e1b5655b3",
+      "production_sha256": "342a75f0b21082fa2a4f92405b1f167bd18770d579e57975bae9fd5e1b5655b3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityLRWordSubtrees",
+      "original_sha256": "2acc70ac9200acd2637a9378a9d3527134473edefe51880bfb057cec61a6b9a6",
+      "production_sha256": "7d7ad83a5f83893358ac1a5e934ec8d3d27dd5d67e4dc844f34308a1f0ad246d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityParityMachines",
+      "original_sha256": "c0e69488e5ceefde380cecd794692520e936d5aa2a2494a2b1099d5e7ee16ed2",
+      "production_sha256": "c0e69488e5ceefde380cecd794692520e936d5aa2a2494a2b1099d5e7ee16ed2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityParityMaterialized",
+      "original_sha256": "c2dfc8ca0602806a9bf6e1d5f95e43646f8d8703953e4a81771ae5742504108b",
+      "production_sha256": "c2dfc8ca0602806a9bf6e1d5f95e43646f8d8703953e4a81771ae5742504108b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityParityPolynomial",
+      "original_sha256": "d66341da97690ab211453723eb7a0721041015cb3d20381704baf84ab1606228",
+      "production_sha256": "d66341da97690ab211453723eb7a0721041015cb3d20381704baf84ab1606228",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityParitySolver",
+      "original_sha256": "17f4eb8d2ac472b72ff930d84fba03ac1f1b4affb4642b881e83301212dafc6f",
+      "production_sha256": "17f4eb8d2ac472b72ff930d84fba03ac1f1b4affb4642b881e83301212dafc6f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRotationCode",
+      "original_sha256": "5df0d6fd2ab9e58754fb8f743f7cc05663371b1b5afdbe03184a52e0a1a332f6",
+      "production_sha256": "5df0d6fd2ab9e58754fb8f743f7cc05663371b1b5afdbe03184a52e0a1a332f6",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRotationCodeMachines",
+      "original_sha256": "bb7c5c68f6e7473eadafc6a730a7ba8cf5d2032c37df829c26b768376bf6551a",
+      "production_sha256": "bb7c5c68f6e7473eadafc6a730a7ba8cf5d2032c37df829c26b768376bf6551a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowComponentFaceProducts",
+      "original_sha256": "2996c1811fc5953ed1a104fed33d7a60ca60c3892f0dcb1e7ee1af2d04091d46",
+      "production_sha256": "7e8363f6caf2e6eef79548568d72397531e0385fb513fe9140e9d7b74b89d4a1",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityRowComponentFaceRoot",
+      "original_sha256": "c4e0dc4ad6b2c317dbe1ff9bb2899731315282f5585cdd768f360e464c0fa9a5",
+      "production_sha256": "c4e0dc4ad6b2c317dbe1ff9bb2899731315282f5585cdd768f360e464c0fa9a5",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowComponentFaceWords",
+      "original_sha256": "069b1348bc99c4abdd6991d504770628913ed8d1717d43c35e3e93fad61c3299",
+      "production_sha256": "069b1348bc99c4abdd6991d504770628913ed8d1717d43c35e3e93fad61c3299",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowDualReachability",
+      "original_sha256": "5c1a308017c37823a6d56db791064a944d3d1f7432bba4b72dc649a596f83c33",
+      "production_sha256": "5c1a308017c37823a6d56db791064a944d3d1f7432bba4b72dc649a596f83c33",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceBoundary",
+      "original_sha256": "5b34283dbd03ca0ad43456a7e9d6f0096b03b4bec237f4e431b43a664ff2341a",
+      "production_sha256": "5b34283dbd03ca0ad43456a7e9d6f0096b03b4bec237f4e431b43a664ff2341a",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceCodeProgram",
+      "original_sha256": "d5f8696b1120b1004c93b3f57487bf915835b5ba375dd54ed57397692ead0349",
+      "production_sha256": "d5f8696b1120b1004c93b3f57487bf915835b5ba375dd54ed57397692ead0349",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceComponents",
+      "original_sha256": "b0ad5835e0cc7717118c6360563bb733afd3c05ce56f80c1d8047c5b8a411b4b",
+      "production_sha256": "b0ad5835e0cc7717118c6360563bb733afd3c05ce56f80c1d8047c5b8a411b4b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceDualConnectivity",
+      "original_sha256": "c8b2ad74e85df9b1233054f5a3c8748d2b3294ec9ec0968f649012eaafef3f76",
+      "production_sha256": "c8b2ad74e85df9b1233054f5a3c8748d2b3294ec9ec0968f649012eaafef3f76",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceDualData",
+      "original_sha256": "56e7b97f021aa4a648fce98fdac0c77e5635e05f515bbf385c8338c1db8c3114",
+      "production_sha256": "56e7b97f021aa4a648fce98fdac0c77e5635e05f515bbf385c8338c1db8c3114",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceLabels",
+      "original_sha256": "be847c1d7f466d15ef094877419055710a00c6baeeb70d68502eb761dab64175",
+      "production_sha256": "3fabefb6682eb1ad4599f3fcbcebafb432ce1d664f9e537cad97268aacfe8dab",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceMachines",
+      "original_sha256": "ae264f8e147696f00e38b2681ab17a955d9c15ab61d68247ffbcbe630a93869e",
+      "production_sha256": "ae264f8e147696f00e38b2681ab17a955d9c15ab61d68247ffbcbe630a93869e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceOrbitMachines",
+      "original_sha256": "f5cfd3b7bfe650c1499a8b6eecf946e7314f78b15a013d54725ec9b13fe563d2",
+      "production_sha256": "f5cfd3b7bfe650c1499a8b6eecf946e7314f78b15a013d54725ec9b13fe563d2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceOrientationCorrectness",
+      "original_sha256": "eeacb9d7c587ec1d17147ef0dab7a9d933eef004bc4eef8c10d1b0c1bab50f5f",
+      "production_sha256": "eeacb9d7c587ec1d17147ef0dab7a9d933eef004bc4eef8c10d1b0c1bab50f5f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFacePermutation",
+      "original_sha256": "774101f439b31e7f109528c09657e1d7eea29b54c8c205615189d886887356af",
+      "production_sha256": "774101f439b31e7f109528c09657e1d7eea29b54c8c205615189d886887356af",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFacePrimitives",
+      "original_sha256": "fa357aa3495375724634bad2d053cfe0d37464f943e6f1b20771ab8e5d92f038",
+      "production_sha256": "15152aabb9526b5aa17d69dd556a55da5e8e941918058eda24c75772de5bc080",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceRepresentatives",
+      "original_sha256": "8ba20b9f16bb6adbb9a65367049d66e265babe8be847f9c649f475fb1d6501c3",
+      "production_sha256": "8ba20b9f16bb6adbb9a65367049d66e265babe8be847f9c649f475fb1d6501c3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceRoots",
+      "original_sha256": "2e0a8667a20ee204272934a1685d779fe48bf06e46d449ee3d15ae7cbd319de7",
+      "production_sha256": "2e0a8667a20ee204272934a1685d779fe48bf06e46d449ee3d15ae7cbd319de7",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PlanarityRowFaceTableMaterialization",
+      "original_sha256": "78ec08b3abc563037c9728ac76e042718f5a7f3ca0ef52d4da3579db937d1337",
+      "production_sha256": "22d0c87b305ff7adf1200f84413b4da89dba583904a7ff3ef55a2506db6c1d30",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityRowGlobalEuler",
+      "original_sha256": "70b5de78092026052acc6cd5157e8fe75f31626eccea0f2afde680fc3f67e65c",
+      "production_sha256": "8b4e0e38413fb224a6f67ec5a7641ab19f665088a00778248c6e1bb2f662524d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PlanarityRowPfaffianOrientation",
+      "original_sha256": "c42a4d22868d9941307b2599aa05faac94d82353b4ecbacd2d3034209bb4c6ca",
+      "production_sha256": "3287a740db41cb755f5dc472e6e5ce0376f9ca72d85f36f79c276e4f3520209d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.PolygonalOppositeStripSeparation",
+      "original_sha256": "470f407940a15b0a2462513bf533bb15973726f2b7e7c726cccbd0a77db543b3",
+      "production_sha256": "470f407940a15b0a2462513bf533bb15973726f2b7e7c726cccbd0a77db543b3",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PolygonalSignedStripWidths",
+      "original_sha256": "00ffef5c21dfe6f7b219f41e8c1729413d1733964b94dacce8cd2fd1dfcffa8f",
+      "production_sha256": "00ffef5c21dfe6f7b219f41e8c1729413d1733964b94dacce8cd2fd1dfcffa8f",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.PottsRandomCluster",
+      "original_sha256": "7ee87afcc56a16e2c919578a931ae040144d66d36e606bec0db2a42d65aef4e4",
+      "production_sha256": "ea8fc775a04630a9f9af6aa4481a875baa031e9a66129a6d3acf55891c1cec92",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.ProperPlaneCollapse",
+      "original_sha256": "baf3aa940dbfaead7b2c5c85bbdf403bf3a6ebf1da65471e33e0afa4135fd0d4",
+      "production_sha256": "baf3aa940dbfaead7b2c5c85bbdf403bf3a6ebf1da65471e33e0afa4135fd0d4",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RadialPottsAssemblyCircleArches",
+      "original_sha256": "fa21550aa70f09bad59082080c43e7622812552d75ad7b9c709062913e69bad2",
+      "production_sha256": "fa21550aa70f09bad59082080c43e7622812552d75ad7b9c709062913e69bad2",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RadialPottsAssemblyCircleCoordinates",
+      "original_sha256": "e2a2745903a86b09d4afc39fb6ac878f21fffc9a91ebe91fb88ce24de005b379",
+      "production_sha256": "3c0a06a0d63960800ece71baab8a72f348c2ef556a6f0217ff246bb1bca3bea1",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RadialPottsAssemblyCircleMap",
+      "original_sha256": "a0bfa56db74e6899d77174da292d1b754b1e99925ba5785729f0d2b764333792",
+      "production_sha256": "a0bfa56db74e6899d77174da292d1b754b1e99925ba5785729f0d2b764333792",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RadialPottsAssemblyRibbonCircleClip",
+      "original_sha256": "54cc1c93e2f39fd3f16129b1ff5b6c9921446af96aba4c205507a968f622c8de",
+      "production_sha256": "0828c8ce20f69300f3eb875268e949e62cccb43149fe27cef90e61ddd9c8d967",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RadialPottsAssemblyRibbonGerms",
+      "original_sha256": "f254201921439278761ad1664fd7ceecdb3bc087e8abbde3753f6c41042ed389",
+      "production_sha256": "f254201921439278761ad1664fd7ceecdb3bc087e8abbde3753f6c41042ed389",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RadialPottsAssemblyRibbonMiddle",
+      "original_sha256": "6d0bd4a4a777d5629429c2fc627050320f9bb462b8fb5e88f6e8ec719487578e",
+      "production_sha256": "7c37885a85a132c1479f58cd1a684ad807c9acf51b9a5aee9b347d25c8e5c9cb",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RootedLoop",
+      "original_sha256": "80f8da3e87e9c6b7942d259e9e82b4a45aa932db33784045567b965c9739fa7b",
+      "production_sha256": "80f8da3e87e9c6b7942d259e9e82b4a45aa932db33784045567b965c9739fa7b",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RootedOccurrenceTree",
+      "original_sha256": "6ab098077adef92c7e7427963f21d0e798f1ca4eb227a8e708bf6e0691779c8d",
+      "production_sha256": "2d3a386ab267273a33592a9ea9b68964316a115f416fc9001a08bbbd1335ebbb",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RootedOccurrenceTreeBoundaryLabels",
+      "original_sha256": "8c3d16affb5ada93e2c1f3a35853ebc271b22d416f74df92a4f5e1e5132ed30a",
+      "production_sha256": "4b0312d2d0890d91818061abb739065fe404d8732f91690802da82f642f2892d",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RootedOccurrenceTreeCuts",
+      "original_sha256": "8e97c9c8f10d9a21370e763cd49fd606ee8b346a9096407884f42b600a9a06b0",
+      "production_sha256": "8e97c9c8f10d9a21370e763cd49fd606ee8b346a9096407884f42b600a9a06b0",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RootedOccurrenceTreeLookup",
+      "original_sha256": "4bb1434ce6281bbbeb1ea536fdeca264443dea7cfae647e7584fc483a295d526",
+      "production_sha256": "891b845b7dd911983d7acbe2790568449c72a1da6376a7cd9089fca4cd792f85",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RotationDartRelabel",
+      "original_sha256": "1b8cc2a93534b1904d4161ce0d82136993fa7bc63aad899b12cb44a53deaa61e",
+      "production_sha256": "1b8cc2a93534b1904d4161ce0d82136993fa7bc63aad899b12cb44a53deaa61e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RotationEvenSubgraphFaceCut",
+      "original_sha256": "2c35c9f07a429572efeb00531117570a4e7bfb4d1b545c37776074436c6e970c",
+      "production_sha256": "b9832997b33ef4311fed7af4404c86d84026ba2986c5dae82cb857ebd5b49985",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RotationFaceCutContour",
+      "original_sha256": "b03172d0fa37cae1d873b14494f253780e874d9cc6bfda28683667d837b4b9eb",
+      "production_sha256": "b03172d0fa37cae1d873b14494f253780e874d9cc6bfda28683667d837b4b9eb",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RotationFaceCutRegionCycles",
+      "original_sha256": "ed2c4e429485b84e93b40b80303700a7cd60934c859b88c407582770497fe9b9",
+      "production_sha256": "ed2c4e429485b84e93b40b80303700a7cd60934c859b88c407582770497fe9b9",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RotationFaceCutSigns",
+      "original_sha256": "899f9b697f051af23bea3476afb5a315490c66299760a957dd7103068fe292e7",
+      "production_sha256": "31f22f7f97b9ceca8e6559dfc153ec71a37eb8a297b91e371cdcde409680dc18",
+      "changed_from_original": true,
+      "seed": "fixed canonical original source",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.RotationFaceCycleDuality",
+      "original_sha256": "4a47856d24b1c7a48cfa18880bf2ad884eaf8c1b8428610f6c41875e01a919ae",
+      "production_sha256": "4a47856d24b1c7a48cfa18880bf2ad884eaf8c1b8428610f6c41875e01a919ae",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RotationSimpleCycleCut",
+      "original_sha256": "0e20bfcbac86d1bb6bbebdd26d361cd62f5b4909ceb6edd3dd08e10cf7f25c4d",
+      "production_sha256": "0e20bfcbac86d1bb6bbebdd26d361cd62f5b4909ceb6edd3dd08e10cf7f25c4d",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.RotationSimpleCycleSigns",
+      "original_sha256": "935adb65ac27387e060e72041d02d328815e150428566a809dde7b9b88308404",
+      "production_sha256": "935adb65ac27387e060e72041d02d328815e150428566a809dde7b9b88308404",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.SelectedStretchCode",
+      "original_sha256": "c0c8082eb93d5ffcddb991a5dab29e9077d036ee21a2ea17ce586f53a269052c",
+      "production_sha256": "44e52e3282ee1337e67e0cf9d69c12fefc412a78e23600bbb0ea42eb7ebe9cb3",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.SelectedStretchMachines",
+      "original_sha256": "fafeee35ca9ba67f9de3a38971dc1f5f0aed2e74e13f718cc2f91c8db0676b18",
+      "production_sha256": "25f0d841e60470afb51cdfb081c13dfcdf56ca8e61aa058b16ceb2eab4b14541",
+      "changed_from_original": true,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": "Lean 4.34.1 / fixed mathlib proof-API compatibility port; see PORTING.md and exact source diff."
+    },
+    {
+      "module": "PlanarHom.StateWordRelabel",
+      "original_sha256": "689650aca66843ced0eca025df70f3573f5d10ce7a62aa16d06c691529fda04e",
+      "production_sha256": "689650aca66843ced0eca025df70f3573f5d10ce7a62aa16d06c691529fda04e",
+      "changed_from_original": false,
+      "seed": "fixed canonical original source",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.UniformFieldArithmeticHeights",
+      "original_sha256": "d2d572ec025eb6571d1900a1c53115c2fbc7443bc2f5829090b11d924eb36431",
+      "production_sha256": "d2d572ec025eb6571d1900a1c53115c2fbc7443bc2f5829090b11d924eb36431",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    },
+    {
+      "module": "PlanarHom.UniformFieldHeights",
+      "original_sha256": "2b4c82af71d2cef696034cbc1751aec6d48b3379bb8bd3f5f49a4270514e5008",
+      "production_sha256": "2b4c82af71d2cef696034cbc1751aec6d48b3379bb8bd3f5f49a4270514e5008",
+      "changed_from_original": false,
+      "seed": "frozen A1 source with reverse namespace mapping",
+      "port_note": null
+    }
+  ],
+  "canonical_modules": 432,
+  "changed_modules": 117
+}

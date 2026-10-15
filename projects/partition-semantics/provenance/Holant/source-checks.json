@@ -1,0 +1,51 @@
+[
+  {
+    "source": "Holant/Signature.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Signature.lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "public_sha256": "c6340ad84662fc877b158109fe84a255baa613b40d3f837766464d49d6514820",
+    "local_sha256": "c6340ad84662fc877b158109fe84a255baa613b40d3f837766464d49d6514820",
+    "local_matches_public": true,
+    "target": "Counting/Upstream/HolantSignature.lean",
+    "target_sha256": "c6340ad84662fc877b158109fe84a255baa613b40d3f837766464d49d6514820",
+    "modification": "Byte-identical to original."
+  },
+  {
+    "source": "Holant/Tensor.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Tensor.lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "public_sha256": "2d0dbc2979f63175cefb8a3716af557c65aa601860187d9012c1ef5adddd446b",
+    "local_sha256": "2d0dbc2979f63175cefb8a3716af557c65aa601860187d9012c1ef5adddd446b",
+    "local_matches_public": true,
+    "target": "Counting/Upstream/HolantTensor.lean",
+    "target_sha256": "a87b0a8c8a8093af0fbdf4eea026a723019b6ee16635a834785ab237b9635eb2",
+    "modification": "Only source-local import module paths rewritten to Counting.Upstream.Holant*; all declarations and proofs byte-preserved."
+  },
+  {
+    "source": "Holant/Network.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Network.lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "public_sha256": "b063244d4ffdd32ba151449dc6333dc6c210535d99b480be1ffe66f98c92eb18",
+    "local_sha256": "b063244d4ffdd32ba151449dc6333dc6c210535d99b480be1ffe66f98c92eb18",
+    "local_matches_public": true,
+    "target": "Counting/Upstream/HolantNetwork.lean",
+    "target_sha256": "c139970791844487cea5990b2176620a237fe2507f68fa064ba470ce42540895",
+    "modification": "Only source-local import module paths rewritten to Counting.Upstream.Holant*; all declarations and proofs byte-preserved."
+  },
+  {
+    "source": "Holant/OpenNetwork.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/OpenNetwork.lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "public_sha256": "321df01d4ff1bcad2ccf6de8b17592462ca107cf7a4e17267017a845ae1c366f",
+    "local_sha256": "321df01d4ff1bcad2ccf6de8b17592462ca107cf7a4e17267017a845ae1c366f",
+    "local_matches_public": true
+  },
+  {
+    "source": "Holant/BoundaryAction.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/BoundaryAction.lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "public_sha256": "53ae7381ecce35d67c3ecd0f283eab8decdb1d76cbfd6a67dd9e66615998dc40",
+    "local_sha256": "53ae7381ecce35d67c3ecd0f283eab8decdb1d76cbfd6a67dd9e66615998dc40",
+    "local_matches_public": true
+  }
+]

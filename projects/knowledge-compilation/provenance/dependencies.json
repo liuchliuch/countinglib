@@ -1,0 +1,9 @@
+{
+  "../partition-semantics/Counting/Model/Basic.lean": "67593d1247a0b1f3fb19512b226959b85faeff5f3cb092c009f3be4ff4654a1d",
+  "../partition-semantics/lakefile.toml": "d96947afccdcbf1f43c71ff14a037c545dceaeb15d86efb068c6bae129a43e33",
+  "../partition-semantics/lake-manifest.json": "6e0dcd52319d39910a51cce7350f275f95e1c801397cc1fd3ff6eabc647fff53",
+  "../partition-semantics/lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+  "../holant-core/lakefile.toml": "eadcb10332060e295980b8a5c3cfda3da20f03d92d8facf1744ca5499b1d0042",
+  "../holant-core/lake-manifest.json": "7e78005375b4bcd9bab5340d49b5061f91d07f1126a295cb7c06f03d2665d083",
+  "../holant-core/lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+}

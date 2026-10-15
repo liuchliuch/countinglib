@@ -1,0 +1,81 @@
+{
+  "canonical_source_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+  "modules": [
+    {
+      "module": "Counting.Algorithm.FKT.Ising",
+      "path": "Counting/Algorithm/FKT/Ising.lean",
+      "sha256": "1c766222004dcc97ebc74e17785819e15794d0eb5001812bdcf2f7b12d4e9dce",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Actual complete typed value pipeline, mathematical partition semantics and finite machine with exact clocks/steps.",
+      "direct_imports": [
+        "PlanarHom.FKTIsingCorrectness",
+        "Counting.FiniteSupport.F1"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.FKT.IsingPromise",
+      "path": "Counting/Algorithm/FKT/IsingPromise.lean",
+      "sha256": "a75ab33001a09dbf47f19a19b342e7956580d2a1e57b4df109fc26fe59eeb937",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Original raw normalizer witness on the original planar decoding promise, with raw input length and unchanged codewords.",
+      "direct_imports": [
+        "Counting.Algorithm.FKT.Ising",
+        "PlanarHom.FKTIsingTractability"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.FKT.IsingUniform",
+      "path": "Counting/Algorithm/FKT/IsingUniform.lean",
+      "sha256": "683333b8c894ec39c551abb208b54ad984eca9261d570a7e12777cf5a9de2f7b",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Actual jointly encoded graph/coupling source machines, fixed field/basis and literal rational specialization.",
+      "direct_imports": [
+        "Counting.Algorithm.FKT.Ising",
+        "PlanarHom.FKTIsingUniformRational"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.FKT.Orientation",
+      "path": "Counting/Algorithm/FKT/Orientation.lean",
+      "sha256": "fba845fbc98703111c6377843f127d2e83c1514ce24ce508d7f6161e88558754",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Public actual face-table program, iterative/recursive equality and full orientation contract.",
+      "direct_imports": [
+        "PlanarHom.OccurrenceKasteleynOrientationIteration"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.FKT.OrientationClients",
+      "path": "Counting/Algorithm/FKT/OrientationClients.lean",
+      "sha256": "14e332b7d8d7ab326133f90e29b2b851de44c18468184bb20a713ec6bf11e508",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Concrete occurrence multiplicity, duplicate-row order and multi-face computations.",
+      "direct_imports": [
+        "Counting.Algorithm.FKT.Orientation"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.FKT.OrientationMachine",
+      "path": "Counting/Algorithm/FKT/OrientationMachine.lean",
+      "sha256": "e07759555619bbbdc80aed6298331880d5180da9c1cfbf0f068f85e15bd0339d",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Actual source fp_computeOrientation witness refined using the single PH finite-support compiler through frozen F1 wrapper.",
+      "direct_imports": [
+        "Counting.Algorithm.FKT.Orientation",
+        "PlanarHom.OccurrenceKasteleynPeelingMachines",
+        "Counting.FiniteSupport.F1"
+      ]
+    },
+    {
+      "module": "Counting.Algorithm.FKT.PfaffianCompatibility",
+      "path": "Counting/Algorithm/FKT/PfaffianCompatibility.lean",
+      "sha256": "2b9b70008afebe8c4beb4263cb3423218fd247e9d04956be6241a6299782ab67",
+      "kind": "new public bridge/client over migrated original algorithms",
+      "purpose": "Literal-word encoder comparison and transport of the actual A1 finite machine; independently chosen canonical computers are not identified.",
+      "direct_imports": [
+        "PlanarHom.OccurrencePfaffianEvaluationMachines",
+        "Counting.Algorithm.PfaffianFinite"
+      ]
+    }
+  ]
+}

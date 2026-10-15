@@ -1,0 +1,179 @@
+name = "countingComplexity"
+version = "0.1.0"
+defaultTargets = ["Counting"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "countingHolantCore"
+path = "projects/holant-core"
+
+[[require]]
+name = "countingFoundations"
+path = "projects/foundations"
+
+[[require]]
+name = "partitionSemantics"
+path = "projects/partition-semantics"
+
+[[require]]
+name = "graphCSPReduction"
+path = "projects/graph-csp-reduction"
+
+[[require]]
+name = "countingInterpolation"
+path = "projects/interpolation"
+
+[[require]]
+name = "holantUnified"
+path = "projects/holant-unified"
+
+[[require]]
+name = "countingPfaffian"
+path = "projects/pfaffian"
+
+[[require]]
+name = "countingKarpLuby"
+path = "projects/karp-luby"
+
+[[require]]
+name = "countingVariableElimination"
+path = "projects/variable-elimination"
+
+[[require]]
+name = "countingProductAlgorithm"
+path = "projects/product-algorithm"
+
+[[require]]
+name = "countingAffine"
+path = "projects/affine-algorithm"
+
+[[require]]
+name = "countingHolographic"
+path = "projects/holographic"
+
+[[require]]
+name = "countingMatchgateWidth"
+path = "projects/matchgate-width"
+
+[[require]]
+name = "countingComplexCSP"
+path = "projects/complex-csp"
+
+[[require]]
+name = "countingPlanarHom"
+path = "projects/planar-homomorphisms"
+
+[[require]]
+name = "countingPfaffianFinite"
+path = "projects/pfaffian-finite"
+
+[[require]]
+name = "countingWitnessMachines"
+path = "projects/witness-machines"
+
+[[require]]
+name = "countingVariableEliminationLayout"
+path = "projects/variable-elimination-layout"
+
+[[require]]
+name = "countingKarpLubyMachine"
+path = "projects/karp-luby-machine"
+
+[[require]]
+name = "countingVariableEliminationWork"
+path = "projects/variable-elimination-work"
+
+[[require]]
+name = "countingPlanarMachines"
+path = "projects/planar-machines"
+
+[[require]]
+name = "countingVariableEliminationWidth"
+path = "projects/variable-elimination-width"
+
+[[require]]
+name = "countingCookLevin"
+path = "projects/counting-cook-levin"
+
+[[require]]
+name = "countingInterpolationMachine"
+path = "projects/interpolation-machine"
+
+[[require]]
+name = "countingVariableEliminationTreewidth"
+path = "projects/variable-elimination-treewidth"
+
+[[require]]
+name = "countingKnowledgeCompilation"
+path = "projects/knowledge-compilation"
+
+[[require]]
+name = "countingChargedReductions"
+path = "projects/charged-reductions"
+
+[[require]]
+name = "countingPlanarAlgorithms"
+path = "projects/planar-algorithms"
+
+[[require]]
+name = "countingPlanarClassification"
+path = "projects/planar-classification"
+
+[[require]]
+name = "countingComplexCSPClassification"
+path = "projects/complex-csp-classification"
+
+[[require]]
+name = "countingKarpLubyRequest"
+path = "projects/karp-luby-request"
+
+[[require]]
+name = "countingOpenNetworkBridge"
+path = "projects/open-network-bridge"
+
+[[require]]
+name = "countingGadgetReductions"
+path = "projects/gadget-reductions"
+
+[[require]]
+name = "countingFieldArithmetic"
+path = "projects/field-arithmetic"
+
+[[require]]
+name = "countingSharpPClosure"
+path = "projects/sharpp-closure"
+
+[[require]]
+name = "countingProductMachineBridge"
+path = "projects/product-machine-bridge"
+
+[[require]]
+name = "countingTractableCore"
+path = "projects/tractable-core"
+
+[[lean_lib]]
+name = "Counting"
+roots = []
+globs = ["Counting", "Counting.Integration.+", "Counting.Bridge.CountingCookLevin"]
+
+[[lean_lib]]
+name = "CountingAlgorithms"
+roots = []
+globs = ["Counting.Algorithms", "Counting.Adapters.+"]
+
+[[lean_lib]]
+name = "CountingFlagships"
+roots = []
+globs = ["Counting.Flagships.Holant", "Counting.Flagships.MatchgateWidth", "Counting.Flagships.ComplexCSP", "Counting.Flagships.PlanarHom"]
+
+[[lean_lib]]
+name = "CountingLibrary"
+roots = []
+globs = ["Counting.Library"]
+
+[[lean_lib]]
+name = "CountingReuse"
+roots = []
+globs = ["Counting.Reuse", "Counting.Reuse.+"]

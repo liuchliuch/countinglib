@@ -1,0 +1,24 @@
+{
+  "scope": "New I1 implementation; not copied upstream machine proofs.",
+  "new_modules": [
+    "Counting.Algorithm.Interpolation",
+    "Counting.Algorithm.Interpolation.Algorithm",
+    "Counting.Algorithm.Interpolation.Cost",
+    "Counting.Algorithm.Interpolation.Examples",
+    "Counting.Algorithm.Interpolation.Program"
+  ],
+  "mathematical_bridge": "Algorithm.denominatorProgram_eval and recoveryProgram_eval connect executable AST evaluation to the unchanged Core finite formulas.",
+  "operation_model": "Every Program query occurrence costs one oracle query; each add/sub/mul/div constructor costs one field operation. Independently recursive run agrees with eval/queries/fieldOps.",
+  "certificate": "recoveryProgram_safe requires Function.Injective nodes; checkedRecover computes this finite predicate and rejects duplicates.",
+  "not_claimed": [
+    "polynomial bit-time",
+    "TM2 implementation",
+    "cost of equality checking and AST construction",
+    "oracle query/reply representation and length bound"
+  ],
+  "reuse": [
+    "Mathlib LinearAlgebra.Lagrange via Core",
+    "Mathlib Fin.univ_succAbove and List.ofFn big operators"
+  ],
+  "source_inventory": "../validation/result.json"
+}

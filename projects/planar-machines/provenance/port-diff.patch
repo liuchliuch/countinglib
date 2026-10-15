@@ -1,0 +1,1926 @@
+--- canonical/PlanarHom/BoundedUnaryMachineCore.lean
++++ ported/PlanarHom/BoundedUnaryMachineCore.lean
+@@ -4,6 +4,8 @@
+ import PlanarHom.OracleReductionComposition
+ 
+ /-! A size-honest binary-to-unary converter, bounded by an explicitly unary cap. -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.BoundedUnaryMachines
+ open Turing Turing.TM2 PlanarHom.Complexity PlanarHom.MachineComposition
+ open PlanarHom.BinaryArithmetic
+@@ -17,8 +19,8 @@
+   simpa [predecessorBits,BitEncoding.nat,Computability.encodeNat,Computability.encodeNum,Computability.encodePosNum] using subBits_encodeNat n 1
+ 
+ noncomputable def subtractionRawComputer :
+-    TM2ComputableInPolyTime (BitEncoding.bits.prod BitEncoding.bits).toFinEncoding
+-      BitEncoding.bits.toFinEncoding (fun p=>subBits p.1 p.2) where
++    TM2ComputableInPolyTime (BitEncoding.bits.prod BitEncoding.bits).encode
++      BitEncoding.bits.encode (fun p=>subBits p.1 p.2) where
+   tm:=subtractionMachine false
+   inputAlphabet:=Equiv.refl Bool
+   outputAlphabet:=Equiv.refl Bool
+@@ -32,10 +34,10 @@
+ 
+ /-- Actual ordinary machine for every oracle query, including noncanonical words. -/
+ noncomputable def predecessorComputer :
+-    TM2ComputableInPolyTime BitEncoding.bits.toFinEncoding BitEncoding.bits.toFinEncoding predecessorBits :=
++    TM2ComputableInPolyTime BitEncoding.bits.encode BitEncoding.bits.encode predecessorBits :=
+   composeComputers
+     (PlanarHom.MachinePairing.pairComputers
+-      (idComputableInPolyTime BitEncoding.bits.toFinEncoding)
++      (idComputableInPolyTime BitEncoding.bits.encode)
+       (PlanarHom.ConstantMachines.computer BitEncoding.bits BitEncoding.bits [true]))
+     subtractionRawComputer
+ 
+--- canonical/PlanarHom/BoundedUnaryMachines.lean
++++ ported/PlanarHom/BoundedUnaryMachines.lean
+@@ -3,6 +3,8 @@
+ import Mathlib.Tactic.Linarith
+ 
+ /-! Exact execution and polynomial cost of bounded unary expansion. -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.BoundedUnaryMachines
+ open Turing Turing.TM2 Polynomial PlanarHom.Complexity PlanarHom.MachineComposition
+ open PlanarHom.BinaryArithmetic
+@@ -157,7 +159,7 @@
+ /-- The output is capped by a unary input component, so no exponential unary
+ expansion is smuggled into polynomial-time computation. -/
+ noncomputable def computer :
+-    TM2ComputableInPolyTime inputEncoding.toFinEncoding BitEncoding.unaryNat.toFinEncoding
++    TM2ComputableInPolyTime inputEncoding.encode BitEncoding.unaryNat.encode
+       (fun p=>min p.1 p.2):=by
+   let g:=predecessorComputer.toTM2ComputableAux
+   refine {
+--- canonical/PlanarHom/CanonicalCoordinateHeights.lean
++++ ported/PlanarHom/CanonicalCoordinateHeights.lean
+@@ -53,7 +53,6 @@
+   simp only [numberFieldEncoding, BitEncoding.retract, rationalCoordinates, BitEncoding.vector,
+     BitEncoding.list, List.length_append, BitEncoding.frame_length, BitEncoding.frames_length,
+     List.length_ofFn, List.map_ofFn, List.sum_ofFn, Function.comp_apply]
+-  dsimp only at hs
+   omega
+ 
+ variable {K : Type} [Field K] [Algebra ℚ K] {dimension : ℕ}
+--- canonical/PlanarHom/ConditionalMachines.lean
++++ ported/PlanarHom/ConditionalMachines.lean
+@@ -2,6 +2,8 @@
+ import PlanarHom.ReturningBitSubroutine
+ 
+ /-! # Actual finite-control selection between two materialized typed values -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.ConditionalMachines
+ open Turing Turing.TM2 Complexity BinaryArithmetic
+ 
+@@ -39,14 +41,18 @@
+ theorem halt_step (xs : Bits) : machine.step (cfg (some .halt) xs []) = some (cfg none xs []) := rfl
+ 
+ def projection_run (b : Bool) (xs ys : Bits) :
+-    EvalsToInTime machine.step (cfg (some (.run b .parse)) (BitEncoding.frame xs++ys) [])
++    StateTransition.EvalsToInTime machine.step (cfg (some (.run b .parse)) (BitEncoding.frame xs++ys) [])
+       (some (cfg (some .halt) (if b then xs else ys) [])) ((BitEncoding.frame xs++ys).length+3) := by
+-  have hs : EvalsToInTime (step (PairProjectionMachines.program b (!b)))
++  have hs : StateTransition.EvalsToInTime (step (PairProjectionMachines.program b (!b)))
+       (PairProjectionMachines.config (some .parse) (BitEncoding.frame xs++ys) [])
+       (some (PairProjectionMachines.config none (if b then xs else ys) [])) ((BitEncoding.frame xs++ys).length+3) := by
+     cases b
+-    · simpa [TM2OutputsInTime,PairProjectionMachines.initial_config,PairProjectionMachines.final_config] using PairProjectionMachines.snd_outputs xs ys
+-    · simpa [TM2OutputsInTime,PairProjectionMachines.initial_config,PairProjectionMachines.final_config] using PairProjectionMachines.fst_outputs xs ys
++    · have h := PairProjectionMachines.snd_outputs xs ys
++      simp [TM2OutputsInTime,PairProjectionMachines.initial_config,PairProjectionMachines.final_config] at h ⊢
++      exact h
++    · have h := PairProjectionMachines.fst_outputs xs ys
++      simp [TM2OutputsInTime,PairProjectionMachines.initial_config,PairProjectionMachines.final_config] at h ⊢
++      exact h
+   exact ReturningBitSubroutine.run (Function.Embedding.refl Bool) (labels b) (Equiv.refl State) .halt (fun _ => [])
+     (PairProjectionMachines.program b (!b)) program (fun _ => rfl) _ _ _ _ _ hs
+     (by refine ⟨rfl,rfl,?_,?_⟩; intro k; rfl; intro j hj; exact (hj j rfl).elim)
+@@ -58,8 +64,8 @@
+   have h₁ := oneStep machine.step (header_step b (BitEncoding.frame xs++ys))
+   have h₂ := projection_run b xs ys
+   have h₃ := oneStep machine.step (halt_step (if b then xs else ys))
+-  have h := EvalsToInTime.trans machine.step 1 _ _ _ _ h₁ h₂
+-  have h := EvalsToInTime.trans machine.step _ 1 _ _ _ h h₃
++  have h := StateTransition.EvalsToInTime.trans machine.step 1 _ _ _ _ h₁ h₂
++  have h := StateTransition.EvalsToInTime.trans machine.step _ 1 _ _ _ h h₃
+   have hi (word : Bits) : initList machine word=cfg (some .header) word [] := by
+     apply OracleSubstitution.cfg_ext
+     · rfl
+@@ -70,14 +76,14 @@
+     · rfl
+     · rfl
+     · funext k; cases k <;> simp [machine,haltList,cfg,PairProjectionMachines.store]
+-  change EvalsToInTime machine.step (initList machine _) (some (haltList machine _)) _
++  change StateTransition.EvalsToInTime machine.step (initList machine _) (some (haltList machine _)) _
+   rw [hi,ho]
+   convert h using 1
+   simp
+   omega
+ 
+ noncomputable def computer {α : Type} (e : BitEncoding α) :
+-    TM2ComputableInPolyTime (BitEncoding.bool.prod (e.prod e)).toFinEncoding e.toFinEncoding
++    TM2ComputableInPolyTime (BitEncoding.bool.prod (e.prod e)).encode e.encode
+       (fun p => if p.1 then p.2.1 else p.2.2) where
+   tm := machine
+   inputAlphabet := Equiv.refl Bool
+--- canonical/PlanarHom/ContextualOracleBatch.lean
++++ ported/PlanarHom/ContextualOracleBatch.lean
+@@ -3,6 +3,9 @@
+ 
+ /-! A real batch-query wrapper retaining an arbitrary framed context word for
+ subsequent interpolation. No original input or metadata is lost across queries. -/
++-- Restore definitional unfolding for the original dependent stack representation.
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.ContextualOracleBatch
+ open Turing Turing.TM2 PlanarHom.Complexity PlanarHom.MachineComposition
+ abbrev BStack:=PlanarHom.ListMapMachines.Stack
+--- canonical/PlanarHom/CountingCookLevinInitialMachines.lean
++++ ported/PlanarHom/CountingCookLevinInitialMachines.lean
+@@ -30,7 +30,7 @@
+ 
+ theorem initialHeadTest_correct (m : Machine) (a : m.Γ) (x : Bits) :
+     initialHeadTest m a x=decide ((initial m x).1.2=a) := by
+-  cases x <;> simp [initialHeadTest,initial,List.headD]
++  cases x <;> simp [initialHeadTest,initial,List.headD] <;> rfl
+ 
+ def initialCellTest (m : Machine) (a : Option m.Γ) (p : Bits × (Bool × ℕ)) : Bool :=
+   if p.2.1 then decide (none=a) else
+--- canonical/PlanarHom/CountingCookLevinLayer.lean
++++ ported/PlanarHom/CountingCookLevinLayer.lean
+@@ -123,25 +123,21 @@
+   · have h := Finset.single_le_sum (s := Finset.univ)
+       (f := fun q : Control m.Q => (localTemplate m (fun c => decide (localControl m c=q))).gates)
+       (fun _ _ => Nat.zero_le _) (Finset.mem_univ q)
+-    dsimp only at h
+     simp only [stepLayer,wiredTemplate,Expr.gates_rename,localGateBound]
+     omega
+   · have h := Finset.single_le_sum (s := Finset.univ)
+       (f := fun a : m.Γ => (localTemplate m (fun c => decide (localHead m c=a))).gates)
+       (fun _ _ => Nat.zero_le _) (Finset.mem_univ a)
+-    dsimp only at h
+     simp only [stepLayer,wiredTemplate,Expr.gates_rename,localGateBound]
+     omega
+   · have h := Finset.single_le_sum (s := Finset.univ)
+       (f := fun v : Bool => (localTemplate m (fun c => decide (localValid m c=v))).gates)
+       (fun _ _ => Nat.zero_le _) (Finset.mem_univ v)
+-    dsimp only at h
+     simp only [stepLayer,wiredTemplate,Expr.gates_rename,localGateBound]
+     omega
+   · have h := Finset.single_le_sum (s := Finset.univ)
+       (f := fun a : Option m.Γ => (localTemplate m (fun c => decide (localCell m c=a))).gates)
+       (fun _ _ => Nat.zero_le _) (Finset.mem_univ a)
+-    dsimp only at h
+     simp only [stepLayer,wiredTemplate,Expr.gates_rename,localGateBound]
+     omega
+ 
+--- canonical/PlanarHom/CountingCookLevinLayerBridge.lean
++++ ported/PlanarHom/CountingCookLevinLayerBridge.lean
+@@ -5,6 +5,8 @@
+ NOR layer compiler. No semantic-machine premise is substituted for the emitter. -/
+ noncomputable section
+ open Classical
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.CountingCookLevin
+ open SingleTapeNondeterministic
+ 
+@@ -22,7 +24,7 @@
+     (i : Fin (p.1.length+p.2.1+1)) (a : Option m.Γ) :
+     cellBlock m C side a (setCell p i.val)=stateBlock m C p (.inr (side,i,a)) := by
+   simpa only [cellBlock,stateBlock,stepLayer,stateOrdinal_cell,timeStart_setCell,cellOrdinal_setCell,
+-    cellOrdinal,refWidth,setCell] using
++    cellOrdinal,refWidth,setCell,timeStart,refStateCount] using
+     (numericLocalBlock_eq m C p side i (fun c => decide (localCell m c=a))
+       (timeStart m C p+4+4*C*cellOrdinal m p side i.val a))
+ 
+@@ -52,7 +54,7 @@
+   · apply List.flatMap_congr
+     intro side _
+     unfold sideLayer
+-    rw [show refWidth p=p.1.length+p.2.1+1 from rfl,← List.map_coe_finRange,List.flatMap_map]
++    rw [show refWidth p=p.1.length+p.2.1+1 from rfl,← List.map_coe_finRange_eq_range,List.flatMap_map]
+     apply List.flatMap_congr
+     intro i _
+     unfold cellRow
+--- canonical/PlanarHom/CountingCookLevinReferenceWiring.lean
++++ ported/PlanarHom/CountingCookLevinReferenceWiring.lean
+@@ -3,6 +3,8 @@
+ /-! The uniform arithmetic references are exactly the semantic local wiring. -/
+ noncomputable section
+ open Classical
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.CountingCookLevin
+ open SingleTapeNondeterministic
+ 
+--- canonical/PlanarHom/CountingCookLevinRegisterOrder.lean
++++ ported/PlanarHom/CountingCookLevinRegisterOrder.lean
+@@ -6,6 +6,7 @@
+ namespace PlanarHom.CountingCookLevin
+ open SingleTapeNondeterministic
+ 
++set_option backward.isDefEq.respectTransparency false in
+ /-- The emitter's nested loops enumerate the canonical arithmetic state slots. -/
+ theorem stateRegisterOrder_eq (m : Machine) (L : ℕ) :
+     stateRegisterOrder m L =
+--- canonical/PlanarHom/CountingCookLevinReplayFold.lean
++++ ported/PlanarHom/CountingCookLevinReplayFold.lean
+@@ -42,7 +42,8 @@
+     rcases s with ⟨⟨⟨q,h⟩,left,right⟩,ok⟩
+     cases q with
+     | accept =>
+-      simp [windowStep,replay,windowView,Bool.and_assoc]
++      simp only [windowStep,replay,windowView,Bool.and_assoc,List.all_cons]
++      rw [replay_accept _ rfl]
+     | reject => simp [windowStep,replay,windowView]
+     | run q =>
+       cases hs : m.transition q h with
+--- canonical/PlanarHom/CountingCookLevinSerializedCorrectness.lean
++++ ported/PlanarHom/CountingCookLevinSerializedCorrectness.lean
+@@ -41,7 +41,8 @@
+ theorem uniformSteps_represents (m : Machine) (x : Complexity.Bits) (T : ℕ) (w : Fin T → Bool) :
+     StoreRepresents m (finalContext (x,T)) (runNor (uniformSteps m (uniformBlockSize m) (x,T)) (initialStore w))
+       ((List.ofFn w).foldl (windowStep m) (encodeWindow m (x.length+T) (initial m x),true)) := by
+-  simpa only [List.take_of_length_le (show (List.ofFn w).length≤T by simp)] using
++  simpa only [prefixProgram, finalContext, uniformSteps, setTime, clockContext,
++    List.take_of_length_le (show (List.ofFn w).length≤T by simp)] using
+     prefixProgram_represents m x T w T (le_refl T)
+ 
+ /-- The three final gates read the actual accepting and validity registers. -/
+@@ -78,6 +79,7 @@
+     serializedValue m x T w=finiteReplay m x T w := by
+   rw [serializedValue,uniformProgram,runNor_append]
+   rw [finalGates_correct m _ _ _ (uniformSteps_represents m x T w),finiteReplay_eq_fold]
++  rfl
+ 
+ /-- Exact counting preservation for the real compiled flat NOR gate list. -/
+ theorem count_eq_serializedValue (M : PolynomialMachine) (x : Complexity.Bits) :
+--- canonical/PlanarHom/CountingCookLevinStoreSimulation.lean
++++ ported/PlanarHom/CountingCookLevinStoreSimulation.lean
+@@ -58,7 +58,7 @@
+     rw [show timeStart m (uniformBlockSize m) p+4=ys.length from hlen.symm]
+     change readBit (runNor _ ys) (stateReference m C (nextContext p)
+       (stateOrdinal m out) (initialBit m p.1 out))=_
+-    convert hr using 1
++    convert hr using 1 <;> try rfl
+     congr 1
+     rw [hlen]
+     simp [nextContext,setTime,stateReference,timeStart,refStateCount,refWidth,C]
+--- canonical/PlanarHom/ExponentProductSemantics.lean
++++ ported/PlanarHom/ExponentProductSemantics.lean
+@@ -21,7 +21,7 @@
+   subst t
+   simp only [expand, List.length_flatten, List.map_ofFn, Function.comp_def, List.length_replicate]
+   have h : (List.ofFn (fun i : Fin xs.length => xs.getD i.val 0)) = xs := by
+-    simpa only [List.getD_eq_getElem _ _ (Fin.isLt _)] using List.ofFn_getElem xs
++    simpa only [List.getD_eq_getElem _ _ (Fin.isLt _)] using (List.ofFn_getElem (xs := xs))
+   rw [h]
+ 
+ theorem expand_product (A : Fin t → K) (xs : List ℕ) :
+--- canonical/PlanarHom/FieldCoordinateCertificates.lean
++++ ported/PlanarHom/FieldCoordinateCertificates.lean
+@@ -137,8 +137,9 @@
+           basis.equivFun (x * y) i := by
+       have h := congrFun (congrArg (fun H : Matrix (Fin dimension) (Fin dimension) ℚ =>
+         H *ᵥ basis.equivFun y) (integerMultiplicationMatrix_cast basis data a)) i
+-      simpa only [Matrix.smul_mulVec, multiplicationMatrix_mulVec, Pi.smul_apply,
+-        smul_eq_mul, mul_comm y x] using h
++      simp only [Matrix.smul_mulVec, multiplicationMatrix_mulVec, Pi.smul_apply,
++        smul_eq_mul, mul_comm y x] at h
++      simpa only [Matrix.mulVec] using h
+     simp only [Matrix.mulVec, dotProduct, Int.cast_sum, Int.cast_mul]
+     simp_rw [← b.spec]
+     rw [show (∑ j, (integerMultiplicationMatrix basis data a i j : ℚ) *
+--- canonical/PlanarHom/FieldDotProductMachines.lean
++++ ported/PlanarHom/FieldDotProductMachines.lean
+@@ -88,7 +88,7 @@
+     have hm := natPolynomial_monotone pm hip
+     apply ho.trans
+     simpa only [q, Polynomial.eval_comp, Polynomial.eval_add, Polynomial.eval_mul,
+-      Polynomial.eval_C, Polynomial.eval_X, BitEncoding.toFinEncoding] using hm
++      Polynomial.eval_C, Polynomial.eval_X, BitEncoding.encode] using hm
+   have hplen : products.length ≤ N := by
+     dsimp [products]
+     rw [List.length_zipWith, List.length_take]
+--- canonical/PlanarHom/FieldExpressionHeights.lean
++++ ported/PlanarHom/FieldExpressionHeights.lean
+@@ -67,11 +67,11 @@
+       ((heightConstant data * H) ^ (xs.length + 1)) := by
+   induction xs with
+   | nil =>
+-    simpa only [product, List.length_nil, Nat.zero_add, pow_one] using
++    simpa only [Bounded, product, List.length_nil, Nat.zero_add, pow_one] using
+       bounded_mono _ (one_bounded data) (Nat.le_mul_of_pos_right _ hH)
+         (Nat.le_mul_of_pos_right _ hH)
+   | cons j xs ih =>
+-    simpa only [product, List.length_cons, pow_succ'] using
++    simpa only [Bounded, product, mul, List.length_cons, pow_succ'] using
+       bounded_mul_uniform data (a j) (product data f a xs) (ha j) ih
+ 
+ /-- Concrete recursive certificate for a sum of field values. -/
+--- canonical/PlanarHom/FixedPowerMachines.lean
++++ ported/PlanarHom/FixedPowerMachines.lean
+@@ -18,8 +18,8 @@
+ /-- `A` and its rational basis are fixed problem data. The varying exponent is
+ unary, so the polynomial running-time claim accounts for output growth. -/
+ noncomputable def computer (basis : Module.Basis (Fin dimension) ℚ K) (A : K) :
+-    TM2ComputableInPolyTime BitEncoding.unaryNat.toFinEncoding
+-      (numberFieldEncoding basis).toFinEncoding (fun n=>A^n):=by
++    TM2ComputableInPolyTime BitEncoding.unaryNat.encode
++      (numberFieldEncoding basis).encode (fun n=>A^n):=by
+   let e:=numberFieldEncoding basis
+   have bodyFP : FP e e (fun x=>x*A):=
+     ((fp_id e).pair (fp_const e e A)).comp (PlanarHom.FixedFieldArithmetic.fp_multiplication basis)
+@@ -39,8 +39,8 @@
+ /-- Binary exponents are expanded only under an explicit unary cap. In the
+ exponent-vector application the proved coordinate bound makes the cap exact. -/
+ noncomputable def boundedComputer (basis : Module.Basis (Fin dimension) ℚ K) (A : K) :
+-    TM2ComputableInPolyTime (BitEncoding.unaryNat.prod BitEncoding.nat).toFinEncoding
+-      (numberFieldEncoding basis).toFinEncoding (fun p=>A^(min p.1 p.2)):=
++    TM2ComputableInPolyTime (BitEncoding.unaryNat.prod BitEncoding.nat).encode
++      (numberFieldEncoding basis).encode (fun p=>A^(min p.1 p.2)):=
+   composeComputers PlanarHom.BoundedUnaryMachines.computer (computer basis A)
+ 
+ end PlanarHom.FixedPowerMachines
+--- canonical/PlanarHom/GraphCodeNormalization.lean
++++ ported/PlanarHom/GraphCodeNormalization.lean
+@@ -14,7 +14,7 @@
+   have he : (fun w : ValidWord e.list=>(ValidWord.listParts e w).items.map ValidWord.value)=ValidWord.value:=by
+     funext w
+     exact (ValidWord.listParts e w).value_eq.symm
+-  change TM2ComputableInPolyTime (ValidWord.encoding e.list).toFinEncoding e.list.toFinEncoding
++  change TM2ComputableInPolyTime (ValidWord.encoding e.list).encode e.list.encode
+     (fun w=>(ValidWord.listParts e w).items.map ValidWord.value) at c
+   rw [he] at c
+   exact c
+@@ -71,7 +71,7 @@
+   let w : BitEncoding.ValidWord encoding:=⟨bits,⟨g,hd⟩⟩
+   have hv : w.value=g:=BitEncoding.ValidWord.value_eq hd
+   have h:=normalizer.outputsFun w
+-  simpa only [BitEncoding.toFinEncoding,BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe,BitEncoding.encode,BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw,w,hv] using h
+ 
+ end PlanarHom.Complexity.GraphCode
+@@ -87,7 +87,7 @@
+   let w : BitEncoding.ValidWord encoding:=⟨bits,⟨g,hd⟩⟩
+   have hv : w.value=g:=BitEncoding.ValidWord.value_eq hd
+   have h:=normalizer.outputsFun w
+-  simpa only [BitEncoding.toFinEncoding,BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe,BitEncoding.encode,BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw,w,hv] using h
+ 
+ end PlanarHom.Complexity.MixedCode
+--- canonical/PlanarHom/GraphParallelSemantics.lean
++++ ported/PlanarHom/GraphParallelSemantics.lean
+@@ -50,6 +50,8 @@
+     (g.parallel s).evaluate (parallel_valid s g hg) M w =
+       g.evaluate hg (fun i j=>M i j^s) w := by
+   classical
++  change (g.parallel s).evaluate (parallel_valid s g hg) M w =
++    g.evaluate hg (Matrix.of (fun i j => M i j ^ s)) w
+   rw [evaluate_eq_list,evaluate_eq_list]
+   change (∑ σ : Fin g.vertices → C, (∏ v,w (σ v)) *
+       ((repeatWords s g.edges).map (edgeValue g.vertices M σ)).prod) = _
+--- canonical/PlanarHom/IntegerCoordinateBounds.lean
++++ ported/PlanarHom/IntegerCoordinateBounds.lean
+@@ -62,7 +62,7 @@
+ /-- The fixed multiplication matrix computes the actual basis coordinates. -/
+ theorem multiplicationMatrix_mulVec (a x : K) :
+     multiplicationMatrix basis a *ᵥ basis.equivFun x = basis.equivFun (x * a) := by
+-  simpa only [multiplicationMatrix, Module.Basis.equivFun_apply] using
++  simpa only [multiplicationMatrix, Module.Basis.equivFun_apply, LinearMap.mulRight_apply] using
+     LinearMap.toMatrix_mulVec_repr basis basis (LinearMap.mulRight ℚ a) x
+ 
+ variable {ι : Type*} [Fintype ι]
+--- canonical/PlanarHom/IntegerLinearSystemBounds.lean
++++ ported/PlanarHom/IntegerLinearSystemBounds.lean
+@@ -60,8 +60,13 @@
+     rw [Matrix.cramer_apply, Matrix.cramer_apply]
+     have hm : Hq.updateCol i bq = (Int.castRingHom ℚ).mapMatrix (H.updateCol i b) := by
+       ext j k
+-      simp only [Matrix.updateCol_apply, Hq, bq, RingHom.mapMatrix_apply, Matrix.map_apply]
+-      split <;> rfl
++      by_cases h : k = i
++      · subst k
++        simp only [Matrix.updateCol_self, RingHom.mapMatrix_apply, Matrix.map_apply, bq]
++        rfl
++      · rw [Matrix.updateCol_ne h]
++        simp only [RingHom.mapMatrix_apply, Matrix.map_apply, Matrix.updateCol_ne h, Hq]
++        rfl
+     rw [hm]
+     exact (RingHom.map_det (Int.castRingHom ℚ) (H.updateCol i b)).symm
+   change Hq *ᵥ x = bq at hx
+--- canonical/PlanarHom/LinearFactorCoefficientMachines.lean
++++ ported/PlanarHom/LinearFactorCoefficientMachines.lean
+@@ -122,8 +122,8 @@
+   exact (hz.pair hsingle).comp (ListMutationMachines.fp_append (fieldEncoding basis))
+ 
+ noncomputable def sizePolynomial (body : Turing.TM2ComputableInPolyTime
+-    ((fieldEncoding basis).prod ((fieldEncoding basis).prod (fieldEncoding basis))).toFinEncoding
+-    (fieldEncoding basis).toFinEncoding coefficient) : Polynomial ℕ :=
++    ((fieldEncoding basis).prod ((fieldEncoding basis).prod (fieldEncoding basis))).encode
++    (fieldEncoding basis).encode coefficient) : Polynomial ℕ :=
+   Polynomial.C 12*(Polynomial.X+1)*((outputLengthPolynomial body).comp (Polynomial.C 5*Polynomial.X+Polynomial.C 2)+1)
+ 
+ omit [Field K] [Algebra ℚ K] in
+@@ -135,8 +135,8 @@
+   | cons a cs ih => exact ih a (hcs a (by simp)) (fun b hb => hcs b (by simp [hb]))
+ 
+ theorem emitted_length_bound (body : Turing.TM2ComputableInPolyTime
+-    ((fieldEncoding basis).prod ((fieldEncoding basis).prod (fieldEncoding basis))).toFinEncoding
+-    (fieldEncoding basis).toFinEncoding coefficient) (N : ℕ) (μ prev : K) (cs : List K)
++    ((fieldEncoding basis).prod ((fieldEncoding basis).prod (fieldEncoding basis))).encode
++    (fieldEncoding basis).encode coefficient) (N : ℕ) (μ prev : K) (cs : List K)
+     (hm : ((fieldEncoding basis).encode μ).length≤N) (hp : ((fieldEncoding basis).encode prev).length≤N)
+     (hcs : ∀a∈cs,((fieldEncoding basis).encode a).length≤N) :
+     ∀b∈emitted μ prev cs,((fieldEncoding basis).encode b).length≤(outputLengthPolynomial body).eval (5*N+2) := by
+@@ -155,8 +155,8 @@
+     · exact ih a (hcs a (by simp)) (fun b hb => hcs b (by simp [hb])) b hb
+ 
+ theorem prefix_size_bound (body : Turing.TM2ComputableInPolyTime
+-    ((fieldEncoding basis).prod ((fieldEncoding basis).prod (fieldEncoding basis))).toFinEncoding
+-    (fieldEncoding basis).toFinEncoding coefficient) (s : K×(K×List K)) (cs : List K) (i : ℕ) :
++    ((fieldEncoding basis).prod ((fieldEncoding basis).prod (fieldEncoding basis))).encode
++    (fieldEncoding basis).encode coefficient) (s : K×(K×List K)) (cs : List K) (i : ℕ) :
+     ((stateEncoding basis).encode ((cs.take i).foldl stateStep s)).length≤
+       (sizePolynomial basis body).eval (((stateEncoding basis).prod (fieldEncoding basis).list).encode (s,cs)).length := by
+   rcases s with ⟨μ,prev,zs⟩
+@@ -175,7 +175,6 @@
+   have hn : cs.length≤N := by omega
+   have hin (a : K) (ha : a∈cs) : (e.encode a).length≤N := by
+     have h := ListMapMachines.mem_le_sum_map (fun a => (e.encode a).length) ha
+-    dsimp only at h
+     omega
+   have htinput (a : K) (ha : a∈cs.take i) : (e.encode a).length≤N := hin a (List.mem_of_mem_take ha)
+   have hlast := lastValue_length_bound e N prev (cs.take i) hp htinput
+--- canonical/PlanarHom/ListCodecMachines.lean
++++ ported/PlanarHom/ListCodecMachines.lean
+@@ -11,7 +11,7 @@
+ 
+ /-- Extract the encoded binary list length from the actual framed header. -/
+ noncomputable def lengthComputer {α : Type} (e : BitEncoding α) :
+-    TM2ComputableInPolyTime e.list.toFinEncoding BitEncoding.nat.toFinEncoding
++    TM2ComputableInPolyTime e.list.encode BitEncoding.nat.encode
+       (List.length : List α → ℕ) :=
+   transportInputComputer e.list (BitEncoding.nat.prod BitEncoding.bits) BitEncoding.nat
+     (fun xs => (xs.length,BitEncoding.frames (xs.map e.encode))) (fun _=>rfl)
+@@ -20,7 +20,7 @@
+ /-- Remove precisely the list-length header, leaving the sequence of fully
+ materialized framed item words. No parsing or encoding work is treated as free. -/
+ noncomputable def payloadComputer {α : Type} (e : BitEncoding α) :
+-    TM2ComputableInPolyTime e.list.toFinEncoding BitEncoding.bits.toFinEncoding
++    TM2ComputableInPolyTime e.list.encode BitEncoding.bits.encode
+       (fun xs => BitEncoding.frames (xs.map e.encode)) :=
+   transportInputComputer e.list (BitEncoding.nat.prod BitEncoding.bits) BitEncoding.bits
+     (fun xs => (xs.length,BitEncoding.frames (xs.map e.encode))) (fun _=>rfl)
+@@ -41,7 +41,7 @@
+ 
+ /-- Extract the unary vertex count from an actual serialized graph code. -/
+ noncomputable def verticesComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.unaryNat.toFinEncoding vertices :=
++    TM2ComputableInPolyTime encoding.encode BitEncoding.unaryNat.encode vertices :=
+   transportInputComputer encoding (BitEncoding.unaryNat.prod edgeEncoding) BitEncoding.unaryNat
+     (fun g => (g.vertices,g.edges)) (fun _=>rfl)
+     (fstEncodingComputer BitEncoding.unaryNat edgeEncoding)
+@@ -49,7 +49,7 @@
+ /-- Extract the complete edge occurrence list without changing multiplicity,
+ loop occurrences, endpoint values, or their order. -/
+ noncomputable def edgesComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding edgeEncoding.toFinEncoding edges :=
++    TM2ComputableInPolyTime encoding.encode edgeEncoding.encode edges :=
+   transportInputComputer encoding (BitEncoding.unaryNat.prod edgeEncoding) edgeEncoding
+     (fun g => (g.vertices,g.edges)) (fun _=>rfl)
+     (sndEncodingComputer BitEncoding.unaryNat edgeEncoding)
+@@ -57,7 +57,7 @@
+ /-- Count edge occurrences by the actual encoded length header; this has no
+ endpoint-validity or planarity assumption and retains parallel-edge multiplicity. -/
+ noncomputable def edgeCountComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.nat.toFinEncoding
++    TM2ComputableInPolyTime encoding.encode BitEncoding.nat.encode
+       (fun g => g.edges.length) :=
+   composeComputers edgesComputer (ListCodecMachines.lengthComputer (BitEncoding.nat.prod BitEncoding.nat))
+ 
+@@ -76,20 +76,20 @@
+ 
+ /-- Typed mixed-code components are extracted by concrete framed projections. -/
+ noncomputable def occurrencesComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding
+-      (edgeEncoding.prod unaryEncoding).toFinEncoding (fun g => (g.edges,g.unaries)) :=
++    TM2ComputableInPolyTime encoding.encode
++      (edgeEncoding.prod unaryEncoding).encode (fun g => (g.edges,g.unaries)) :=
+   transportInputComputer encoding
+     (BitEncoding.unaryNat.prod (edgeEncoding.prod unaryEncoding))
+     (edgeEncoding.prod unaryEncoding) (fun g => (g.vertices,(g.edges,g.unaries))) (fun _=>rfl)
+     (sndEncodingComputer BitEncoding.unaryNat (edgeEncoding.prod unaryEncoding))
+ 
+ noncomputable def edgesComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding edgeEncoding.toFinEncoding edges :=
++    TM2ComputableInPolyTime encoding.encode edgeEncoding.encode edges :=
+   composeComputers (f := fun g : MixedCode => (g.edges,g.unaries)) (g := Prod.fst)
+     occurrencesComputer (fstEncodingComputer edgeEncoding unaryEncoding)
+ 
+ noncomputable def unariesComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding unaryEncoding.toFinEncoding unaries :=
++    TM2ComputableInPolyTime encoding.encode unaryEncoding.encode unaries :=
+   composeComputers (f := fun g : MixedCode => (g.edges,g.unaries)) (g := Prod.snd)
+     occurrencesComputer (sndEncodingComputer edgeEncoding unaryEncoding)
+ 
+--- canonical/PlanarHom/ListContextMachines.lean
++++ ported/PlanarHom/ListContextMachines.lean
+@@ -30,11 +30,11 @@
+   exact hc.pair hnew
+ 
+ noncomputable def sizePolynomial {ec : BitEncoding C} {ea : BitEncoding α} {eb : BitEncoding β}
+-    {f : C×α→β} (body : TM2ComputableInPolyTime (ec.prod ea).toFinEncoding eb.toFinEncoding f) : Polynomial ℕ :=
++    {f : C×α→β} (body : TM2ComputableInPolyTime (ec.prod ea).encode eb.encode f) : Polynomial ℕ :=
+   Polynomial.C 10*(Polynomial.X+1)*((outputLengthPolynomial body).comp (Polynomial.C 3*Polynomial.X+1)+1)
+ 
+ theorem prefix_size_bound (ec : BitEncoding C) (ea : BitEncoding α) (eb : BitEncoding β)
+-    (f : C×α→β) (body : TM2ComputableInPolyTime (ec.prod ea).toFinEncoding eb.toFinEncoding f)
++    (f : C×α→β) (body : TM2ComputableInPolyTime (ec.prod ea).encode eb.encode f)
+     (s : C×List β) (xs : List α) (i : ℕ) :
+     ((ec.prod eb.list).encode ((xs.take i).foldl (contextStep f) s)).length ≤
+       (sizePolynomial body).eval (((ec.prod eb.list).prod ea.list).encode (s,xs)).length := by
+@@ -52,7 +52,6 @@
+   have hn : xs.length≤N := by omega
+   have hin (a : α) (ha : a∈xs) : (ea.encode a).length≤N := by
+     have h := ListMapMachines.mem_le_sum_map (fun a => (ea.encode a).length) ha
+-    dsimp only at h
+     omega
+   have hout (a : α) (ha : a∈xs) : (eb.encode (f (c,a))).length≤P := by
+     apply (encoded_output_length_le body (c,a)).trans
+--- canonical/PlanarHom/ListFoldMachines.lean
++++ ported/PlanarHom/ListFoldMachines.lean
+@@ -1,6 +1,8 @@
+ import PlanarHom.ListMapMachines
+ 
+ /-! # Actual polynomially bounded typed left folds -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.ListFoldMachines
+ open Turing Turing.TM2 Complexity MachineComposition
+ 
+@@ -387,8 +389,10 @@
+     simp only [List.append_nil,List.reverse_reverse,List.length_reverse] at h₇ h₈
+     have h := (((((((h₁.trans h₂).trans h₃).trans h₄).trans h₅).trans h₆).trans h₇).trans h₈).trans (ih (f z a))
+     convert h using 1
+-    simp only [loopCost,BitEncoding.prod_length,BitEncoding.frame_length]
+-    ring
++    · rfl
++    · rfl
++    · simp only [loopCost,BitEncoding.prod_length,BitEncoding.frame_length]
++      ring
+ 
+ def foldTime (ea : BitEncoding α) (eb : BitEncoding β) (f : β→α→β) (z : β) (xs : List α) : ℕ :=
+   2*(eb.encode z).length+(BitEncoding.nat.encode xs.length).length+3+loopCost ea eb f z xs
+@@ -411,6 +415,7 @@
+     · funext k; cases k <;> simp [machine,OracleTM2.initial,initList,cfg,store,Equiv.refl]
+   rw [hi]
+   convert h using 1
++  · rfl
+   · dsimp [foldTime]
+     ring
+ 
+@@ -450,7 +455,6 @@
+   have hn : xs.length≤N := by omega
+   have hinput (a : α) (ha : a∈xs) : (ea.encode a).length≤N := by
+     have h := ListMapMachines.mem_le_sum_map (fun a => (ea.encode a).length) ha
+-    dsimp only at h
+     omega
+   have hl := loopCost_bound z xs N P hinput (sizeBound z xs)
+   have hmul := Nat.mul_le_mul_right (3*N+8*P+10) hn
+@@ -464,11 +468,11 @@
+ 
+ /-- Actual bounded-fold compiler using canonical on-trace typed subroutine calls. -/
+ noncomputable def computer (ea : BitEncoding α) (eb : BitEncoding β) (f : β→α→β)
+-    (body : TM2ComputableInPolyTime (eb.prod ea).toFinEncoding eb.toFinEncoding (fun p => f p.1 p.2))
++    (body : TM2ComputableInPolyTime (eb.prod ea).encode eb.encode (fun p => f p.1 p.2))
+     (p : Polynomial ℕ)
+     (sizeBound : ∀z xs i,i≤xs.length→(eb.encode ((xs.take i).foldl f z)).length≤
+       p.eval ((eb.prod ea.list).encode (z,xs)).length) :
+-    TM2ComputableInPolyTime (eb.prod ea.list).toFinEncoding eb.toFinEncoding
++    TM2ComputableInPolyTime (eb.prod ea.list).encode eb.encode
+       (fun zx => zx.2.foldl f zx.1) := by
+   let time : Polynomial ℕ := (Polynomial.C 10*Polynomial.X+Polynomial.C 10)*(Polynomial.X+p+Polynomial.C 4)
+   let g := body.toTM2ComputableAux
+--- canonical/PlanarHom/ListHeaderNormalization.lean
++++ ported/PlanarHom/ListHeaderNormalization.lean
+@@ -18,16 +18,18 @@
+ /-- The natural-header decoder runs on the real raw bits. Accepted item words
+ are preserved as distinct typed valid-word values until the next map stage. -/
+ noncomputable def listHeaderComputer {α : Type} (e : BitEncoding α) :
+-    TM2ComputableInPolyTime (ValidWord.encoding e.list).toFinEncoding
+-      (ValidWord.encoding e).list.toFinEncoding (fun w=>(listParts e w).items):=by
++    TM2ComputableInPolyTime (ValidWord.encoding e.list).encode
++      (ValidWord.encoding e).list.encode (fun w=>(listParts e w).items):=by
+   let headerMap:=productMapComputers PlanarHom.NatCanonicalizationMachine.decodeComputer
+-    (idComputableInPolyTime bits.toFinEncoding)
++    (idComputableInPolyTime bits.encode)
+   let c:=transportInputComputer (ValidWord.encoding e.list) (bits.prod bits) (nat.prod bits)
+     (listRawPair e) (listRawPair_encode e) headerMap
+   apply transportOutputComputer (ValidWord.encoding e.list) (nat.prod bits) (ValidWord.encoding e).list
+     (computer:=c)
+   intro w
+-  simp only [Function.comp_apply,Prod.map,listRawPair,prod,list,bits,ValidWord.encoding,id_eq,
+-    (listParts e w).count_eq]
++  change frame (nat.encode (Computability.decodeNat (listParts e w).header)) ++
++      frames ((listParts e w).items.map raw) =
++    frame (nat.encode (listParts e w).items.length) ++ frames ((listParts e w).items.map raw)
++  rw [(listParts e w).count_eq]
+ 
+ end PlanarHom.Complexity.BitEncoding
+--- canonical/PlanarHom/ListIndexMachines.lean
++++ ported/PlanarHom/ListIndexMachines.lean
+@@ -46,7 +46,6 @@
+   have hword : ∀ a ∈ xs, (e.encode a).length ≤ N := by
+     intro a ha
+     have hh := ListMapMachines.mem_le_sum_map (fun a => (e.encode a).length) ha
+-    dsimp only at hh
+     have hp := payloadSize_le_word e xs
+     rw [payloadSize_eq] at hp
+     omega
+--- canonical/PlanarHom/ListMapMachines.lean
++++ ported/PlanarHom/ListMapMachines.lean
+@@ -4,6 +4,8 @@
+ import Mathlib.Tactic.Linarith
+ 
+ /-! # An actual typed list-map machine with canonical framing and on-trace substitution -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.ListMapMachines
+ open Turing Turing.TM2 Complexity MachineComposition
+ 
+@@ -260,6 +262,7 @@
+     have h := ((((h₁.trans h₂).trans h₃).trans h₄).trans h₅).trans
+       (ih ((BitEncoding.frame (eb.encode (f a))).reverse++out))
+     convert h using 1
++    · rfl
+     · simp [BitEncoding.frames,List.reverse_append,List.append_assoc]
+     · simp [mapCost,itemCost]
+       ring
+@@ -314,7 +317,7 @@
+ 
+ /-- A polynomial source-oracle cost follows solely from the callee's actual
+ output-length polynomial and the serialized input size. -/
+-theorem mapTime_bound (body : TM2ComputableInPolyTime ea.toFinEncoding eb.toFinEncoding f)
++theorem mapTime_bound (body : TM2ComputableInPolyTime ea.encode eb.encode f)
+     (xs : List α) : mapTime ea eb f xs ≤
+       ((Polynomial.C 4*Polynomial.X+Polynomial.C 4)*
+         (Polynomial.X+outputLengthPolynomial body+Polynomial.C 4)).eval (ea.list.encode xs).length := by
+@@ -351,8 +354,8 @@
+ /-- Actual map compiler. Only the canonical query words proved in `run` are
+ required to terminate; no behavior is assumed on malformed callee inputs. -/
+ noncomputable def computer (ea : BitEncoding α) (eb : BitEncoding β) (f : α→β)
+-    (body : TM2ComputableInPolyTime ea.toFinEncoding eb.toFinEncoding f) :
+-    TM2ComputableInPolyTime ea.list.toFinEncoding eb.list.toFinEncoding (List.map f) := by
++    (body : TM2ComputableInPolyTime ea.encode eb.encode f) :
++    TM2ComputableInPolyTime ea.list.encode eb.list.encode (List.map f) := by
+   let time : Polynomial ℕ := (Polynomial.C 4*Polynomial.X+Polynomial.C 4)*
+     (Polynomial.X+outputLengthPolynomial body+Polynomial.C 4)
+   let g := body.toTM2ComputableAux
+--- canonical/PlanarHom/MarkedOccurrenceCount.lean
++++ ported/PlanarHom/MarkedOccurrenceCount.lean
+@@ -34,21 +34,21 @@
+   (markedCount_le_edges selected g).trans (edges_le_length g)
+ 
+ noncomputable def edgeCountComputer :
+-    TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.nat.toFinEncoding (fun g=>g.edges.length) :=
++    TM2ComputableInPolyTime encoding.encode BitEncoding.nat.encode (fun g=>g.edges.length) :=
+   composeComputers edgesComputer
+     (ListCodecMachines.lengthComputer (BitEncoding.nat.prod (BitEncoding.nat.prod BitEncoding.nat)))
+ 
+ /-- The counter is an actual TM2 construction: preserve the original input,
+ remove just the selected occurrences, extract both encoded counts, and subtract. -/
+ noncomputable def markedCountComputer (selected : ℕ) :
+-    TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.nat.toFinEncoding (markedCount selected) := by
++    TM2ComputableInPolyTime encoding.encode BitEncoding.nat.encode (markedCount selected) := by
+   let paired := pairComputers (ConstantMachines.computer encoding BitEncoding.unaryNat 0)
+-    (Turing.idComputableInPolyTime encoding.toFinEncoding)
++    (Turing.idComputableInPolyTime encoding.encode)
+   let deleted := composeComputers paired (MixedParallelMachines.parallelComputer selected)
+   let remaining := composeComputers deleted edgeCountComputer
+   let counts := pairComputers edgeCountComputer remaining
+   let result := composeComputers counts PlanarHom.BinaryArithmetic.subtractionComputable
+-  change TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.nat.toFinEncoding
++  change TM2ComputableInPolyTime encoding.encode BitEncoding.nat.encode
+     (fun g=>g.edges.length-(g.parallelLabel selected 0).edges.length) at result
+   have he : (fun g : MixedCode=>g.edges.length-(g.parallelLabel selected 0).edges.length)=markedCount selected := by
+     funext g
+--- canonical/PlanarHom/MaterializedFieldHeights.lean
++++ ported/PlanarHom/MaterializedFieldHeights.lean
+@@ -33,12 +33,12 @@
+       ((Certificate.heightConstant data * H) ^ (xs.length + 1)) := by
+   induction xs with
+   | nil =>
+-    simpa only [Certificate.product, List.length_nil, Nat.zero_add, pow_one] using
++    simpa only [Certificate.Bounded, Certificate.product, List.length_nil, Nat.zero_add, pow_one] using
+       Certificate.bounded_mono _ (Certificate.one_bounded data) (Nat.le_mul_of_pos_right _ hH)
+         (Nat.le_mul_of_pos_right _ hH)
+   | cons x xs ih =>
+     have hi := ih (fun y hy => ha y (List.mem_cons_of_mem _ hy))
+-    simpa only [Certificate.product, List.length_cons, pow_succ'] using
++    simpa only [Certificate.Bounded, Certificate.product, Certificate.mul, List.length_cons, pow_succ'] using
+       Certificate.bounded_mul_uniform data (certificate basis x)
+         (Certificate.product data id (certificate basis) xs) (ha x List.mem_cons_self) hi
+ 
+--- canonical/PlanarHom/MixedParallelFinalize.lean
++++ ported/PlanarHom/MixedParallelFinalize.lean
+@@ -1,4 +1,6 @@
+ import PlanarHom.MixedParallelLoops
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.MixedParallelMachines
+ open Turing Turing.TM2 PlanarHom.Complexity
+--- canonical/PlanarHom/MixedParallelLoops.lean
++++ ported/PlanarHom/MixedParallelLoops.lean
+@@ -80,6 +80,7 @@
+   have h₁ := check_cons selected true {d with buffer:=[],count:=BitEncoding.nat.encode k} b fs
+   have h₂ := emit_body selected true {d with factor:=fs,back:=b::d.back} k
+   dsimp only at h₂
++  simp only [↓reduceIte] at h₂
+   have h := h₁.trans h₂
+   convert h using 1
+   omega
+--- canonical/PlanarHom/MixedParallelMachineCore.lean
++++ ported/PlanarHom/MixedParallelMachineCore.lean
+@@ -2,6 +2,8 @@
+ import PlanarHom.RelationalStackTransfer
+ 
+ /-! Actual finite-control selected-label mixed-occurrence transducer. -/
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.MixedParallelMachines
+ open Turing Turing.TM2 PlanarHom.Complexity PlanarHom.MachineComposition
+--- canonical/PlanarHom/MixedParallelMachines.lean
++++ ported/PlanarHom/MixedParallelMachines.lean
+@@ -129,7 +129,7 @@
+ /-- A genuine ordinary TM2 computer for fixed-selected-label mixed thickening.
+ The classifier/successor oracle is replaced by its actual proved machine. -/
+ noncomputable def parallelComputer (selected : ℕ) :
+-    TM2ComputableInPolyTime inputEncoding.toFinEncoding MixedCode.encoding.toFinEncoding
++    TM2ComputableInPolyTime inputEncoding.encode MixedCode.encoding.encode
+       (fun p=>p.2.parallelLabel selected p.1) := by
+   let c := SelectedLabelOracleMachine.computer selected
+   let g := c.toTM2ComputableAux
+--- canonical/PlanarHom/MixedParallelRuns.lean
++++ ported/PlanarHom/MixedParallelRuns.lean
+@@ -1,4 +1,6 @@
+ import PlanarHom.MixedParallelMachineCore
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.MixedParallelMachines
+ open Turing Turing.TM2 PlanarHom.Complexity
+--- canonical/PlanarHom/MixedPlanarCode.lean
++++ ported/PlanarHom/MixedPlanarCode.lean
+@@ -42,8 +42,8 @@
+       (g.underlying.toMultiGraph (g.underlying_valid h)) where
+   vertex := Equiv.refl _
+   edge := finCongr g.underlying_edges_length.symm
+-  src_eq e := by apply Fin.ext; simp [GraphCode.toMultiGraph, toMultiGraph, underlying]
+-  dst_eq e := by apply Fin.ext; simp [GraphCode.toMultiGraph, toMultiGraph, underlying]
++  src_eq e := by apply Fin.ext; simp [GraphCode.toMultiGraph, toMultiGraph, underlying]; rfl
++  dst_eq e := by apply Fin.ext; simp [GraphCode.toMultiGraph, toMultiGraph, underlying]; rfl
+ 
+ /-- Full ordinary mixed-input promise: fixed label bounds plus underlying
+ abstract planarity. It does not depend on serialized drawings. -/
+--- canonical/PlanarHom/MixedProductSemantics.lean
++++ ported/PlanarHom/MixedProductSemantics.lean
+@@ -76,10 +76,11 @@
+     unfold binaryValue
+     split <;> simp_all
+   rw [hf]
+-  simpa only [List.map_map, Function.comp_apply] using
++  simpa [List.map_map, Function.comp_def, powMonoidHom] using
+     (map_list_prod (powMonoidHom s) ((g.edges.filter (fun e => e.2.2 = selected)).map
+       (binaryValue g.vertices binaryTypes M σ))).symm
+ 
++set_option backward.isDefEq.respectTransparency false in
+ /-- Every actual parallel query is the finite selected-product power sum. -/
+ theorem evaluate_parallelLabel_eq_power_sum (g : MixedCode) (hg : g.Valid binaryTypes unaryTypes)
+     (selected s : ℕ) (M : Fin binaryTypes → Matrix C C R)
+@@ -172,7 +173,7 @@
+     unfold unaryValue
+     split <;> simp_all
+   rw [hf]
+-  simpa only [List.map_map, Function.comp_apply] using
++  simpa [List.map_map, Function.comp_def, powMonoidHom] using
+     (map_list_prod (powMonoidHom s) ((g.unaries.filter (fun e => e.2 = selected)).map
+       (unaryValue g.vertices unaryTypes U σ))).symm
+ 
+--- canonical/PlanarHom/MixedUnaryParallelMachines.lean
++++ ported/PlanarHom/MixedUnaryParallelMachines.lean
+@@ -17,7 +17,7 @@
+ def unaryLoopGraph (g : MixedCode) : MixedCode:=⟨g.vertices,g.unaries.map unaryAsLoop,[]⟩
+ 
+ theorem fp_vertices : FP encoding BitEncoding.unaryNat vertices:=by
+-  simpa only [Function.comp_apply] using
++  simpa only [Function.comp_def] using
+     (fp_fst BitEncoding.unaryNat (edgeEncoding.prod unaryEncoding)).transportInput
+       (fun g : MixedCode=>(g.vertices,g.edges,g.unaries)) (fun _=>rfl)
+ 
+@@ -60,15 +60,15 @@
+   rfl
+ 
+ noncomputable def parallelUnaryComputer (selected : ℕ) :
+-    TM2ComputableInPolyTime (BitEncoding.unaryNat.prod encoding).toFinEncoding encoding.toFinEncoding
++    TM2ComputableInPolyTime (BitEncoding.unaryNat.prod encoding).encode encoding.encode
+       (fun p=>p.2.parallelUnaryLabel selected p.1):=
+   Classical.choice (fp_parallelUnaryLabel selected)
+ 
+ /-- Full successful-raw-decoding extension, including noncanonical unary labels. -/
+ noncomputable def parallelUnaryRawComputer (selected : ℕ) :
+     TM2ComputableInPolyTime
+-      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).toFinEncoding
+-      encoding.toFinEncoding (fun w=>w.value.2.parallelUnaryLabel selected w.value.1):=
++      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).encode
++      encoding.encode (fun w=>w.value.2.parallelUnaryLabel selected w.value.1):=
+   composeComputers (BitEncoding.prodNormalizer BitEncoding.unaryNormalizer normalizer)
+     (parallelUnaryComputer selected)
+ 
+@@ -83,7 +83,7 @@
+   let w : BitEncoding.ValidWord (BitEncoding.unaryNat.prod encoding):=⟨raw,⟨(s,g),hd⟩⟩
+   have hv : w.value=(s,g):=BitEncoding.ValidWord.value_eq hd
+   have h:=(parallelUnaryRawComputer selected).outputsFun w
+-  simpa only [BitEncoding.toFinEncoding,BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe,BitEncoding.encode,BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw,hv,w] using h
+ 
+ end PlanarHom.Complexity.MixedCode
+--- canonical/PlanarHom/NatCanonicalizationMachine.lean
++++ ported/PlanarHom/NatCanonicalizationMachine.lean
+@@ -4,6 +4,8 @@
+ 
+ /-! Actual normalization for the pinned mathlib natural decoder. A nonempty
+ word ending in `false` acquires a high `true`; this is not zero-padding removal. -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.NatCanonicalizationMachine
+ open Turing Turing.TM2 Polynomial PlanarHom.Complexity PlanarHom.MachineComposition
+ 
+@@ -72,7 +74,9 @@
+     rfl () none (store xs [])
+   have hs : transferStore Stack.input Stack.buffer (id : Bool→Bool) (store xs [])=store [] xs.reverse:=by
+     funext k; cases k <;> simp [transferStore,store]
+-  simpa [iter,machine,FinTM2.step,cfg,store,Function.comp_def,hs] using h
++  simp only [Function.id_comp] at h
++  rw [hs] at h
++  exact h
+ 
+ theorem fix_run (xs : Bits) :
+     iter 1 (cfg .fix [] xs.reverse)=some (cfg .restore (suffix xs) xs.reverse):=by
+@@ -89,7 +93,9 @@
+     rfl () none (store xs ys)
+   have hs : transferStore Stack.buffer Stack.input (id : Bool→Bool) (store xs ys)=store (ys.reverse++xs) []:=by
+     funext k; cases k <;> simp [transferStore,store]
+-  simpa [iter,machine,FinTM2.step,cfg,store,Function.comp_def,hs] using h
++  simp only [Function.id_comp] at h
++  rw [hs] at h
++  exact h
+ 
+ theorem halt_run (xs : Bits) : iter 1 (cfg .halt xs [])=some (haltList machine xs):=by
+   apply congrArg some
+@@ -125,19 +131,23 @@
+ 
+ /-- Correct on every raw word, including the noncanonical one-bit word `[false]`. -/
+ noncomputable def computer :
+-    TM2ComputableInPolyTime BitEncoding.bits.toFinEncoding BitEncoding.bits.toFinEncoding canonical where
++    TM2ComputableInPolyTime BitEncoding.bits.encode BitEncoding.bits.encode canonical where
+   tm:=machine
+   inputAlphabet:=Equiv.refl Bool
+   outputAlphabet:=Equiv.refl Bool
+   time:=C 2*X+C 4
+   outputsFun xs:={
+     steps:=2*xs.length+4
+-    evals_in_steps:=by simpa [BitEncoding.bits,BitEncoding.toFinEncoding,Equiv.refl] using run xs
+-    steps_le_m:=by simp [BitEncoding.bits,BitEncoding.toFinEncoding] }
++    evals_in_steps:=by
++      change (fun c : Option machine.Cfg => c.bind machine.step)^[2*xs.length+4]
++        (some (initList machine (xs.map id))) =
++          some (haltList machine ((canonical xs).map id))
++      simpa only [List.map_id] using run xs
++    steps_le_m:=by simp [BitEncoding.bits] }
+ 
+ /-- The natural decoder itself is compiled, with its canonical binary output. -/
+ noncomputable def decodeComputer :
+-    TM2ComputableInPolyTime BitEncoding.bits.toFinEncoding BitEncoding.nat.toFinEncoding
++    TM2ComputableInPolyTime BitEncoding.bits.encode BitEncoding.nat.encode
+       Computability.decodeNat:=
+   transportOutputComputer BitEncoding.bits BitEncoding.bits BitEncoding.nat
+     canonical_eq_encode_decode computer
+--- canonical/PlanarHom/NonadaptiveReductionCompiler.lean
++++ ported/PlanarHom/NonadaptiveReductionCompiler.lean
+@@ -24,8 +24,8 @@
+     {A C Q B R : Type} (ea : BitEncoding A) (ec : BitEncoding C)
+     (eq : BitEncoding Q) (eb : BitEncoding B) (er : BitEncoding R)
+     (target source : PromiseProblem) (prepare : A→C × List Q) (answer : Q→B) (recover : C × List B→R)
+-    (preprocessing : TM2ComputableInPolyTime ea.toFinEncoding (ec.prod eq.list).toFinEncoding prepare)
+-    (recovery : TM2ComputableInPolyTime (ec.prod eb.list).toFinEncoding er.toFinEncoding recover)
++    (preprocessing : TM2ComputableInPolyTime ea.encode (ec.prod eq.list).encode prepare)
++    (recovery : TM2ComputableInPolyTime (ec.prod eb.list).encode er.encode recover)
+     (view : ∀raw,target.valid raw→A)
+     (sameWords : ∀raw h,ea.encode (view raw h)=raw)
+     (queriesValid : ∀raw h,∀q∈(prepare (view raw h)).2,source.valid (eq.encode q))
+@@ -83,7 +83,7 @@
+   rw [hanswer] at hr
+   have hpre : TM2OutputsInTime pre.tm (raw.map pre.inputAlphabet.symm)
+       (some (prepared.map pre.outputAlphabet.symm)) (pre.time.eval raw.length):=by
+-    simpa only [BitEncoding.toFinEncoding,hraw,prepared] using pre.outputsFun a
++    simpa only [Equiv.invFun_as_coe,BitEncoding.encode,hraw,prepared] using pre.outputsFun a
+   have hpost : TM2OutputsInTime post.tm (recoveredInput.map post.inputAlphabet.symm)
+       (some ((er.encode (recover (context,queries.map answer))).map post.outputAlphabet.symm))
+       (post.time.eval recoveredInput.length):=post.outputsFun (context,queries.map answer)
+@@ -96,7 +96,7 @@
+   rw [hcorrect] at hfinal
+   refine ⟨_,_,trace,hfinal,?_,hgood⟩
+   have hpreSize : prepared.length≤P.eval raw.length:=by
+-    simpa only [BitEncoding.toFinEncoding,hraw,prepared,P] using encoded_output_length_le pre a
++    simpa only [Equiv.invFun_as_coe,BitEncoding.encode,hraw,prepared,P] using encoded_output_length_le pre a
+   have hcost' : cost≤(contextualBatchTime p).eval prepared.length:=hcost
+   have hcostTotal : cost≤(contextualBatchTime p).eval (P.eval raw.length):=
+     hcost'.trans (natPolynomial_monotone _ hpreSize)
+--- canonical/PlanarHom/NondeterministicTM2SpaceBounds.lean
++++ ported/PlanarHom/NondeterministicTM2SpaceBounds.lean
+@@ -8,6 +8,8 @@
+ Source control and syntax determine these constants. The potential includes all
+ remaining source steps, so it decreases across both ordinary and binary edges.
+ -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.NondeterministicTM2SpaceBounds
+ noncomputable section
+ open Turing NondeterministicTM2 NondeterministicComputationTree
+--- canonical/PlanarHom/OraclePostcomposition.lean
++++ ported/PlanarHom/OraclePostcomposition.lean
+@@ -17,6 +17,9 @@
+   exact h.2 j hj
+ 
+ end PlanarHom.MachineComposition.StackEmbedding
++
++-- The original dependent stack model requires semireducible unfolding.
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.OraclePostcomposition
+ noncomputable section
+@@ -76,7 +79,8 @@
+       ((oracle ((machine a b).queryWord d)).map
+         (((embedding a b).alphabet a.answerStack).symm.trans a.answerAlphabet).symm))
+   rw [left_queryWord a b h]
+-  simpa only [List.map_map,Equiv.symm_trans_apply,Equiv.symm_symm,Function.comp_def] using hs
++  rw [Equiv.symm_trans, Equiv.symm_symm, Equiv.coe_trans, ← List.map_map]
++  exact hs
+ 
+ /-- The oracle phase is embedded with unchanged communication and transcript. -/
+ theorem left_run {oracle : Bits→Bits} {c z : a.Cfg} {steps cost : ℕ} {qs : OracleTM2.Transcript}
+@@ -128,9 +132,12 @@
+ 
+ private theorem initial (x : Bits) :
+     LeftRel a.core.tm b.tm (alphabet a b) (a.initial x) ((machine a b).initial x):=by
+-  have h:=sequential_initial a.core.tm b.tm (alphabet a b) (x.map a.core.inputAlphabet.symm)
+-  simpa only [machine,OracleTM2.initial,List.map_map,Equiv.symm_trans_apply,
+-    Equiv.symm_symm,Function.comp_def,embedding] using h
++  change LeftRel a.core.tm b.tm (alphabet a b) (initList a.core.tm (x.map a.core.inputAlphabet.symm))
++    (initList (sequentialMachine a.core.tm b.tm (alphabet a b))
++      (x.map (((leftEmbedding a.core.tm.k₁ b.tm.k₀ (alphabet a b)).alphabet a.core.tm.k₀).symm.trans
++        a.core.inputAlphabet).symm))
++  rw [Equiv.symm_trans, Equiv.symm_symm, Equiv.coe_trans, ← List.map_map]
++  exact sequential_initial a.core.tm b.tm (alphabet a b) (x.map a.core.inputAlphabet.symm)
+ 
+ /-- Complete oracle execution followed by the actual exact-output postprocessor. -/
+ theorem run {oracle : Bits→Bits} (x y z : Bits) {steps cost : ℕ} {qs : OracleTM2.Transcript}
+--- canonical/PlanarHom/OraclePrecomposition.lean
++++ ported/PlanarHom/OraclePrecomposition.lean
+@@ -49,6 +49,7 @@
+   rw [right_stack a b h]
+   rfl
+ 
++set_option backward.isDefEq.respectTransparency false in
+ private theorem right_answer {oracle : Bits→Bits} {c : b.Cfg} {d : (machine a b).Cfg}
+     (h : RightRel a.tm b.core.tm (alphabet a b) c d) (next : b.core.tm.Λ) :
+     RightRel a.tm b.core.tm (alphabet a b) (b.answerCfg oracle c next)
+@@ -131,12 +132,16 @@
+       obtain ⟨e,he,hz⟩:=ih c' h d' hrel
+       exact ⟨e,.ordinary (left_continuation a b hs hd) hstep he,hz⟩
+ 
++set_option backward.isDefEq.respectTransparency false in
+ private theorem initial (x : Bits) :
+     LeftRel a.tm b.core.tm (alphabet a b) (initList a.tm (x.map a.inputAlphabet.symm))
+       ((machine a b).initial x):=by
+-  have h:=sequential_initial a.tm b.core.tm (alphabet a b) (x.map a.inputAlphabet.symm)
+-  simpa only [machine,OracleTM2.initial,List.map_map,Equiv.symm_trans_apply,
+-    Equiv.symm_symm,Function.comp_def] using h
++  change LeftRel a.tm b.core.tm (alphabet a b) (initList a.tm (x.map a.inputAlphabet.symm))
++    (initList (sequentialMachine a.tm b.core.tm (alphabet a b))
++      (x.map (((leftEmbedding a.tm.k₁ b.core.tm.k₀ (alphabet a b)).alphabet a.tm.k₀).symm.trans
++        a.inputAlphabet).symm))
++  rw [Equiv.symm_trans, Equiv.symm_symm, Equiv.coe_trans, ← List.map_map]
++  exact sequential_initial a.tm b.core.tm (alphabet a b) (x.map a.inputAlphabet.symm)
+ 
+ /-- Complete finite preprocessing plus an arbitrary genuine oracle run. -/
+ theorem run {oracle : Bits→Bits} (x y z : Bits) (time : ℕ)
+--- canonical/PlanarHom/OracleRunExtensionality.lean
++++ ported/PlanarHom/OracleRunExtensionality.lean
+@@ -18,6 +18,7 @@
+       answers _ _ (by simp)
+     have he : m.answerCfg replacement c next=m.answerCfg oracle c next:=by
+       simp only [OracleTM2.answerCfg,hanswer]
++      rfl
+     have hrest:=ih (fun q a ha=>answers q a (List.mem_cons_of_mem _ ha))
+     rw [←he] at hrest
+     have hh:=OracleTM2.Run.query next hq hrest
+--- canonical/PlanarHom/ParsimoniousBooleanProgram.lean
++++ ported/PlanarHom/ParsimoniousBooleanProgram.lean
+@@ -5,6 +5,8 @@
+ Cook-Levin compiler, a planar embedding, or a global raw-bit reduction yet. -/
+ noncomputable section
+ open Classical
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.ParsimoniousNorOneInThree
+ 
+ /-- Three clauses force an existing variable true and three fresh bits false. -/
+--- canonical/PlanarHom/PlanarNeighborhoods.lean
++++ ported/PlanarHom/PlanarNeighborhoods.lean
+@@ -160,7 +160,7 @@
+   intro p hpv hpw
+   have hsep := d.radius_vertex_separation hr hvw
+   have htri := dist_triangle (d.point v) p (d.point w)
+-  have hv : dist (d.point v) p ≤ r := by simpa only [dist_comm] using hpv
++  have hv : dist (d.point v) p ≤ r := by simpa only [Metric.mem_closedBall, dist_comm] using hpv
+   have hw : dist p (d.point w) ≤ r := hpw
+   linarith
+ 
+--- canonical/PlanarHom/PolygonalDrawingIncidence.lean
++++ ported/PlanarHom/PolygonalDrawingIncidence.lean
+@@ -28,7 +28,8 @@
+ theorem chain_graphArc (d : PolygonalDrawing G) (e : E) : Polygonal.GraphArc (d.chain e).strictPath := by
+   intro s t heq
+   have h : d.drawing.curve e s = d.drawing.curve e t := by
+-    simpa only [d.curve_eq] using heq
++    rw [d.curve_eq]
++    exact heq
+   by_cases hs0 : s = 0
+   · subst s
+     have ht := (d.drawing.curve_eq_point_iff e t (G.src e)).mp
+--- canonical/PlanarHom/PolygonalNormals.lean
++++ ported/PlanarHom/PolygonalNormals.lean
+@@ -181,7 +181,7 @@
+     exact p.2.2.2
+   have hinner : ‖A + (p.1 : ℝ) • (B - A)‖ ≤ ‖A‖ + ‖B - A‖ := by
+     apply (norm_add_le _ _).trans
+-    apply add_le_add_left
++    apply add_le_add le_rfl
+     exact (norm_smul_le _ _).trans (mul_le_of_le_one_left (norm_nonneg _) ht)
+   have houter : ‖(p.2 : ℝ) • (A + (p.1 : ℝ) • (B - A))‖ ≤ ‖A‖ + ‖B - A‖ := by
+     apply (norm_smul_le _ _).trans
+--- canonical/PlanarHom/PolynomialChoiceExpansion.lean
++++ ported/PlanarHom/PolynomialChoiceExpansion.lean
+@@ -37,5 +37,6 @@
+   rw [Fintype.prod_sum]
+   simp_rw [prod_monomial]
+   simp only [finset_sum_coeff, coeff_monomial, choiceDegree, choiceWeight]
++  rfl
+ 
+ end PlanarHom.PolynomialChoiceExpansion
+--- canonical/PlanarHom/ProductRepresentativeMachines.lean
++++ ported/PlanarHom/ProductRepresentativeMachines.lean
+@@ -52,7 +52,7 @@
+ omit [Algebra ℚ K] in
+ theorem representatives_pairwise (A B : Fin t→K) (m : ℕ) :
+     (representatives A B m).Pairwise (fun p q=>p.1≠q.1):=by
+-  simpa only [ListDedupMachines.Rel,decide_eq_true_eq] using
++  simpa only [representatives,ListDedupMachines.Rel,decide_eq_true_eq] using
+     dedupByFirst_pairwise (fun p : K × K=>decide (p.1=p.2)) equality_equivalence (nonzeroProducts A B m)
+ 
+ theorem fp_representatives (basis : Module.Basis (Fin dimension) ℚ K) (A B : Fin t→K) :
+--- canonical/PlanarHom/PromisePolynomialTime.lean
++++ ported/PlanarHom/PromisePolynomialTime.lean
+@@ -17,8 +17,8 @@
+ 
+ /-- Choose the genuine machine certified by promised membership. -/
+ def PromiseProblem.InFP.computer {P : PromiseProblem} (h : P.InFP) :
+-    Turing.TM2ComputableInPolyTime (BitEncoding.bits.restrict P.valid).toFinEncoding
+-      BitEncoding.bits.toFinEncoding (fun x => P.value x.val) := Classical.choice h
++    Turing.TM2ComputableInPolyTime (BitEncoding.bits.restrict P.valid).encode
++      BitEncoding.bits.encode (fun x => P.value x.val) := Classical.choice h
+ 
+ /-- Direct raw-word execution specification, charged against the literal input
+ length and requiring only membership in the mathematical promise. -/
+@@ -26,8 +26,9 @@
+     (raw : Bits) (valid : P.valid raw) :
+     Turing.TM2OutputsInTime h.computer.tm (raw.map h.computer.inputAlphabet.symm)
+       (some ((P.value raw).map h.computer.outputAlphabet.symm))
+-      (h.computer.time.eval raw.length) :=
+-  h.computer.outputsFun ⟨raw,valid⟩
++      (h.computer.time.eval raw.length) := by
++  simpa only [Equiv.invFun_as_coe, BitEncoding.encode, BitEncoding.restrict,
++    BitEncoding.bits, id_eq] using h.computer.outputsFun ⟨raw, valid⟩
+ 
+ /-- Narrowing only the promise reuses the same actual program. -/
+ theorem PromiseProblem.InFP.mono {P Q : PromiseProblem} (h : P.InFP)
+--- canonical/PlanarHom/PromisedFPReductionClosure.lean
++++ ported/PlanarHom/PromisedFPReductionClosure.lean
+@@ -42,10 +42,10 @@
+ call with the promised solver. The resulting polynomial is the existing
+ cumulative compiler bound, including transfer, clearing and answer-bit costs. -/
+ def computer {P Q : PromiseProblem} (r : PromisePolyTimeTuringReduction P Q)
+-    (solver : TM2ComputableInPolyTime (BitEncoding.bits.restrict Q.valid).toFinEncoding
+-      BitEncoding.bits.toFinEncoding (fun x => Q.value x.val)) :
+-    TM2ComputableInPolyTime (BitEncoding.bits.restrict P.valid).toFinEncoding
+-      BitEncoding.bits.toFinEncoding (fun x => P.value x.val) := by
++    (solver : TM2ComputableInPolyTime (BitEncoding.bits.restrict Q.valid).encode
++      BitEncoding.bits.encode (fun x => Q.value x.val)) :
++    TM2ComputableInPolyTime (BitEncoding.bits.restrict P.valid).encode
++      BitEncoding.bits.encode (fun x => P.value x.val) := by
+   let g := solver.toTM2ComputableAux
+   refine {
+     tm := OracleSubstitution.machine r.machine g
+--- canonical/PlanarHom/RawBooleanListMachine.lean
++++ ported/PlanarHom/RawBooleanListMachine.lean
+@@ -4,6 +4,8 @@
+ 
+ /-! NEW reconstruction: raw Boolean words to framed Boolean lists, with a
+ literal linear-time transducer and a real binary length-header compiler. -/
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.RawBooleanListMachine
+ 
+@@ -82,7 +84,7 @@
+     change (fun c : Option machine.Cfg => c.bind machine.step)^[xs.length+1]
+       (machine.step (cfg .scan (x::xs) buf out)) = _
+     rw [step_scan_cons]
+-    simpa [payload,List.reverse_cons,List.append_assoc] using ih (false::x::true::buf)
++    simpa [iter,payload,List.reverse_cons,List.append_assoc] using ih (false::x::true::buf)
+ 
+ theorem transfer_store (xs buf out : Bits) :
+     transferStore .buffer .output (id : Bool→Bool) (store xs buf out) =
+@@ -94,7 +96,11 @@
+     iter (buf.length+1) (cfg .reverse [] buf []) = some (cfg .finish [] [] buf.reverse) := by
+   have h := transfer_run program Stack.buffer Stack.output (by intro h; cases h)
+     id id Label.reverse Label.finish rfl () none (store [] buf [])
+-  simpa [iter,cfg,FinTM2.step,machine,transfer_store] using h
++  change (fun c : Option (Cfg (fun _ : Stack => Bool) Label (Unit × Option Bool)) =>
++    c.bind (step program))^[buf.length+1]
++      (some ⟨some .reverse, ((),none), store [] buf []⟩) =
++    some ⟨some .finish, ((),none), store [] [] buf.reverse⟩
++  simpa only [store, Function.id_comp, transfer_store, List.append_nil] using h
+ 
+ theorem finish_run (out : Bits) : machine.step (cfg .finish [] [] out) =
+     some (haltList machine out) := by
+@@ -135,8 +141,8 @@
+ 
+ 
+ /-- A real linear-time machine emits the Boolean-list payload. -/
+-noncomputable def payloadComputer : TM2ComputableInPolyTime BitEncoding.bits.toFinEncoding
+-    BitEncoding.bits.toFinEncoding payload where
++noncomputable def payloadComputer : TM2ComputableInPolyTime BitEncoding.bits.encode
++    BitEncoding.bits.encode payload where
+   tm := machine
+   inputAlphabet := Equiv.refl Bool
+   outputAlphabet := Equiv.refl Bool
+@@ -148,7 +154,7 @@
+         (some (initList machine (xs.map id))) =
+           some (haltList machine ((payload xs).map id))
+       simpa only [List.map_id] using payload_run xs
+-    steps_le_m := by simp [BitEncoding.toFinEncoding,BitEncoding.bits] }
++    steps_le_m := by simp [BitEncoding.encode,BitEncoding.bits] }
+ 
+ theorem fp_payload : FP BitEncoding.bits BitEncoding.bits payload := ⟨payloadComputer⟩
+ 
+--- canonical/PlanarHom/RawGraphTransformMachines.lean
++++ ported/PlanarHom/RawGraphTransformMachines.lean
+@@ -8,8 +8,8 @@
+ 
+ noncomputable def parallelRawComputer (selected : ℕ) :
+     TM2ComputableInPolyTime
+-      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).toFinEncoding
+-      encoding.toFinEncoding
++      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).encode
++      encoding.encode
+       (fun w=>w.value.2.parallelLabel selected w.value.1):=
+   composeComputers (BitEncoding.prodNormalizer BitEncoding.unaryNormalizer normalizer)
+     (PlanarHom.MixedParallelMachines.parallelComputer selected)
+@@ -25,7 +25,7 @@
+   let w : BitEncoding.ValidWord (BitEncoding.unaryNat.prod encoding):=⟨raw,⟨(s,g),hd⟩⟩
+   have hv : w.value=(s,g):=BitEncoding.ValidWord.value_eq hd
+   have h:=(parallelRawComputer selected).outputsFun w
+-  simpa only [BitEncoding.toFinEncoding,BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe,BitEncoding.encode,BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw,hv,w] using h
+ 
+ end PlanarHom.Complexity.MixedCode
+--- canonical/PlanarHom/RestrictedListFoldMachines.lean
++++ ported/PlanarHom/RestrictedListFoldMachines.lean
+@@ -34,7 +34,6 @@
+   have hn : xs.length≤N := by omega
+   have hinput (a : α) (ha : a∈xs) : (ea.encode a).length≤N := by
+     have h := ListMapMachines.mem_le_sum_map (fun a => (ea.encode a).length) ha
+-    dsimp only at h
+     omega
+   have hl := loopCost_bound z xs N P hinput hacc
+   have hmul := Nat.mul_le_mul_right (3*N+8*P+10) hn
+@@ -49,11 +48,11 @@
+ noncomputable def computerOn (input : BitEncoding γ) (ea : BitEncoding α) (eb : BitEncoding β)
+     (f : β→α→β) (start : γ→β) (items : γ→List α)
+     (sameWords : ∀b,input.encode b=(eb.prod ea.list).encode (start b,items b))
+-    (body : TM2ComputableInPolyTime (eb.prod ea).toFinEncoding eb.toFinEncoding (fun p => f p.1 p.2))
++    (body : TM2ComputableInPolyTime (eb.prod ea).encode eb.encode (fun p => f p.1 p.2))
+     (p : Polynomial ℕ)
+     (sizeBound : ∀b i,i≤(items b).length→(eb.encode (((items b).take i).foldl f (start b))).length≤
+       p.eval (input.encode b).length) :
+-    TM2ComputableInPolyTime input.toFinEncoding eb.toFinEncoding (fun b => (items b).foldl f (start b)) := by
++    TM2ComputableInPolyTime input.encode eb.encode (fun b => (items b).foldl f (start b)) := by
+   let time : Polynomial ℕ := (Polynomial.C 10*Polynomial.X+Polynomial.C 10)*(Polynomial.X+p+Polynomial.C 4)
+   let g := body.toTM2ComputableAux
+   refine {
+--- canonical/PlanarHom/RootedCodeNormalization.lean
++++ ported/PlanarHom/RootedCodeNormalization.lean
+@@ -8,12 +8,12 @@
+ variable {n m : ℕ}
+ 
+ def computer (H : RootedGraph (Fin n) (Fin m)) (selected : ℕ) :
+-    TM2ComputableInPolyTime inputEncoding.toFinEncoding MixedCode.encoding.toFinEncoding
++    TM2ComputableInPolyTime inputEncoding.encode MixedCode.encoding.encode
+       (attach H selected) := Classical.choice (fp_attach H selected)
+ 
+ def rawComputer (H : RootedGraph (Fin n) (Fin m)) (selected : ℕ) :
+-    TM2ComputableInPolyTime (BitEncoding.ValidWord.encoding inputEncoding).toFinEncoding
+-      MixedCode.encoding.toFinEncoding (fun w => attach H selected w.value) :=
++    TM2ComputableInPolyTime (BitEncoding.ValidWord.encoding inputEncoding).encode
++      MixedCode.encoding.encode (fun w => attach H selected w.value) :=
+   composeComputers (BitEncoding.prodNormalizer BitEncoding.natNormalizer MixedCode.normalizer)
+     (computer H selected)
+ 
+@@ -27,7 +27,7 @@
+   let w : BitEncoding.ValidWord inputEncoding := ⟨raw,⟨(r,g),hd⟩⟩
+   have hv : w.value=(r,g) := BitEncoding.ValidWord.value_eq hd
+   have h := (rawComputer H selected).outputsFun w
+-  simpa only [BitEncoding.toFinEncoding,BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe,BitEncoding.encode,BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw,hv,w] using h
+ 
+ end PlanarHom.RootedCodeMachines
+--- canonical/PlanarHom/RootedCodeSemantics.lean
++++ ported/PlanarHom/RootedCodeSemantics.lean
+@@ -40,16 +40,18 @@
+     Fin p.2.edges.length ⊕ Fin m ≃ Fin (attach H selected p).edges.length :=
+   finSumFinEquiv.trans (finCongr (attach_edges_length H selected p).symm)
+ 
++set_option backward.isDefEq.respectTransparency false in
+ theorem attach_get_old (H : RootedGraph (Fin n) (Fin m)) (selected : ℕ) (p : ℕ × MixedCode)
+     (e : Fin p.2.edges.length) :
+     (attach H selected p).edges.get (attachEdgeEquiv H selected p (.inl e)) = p.2.edges.get e := by
+-  simp [attachEdgeEquiv,attach,List.get_eq_getElem]
++  simp [attachEdgeEquiv,attach,List.get_eq_getElem, Equiv.trans_apply, finCongr_apply]
+ 
++set_option backward.isDefEq.respectTransparency false in
+ theorem attach_get_new (H : RootedGraph (Fin n) (Fin m)) (selected : ℕ) (p : ℕ × MixedCode)
+     (e : Fin m) :
+     (attach H selected p).edges.get (attachEdgeEquiv H selected p (.inr e)) =
+       (endpoint p.2.vertices p.1 (H.src e),endpoint p.2.vertices p.1 (H.dst e),selected) := by
+-  simp [attachEdgeEquiv,attach,newEdges,List.get_eq_getElem]
++  simp [attachEdgeEquiv,attach,newEdges,List.get_eq_getElem, Equiv.trans_apply, finCongr_apply]
+ 
+ theorem endpoint_equiv (g : MixedCode) (r : Fin g.vertices) (a : PUnit ⊕ Fin n) :
+     endpoint g.vertices r.val a =
+--- canonical/PlanarHom/RootedSignatureSpan.lean
++++ ported/PlanarHom/RootedSignatureSpan.lean
+@@ -104,8 +104,9 @@
+     rw [pairing_comm w target (f a), ← ha, pairing_comm, pairing_sum]
+     rfl
+   intro v hv
+-  simpa only [lhs, rhs, pairingMap, LinearMap.sum_apply, LinearMap.smul_apply,
+-    smul_eq_mul, LinearMap.coe_mk, AddHom.coe_mk] using LinearMap.eqOn_span hEq hv
++  have he := LinearMap.eqOn_span hEq hv
++  simp only [lhs, rhs, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul] at he
++  exact he
+ 
+ /-- Choose finitely many members of any signature family, then project onto
+ its span. The choice depends only on that fixed family and target functional. -/
+--- canonical/PlanarHom/SelectedLabelOracleMachine.lean
++++ ported/PlanarHom/SelectedLabelOracleMachine.lean
+@@ -2,6 +2,8 @@
+ import PlanarHom.OracleSubstitution
+ 
+ /-! A genuine finite-control machine for the tagged counter/classifier oracle. -/
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.SelectedLabelOracleMachine
+ open Turing Turing.TM2 PlanarHom.Complexity PlanarHom.BinaryArithmetic PlanarHom.MachineComposition
+@@ -109,7 +111,7 @@
+ /-- The parser's malformed-input behavior is proved for every raw bit string. -/
+ def skip_run (selected : ℕ) (l next : Label)
+     (hp : program selected l = skipStmt l next) (xs : Bits) :
+-    EvalsToInTime (machine selected).step (cfg (some l) none xs [])
++    StateTransition.EvalsToInTime (machine selected).step (cfg (some l) none xs [])
+       (some (cfg (some next) none (skipFrame xs) [])) (xs.length+1) := by
+   induction xs using List.twoStepInduction with
+   | nil =>
+@@ -137,7 +139,7 @@
+     | true =>
+       have h₁ := oneStep (machine selected).step (a:=cfg (some l) none (true::b::xs) [])
+         (b:=cfg (some l) none xs []) (by simp [machine,FinTM2.step,step,cfg,hp,skipStmt,resetGoto,stepAux])
+-      have hh := EvalsToInTime.trans (machine selected).step 1 (xs.length+1) _ _ _ h₁ ih
++      have hh := StateTransition.EvalsToInTime.trans (machine selected).step 1 (xs.length+1) _ _ _ h₁ ih
+       exact weakenTime hh (by simp)
+ 
+ 
+@@ -173,7 +175,7 @@
+         simp [compareStmt,compareRest,stepAux,resetGoto,cfg,h,hab]
+ 
+ def failure_run (selected : ℕ) (xs : Bits) :
+-    EvalsToInTime (machine selected).step (cfg (some .failure) none xs [])
++    StateTransition.EvalsToInTime (machine selected).step (cfg (some .failure) none xs [])
+       (some (cfg none none [false] [])) (xs.length+1) := by
+   induction xs with
+   | nil =>
+@@ -182,10 +184,10 @@
+   | cons b xs ih =>
+     have hs := oneStep (machine selected).step (a:=cfg (some .failure) none (b::xs) [])
+       (b:=cfg (some .failure) none xs []) (by simp [machine,FinTM2.step,step,program,stepAux,resetGoto,cfg])
+-    exact EvalsToInTime.trans (machine selected).step 1 (xs.length+1) _ _ _ hs ih
++    exact StateTransition.EvalsToInTime.trans (machine selected).step 1 (xs.length+1) _ _ _ hs ih
+ 
+ def compare_run (selected : ℕ) (xs : Bits) :
+-    EvalsToInTime (machine selected).step (cfg (some .compare) none xs [])
++    StateTransition.EvalsToInTime (machine selected).step (cfg (some .compare) none xs [])
+       (some (cfg none none [xs==BitEncoding.nat.encode selected] [])) (xs.length+2) := by
+   have hs : (machine selected).step (cfg (some .compare) none xs []) =
+       some (cfg (some (if xs==BitEncoding.nat.encode selected then .success else .failure)) none
+@@ -197,11 +199,11 @@
+     simp only [BEq.rfl,compareRest_self] at hs ⊢
+     have h₂ := oneStep (machine selected).step (a:=cfg (some .success) none [] [])
+       (b:=cfg none none [true] []) (by simp [machine,FinTM2.step,step,program,stepAux,cfg])
+-    exact weakenTime (EvalsToInTime.trans (machine selected).step 1 1 _ _ _ (oneStep _ hs) h₂) (by omega)
++    exact weakenTime (StateTransition.EvalsToInTime.trans (machine selected).step 1 1 _ _ _ (oneStep _ hs) h₂) (by omega)
+   · have hne : (xs==BitEncoding.nat.encode selected)=false := by simp [he]
+     rw [hne] at hs ⊢
+     have h₂ := failure_run selected (compareRest (BitEncoding.nat.encode selected) xs)
+-    apply weakenTime (EvalsToInTime.trans (machine selected).step 1 _ _ _ _ (oneStep _ hs) h₂)
++    apply weakenTime (StateTransition.EvalsToInTime.trans (machine selected).step 1 _ _ _ _ (oneStep _ hs) h₂)
+     have hlen := compareRest_length (BitEncoding.nat.encode selected) xs
+     omega
+ 
+@@ -230,7 +232,7 @@
+   simpa [he] using hh
+ 
+ def inc_run (selected : ℕ) (xs : Bits) :
+-    EvalsToInTime (machine selected).step (cfg (some (.inc false)) none xs [])
++    StateTransition.EvalsToInTime (machine selected).step (cfg (some (.inc false)) none xs [])
+       (some (cfg none none (succBits xs) [])) (2*xs.length+2) where
+   steps := (successor_outputs xs).steps
+   steps_le_m := (successor_outputs xs).steps_le_m
+@@ -246,13 +248,13 @@
+       · rfl
+       · rfl
+       · funext k; cases k <;> rfl
+-    simpa [hi,ho] using hh
++    simpa [hi,ho,Function.flip_def] using hh
+ 
+ 
+ /-- Complete total raw-word behavior, including both dispatch tags and malformed
+ classification inputs. Each selected label determines one fixed finite program. -/
+ def tagged_run (selected : ℕ) (xs : Bits) :
+-    EvalsToInTime (machine selected).step (cfg (some .dispatch) none xs [])
++    StateTransition.EvalsToInTime (machine selected).step (cfg (some .dispatch) none xs [])
+       (some (cfg none none (selectedOracle selected xs) [])) (4*xs.length+6) := by
+   cases xs with
+   | nil =>
+@@ -265,7 +267,7 @@
+       have h₁ := oneStep (machine selected).step (a:=cfg (some .dispatch) none (false::xs) [])
+         (b:=cfg (some (.inc false)) none xs [])
+         (by simp [machine,FinTM2.step,step,program,stepAux,resetGoto,cfg])
+-      have h := EvalsToInTime.trans (machine selected).step 1 (2*xs.length+2) _ _ _ h₁ (inc_run selected xs)
++      have h := StateTransition.EvalsToInTime.trans (machine selected).step 1 (2*xs.length+2) _ _ _ h₁ (inc_run selected xs)
+       exact weakenTime h (by simp; omega)
+     | true =>
+       have h₁ := oneStep (machine selected).step (a:=cfg (some .dispatch) none (true::xs) [])
+@@ -274,9 +276,9 @@
+       have h₂ := skip_run selected .skipFirst .skipSecond rfl xs
+       have h₃ := skip_run selected .skipSecond .compare rfl (skipFrame xs)
+       have h₄ := compare_run selected (skipFrame (skipFrame xs))
+-      have h₁₂ := EvalsToInTime.trans (machine selected).step _ _ _ _ _ h₁ h₂
+-      have h₁₂₃ := EvalsToInTime.trans (machine selected).step _ _ _ _ _ h₁₂ h₃
+-      have h := EvalsToInTime.trans (machine selected).step _ _ _ _ _ h₁₂₃ h₄
++      have h₁₂ := StateTransition.EvalsToInTime.trans (machine selected).step _ _ _ _ _ h₁ h₂
++      have h₁₂₃ := StateTransition.EvalsToInTime.trans (machine selected).step _ _ _ _ _ h₁₂ h₃
++      have h := StateTransition.EvalsToInTime.trans (machine selected).step _ _ _ _ _ h₁₂₃ h₄
+       apply weakenTime h
+       have ha := skipFrame_length xs
+       have hb := skipFrame_length (skipFrame xs)
+@@ -300,7 +302,7 @@
+ /-- A genuine polynomial-time computer for the selected-label oracle used by
+ the mixed-graph compiler; the oracle is never an assumed algorithmic interface. -/
+ noncomputable def computer (selected : ℕ) :
+-    TM2ComputableInPolyTime BitEncoding.bits.toFinEncoding BitEncoding.bits.toFinEncoding
++    TM2ComputableInPolyTime BitEncoding.bits.encode BitEncoding.bits.encode
+       (selectedOracle selected) where
+   tm := machine selected
+   inputAlphabet := Equiv.refl Bool
+--- canonical/PlanarHom/SignedIntegerAdditionMachine.lean
++++ ported/PlanarHom/SignedIntegerAdditionMachine.lean
+@@ -1,5 +1,8 @@
+ import PlanarHom.SignedIntegerAdditionBits
+ import PlanarHom.BinaryAdditionMachine
++
++-- Preserve upstream definitional reduction in concrete machine proofs.
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-! # Linear-time signed integer addition on a fixed finite-control TM2 -/
+ namespace PlanarHom.BinaryArithmetic
+@@ -165,67 +168,67 @@
+       funext k; rcases k with _ | (_ | _) <;> simp
+ 
+ def sadd_parse (v : SAddState) (as ys bs xs : List Bool) :
+-    EvalsToInTime signedAdditionMachine.step
++    StateTransition.EvalsToInTime signedAdditionMachine.step
+       (saddCfg (some .parse) v (Complexity.BitEncoding.frame as ++ ys) bs xs)
+       (some (saddCfg (some .rightHeader) {v with first := some false} ys (as.reverse++bs) xs)) (as.length+1) := by
+   induction as generalizing v bs with
+   | nil => simpa [Complexity.BitEncoding.frame] using oneStep signedAdditionMachine.step (sadd_step_parse_end v ys bs xs)
+   | cons b as ih =>
+-    have h := EvalsToInTime.trans signedAdditionMachine.step 1 (as.length+1) _ _ _
++    have h := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1 (as.length+1) _ _ _
+       (oneStep signedAdditionMachine.step (sadd_step_parse_bit v b (Complexity.BitEncoding.frame as++ys) bs xs))
+       (ih {v with first := some b} (b::bs))
+     simpa [Complexity.BitEncoding.frame,List.reverse_cons,List.append_assoc] using h
+ 
+ def sadd_reverse (v : SAddState) (ys bs xs : List Bool) :
+-    EvalsToInTime signedAdditionMachine.step (saddCfg (some .reverse) v ys bs xs)
++    StateTransition.EvalsToInTime signedAdditionMachine.step (saddCfg (some .reverse) v ys bs xs)
+       (some (saddCfg (some .add) (saddFlags v.left v.right) ys [] (bs.reverse++xs))) (bs.length+1) := by
+   induction bs generalizing v xs with
+   | nil => simpa using oneStep signedAdditionMachine.step (sadd_step_reverse_nil v ys xs)
+   | cons b bs ih =>
+-    have h := EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
++    have h := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
+       (oneStep signedAdditionMachine.step (sadd_step_reverse_cons v b ys bs xs))
+       (ih {v with first := some b} (b::xs))
+     simpa [List.reverse_cons,List.append_assoc] using h
+ 
+ def sadd_restore (v : SAddState) (ys bs : List Bool) :
+-    EvalsToInTime signedAdditionMachine.step (saddCfg (some .restore) v ys bs [])
++    StateTransition.EvalsToInTime signedAdditionMachine.step (saddCfg (some .restore) v ys bs [])
+       (some (saddCfg none saddInitial
+         (Complexity.BitEncoding.frame [v.left] ++ bs.reverse.map (fun b => xor b v.left) ++ ys) [] [])) (bs.length+1) := by
+   induction bs generalizing v ys with
+   | nil => simpa using oneStep signedAdditionMachine.step (sadd_step_restore_nil v ys)
+   | cons b bs ih =>
+-    have h := EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
++    have h := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
+       (oneStep signedAdditionMachine.step (sadd_step_restore_cons v b ys bs))
+       (ih {v with first := some b} (xor b v.left :: ys))
+     simpa [List.reverse_cons,List.map_append,List.append_assoc] using h
+ 
+ def sadd_trim (v : SAddState) (bs : List Bool) :
+-    EvalsToInTime signedAdditionMachine.step (saddCfg (some .trim) v [] bs [])
++    StateTransition.EvalsToInTime signedAdditionMachine.step (saddCfg (some .trim) v [] bs [])
+       (some (saddCfg none saddInitial (intWordOutput v.left bs.reverse) [] [])) (bs.length+1) := by
+   induction bs generalizing v with
+   | nil => simpa [intWordOutput,normalizeBits] using oneStep signedAdditionMachine.step (sadd_step_trim_nil v)
+   | cons b bs ih =>
+     cases hb : xor b v.left with
+     | false =>
+-      have h := EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
++      have h := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
+         (oneStep signedAdditionMachine.step (sadd_step_trim_false v b bs hb))
+         (ih {v with first := some b})
+       simpa [intWordOutput,List.reverse_cons,List.map_append,hb] using h
+     | true =>
+-      have h := EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
++      have h := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1 (bs.length+1) _ _ _
+         (oneStep signedAdditionMachine.step (sadd_step_trim_true v b bs hb))
+         (sadd_restore {v with first := some b} [true] bs)
+       simpa [intWordOutput,List.reverse_cons,List.map_append,hb] using h
+ 
+ /-- Signed full-adder execution, including sign extension and canonical output. -/
+ def sadd_run (v : SAddState) (xs ys bs : List Bool) :
+-    EvalsToInTime signedAdditionMachine.step (saddCfg (some .add) v ys bs xs)
++    StateTransition.EvalsToInTime signedAdditionMachine.step (saddCfg (some .add) v ys bs xs)
+       (some (saddCfg none saddInitial (intWordOutput (twosAdd v.left v.right v.carry xs ys).1
+         (bs.reverse ++ (twosAdd v.left v.right v.carry xs ys).2)) [] []))
+       (2*(xs.length+ys.length)+bs.length+3) := by
+   by_cases h : xs=[] ∧ ys=[]
+   · rcases h with ⟨rfl,rfl⟩
+-    have he := EvalsToInTime.trans signedAdditionMachine.step 1
++    have he := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1
+       ((fullAdderBit v.left v.right v.carry :: bs).length+1) _ _ _
+       (oneStep signedAdditionMachine.step (sadd_step_finish v bs))
+       (sadd_trim {saddInitial with left := (fullAdderBit v.left v.right
+@@ -236,7 +239,7 @@
+     let c := fullAdderCarry (xor (xs.head?.getD false) v.left) (xor (ys.head?.getD false) v.right) v.carry
+     let v' := {v with carry := c,first := none,second := none}
+     have hs := sadd_step_add v xs ys bs hn
+-    have he := EvalsToInTime.trans signedAdditionMachine.step 1
++    have he := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1
+       (2*(xs.tail.length+ys.tail.length)+(bit::bs).length+3) _ _ _
+       (oneStep signedAdditionMachine.step hs) (sadd_run v' xs.tail ys.tail (bit::bs))
+     have hout : intWordOutput (twosAdd v'.left v'.right v'.carry xs.tail ys.tail).1
+@@ -286,13 +289,13 @@
+   have h5 := sadd_run (saddFlags sa sb) xs ys []
+   simp only [List.reverse_reverse,List.reverse_nil,List.nil_append,List.length_reverse,
+     List.append_nil,List.length_nil,Nat.add_zero] at h2 h4 h5
+-  have h45 := EvalsToInTime.trans signedAdditionMachine.step (xs.length+1)
++  have h45 := StateTransition.EvalsToInTime.trans signedAdditionMachine.step (xs.length+1)
+     (2*(xs.length+ys.length)+3) _ _ _ h4 h5
+-  have h345 := EvalsToInTime.trans signedAdditionMachine.step 1
++  have h345 := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1
+     ((2*(xs.length+ys.length)+3)+(xs.length+1)) _ _ _ h3 h45
+-  have h2345 := EvalsToInTime.trans signedAdditionMachine.step (xs.length+1)
++  have h2345 := StateTransition.EvalsToInTime.trans signedAdditionMachine.step (xs.length+1)
+     (((2*(xs.length+ys.length)+3)+(xs.length+1))+1) _ _ _ h2 h345
+-  have h := EvalsToInTime.trans signedAdditionMachine.step 1
++  have h := StateTransition.EvalsToInTime.trans signedAdditionMachine.step 1
+     ((((2*(xs.length+ys.length)+3)+(xs.length+1))+1)+(xs.length+1)) _ _ _ h1 h2345
+   have hout := intWordOutput_add_encode sa sb a b
+   change intWordOutput (twosAdd sa sb false xs ys).1 (twosAdd sa sb false xs ys).2 = _ at hout
+@@ -308,7 +311,7 @@
+     congr 1
+     funext k; rcases k with _ | (_ | _) <;> rfl
+   rw [intPairWord_encode]
+-  change EvalsToInTime signedAdditionMachine.step (initList signedAdditionMachine (intPairWord sa sb xs ys))
++  change StateTransition.EvalsToInTime signedAdditionMachine.step (initList signedAdditionMachine (intPairWord sa sb xs ys))
+     (some (haltList signedAdditionMachine (Complexity.BitEncoding.int.encode (signedIndex sa a+signedIndex sb b)))) _
+   rw [hi,ho]
+   apply weakenTime (by simpa only [intPairWord,List.append_assoc] using h)
+@@ -318,8 +321,8 @@
+ 
+ noncomputable def signedAdditionComputable :
+     TM2ComputableInPolyTime
+-      (Complexity.BitEncoding.prod Complexity.BitEncoding.int Complexity.BitEncoding.int).toFinEncoding
+-      Complexity.BitEncoding.int.toFinEncoding (fun p : ℤ×ℤ => p.1+p.2) where
++      (Complexity.BitEncoding.prod Complexity.BitEncoding.int Complexity.BitEncoding.int).encode
++      Complexity.BitEncoding.int.encode (fun p : ℤ×ℤ => p.1+p.2) where
+   tm := signedAdditionMachine
+   inputAlphabet := Equiv.refl Bool
+   outputAlphabet := Equiv.refl Bool
+--- canonical/PlanarHom/SingleTapeNondeterministic.lean
++++ ported/PlanarHom/SingleTapeNondeterministic.lean
+@@ -1,6 +1,6 @@
+ import PlanarHom.NondeterministicSharpP
+ import PlanarHom.NondeterministicRunCombinators
+-import Mathlib.Computability.Tape
++import Mathlib.Computability.TuringMachine.Tape
+ import Mathlib.Data.Fintype.Prod
+ import Mathlib.Tactic.DeriveFintype
+ 
+@@ -12,6 +12,8 @@
+ writes one symbol, moves by at most one cell, and changes a finite control state.
+ The two binary alternatives are labelled and counted separately, even if equal.
+ -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.SingleTapeNondeterministic
+ open Turing NondeterministicComputationTree Complexity
+ 
+--- canonical/PlanarHom/SingleTapeToNondeterministicTM2.lean
++++ ported/PlanarHom/SingleTapeToNondeterministicTM2.lean
+@@ -9,6 +9,8 @@
+ of TM2 push/pop/load/goto/halt instructions and a binary label choice. Input is
+ physically copied and reversed in a charged deterministic prefix.
+ -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.SingleTapeToNondeterministicTM2
+ open Turing Turing.TM2 Complexity NondeterministicComputationTree
+ open SingleTapeNondeterministic
+--- canonical/PlanarHom/StructuralCodeNormalizers.lean
++++ ported/PlanarHom/StructuralCodeNormalizers.lean
+@@ -12,7 +12,7 @@
+ open ValidWord
+ 
+ abbrev Normalizer {α : Type} (e : BitEncoding α):=
+-  TM2ComputableInPolyTime (ValidWord.encoding e).toFinEncoding e.toFinEncoding ValidWord.value
++  TM2ComputableInPolyTime (ValidWord.encoding e).encode e.encode ValidWord.value
+ 
+ noncomputable def natNormalizer : Normalizer nat:=by
+   let c:=transportInputComputer (ValidWord.encoding nat) bits nat ValidWord.raw (by intro w; rfl)
+@@ -31,14 +31,14 @@
+     funext w
+     have h:=w.decode_raw
+     exact Option.some.inj h
+-  change TM2ComputableInPolyTime (ValidWord.encoding unaryNat).toFinEncoding unaryNat.toFinEncoding
++  change TM2ComputableInPolyTime (ValidWord.encoding unaryNat).encode unaryNat.encode
+     ((fun w : Bits=>w.length) ∘ ValidWord.raw) at c
+   rw [he] at c
+   exact c
+ 
+ noncomputable def prodFirstComputer {α β : Type} (ea : BitEncoding α) (eb : BitEncoding β) :
+-    TM2ComputableInPolyTime (ValidWord.encoding (ea.prod eb)).toFinEncoding
+-      (ValidWord.encoding ea).toFinEncoding (fun w=>(ValidWord.split eb w).1):=by
++    TM2ComputableInPolyTime (ValidWord.encoding (ea.prod eb)).encode
++      (ValidWord.encoding ea).encode (fun w=>(ValidWord.split eb w).1):=by
+   let c:=transportInputComputer (ValidWord.encoding (ea.prod eb))
+     ((ValidWord.encoding ea).prod (ValidWord.encoding eb)) (ValidWord.encoding ea)
+     (ValidWord.split eb) (fun w=>(ValidWord.split_raw eb w).symm)
+@@ -46,8 +46,8 @@
+   exact c
+ 
+ noncomputable def prodSecondComputer {α β : Type} (ea : BitEncoding α) (eb : BitEncoding β) :
+-    TM2ComputableInPolyTime (ValidWord.encoding (ea.prod eb)).toFinEncoding
+-      (ValidWord.encoding eb).toFinEncoding (fun w=>(ValidWord.split eb w).2):=by
++    TM2ComputableInPolyTime (ValidWord.encoding (ea.prod eb)).encode
++      (ValidWord.encoding eb).encode (fun w=>(ValidWord.split eb w).2):=by
+   let c:=transportInputComputer (ValidWord.encoding (ea.prod eb))
+     ((ValidWord.encoding ea).prod (ValidWord.encoding eb)) (ValidWord.encoding eb)
+     (ValidWord.split eb) (fun w=>(ValidWord.split_raw eb w).symm)
+@@ -65,7 +65,7 @@
+       ((ValidWord.split eb w).1.value,(ValidWord.split eb w).2.value))=ValidWord.value:=by
+     funext w
+     exact (ValidWord.split_value eb w).symm
+-  change TM2ComputableInPolyTime (ValidWord.encoding (ea.prod eb)).toFinEncoding (ea.prod eb).toFinEncoding
++  change TM2ComputableInPolyTime (ValidWord.encoding (ea.prod eb)).encode (ea.prod eb).encode
+     (fun w=>((ValidWord.split eb w).1.value,(ValidWord.split eb w).2.value)) at c
+   rw [he] at c
+   exact c
+@@ -74,9 +74,9 @@
+     (hgf : ∀a,g (f a)=a) (w : ValidWord (e.retract f g hgf)) : ValidWord e:=by
+   refine ⟨w.raw,?_⟩
+   obtain ⟨a,ha⟩:=w.property
+-  change (e.retract f g hgf).decode w.raw=some a at ha
++  change (e.decode w.raw).map g=some a at ha
+   cases hd:e.decode w.raw with
+-  | none=>simp [-decode_raw,retract,hd] at ha
++  | none=>simp only [hd, Option.map_none, reduceCtorEq] at ha
+   | some b=>exact ⟨b,rfl⟩
+ 
+ theorem retractWord_value {α β : Type} (e : BitEncoding β) (f : α→β) (g : β→α)
+@@ -100,6 +100,7 @@
+   apply transportOutputComputer (ValidWord.encoding (e.retract f g hgf)) e (e.retract f g hgf)
+     (computer:=c)
+   intro w
+-  simp only [Function.comp_apply,retract,retractWord_value,hfg]
++  change e.encode (retractWord e f g hgf w).value = e.encode (f w.value)
++  rw [retractWord_value, hfg]
+ 
+ end PlanarHom.Complexity.BitEncoding
+--- canonical/PlanarHom/TM1FiniteControl.lean
++++ ported/PlanarHom/TM1FiniteControl.lean
+@@ -8,6 +8,8 @@
+ retain their labels, so a caller can intercept a designated entry with a binary
+ choice. Halt is a separate boundary available to an output-checking routine.
+ -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.TM1FiniteControl
+ open Turing
+ 
+@@ -190,7 +192,15 @@
+ omit [Inhabited Γ] in
+ theorem forget_injective : Function.Injective (forget M S) := by
+   rintro ⟨a,v⟩ ⟨b,w⟩ h
+-  cases a <;> cases b <;> simp_all [forget,Subtype.ext_iff]
++  have hv : v = w := congrArg Prod.snd h
++  subst w
++  have hab := congrArg Prod.fst h
++  refine Prod.ext ?_ rfl
++  cases a <;> cases b
++  · exact congrArg Sum.inl (Subtype.ext (Sum.inl.inj hab))
++  · cases hab
++  · cases hab
++  · exact congrArg Sum.inr (Subtype.ext (Sum.inr.inj hab))
+ 
+ theorem forgetCfg_injective : Function.Injective (forgetCfg M S) := by
+   rintro ⟨q,t⟩ ⟨r,u⟩ h
+@@ -543,12 +553,14 @@
+     (fun (r,s) => (⟨r,applyStmt s t⟩ : TM0.Cfg Γ (TM1to0.Λ' M))) (aux_erase M t.head q v)
+   cases l with
+   | inl l =>
+-    simpa [rawStep,rawTransition,eraseCfg,eraseState,TM0.step,TM1to0.tr,applyStmt] using congrArg some (he (M l))
++    dsimp only [rawStep, rawTransition, Option.map, eraseCfg, eraseState, TM0.step, TM1to0.tr]
++    exact congrArg some (he (M l))
+   | inr q =>
+     cases q with
+     | none => rfl
+     | some q =>
+-      simpa [rawStep,rawTransition,eraseCfg,eraseState,TM0.step,TM1to0.tr,applyStmt] using congrArg some (he q)
++      dsimp only [rawStep, rawTransition, Option.map, eraseCfg, eraseState, TM0.step, TM1to0.tr]
++      exact congrArg some (he q)
+ 
+ theorem step_erase (S : Finset Λ) (ss : TM1.Supports M S) (c : Cfg M S) :
+     (step M S ss c).map (fun d => eraseCfg M (forgetCfg M S d)) =
+--- canonical/PlanarHom/TM2SingleTapeCompiler.lean
++++ ported/PlanarHom/TM2SingleTapeCompiler.lean
+@@ -8,6 +8,8 @@
+ Finite residual syntax implements every scan and stack operation by local
+ read/write/move transitions. Only source binary labels create binary target nodes.
+ -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.TM2SingleTapeCompiler
+ noncomputable section
+ open Turing NondeterministicComputationTree NondeterministicBlockSimulation
+--- canonical/PlanarHom/TM2SingleTapeInputOutput.lean
++++ ported/PlanarHom/TM2SingleTapeInputOutput.lean
+@@ -2,6 +2,8 @@
+ import PlanarHom.TM2SingleTapeLoadingRuns
+ 
+ /-! # Exact input and output blocks of the actual reverse compiler -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.TM2SingleTapeCompiler
+ noncomputable section
+ open Turing SingleTapeNondeterministic NondeterministicComputationTree
+@@ -144,7 +146,7 @@
+   rw [loaded, ht] at hr
+   simpa only [represented,boundary,embed,mirrorTape,NondeterministicTM2.Machine.initial,
+     initList, TM1FiniteControl.startBoundary,TM1FiniteControl.startEntry,
+-    initialState,sourceState] using hr
++    initialState,sourceState,Option.map_some] using hr
+ 
+ /-- Halting decisions are made by two actual tape transitions from precisely
+ the compiler representation of the halted source configuration. -/
+@@ -161,7 +163,7 @@
+     simp only at hl
+     subst l
+     simpa only [represented,boundary,embed,TM1FiniteControl.startBoundary,haltState,
+-      NondeterministicTM2.Machine.output] using hr
++      NondeterministicTM2.Machine.output,Option.map_none] using hr
+   · split_ifs <;> rfl
+ 
+ end
+--- canonical/PlanarHom/TM2SingleTapeLoading.lean
++++ ported/PlanarHom/TM2SingleTapeLoading.lean
+@@ -7,6 +7,8 @@
+ The rightmost input cell carries the common bottom marker: mathlib overlays
+ that marker on the first track cell, rather than inserting a new stack cell.
+ -/
++set_option backward.isDefEq.respectTransparency false
++
+ namespace PlanarHom.TM2SingleTapeLoading
+ open Turing SingleTapeNondeterministic
+ 
+@@ -31,7 +33,10 @@
+   fun _ _ h => Alphabet.raw.inj h
+ 
+ @[simp] theorem raw_ne_blank (b : Bool) : Alphabet.raw (K := K) (Γ := Γ) b ≠ default :=
+-  fun h => Alphabet.noConfusion h
++  by
++    change Alphabet.raw b ≠ Alphabet.sim default
++    intro h
++    cases h
+ 
+ /-- Applying a genuine single-tape local action. This is definitionally the
+ operation used by `SingleTapeNondeterministic.Machine.execute`. -/
+--- canonical/PlanarHom/TM2TapeBoundaryRuns.lean
++++ ported/PlanarHom/TM2TapeBoundaryRuns.lean
+@@ -38,7 +38,7 @@
+         .ordinary ⟨some (.go k action q),v,
+           (Tape.move Dir.right)^[n+1] (Tape.mk' ∅ (addBottom L))⟩ := by
+       simp only [scanView,TM1.stepAux,tr,Tape.mk'_nth_nat,Tape.move_right_n_head,addBottom_nth_snd]
+-      rw [stk_nth_val _ hL,List.getElem?_eq_getElem (by simpa only [List.length_reverse] using hn)]
++      rw [stk_nth_val _ hL,List.getElem?_eq_getElem (by simpa only [List.length_reverse] using Nat.lt_of_succ_le hn)]
+       simp only [Option.isNone_some,Bool.cond_false,Function.iterate_succ_apply']
+     exact (ih (Nat.le_of_succ_le hn)).trans (.cons hs (.nil _))
+ 
+--- canonical/PlanarHom/TM2TapeScanBounds.lean
++++ ported/PlanarHom/TM2TapeScanBounds.lean
+@@ -34,7 +34,7 @@
+       (Tape.move Dir.right)^[n] (Tape.mk' ∅ (addBottom L))⟩ = _
+     simp only [TM1.step,TM1.stepAux,tr,Tape.mk'_nth_nat,Tape.move_right_n_head,
+       addBottom_nth_snd]
+-    rw [stk_nth_val _ hL,List.getElem?_eq_getElem (by simpa only [List.length_reverse] using hn)]
++    rw [stk_nth_val _ hL,List.getElem?_eq_getElem (by simpa only [List.length_reverse] using Nat.lt_of_succ_le hn)]
+     simp only [Option.isNone_some,Bool.cond_false,Function.iterate_succ_apply']
+ 
+ /-- Returning from depth `n` to the marked bottom takes exactly `n` TM1
+--- canonical/PlanarHom/UnaryMarkedCount.lean
++++ ported/PlanarHom/UnaryMarkedCount.lean
+@@ -8,11 +8,11 @@
+ /-- The numeric output is bounded by the graph's explicit edge list. Its unary
+ expansion is implemented using an actual input-length cap and bounded converter. -/
+ noncomputable def unaryMarkedCountComputer (selected : ℕ) :
+-    TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.unaryNat.toFinEncoding
++    TM2ComputableInPolyTime encoding.encode BitEncoding.unaryNat.encode
+       (markedCount selected):=by
+   let paired:=pairComputers (PlanarHom.InputLengthMachine.computer encoding) (markedCountComputer selected)
+   let result:=composeComputers paired PlanarHom.BoundedUnaryMachines.computer
+-  change TM2ComputableInPolyTime encoding.toFinEncoding BitEncoding.unaryNat.toFinEncoding
++  change TM2ComputableInPolyTime encoding.encode BitEncoding.unaryNat.encode
+     (fun g=>min (encoding.encode g).length (g.markedCount selected)) at result
+   have he : (fun g : MixedCode=>min (encoding.encode g).length (g.markedCount selected))=
+       markedCount selected:=by
+--- canonical/PlanarHom/UnaryNatConversionMachine.lean
++++ ported/PlanarHom/UnaryNatConversionMachine.lean
+@@ -11,7 +11,7 @@
+   | succ n ih=>simp [Function.iterate_succ_apply',ih]
+ 
+ noncomputable def computer :
+-    TM2ComputableInPolyTime BitEncoding.unaryNat.toFinEncoding BitEncoding.nat.toFinEncoding id:=by
++    TM2ComputableInPolyTime BitEncoding.unaryNat.encode BitEncoding.nat.encode id:=by
+   let c:=PlanarHom.BoundedIterationMachine.fromSeedComputer BitEncoding.nat (fun x=>x+1) 0
+     successorComputable X (fun n i hi=>by
+       simpa only [successor_iterate,Polynomial.eval_X] using (encodeNat_length_le i).trans hi)
+--- canonical/PlanarHom/UnaryRangeMachines.lean
++++ ported/PlanarHom/UnaryRangeMachines.lean
+@@ -61,17 +61,17 @@
+   nlinarith
+ 
+ noncomputable def enumerateFromComputer :
+-    TM2ComputableInPolyTime (BitEncoding.unaryNat.prod BitEncoding.nat.list).toFinEncoding
+-      BitEncoding.nat.list.toFinEncoding (fun p=>prependLength^[p.1] p.2):=
++    TM2ComputableInPolyTime (BitEncoding.unaryNat.prod BitEncoding.nat.list).encode
++      BitEncoding.nat.list.encode (fun p=>prependLength^[p.1] p.2):=
+   PlanarHom.BoundedIterationMachine.computer BitEncoding.nat.list prependLength
+     (Classical.choice fp_prependLength) (C 12*(X+1)^2) iterate_size_bound
+ 
+ /-- Descending enumeration `[n-1,...,0]`; the input count is explicitly unary. -/
+ noncomputable def rangeComputer :
+-    TM2ComputableInPolyTime BitEncoding.unaryNat.toFinEncoding BitEncoding.nat.list.toFinEncoding
++    TM2ComputableInPolyTime BitEncoding.unaryNat.encode BitEncoding.nat.list.encode
+       (fun n=>(List.range n).reverse):=by
+   let c:=composeComputers
+-    (pairComputers (idComputableInPolyTime BitEncoding.unaryNat.toFinEncoding)
++    (pairComputers (idComputableInPolyTime BitEncoding.unaryNat.encode)
+       (PlanarHom.ConstantMachines.computer BitEncoding.unaryNat BitEncoding.nat.list []))
+     enumerateFromComputer
+   have hr (n : ℕ) : prependLength^[n] []=(List.range n).reverse:=by
+@@ -79,7 +79,7 @@
+     | zero=>rfl
+     | succ n ih=>simp [Function.iterate_succ_apply',prependLength,ih,List.range_succ]
+   have he : (fun n : ℕ=>prependLength^[n] [])=(fun n=>(List.range n).reverse):=funext hr
+-  change TM2ComputableInPolyTime BitEncoding.unaryNat.toFinEncoding BitEncoding.nat.list.toFinEncoding
++  change TM2ComputableInPolyTime BitEncoding.unaryNat.encode BitEncoding.nat.list.encode
+     (fun n=>prependLength^[n] []) at c
+   rw [he] at c
+   exact c
+--- canonical/PlanarHom/ValidEncodedLists.lean
++++ ported/PlanarHom/ValidEncodedLists.lean
+@@ -21,7 +21,8 @@
+         obtain ⟨tail,hraw,hvalue⟩:=ih ys ht
+         let head : ValidWord e:=⟨w,⟨x,hw⟩⟩
+         refine ⟨head::tail,?_,?_⟩
+-        · simpa [head,raw] using congrArg (List.cons w) hraw
++        · change w :: tail.map raw = w :: words
++          exact congrArg (List.cons w) hraw
+         · have hv : head.value=x:=value_eq hw
+           simp [hv,hvalue]
+ 
+@@ -35,18 +36,20 @@
+ private theorem nonempty_listParts {α : Type} (e : BitEncoding α) (w : ValidWord e.list) :
+     Nonempty (ListParts e w):=by
+   obtain ⟨xs,hs⟩:=w.property
+-  change e.list.decode w.raw=some xs at hs
++  change ((unframe w.raw).bind fun p =>
++    (unframes (Computability.decodeNat p.1) p.2).bind fun q =>
++      if q.2 = [] then q.1.mapM e.decode else none) = some xs at hs
+   cases hu:unframe w.raw with
+-  | none=>simp [-decode_raw,list,hu] at hs
++  | none=>simp only [hu, Option.bind_none, reduceCtorEq] at hs
+   | some p=>
+     rcases p with ⟨header,rest⟩
+     cases hr:unframes (Computability.decodeNat header) rest with
+-    | none=>simp [-decode_raw,list,nat,hu,hr] at hs
++    | none=>simp only [hu, Option.bind_some, hr, Option.bind_none, reduceCtorEq] at hs
+     | some p=>
+       rcases p with ⟨words,tail⟩
+       by_cases ht:tail=[]
+       · subst tail
+-        have hm : words.mapM e.decode=some xs:=by simpa [-decode_raw,list,nat,hu,hr] using hs
++        have hm : words.mapM e.decode=some xs:=by simpa only [hu, Option.bind_some, hr, ite_true] using hs
+         obtain ⟨items,hraw,hvalue⟩:=exists_validWords e words xs hm
+         obtain ⟨hlen,hrest⟩:=unframes_spec _ _ _ _ hr
+         refine ⟨⟨header,items,?_,?_,?_⟩⟩
+@@ -55,7 +58,7 @@
+           simp only [List.length_map] at hl
+           omega
+         · exact (value_eq hs).trans hvalue.symm
+-      · simp [-decode_raw,list,nat,hu,hr,ht] at hs
++      · simp only [hu, Option.bind_some, hr, ht, ite_false, reduceCtorEq] at hs
+ 
+ noncomputable def listParts {α : Type} (e : BitEncoding α) (w : ValidWord e.list) :
+     ListParts e w:=Classical.choice (nonempty_listParts e w)
+--- canonical/PlanarHom/ValidEncodedWords.lean
++++ ported/PlanarHom/ValidEncodedWords.lean
+@@ -40,15 +40,20 @@
+     ∃p : ValidWord e × ValidWord eb,w.raw=frame p.1.raw++p.2.raw:=by
+   obtain ⟨p,hp⟩:=w.property
+   change (e.prod eb).decode w.raw=some p at hp
++  change ((unframe w.raw).bind fun pair => (e.decode pair.1).bind fun av =>
++    (eb.decode pair.2).bind fun bv => some (av,bv)) = some p at hp
+   cases hu:unframe w.raw with
+-  | none=>simp [-decode_raw,prod,hu] at hp
++  | none=>rw [hu] at hp
++          cases hp
+   | some pair=>
+     rcases pair with ⟨a,b⟩
+     cases hda:e.decode a with
+-    | none=>simp [-decode_raw,prod,hu,hda] at hp
++    | none=>rw [hu] at hp
++            simp only [Option.bind_some, hda, Option.bind_none, reduceCtorEq] at hp
+     | some av=>
+       cases hdb:eb.decode b with
+-      | none=>simp [-decode_raw,prod,hu,hda,hdb] at hp
++      | none=>rw [hu] at hp
++              simp only [Option.bind_some, hda, hdb, Option.bind_none, reduceCtorEq] at hp
+       | some bv=>
+         exact ⟨(⟨a,⟨av,hda⟩⟩,⟨b,⟨bv,hdb⟩⟩),unframe_spec _ _ _ hu⟩
+ 

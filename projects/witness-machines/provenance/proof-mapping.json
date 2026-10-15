@@ -1,0 +1,54 @@
+{
+  "status": "new representation transducers with source proof reuse; no upstream theorem imported as an axiom",
+  "frozen_ph1_manifest_sha256": "6b93937ca9a60b0795a77300ae6f51417eaee470cc160abebe0e361008cb4e25",
+  "references": [
+    {
+      "role": "F1 mapped-reversal machine and exact-run proof",
+      "path": "projects/foundations/Counting/Examples/Machines.lean",
+      "sha256": "95e4e0c1474d1dca96ee45ac695257509249ebb4e39cd3c24f5865c8af950f7e"
+    },
+    {
+      "role": "F1 actual composition compiler interface",
+      "path": "projects/foundations/Counting/Computation/PolyTime.lean",
+      "sha256": "fd864c8839670e187e46e0bd5a463b77c62f2f4284da82e172f1ac24b0fcc68e"
+    },
+    {
+      "role": "F1 public witness class and concrete constant verifiers",
+      "path": "projects/foundations/Counting/Complexity/SharpP.lean",
+      "sha256": "c386d7ad99a06216a999fa3355492cb1220fe6d8ca4656d83458b2e7df41508a"
+    },
+    {
+      "role": "R1 three-stack framing proof pattern",
+      "path": "projects/karp-luby-machine/Counting/Algorithm/KarpLubyMachine/Framing.lean",
+      "sha256": "626d8dfe6a3902dc44d0eeb739f0ebb31b16d6fa8689448fad9f1ea5601a4e49"
+    },
+    {
+      "role": "H1 frame parser consulted for clean output contract",
+      "path": "projects/holant-unified/Holant/Complexity/GraphPreprocessing/FrameMachine.lean",
+      "sha256": "2760add9af073733c1fafbfea8958bd659eb4f3e91d88edaf005500ff3dcc2e0"
+    },
+    {
+      "role": "PH source actual replay compiler",
+      "path": "projects/planar-homomorphisms/PlanarHom/NondeterministicReplayCompiler.lean",
+      "sha256": "0664153381c6df56688162a19c0895c1c4826105184b233f7bee016823780d13"
+    },
+    {
+      "role": "PH source actual accepting-path generator",
+      "path": "projects/planar-homomorphisms/PlanarHom/CertificateNondeterministicCompiler.lean",
+      "sha256": "b11f7bfa2c0653b92464fe8a90a49da8f0b971d17cc7f85cc5dea53fe80c969c"
+    },
+    {
+      "role": "PH public finite alphabet compiler bridge",
+      "path": "projects/planar-homomorphisms/Counting/Bridge/PlanarHomSharpP.lean",
+      "sha256": "87b2b15e2b449d29492fdef72cabd3444ab98aa5a68a33fc161ab19a5adae750"
+    }
+  ],
+  "modules": {
+    "Counting.WitnessMachines.MappedReverse": "Generalizes F1 Bool lookup to two distinct finite alphabets; actual symbol table, strict halt-list and exact n+1 run.",
+    "Counting.WitnessMachines.TaggedToFramed": "New three-stack transducer for PH frame x ++ w; uses explicit configs and induction architecture reviewed in F1/R1; x=empty/w=empty included.",
+    "Counting.WitnessMachines.FramedToTagged": "New inverse parser, tagging and restore transducer; no assumption about a free encoding conversion.",
+    "Counting.WitnessMachines.BooleanOutput": "Actual mapped-reversal specialization on singleton binary/tagged Boolean outputs.",
+    "Counting.Bridge.WitnessSharpP": "F1 machine composition, PH finite alphabet restriction, replay and certificate generator; unchanged exact witness lengths/predicates/counts.",
+    "Counting.WitnessMachines.Clients": "Kernel-decided concrete transducer cases and full witness\u2192accepting machine\u2192witness exponential-count client."
+  }
+}

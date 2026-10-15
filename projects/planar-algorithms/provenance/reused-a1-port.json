@@ -1,0 +1,240 @@
+[
+  {
+    "module": "PlanarHom.Boolean",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/Boolean.lean",
+    "migrated_source_sha256": "cf46cd0796595617c63dd184fc188e5608a140add60ed07a6ceb38aa8647b7ca",
+    "result_sha256": "6a12e8f41bf07f22f5ff936055339c22d5607fef74aaa8150c453153cd8a16fb",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.FiniteLabelLookupMachines",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/FiniteLabelLookupMachines.lean",
+    "migrated_source_sha256": "fb01c0d723dd658e769befe429c716cfdeb31393981588618a287195eaf33dba",
+    "result_sha256": "8a4f9c123d854216485e5175155574e46dc7bb47f3e358073803f2d6f8aa5100",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.GraphStretchCode",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/GraphStretchCode.lean",
+    "migrated_source_sha256": "155b1652e52d65af36f0d61aaf50859a9a5a96eae3e1a8f3a8cdf410f40beb0b",
+    "result_sha256": "9dd6d29ee08575c130e7fb87e180c5107e1469495bd65699f1e13483bf3503d5",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.IsingEvenSubgraph",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/IsingEvenSubgraph.lean",
+    "migrated_source_sha256": "3c67d625e1add6365979597a73c4aaee670da2c975190e8230c0cfe1adcd803f",
+    "result_sha256": "93ae2981a20dbb5b3990329d02241c6e7613b09f3617bd29ab5a22c515aa37a8",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.MaterializedCoefficientHeights",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/MaterializedCoefficientHeights.lean",
+    "migrated_source_sha256": "f9b36cd8576abb1ff87ea0a67cece2d330960cf27d5111bd6d6b39b88bc48e79",
+    "result_sha256": "d14a14bba55c97e676b1f3fd2ee852307c7e04a5a5d11d70a0ab60d9bbd8d5b7",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.MixedRelabelMachines",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/MixedRelabelMachines.lean",
+    "migrated_source_sha256": "baa8370394addef1a61c1b0fc9f04b38a7589018c0db2702f4c00cae419dd73c",
+    "result_sha256": "5f6d7b6d875519ed2203bb961bbb183b10565af93f0844d01f93a5a0113c4b91",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrenceMatchings",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrenceMatchings.lean",
+    "migrated_source_sha256": "917a3313876158b5c3ba4f4ca98d6317869b489b552ecd62a9aeb9977e7911f4",
+    "result_sha256": "3d25f7fd23dd7c985cfb6d9a330f866f755d31ea2b6a9c116dadee7dcf91ca21",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianEliminationAlgorithm",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianEliminationAlgorithm.lean",
+    "migrated_source_sha256": "54adbd0226a6de342f22c03e82433c1e1ab8da9f66ea97e2605a330a1c9ddd02",
+    "result_sha256": "fbb792fa2b7f32460ce59d0ef05b52b290d737774e9557e853858f71090d1b72",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianEvaluationMachines",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianEvaluationMachines.lean",
+    "migrated_source_sha256": "33c2699cdf5b962bf951221d3c1a9577b7ad6ca12ef31310d58e0004ccd925d0",
+    "result_sha256": "f908423a63c2df9702a8640acaf6baca11953e18e492b131eccc2d0ab83f4366",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianEvaluationProgram",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianEvaluationProgram.lean",
+    "migrated_source_sha256": "34c7b9b3a88b03be502b84f5fc911ce53ef04dd99fc16a9d0116d2eeb0980642",
+    "result_sha256": "98f9295282c322fe2ea4990dcf301983f3416fc0a988c3be9e4401518a11fdb6",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianExpansion",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianExpansion.lean",
+    "migrated_source_sha256": "3920918e94b3428c2f95b92b0dfc3a9eea52793d85f5fccada543a97570ee6c5",
+    "result_sha256": "264109ef5cb3e674f1b8729e02145e889b599bfa78946d363d69b2a41db53c4c",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianExpansionSigns",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianExpansionSigns.lean",
+    "migrated_source_sha256": "e8bbf6d1e439f5ccd685e43e2cc8b6632913f022aaca35ef551d6fe6d98cbdb5",
+    "result_sha256": "6eb197ba10561e25e1cab89c3d48816d325efc8004b423577619cc19d6d4da38",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianGridNormalization",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianGridNormalization.lean",
+    "migrated_source_sha256": "a31d395e8f459cf5fbe5a1565c3f5baf9863136d01eabece37282eb5c41e7cbd",
+    "result_sha256": "39a353287b3be2d98a2a5f935388716954b3e62a53755186a1c40e0f9ca3f93a",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianIterationBounds",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianIterationBounds.lean",
+    "migrated_source_sha256": "03d11f663cc1d8f360316acafe98e5acc6bcda84872aecf177caaaad9025f1d4",
+    "result_sha256": "a647d6b65cf5aef0fec5f35714dcfd1fdb31e3d6bb50b371a204733763dd745e",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianIterationInvariant",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianIterationInvariant.lean",
+    "migrated_source_sha256": "af19a5a5e2aadda2b0d390000a06c7d03c374f8876ebe74383469101cd4c4653",
+    "result_sha256": "8ab07d6dc121d490d71c91917d0c8b148d77273fd26f4e5d2d04d372dcb7fe33",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianListStep",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianListStep.lean",
+    "migrated_source_sha256": "813549fa1c09330b2dd1c1267fb91260db994587d32861a87e3fdb103bce31b3",
+    "result_sha256": "d7234567731a63c1209c723a4580e41480ac2c973101808e9e3339c02adc7e6d",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianMatrix",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianMatrix.lean",
+    "migrated_source_sha256": "e35a44bf4ec0bc2f855e6cfaaf27221e6d5cbd7ac6ef9f5b1dc8ccaaed160650",
+    "result_sha256": "8801669a391803c296dcf1c580e283932674588ac44c5b423e8be013f91bb03d",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianPairExchange",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianPairExchange.lean",
+    "migrated_source_sha256": "f9af6b24b405390d79be0fad993afde306d790c5d31137682b84f980cfd026a1",
+    "result_sha256": "7ebd5f8e64bb9d700277f4ab8061cbbe6ec03ba302c619863ca1451d3ce83764",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianPairings",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianPairings.lean",
+    "migrated_source_sha256": "0e430ec149d07a58106359693a0d7b36f7c40c6b91e04923fba39746068eed46",
+    "result_sha256": "1c2e39a631bbc90f1a93e9b9e78fe646210657a51adf48f75ed6df1ac75c0d95",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianProgramBridge",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianProgramBridge.lean",
+    "migrated_source_sha256": "d84a975cdb048875893c67d96b763a4a93d3dc1f886209dbc2d08eb4e510c44c",
+    "result_sha256": "86451813d758dddc1f43746ff7a67e07cf4d7d156605f72ce18b435013a69e9a",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianShear",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianShear.lean",
+    "migrated_source_sha256": "67304dba163483d91aa805e5e406349f7b204e2e6c2d487192b4885465402dc5",
+    "result_sha256": "0f8c0d2ab97cc08f220023b17caaacafe2a63b95c5621ae6d51c75233b1a1625",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianStateBounds",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianStateBounds.lean",
+    "migrated_source_sha256": "e4847eed645b7560e332bce96742bbf06689bc5ad3278f36d096635a90f40a83",
+    "result_sha256": "216fa53503be7978a446f2bdcfbcd355a9cdbd6942dda0fe5d223d72f8cad24f",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.OccurrencePfaffianVertexLinearity",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianVertexLinearity.lean",
+    "migrated_source_sha256": "0ba05f492b4185fe2d54de8aef816d0731b29336e87eb1da224a596c94e57b1c",
+    "result_sha256": "5140d56121fd7c5ee82c0dc5f80ea8b4921d994daf9af3abf63234b6102023a9",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PfaffianEliminationHeights",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PfaffianEliminationHeights.lean",
+    "migrated_source_sha256": "7ccb72197228d773711a4ab291367ada13b1bf7a2f08ae46f77551fa99cdf76a",
+    "result_sha256": "4b7ea2063cbe8b4e94f5dbb77ab4fffbcf4b0d27a395f61e5dad4984d9484e3f",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PfaffianMinorHeights",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PfaffianMinorHeights.lean",
+    "migrated_source_sha256": "12192234052c479d32536c71139c16c1ebc7ef567973e63011bb8719e7bcd291",
+    "result_sha256": "23cfb1834a074603de1bb19c96aafb7f2ed0d93be9094eb3e137c9546f2010a7",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PfaffianPivotSemantics",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PfaffianPivotSemantics.lean",
+    "migrated_source_sha256": "c37c49e8f049132f4de1fc690acab6aea2482d20ccdea55189548fdbab65eb26",
+    "result_sha256": "df2ef037884a39f8863768cdc5bc12aa97f7e48d7bab09201d18951717eec1bd",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PfaffianPivotShear",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PfaffianPivotShear.lean",
+    "migrated_source_sha256": "4336c6b85ca0efd0871dafff7040d010d8e70c22db5d515be07cacb6b1f131c9",
+    "result_sha256": "f7c6625383d89eeba72a39609485ec52c9b820c116c4d87362e4bbd1edad49a1",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PfaffianSchurComplement",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PfaffianSchurComplement.lean",
+    "migrated_source_sha256": "978a6388fb80965575927a7c5f49c35332bd5b45db53f3cf61e43e91b9a08b3f",
+    "result_sha256": "df79559d448caf26badcaeaf75aae6cc8d4a4315056d51aba2a5add2887c88df",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PfaffianSchurMinors",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PfaffianSchurMinors.lean",
+    "migrated_source_sha256": "f92b06a6c1edbf531f02a043232c992ed59d5240e3bd9b26b52c5bac24cdbeea",
+    "result_sha256": "d52dc54aa2e96a1a357b6c8e22947e13525d0d48029ce031cd34643f69acb38e",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.PlanarStretch",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/PlanarStretch.lean",
+    "migrated_source_sha256": "35289d42f380cbf527151bea7b450a81a702a76501064d176723b37ee2b60f2a",
+    "result_sha256": "4071f1bc00287ec7a9176610caf16969181a1829f438ee801bd303709c5f6329",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.SelectedStretchCode",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/SelectedStretchCode.lean",
+    "migrated_source_sha256": "ba374dd53a784194ae6c650c8a4f278b31b90b5415dba9898951eec1a735e056",
+    "result_sha256": "44e52e3282ee1337e67e0cf9d69c12fefc412a78e23600bbb0ea42eb7ebe9cb3",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.SelectedStretchMachines",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/SelectedStretchMachines.lean",
+    "migrated_source_sha256": "3b543710b1c22fdfa7b22fce6b05e8495892a90650798e67f07a75cbf08097a2",
+    "result_sha256": "25f0d841e60470afb51cdfb081c13dfcdf56ca8e61aa058b16ceb2eab4b14541",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.UniformFieldArithmeticHeights",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/UniformFieldArithmeticHeights.lean",
+    "migrated_source_sha256": "f4b33e1b8ed6cfcf03567fa239a4b6fc711815a17b48837fff14d5435b9684fc",
+    "result_sha256": "d2d572ec025eb6571d1900a1c53115c2fbc7443bc2f5829090b11d924eb36431",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  },
+  {
+    "module": "PlanarHom.UniformFieldHeights",
+    "migrated_source": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/UniformFieldHeights.lean",
+    "migrated_source_sha256": "b72ee7091be8dd201fc7dfd90a6714d52ea3b35c327df6623ea75c0852c60f06",
+    "result_sha256": "2b4c82af71d2cef696034cbc1751aec6d48b3379bb8bd3f5f49a4270514e5008",
+    "transformation": "Replace PfaffianPort with PlanarHom; re-elaborate source in canonical provider, no project olean reuse."
+  }
+]

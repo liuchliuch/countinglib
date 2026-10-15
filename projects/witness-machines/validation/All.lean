@@ -1,0 +1,6 @@
+import Counting.WitnessMachines.Clients
+#check Counting.Bridge.WitnessSharpP.bits_inSharpP_iff_acceptingPaths
+#check Counting.Bridge.WitnessSharpP.acceptingMachineWitness
+#check Counting.Bridge.WitnessSharpP.witnessAcceptingMachine_count
+#check Counting.WitnessMachines.TaggedToFramed.outputs
+#check Counting.WitnessMachines.FramedToTagged.outputs

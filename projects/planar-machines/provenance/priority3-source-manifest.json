@@ -1,0 +1,59 @@
+[
+  {
+    "module": "PlanarHom.Gadgets",
+    "path": "PlanarHom/Gadgets.lean",
+    "imports": [
+      "Init",
+      "Init",
+      "PlanarHom.Basic",
+      "Mathlib.Logic.Equiv.Prod"
+    ],
+    "git_blob": "0881b81f478994fbf63bb764818493dabb00fed1",
+    "sha256": "0ffaf6175beec9006faeb70496155a2e6a1d447a8693b42ca4d819ac46bc532d",
+    "bytes": 12169,
+    "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "reused_source": "projects/pfaffian/PfaffianPort/Gadgets.lean",
+    "reused_sha256": "0559d30d158f923069c80b54ed8e424dc0fb34aeded13358640dfaf49ff8432b",
+    "ported_sha256": "0ffaf6175beec9006faeb70496155a2e6a1d447a8693b42ca4d819ac46bc532d"
+  },
+  {
+    "module": "PlanarHom.PlanarEmbedding",
+    "path": "PlanarHom/PlanarEmbedding.lean",
+    "imports": [
+      "Init",
+      "Init",
+      "PlanarHom.Gadgets",
+      "Mathlib.Topology.UnitInterval",
+      "Mathlib.Topology.ContinuousMap.Basic",
+      "Mathlib.Topology.Connected.Basic",
+      "Mathlib.Topology.MetricSpace.Bounded",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.FunProp"
+    ],
+    "git_blob": "4b49078c54331d05e2c737d8b37619c3a32fe1dc",
+    "sha256": "aa92820a4a6dffdbcd561794c1efc5253647a146f2efd7a7ab784b9a22ac3a0a",
+    "bytes": 9830,
+    "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "reused_source": "projects/pfaffian/PfaffianPort/PlanarEmbedding.lean",
+    "reused_sha256": "f3f5303c8fd06a031e5b78b86cddf7e97fe3f43728c469ee69b314e0b0d53eec",
+    "ported_sha256": "aa92820a4a6dffdbcd561794c1efc5253647a146f2efd7a7ab784b9a22ac3a0a"
+  },
+  {
+    "module": "PlanarHom.PlanarRibbons",
+    "path": "PlanarHom/PlanarRibbons.lean",
+    "imports": [
+      "Init",
+      "Init",
+      "PlanarHom.PlanarEmbedding"
+    ],
+    "git_blob": "d905cdb1a05481ab67cbfcea67b21c81f5c102d3",
+    "sha256": "0eda2128be3a106f27a1dc1367b7c2fb8e59845074585e4348917fd264cac4dd",
+    "bytes": 10344,
+    "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "reused_source": null,
+    "reused_sha256": null,
+    "ported_sha256": "0eda2128be3a106f27a1dc1367b7c2fb8e59845074585e4348917fd264cac4dd"
+  }
+]

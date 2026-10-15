@@ -1,0 +1,18 @@
+import Counting.Algorithm.VariableEliminationWidth
+
+#check Counting.Algorithm.VariableEliminationWidth.BagTree
+#check Counting.Algorithm.VariableEliminationWidth.peel
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.order
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.scopeBound
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.value_evaluate
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.observe_evaluate_le
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.observe_evaluate_le_of_pos
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.rows_le
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.additions_le
+#check Counting.Algorithm.VariableEliminationWidth.Examples.path_dynamic_width
+#check Counting.Algorithm.VariableEliminationWidth.Examples.path_value
+#check Counting.Algorithm.VariableEliminationWidth.Examples.sparse_rational_value
+
+#check Counting.Algorithm.VariableEliminationWidth.Decomposition.runningIntersection
+#check Counting.Algorithm.VariableEliminationWidth.BagTree.connected
+#check Counting.Algorithm.VariableEliminationWidth.BagTree.no_parent_cycle

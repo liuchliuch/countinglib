@@ -1,0 +1,86 @@
+[
+  {
+    "module": "Counting.Algorithm.Product",
+    "path": "Counting/Algorithm/Product.lean",
+    "package": "countingProductAlgorithm",
+    "sha256": "e55a3697876ef663a225a17a601ca1b55763b651cae6c3357755219f70122359",
+    "library": "CountingProductAlgorithm"
+  },
+  {
+    "module": "Counting.Algorithm.Product.Evaluation",
+    "path": "Counting/Algorithm/Product/Evaluation.lean",
+    "package": "countingProductAlgorithm",
+    "sha256": "e1829a6873bef3b704f4a3e17920193233e9affad9c2375ee7f5e2f9dd9909df",
+    "library": "CountingProductAlgorithm"
+  },
+  {
+    "module": "Counting.Algorithm.Product.Examples",
+    "path": "Counting/Algorithm/Product/Examples.lean",
+    "package": "countingProductAlgorithm",
+    "sha256": "5b5ee07edce40873aa4799dcb164a38ae515274f0830619f6f10bd6040c078d2",
+    "library": "CountingProductAlgorithm"
+  },
+  {
+    "module": "Counting.Algorithm.Product.Input",
+    "path": "Counting/Algorithm/Product/Input.lean",
+    "package": "countingProductAlgorithm",
+    "sha256": "f3378943fe0294392f9e0e2fed6bf786eac532adbf672119733350f9494b9955",
+    "library": "CountingProductAlgorithm"
+  },
+  {
+    "module": "Counting.Model.Basic",
+    "path": "../partition-semantics/Counting/Model/Basic.lean",
+    "package": "partitionSemantics",
+    "sha256": "67593d1247a0b1f3fb19512b226959b85faeff5f3cb092c009f3be4ff4654a1d",
+    "library": "CountingPartitionSemantics"
+  },
+  {
+    "module": "Holant.Kernel",
+    "path": "../holant-unified/Holant/Kernel.lean",
+    "package": "holantUnified",
+    "sha256": "c78531dd613e9789f054181b1aa169c24079cd03eb3ed59ff0b31f0283b0312d",
+    "library": "Holant"
+  },
+  {
+    "module": "Holant.Proofs.Tractability.ProductElimination",
+    "path": "../holant-unified/Holant/Proofs/Tractability/ProductElimination.lean",
+    "package": "holantUnified",
+    "sha256": "0061d366ced065727fb0e7093a96f5ea02d3e381ce4e3baed090238cdedc1947",
+    "library": "Holant"
+  },
+  {
+    "module": "Holant.Proofs.Tractability.ProductEliminationBounds",
+    "path": "../holant-unified/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+    "package": "holantUnified",
+    "sha256": "4da4fbe113531e6381ac67744ac6f51695777a626ae22ead92cfd3875eaa6500",
+    "library": "Holant"
+  },
+  {
+    "module": "Holant.Signature",
+    "path": "../holant-core/Holant/Signature.lean",
+    "package": "countingHolantCore",
+    "sha256": "c6340ad84662fc877b158109fe84a255baa613b40d3f837766464d49d6514820",
+    "library": "CountingHolantCore"
+  },
+  {
+    "module": "Holant.Tensor",
+    "path": "../holant-core/Holant/Tensor.lean",
+    "package": "countingHolantCore",
+    "sha256": "2d0dbc2979f63175cefb8a3716af557c65aa601860187d9012c1ef5adddd446b",
+    "library": "CountingHolantCore"
+  },
+  {
+    "module": "Holant.Tractable.Product",
+    "path": "../holant-unified/Holant/Tractable/Product.lean",
+    "package": "holantUnified",
+    "sha256": "01efdb408076f3090fb707efd573d9b5b867b1c8b2a0a055bda5909baf738745",
+    "library": "Holant"
+  },
+  {
+    "module": "Holant.Tractable.Scalars",
+    "path": "../holant-unified/Holant/Tractable/Scalars.lean",
+    "package": "holantUnified",
+    "sha256": "9f740f4b8003d1605d147b1f4b390ab99ba8803152aa7a8197cccee060d6303b",
+    "library": "Holant"
+  }
+]

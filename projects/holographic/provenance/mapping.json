@@ -1,0 +1,161 @@
+{
+  "sources": [
+    {
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "path": "Holant/Holographic.lean",
+      "provider": "../holant-unified/Holant/Holographic.lean",
+      "sha256": "28aae671a3d5e2e0b7d89525bf096028311bbb7fefa9eb281a7c8fccd59aab8f",
+      "git_blob_sha1": "70b0015b935ff195cb0f9ddbd1d65c7c7a628eda"
+    },
+    {
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "path": "Holant/BoundaryAction.lean",
+      "provider": "../holant-unified/Holant/BoundaryAction.lean",
+      "sha256": "53ae7381ecce35d67c3ecd0f283eab8decdb1d76cbfd6a67dd9e66615998dc40",
+      "git_blob_sha1": "01f4dec4bb281d4044bdeb79c22c5d8adf11d52c"
+    },
+    {
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "path": "Holant/Kernel.lean",
+      "provider": "../holant-unified/Holant/Kernel.lean",
+      "sha256": "c78531dd613e9789f054181b1aa169c24079cd03eb3ed59ff0b31f0283b0312d",
+      "git_blob_sha1": "54f79a69621f283aa71248332316f6ed31121f41"
+    },
+    {
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "path": "Holant/Proofs/Algorithms/HolographicTransport.lean",
+      "provider": "../holant-unified/Holant/Proofs/Algorithms/HolographicTransport.lean",
+      "sha256": "cb777fb0a6c259bbcfb528ac5c4de97c367d3c5b4b5c78df3bcecda089f12cf7",
+      "git_blob_sha1": "f9c936dd37f6adcb2eb13954b997e42f906b95be"
+    },
+    {
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "path": "Holant/Proofs/Closure/ClosurePhysicalBridgeHolographicOpenAlgebra.lean",
+      "provider": "../holant-unified/Holant/Proofs/Closure/ClosurePhysicalBridgeHolographicOpenAlgebra.lean",
+      "sha256": "e04f631029ebea6936af818495ec8de304aab6b16f8eee111b48f3c30e73f969",
+      "git_blob_sha1": "bdfe7f1bd54999ccda48ef9b66a610740f8af58f"
+    },
+    {
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "path": "Holant/Proofs/Closure/ClosurePhysicalBridgeHolographicOpen.lean",
+      "provider": "../holant-unified/Holant/Proofs/Closure/ClosurePhysicalBridgeHolographicOpen.lean",
+      "sha256": "25a236bffc688ad7b61397eeb7aae4ee12f438c392534a62e6d7f295c09d5537",
+      "git_blob_sha1": "6c82ee9caa34d095709334df0aad51eda40a3ddb"
+    },
+    {
+      "repository": "local-counting-complexity-S1",
+      "path": "Counting/Model/Basic.lean",
+      "provider": "../partition-semantics/Counting/Model/Basic.lean",
+      "sha256": "67593d1247a0b1f3fb19512b226959b85faeff5f3cb092c009f3be4ff4654a1d"
+    },
+    {
+      "repository": "local-counting-complexity-S1",
+      "path": "Counting/Model/Holant.lean",
+      "provider": "../partition-semantics/Counting/Model/Holant.lean",
+      "sha256": "19290cbcdd309d0d5fb364f622ee9118fe0c59d0424aaad9dde2d796fbdb362e"
+    },
+    {
+      "repository": "local-counting-complexity-S1",
+      "path": "Counting/Model/FiniteSums.lean",
+      "provider": "../partition-semantics/Counting/Model/FiniteSums.lean",
+      "sha256": "9de97f84289e6de03eef1856eb8a99eea1704f16e4d153baec1970abde0ee575"
+    },
+    {
+      "repository": "local-counting-complexity-S1",
+      "path": "Counting/Bridge/Holant.lean",
+      "provider": "../partition-semantics/Counting/Bridge/Holant.lean",
+      "sha256": "0ccff604ff303982b21c37e748d896073fc400820694e864ad4e1d1c42ff067a"
+    }
+  ],
+  "mappings": [
+    {
+      "new": "Basic.coordinateAction / coordinateAction_comp / coordinateAction_cancel",
+      "source": "Holant.Signature.coordinateAction / coordinateAction_comp / coordinateAction_cancel",
+      "relation": "Finite-domain generalization of the ordered tensor-product proof; mathlib Matrix multiplication replaces the Boolean kernel multiplication",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.coordinateAction",
+        "Counting.Algorithm.Holographic.coordinateAction_comp",
+        "Counting.Algorithm.Holographic.coordinateAction_cancel"
+      ]
+    },
+    {
+      "new": "Basic.pullback / pullback_cancel / edge_cancel",
+      "source": "Holant.Kernel.pullback / connect_change_basis; Holant.Network.edge_holographic_cancel",
+      "relation": "Same bilinear convention; generalized finite-domain cancellation uses mathlib matrix identities and actual sums",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.pullback",
+        "Counting.Algorithm.Holographic.pullback_cancel",
+        "Counting.Algorithm.Holographic.edge_cancel"
+      ]
+    },
+    {
+      "new": "Network.assignments / prod_vertex_action / raw_transform",
+      "source": "Holant.LocalDrafts.RemoteWork.StableClosureV2.OpenHolographic.assignments / prod_vertex_action / denote_transform",
+      "relation": "Finite-domain generalization on the existing S1 KernelNetwork, preserving its actual incidence and raw partition",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.assignments",
+        "Counting.Algorithm.Holographic.prod_vertex_action",
+        "Counting.Algorithm.Holographic.raw_transform"
+      ]
+    },
+    {
+      "new": "Network.partition_transform / partition_transform_closed / recover_boundary",
+      "source": "Counting.Model.KernelNetwork.partition_toOpenInstance",
+      "relation": "New semantic bridge and boundary recovery on S1 occurrence-list partitions",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.partition_transform",
+        "Counting.Algorithm.Holographic.partition_transform_closed",
+        "Counting.Algorithm.Holographic.recover_boundary"
+      ]
+    },
+    {
+      "new": "Upstream.closed_partition / open_partition",
+      "source": "Holant.Network.denote_holographicTransform; OpenHolographic.denote_transform",
+      "relation": "Direct theorem reuse after literal transformed-network identification and S1 partition bridge",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.Upstream.closed_partition",
+        "Counting.Algorithm.Holographic.Upstream.open_partition"
+      ]
+    },
+    {
+      "new": "FixedTables.network_tables / value_eq / toTransformed / fromTransformed / computes",
+      "source": "Holant.LocalDrafts.MainChain.HolographicTransport",
+      "relation": "Preserve existing actual machines, encodings, fixed tables, and length/resource conditions; prove S1 semantic specification and table-transform compatibility",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.FixedTables.network_tables",
+        "Counting.Algorithm.Holographic.FixedTables.value_eq",
+        "Counting.Algorithm.Holographic.FixedTables.toTransformed",
+        "Counting.Algorithm.Holographic.FixedTables.fromTransformed",
+        "Counting.Algorithm.Holographic.FixedTables.computes"
+      ]
+    },
+    {
+      "new": "PhysicalOpen.source_partition_covariance / source_partition_recovery / source_same_shape",
+      "source": "ClosurePhysicalBridge.fromHolographicOpen / restoredOpen_denote",
+      "relation": "Actual constructed physical source and its incidence geometry, after coefficient embedding, connected to S1 occurrence partition",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.PhysicalOpen.source_partition_covariance",
+        "Counting.Algorithm.Holographic.PhysicalOpen.source_partition_recovery",
+        "Counting.Algorithm.Holographic.PhysicalOpen.source_same_shape"
+      ]
+    },
+    {
+      "new": "Clients",
+      "source": "New concrete rational and three-state examples",
+      "relation": "Loop value 279, reversed endpoint 271, free-boundary entries 3 to -4 and reversed -2, ternary value 20",
+      "new_declarations": [
+        "Counting.Algorithm.Holographic.Clients.transformed_loop_value",
+        "Counting.Algorithm.Holographic.Clients.reversed_edge_value",
+        "Counting.Algorithm.Holographic.Clients.open_not_invariant",
+        "Counting.Algorithm.Holographic.Clients.open_reversed_value",
+        "Counting.Algorithm.Holographic.Clients.ternary_transformed_loop_value"
+      ]
+    }
+  ]
+}

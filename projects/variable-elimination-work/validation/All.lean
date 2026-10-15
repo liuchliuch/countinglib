@@ -1,0 +1,12 @@
+import Counting.Algorithm.VariableEliminationWork
+
+#check Counting.Algorithm.VariableEliminationWork.values_enumerateFinAssignments
+#check Counting.Algorithm.VariableEliminationWork.work_enumerateFinAssignments
+#check Counting.Algorithm.VariableEliminationWork.value_evaluate
+#check Counting.Algorithm.VariableEliminationWork.work_evaluate
+#check Counting.Algorithm.VariableEliminationWork.value_evaluateStored
+#check Counting.Algorithm.VariableEliminationWork.work_bucketSum_cached
+#check Counting.Algorithm.VariableEliminationWork.reads_evaluateStored
+#check Counting.Algorithm.VariableEliminationWork.work_evaluateStored
+#check Counting.Algorithm.VariableEliminationWork.Examples.first_stored_address_work
+#check Counting.Algorithm.VariableEliminationWork.Examples.isolated_first_address_work

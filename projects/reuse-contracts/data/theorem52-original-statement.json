@@ -1,0 +1,89 @@
+{
+  "status": "original source-map transcription; not a new proof audit",
+  "source_path": "/Users/liuch/draft-pinkfold/complex-csp-decidability/verification/paper.json",
+  "source_sha256": "ebd515338dae15b8c77c02c198334d3b7b134f74acf32b8ca871922f9d067ecb",
+  "paper": {
+    "title": "From Block Orthogonality to Decidability in Complex-Weighted Counting CSP",
+    "authors": [
+      "Chenghua Liu",
+      "Boning Meng"
+    ],
+    "url": "https://arxiv.org/abs/2608.14845v1",
+    "version": "v1",
+    "tex_file": "paper/source/cai-chen-complex-csp-decidability.tex",
+    "tex_sha256": "d71a123ca1186595783e14f12a53d449c374eb9426f0f0df30bd0a61e718ae2c",
+    "bib_file": "paper/source/cai-chen-complex-csp-decidability.bib",
+    "bib_sha256": "a639b636eeb651d674a4407df9da044b24d7484a0537c9802d744bbe4a1b1a2b"
+  },
+  "item": {
+    "number": "5.2",
+    "kind": "theorem",
+    "label": "thm:young-pinned",
+    "title_tex": "Pinned constraint-function isomorphism",
+    "source_range": {
+      "start_line": 2281,
+      "end_line": 2299
+    },
+    "statement_tex": "\\begin{theorem}[Pinned constraint-function isomorphism]\n\\label{thm:young-pinned}\nLet $\\mathcal H$ and $\\mathcal G$ be similar finite sets of constraint\nfunctions over a field of characteristic zero.  Fix $k\\ge1$ and pins\n$\\beta:[k]\\to V(\\mathcal H)$ and $\\gamma:[k]\\to V(\\mathcal G)$.\nIf\n\\begin{equation*}\n  Z_{\\beta}^{\\mathcal H}(I)\n  =Z_{\\gamma}^{\\mathcal G}(I_{\\mathcal H\\to\\mathcal G})\n\\end{equation*}\nfor every simple $k$-labelled $\\mathcal H$-instance $I$, then the two\ndomains have the same size and there is an isomorphism\n$\\sigma:V(\\mathcal H)\\to V(\\mathcal G)$ of the two families such that\n$\\sigma(\\beta(i))$ and $\\gamma(i)$ are twins in $\\mathcal G$ for every\n$i\\in[k]$.\n\nConversely, such a domain bijection and twin replacements preserve pinned\npartition values on every $k$-labelled instance, whether or not it is simple.\n\\end{theorem}",
+    "statement_sha256": "877619f1f5c3a1300aabb19769aa782f9f3982beeb9523cf196c220ad7f182f0",
+    "status": "original_refuted_corrected_all_instance_proved",
+    "declarations": [
+      {
+        "name": "ComplexCSP.Theorem52Counterexample.printed_theorem_5_2_counterexample",
+        "file": "ComplexCSP/Algebra/Theorem52Counterexample.lean",
+        "role": "universal actual-simple-instance refutation"
+      },
+      {
+        "name": "ComplexCSP.Instance.partition_eq_of_iso_pin_twins",
+        "file": "ComplexCSP/Instances/PinnedIsomorphism.lean",
+        "role": "valid converse"
+      },
+      {
+        "name": "ComplexCSP.PinnedIsomorphism.all_instance_pinned_iso_iff",
+        "file": "ComplexCSP/Instances/IsomorphismCompleteness.lean",
+        "role": "separate repaired equivalence"
+      },
+      {
+        "name": "ComplexCSP.PinnedIsomorphism.pinnedIsoCheck_correct_all_instances",
+        "file": "ComplexCSP/Instances/IsomorphismCompleteness.lean",
+        "role": "finite checker under repaired premise"
+      },
+      {
+        "name": "ComplexCSP.PaperBridge.theorem_5_2_complex_counterexample",
+        "file": "ComplexCSP/Structure/PaperBridge.lean",
+        "role": "explicit paper bridge or companion theorem"
+      },
+      {
+        "name": "ComplexCSP.PinnedIsomorphism.all_instance_completeness",
+        "file": "ComplexCSP/Instances/IsomorphismCompleteness.lean",
+        "role": "explicit paper bridge or companion theorem"
+      },
+      {
+        "name": "ComplexCSP.Theorem52Counterexample.doubledUnary_first_value",
+        "file": "ComplexCSP/Algebra/Theorem52Counterexample.lean",
+        "role": "explicit paper bridge or companion theorem"
+      },
+      {
+        "name": "ComplexCSP.Theorem52Counterexample.doubledUnary_second_value",
+        "file": "ComplexCSP/Algebra/Theorem52Counterexample.lean",
+        "role": "explicit paper bridge or companion theorem"
+      },
+      {
+        "name": "ComplexCSP.Theorem52Counterexample.paperSimple_iff_simple",
+        "file": "ComplexCSP/Algebra/Theorem52Counterexample.lean",
+        "role": "explicit paper bridge or companion theorem"
+      }
+    ],
+    "goals": [
+      "ComplexCSP.PaperSpec.paper_5_2_printed_theorem_5_2_counterexample",
+      "ComplexCSP.PaperSpec.paper_5_2_partition_eq_of_iso_pin_twins",
+      "ComplexCSP.PaperSpec.paper_5_2_all_instance_pinned_iso_iff",
+      "ComplexCSP.PaperSpec.paper_5_2_pinnedIsoCheck_correct_all_instances",
+      "ComplexCSP.PaperSpec.paper_5_2_theorem_5_2_complex_counterexample",
+      "ComplexCSP.PaperSpec.paper_5_2_all_instance_completeness",
+      "ComplexCSP.PaperSpec.paper_5_2_doubledUnary_first_value",
+      "ComplexCSP.PaperSpec.paper_5_2_doubledUnary_second_value",
+      "ComplexCSP.PaperSpec.paper_5_2_paperSimple_iff_simple"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite the accompanying paper."
+title: "Complex-weighted CSP decidability in Lean"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Liu
+    given-names: Chenghua
+  - family-names: Meng
+    given-names: Boning
+preferred-citation:
+  type: article
+  title: "From Block Orthogonality to Decidability in Complex-Weighted Counting CSP"
+  authors:
+    - family-names: Liu
+      given-names: Chenghua
+    - family-names: Meng
+      given-names: Boning
+  year: 2026
+  url: "https://arxiv.org/abs/2608.14845v1"

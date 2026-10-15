@@ -1,0 +1,86 @@
+[
+  {
+    "id": "product_elimination",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/ProductElimination.lean",
+    "git_blob_sha1": "f8459986d862519ae76fb085e50e2edd0cd810c3",
+    "sha256": "0061d366ced065727fb0e7093a96f5ea02d3e381ce4e3baed090238cdedc1947",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/ProductElimination.lean",
+    "declarations": [
+      {
+        "name": "Factor",
+        "lines": [
+          11
+        ]
+      },
+      {
+        "name": "Factor.pivot",
+        "lines": [
+          69
+        ]
+      },
+      {
+        "name": "partition_isolated",
+        "lines": [
+          213
+        ]
+      },
+      {
+        "name": "evaluate",
+        "lines": [
+          221
+        ]
+      },
+      {
+        "name": "evaluate_eq_partition",
+        "lines": [
+          229
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/ProductElimination.lean",
+    "canonical_provider": "../holant-unified/Holant/Proofs/Tractability/ProductElimination.lean",
+    "current_sha256": "0061d366ced065727fb0e7093a96f5ea02d3e381ce4e3baed090238cdedc1947",
+    "matches_reviewed_source": true
+  },
+  {
+    "id": "product_cost",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+    "git_blob_sha1": "315e120ccfdfeb6d212565a97dd36c0d3da8af17",
+    "sha256": "4da4fbe113531e6381ac67744ac6f51695777a626ae22ead92cfd3875eaa6500",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+    "declarations": [
+      {
+        "name": "run",
+        "lines": [
+          18
+        ]
+      },
+      {
+        "name": "run_exact",
+        "lines": [
+          35
+        ]
+      },
+      {
+        "name": "run_operations_le",
+        "lines": [
+          40
+        ]
+      },
+      {
+        "name": "factorVisits_le",
+        "lines": [
+          66
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+    "canonical_provider": "../holant-unified/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+    "current_sha256": "4da4fbe113531e6381ac67744ac6f51695777a626ae22ead92cfd3875eaa6500",
+    "matches_reviewed_source": true
+  }
+]

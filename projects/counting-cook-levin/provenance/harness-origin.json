@@ -1,0 +1,21 @@
+{
+  "purpose": "Reuse accepted source-build/private-axiom audit implementation; new package adds clean-own source builds, exact new-module ownership, public namespace/export guard, runtime smoke, and receipt fault tests",
+  "origins": [
+    {
+      "path": "../planar-machines/scripts/verify.py",
+      "sha256": "3e4e2c6e0d9ece640bc3414f50d7e432c396334233cff9dc88755f8b79c9ab75"
+    },
+    {
+      "path": "../planar-machines/validation/Audit.lean",
+      "sha256": "46a393f825130a0c583f1aa95bb015100198fccf6c5d09e1401f78382afa88e5"
+    },
+    {
+      "path": "../planar-machines/validation/ImportGraph.lean",
+      "sha256": "8a2667db3649c9c81bc58c595e7cabd2488672cf8a6c1eda12f432b46f147bfe"
+    },
+    {
+      "path": "../planar-machines/scripts/lake",
+      "sha256": "c0699bd4bcfa744a895cc389e872da18a2292c13e479798dc70560cf34ef8625"
+    }
+  ]
+}

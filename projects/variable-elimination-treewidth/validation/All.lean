@@ -1,0 +1,13 @@
+import Counting.Algorithm.VariableEliminationTreewidth
+
+#check Counting.Algorithm.VariableEliminationTreewidth.linearize
+#check Counting.Algorithm.VariableEliminationTreewidth.bagConvex_iff_occurrence_preconnected
+#check Counting.Algorithm.VariableEliminationTreewidth.pairwise_covered_subset_bag
+#check Counting.Algorithm.VariableEliminationTreewidth.TreeDecomposition.toDecomposition
+#check Counting.Algorithm.VariableEliminationTreewidth.bagged_primal
+#check Counting.Algorithm.VariableEliminationTreewidth.evaluate
+#check Counting.Algorithm.VariableEliminationTreewidth.value_evaluate
+#check Counting.Algorithm.VariableEliminationTreewidth.scopeBound
+#check Counting.Algorithm.VariableEliminationTreewidth.observe_evaluate_le
+#check Counting.Algorithm.VariableEliminationTreewidth.rows_evaluate_le
+#check Counting.Algorithm.VariableEliminationTreewidth.additions_evaluate_le

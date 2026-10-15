@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "path": "projects/holant-unified/Counting/HolantUnified/FullDichotomy.lean",
+      "sha256": "539309fb2bc5967105cbb539b79f434e84fd5cd7009a92ac201cb491fe749b5e",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/Counting/HolantUnified/BinaryDisequality.lean",
+      "sha256": "b74e97a1723aa5c2469a9ec28e73e1471407647b5fbc0229b4c69ffbaf7620c7",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/matchgate-width/Counting/MatchgateWidth/Main.lean",
+      "sha256": "01f873cb5b49dd6f4dfb739b36da07b7666949702796063858c8b8b9429a760b",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/Counting/ComplexCSP/StructuralCollapse.lean",
+      "sha256": "c2b613338f289e6f08b097b07754c2380406d6f96cb42204322eaa42db9de4a0",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/Counting/ComplexCSP/DegreeStructuralCollapse.lean",
+      "sha256": "53ad8202c2d4a924d50e7a9bcc4c4a7c3d907bf849ae13487b70d70c7a904442",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/Counting/ComplexCSP/Recognition.lean",
+      "sha256": "84ee3b238e340dbbf76547b6b52c3e6bfb7d97da3b7a782c78baca57bbec6a45",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/complex-csp-classification/ComplexCSP/Recognition/UniformComplexityClassification.lean",
+      "sha256": "54c3b7d519860ce56f8ccd647957ff3b9ff5c25870ec38a002bed432e317fc0a",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp-classification/ComplexCSP/Complexity/Classification.lean",
+      "sha256": "a64120a0fa14fc3c75b5528ca02718bb5aa15fd0e2d46f31d9b98ee127db4bd0",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/planar-classification/PlanarHom/MainDichotomiesClosed.lean",
+      "sha256": "9aba7cdaf899acc74dfabafb0b68200ad480995efa44c270301c15453527b4c9",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/ComplexCSP/Instances/IsomorphismCompleteness.lean",
+      "sha256": "4273360210768b5c2ac73b29f71d7c4530730530d335f13b75338a50e932ec15",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/ComplexCSP/Recognition/CharacterComparison.lean",
+      "sha256": "01a1d7ac732a2d7a3438739295867d7bc634bfa958f3e42f4c12cfd1a2a0af84",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/Paper2/PublicNativeClassification.lean",
+      "sha256": "8d8583cc1a8e18edb5621ab3db726b28f4bb5597fc428fe11aa5e3427b243a73",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/holant-unified/Holant/Statements.lean",
+      "sha256": "d7eb67ecde4a21425a4a7393b41b7a63f9ace3ed74da67fc793d80a330486f78",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/planar-classification/PlanarHom/MainDichotomyScope.lean",
+      "sha256": "0edd2a81d0b585d10bb07af6d5a4326f1ac41ab9a64af84942b529f1f4b53a46",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/matchgate-width/Counting/MatchgateWidth/PaperStatements.lean",
+      "sha256": "de03b9d884e704b60061297742612c48ccbea38835172452774cbb4fca01f5f9",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/Paper2/Problem.lean",
+      "sha256": "d0fa9b2600dd595fb14bdc3f4c4d957532f364cbb33103ef4e280e989656f9f3",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/Paper2/PublicDichotomyComplete.lean",
+      "sha256": "fcd88b21268217fb6aa8b58de49b72f8682e46a8de4b631b761e97f352e461b6",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/holant-unified/Paper2/TractableAlgorithms/PublicEvaluation.lean",
+      "sha256": "ccf54880fe52752ea99defc7f7a863e49e0d77f0d545b945551f5717f41814d8",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/holant-unified/Holant/Proofs.lean",
+      "sha256": "2bb928fa3c4a48768e01cb95b5dbc2c2f005c7fc0038685ebd4b0aab13373da5",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/holant-unified/Holant/Proofs/Dichotomy/Main/PaperMainTheoremsDecision.lean",
+      "sha256": "c40fb1f0c3affeb93e4b262f59a2dfb274bac57a96c4cf432064491ee3da8a49",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/holant-unified/Holant/Proofs/Recognition/RuntimeSevenDecision.lean",
+      "sha256": "a56ae851993ed4fcb9d7750c29bd5470698870fcd0add5d8e5a5c271ac1b16b7",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/matchgate-width/Counting/MatchgateWidth/PaperProofs.lean",
+      "sha256": "7a313d06b30d7fb5924d3b26c939684a1c8308842c3b3e4e342f8cdde294def5",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/ComplexCSP/Structure/StructuralCollapse.lean",
+      "sha256": "16d1143648ef4616bed39e3fa3a5a4a6065885530e880b10e03e1f7c6ce7b16d",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/complex-csp/ComplexCSP/Structure/DegreeStructuralCollapse.lean",
+      "sha256": "fee5ea9ae27606939e0aa7de68aeffbef5577e26e754651b8716557856e3accd",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/complex-csp/ComplexCSP/Recognition/UniformAlgebraicEncoded.lean",
+      "sha256": "b34ff5bd6572086a884e505be3e7b042828ab63e70c61732993e65ead0030d1e",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "projects/complex-csp/ComplexCSP/Algebra/AlgebraicInput.lean",
+      "sha256": "2ecad13cd1b0a317158fa564cf7a0563d876a0cb7246b164d4c0bdfe32c013ac",
+      "matches_INT9_source_inventory": true
+    },
+    {
+      "path": "Counting/Flagships/Holant.lean",
+      "sha256": "822aa85d202314717be036c537f5173787e19a092b48cd5c2a4367698a885c49",
+      "kind": "root flagship import source"
+    },
+    {
+      "path": "Counting/Flagships/ComplexCSP.lean",
+      "sha256": "32f01b58535c1bdef81947ea6253b597ae452c5c74bea9f9f366343741a8a13b",
+      "kind": "root flagship import source"
+    },
+    {
+      "path": "Counting/Flagships/PlanarHom.lean",
+      "sha256": "9d315695f79502e18dc2e0743ed811a34e39737ef04e0259251863f44f39a3ff",
+      "kind": "root flagship import source"
+    },
+    {
+      "path": "Counting/Flagships/MatchgateWidth.lean",
+      "sha256": "275ef095278aaf9aee1df0d5dd68e04f7736bdd7ed3ae3e3543a4abb349a40f5",
+      "kind": "root flagship import source"
+    },
+    {
+      "path": "validation/history/all-20261014T144212780936Z/result.json",
+      "sha256": "1a79c5e0bcafa73bda913abe30e59eaacb33eff3ba00e260d1fdcfa388be913a",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "validation/history/all-20261014T144212780936Z/sources.json",
+      "sha256": "5680a661cf3c1dd2e38b1aa0ca1a966f2f46b47f01282e45ab7a999b3c8f8ad0",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "validation/history/all-20261014T144212780936Z/audit-declarations.jsonl",
+      "sha256": "c217beafe51895f896f81b3314fde46a27c56480a13c15fb4249a6b17be7d968",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "validation/history/all-20261014T144212780936Z/audit-closure.jsonl",
+      "sha256": "cccddab80fcd7a7838a130e1e80521f3ed3db9844e402fe7c901d8996505a218",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "validation/history/all-20261014T144212780936Z/audit-modules.jsonl",
+      "sha256": "8bf905c6a40a13be885ac61dfd4f453c82a2a4281ba8fb809b5ff7aac75001eb",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "validation/history/first-maturity-before-reuse-20261014T134806Z/validation/integration/result.json",
+      "sha256": "56b5bc0c027f542497a2000d4ad685e6231078d68e456229be661115e046e585",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "validation/history/first-maturity-before-reuse-20261014T134806Z/validation/maturity/result.json",
+      "sha256": "35cfa94ee85d1a28b3c783d23be40dcae9c17c469359117cfca6d37a845ba36b",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "data/upstream-lock.json",
+      "sha256": "373da7d9c2c94d481dab0fb4d1398728a024846dc5a9692bf8dba789c12fe7e4",
+      "kind": "existing evidence, not recreated"
+    },
+    {
+      "path": "projects/holant-unified/data/full-dichotomy-map.json",
+      "sha256": "2201132f9c083cd86b64ede3a52442654a01c4898199e08f739a833109be7bf5",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/Holant/Proofs/Counting/Hardness.lean",
+      "sha256": "7aa7f9660de2a0eaeb9e0d457caa6047b20b54471db0f4406583826b81300108",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/data/binary-disequality-map.json",
+      "sha256": "299493103913b1fde66f8ca97283045eeccd79b9ce2e6d44e1df33c59d667f09",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/complex-csp/provenance/upstream/docs/paper.md",
+      "sha256": "53ededf3bc25485044cf75e1385eccd3aa86e4e01fe2664c0f1c1a71470a4235",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/planar-classification/PlanarHom/AlgebraicProductInterpolation.lean",
+      "sha256": "f9794349ca2e7cda3f6e35cf6f1d82f38a3a5d03e20bdaa844c273a74a80e4b3",
+      "kind": "source reviewed for human contract; not a new build"
+    },
+    {
+      "path": "projects/holant-unified/provenance/B/Verification/Challenge.lean",
+      "sha256": "22c67ed562c346840cfa53581ad4403b1b27620df7fd3b2587e0c41b0086ee20",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/holant-unified/provenance/D/Verification/Challenge.lean",
+      "sha256": "011202ce974860118c8ad7ecebb8dfabe8bd7e594dc5d5763921c0740f9437a0",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/matchgate-width/provenance/upstream/PaperChallenge.lean",
+      "sha256": "fef82e1fbbfe95f449944c565fb98cafff7cf82d539a148969c45605feaea1dd",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/complex-csp/provenance/upstream/verification/Statements.lean",
+      "sha256": "d5edbf66b2865b79ac5f74dc13cc449589709f726d2301831b66c9645e0eb266",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/holant-unified/STATUS.md",
+      "sha256": "31b5a8fadf666986bad035b9dd0f3a5dc52c9c0050237978f5577542cd046abe",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/holant-unified/DESIGN.md",
+      "sha256": "002b49fbddd16728a3a0387994f6dc68b7184fd3393d0daa11a2af426fd46db9",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/foundations/notes/reduction.md",
+      "sha256": "c4addc29d513ff4483c5255740d5a1fcbc4718db58179951d76b918bb4220f77",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/foundations/notes/witness.md",
+      "sha256": "9d0839424c7efa1aca819450d488cb5a574df2d831f151cb71f3d9bffc24fc5f",
+      "kind": "unchanged historical specification or status source"
+    },
+    {
+      "path": "projects/reuse-contracts/data/type-export-result.json",
+      "sha256": "3890d9bedc2ed26ba0344f3f8cee6d6ef73f82519a68e21ed9735fbee9c3b081",
+      "kind": "current actual-environment type extraction evidence"
+    },
+    {
+      "path": "projects/reuse-contracts/data/type-request.json",
+      "sha256": "359218eef785532158ed2c1a4104727617fd446077b71d470c683c4479099dd7",
+      "kind": "current actual-environment type extraction evidence"
+    },
+    {
+      "path": "projects/reuse-contracts/data/exported-types.jsonl",
+      "sha256": "8c5e3bdabfe289565fdb5788bffdf75e31b3dde45e6f3f722051eca320e2af2f",
+      "kind": "current actual-environment type extraction evidence"
+    },
+    {
+      "path": "projects/reuse-contracts/tools/ExportTypes.lean",
+      "sha256": "fe5ed002899b6c3bed27b9332a51b508dc7db85fed04444078ef59079498beb4",
+      "kind": "current actual-environment type extraction evidence"
+    }
+  ]
+}

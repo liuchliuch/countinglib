@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "exit_code": 0,
+  "recorded_utc": "2026-10-14T14:38:46.296153+00:00",
+  "command": "COUNTING_CATALOG_REQUEST=<root>/projects/reuse-catalog/data/type-request.json COUNTING_CATALOG_OUTPUT=<root>/projects/reuse-catalog/data/exported-types.jsonl ./scripts/lake -q lean projects/reuse-catalog/tools/ExportTypes.lean",
+  "execution": "Lean run_cmd exporter, no --run argument; sole coordinated Lake invocation after reuse proof audit completed",
+  "cwd": "/Users/liuch/draft-pinkfold/counting-complexity",
+  "types": 184,
+  "output_bytes": 3672859,
+  "output": "projects/reuse-catalog/data/exported-types.jsonl",
+  "output_sha256": "886bc7f23d889a4f5dc397b55d691502b0171ab4046a012e9444d4cf55af1f85",
+  "request": "projects/reuse-catalog/data/type-request.json",
+  "request_sha256": "6b6e124c6f9fc003b8b9ec938a4a0d4eaa8eaef05263ce190847b05ec5f13b27",
+  "exporter": "projects/reuse-catalog/tools/ExportTypes.lean",
+  "exporter_sha256": "0022a7a6aa672a98c27f4478018c7927ff80679ce0020cf13e7386103a7e38ce",
+  "log": "projects/reuse-catalog/data/type-export.log",
+  "log_sha256": "ebb653606dc404f4b56b6769822202bb5c7c12dd3089374226fef2b4e78cf0d8",
+  "root_proof_receipt": "validation/reuse/result.json",
+  "root_proof_receipt_sha256": "343f8b689b8590a7808c080553447d084fc94153b61e086d900e8206dd4d2109",
+  "scope": "actual complete Lean types and requested definition bodies, not independent paper correspondence or kernel replay"
+}

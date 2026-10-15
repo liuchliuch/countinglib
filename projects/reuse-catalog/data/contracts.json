@@ -1,0 +1,175 @@
+[
+  {
+    "id": "open",
+    "title": "Canonical OpenNetwork and S1",
+    "groups": [
+      "open-raw",
+      "open-corrected",
+      "open-composition",
+      "open-ordinary",
+      "open-canonical",
+      "open-clients"
+    ],
+    "fixed_parameters": "Canonical Holant.OpenNetwork over Bool, CommSemiring R; boundary order and actual vertex/edge records retained. BoundaryComplement itself works over any finite D without Nonempty D.",
+    "runtime_inputs": "Semantic network and boundary assignment, not a byte machine. All boundary assignments are quantified.",
+    "promises": "Raw uses the actual boundary-image complement. Corrected tensor adds a hidden copy of the raw boundary and n explicitly oriented boundary-kernel occurrences. Corrected disjoint composition requires the original common EdgeKind W and per-edge hypotheses; raw composition permits mixed kinds.",
+    "outputs": "S1 partition equals canonical raw or corrected tensor, separately. Actual canonical disjointUnion and boundary-reorder commuting laws; ordinary/closed compatibility with the prior S1 bridge.",
+    "resources": "Instance-generated palette includes actual vertex functions and edge kernels; corrected palette explicitly includes boundary kernels. It does not grant those tables to an arbitrary fixed language.",
+    "cost": "Noncomputable semantic conversions and equivalences; no codec, polynomial bit-time, fixed-language reduction, planarity or degree-preservation theorem.",
+    "clients": [
+      "Counting.Bridge.OpenNetwork.Clients.first_composition_raw",
+      "Counting.Bridge.OpenNetwork.Clients.second_composition_tensor",
+      "Counting.Bridge.OpenNetwork.Clients.boundary_reorder_tensor",
+      "Counting.Bridge.OpenNetwork.EdgeCases.empty_domain_hidden_port"
+    ],
+    "source_files": [
+      "projects/open-network-bridge/Counting/Bridge/OpenNetwork.lean",
+      "projects/open-network-bridge/Counting/Bridge/OpenNetwork/Corrected.lean",
+      "projects/open-network-bridge/Counting/Bridge/OpenNetwork/Composition.lean",
+      "projects/open-network-bridge/Counting/Bridge/OpenNetwork/Ordinary.lean"
+    ],
+    "independent_client_files": [
+      "projects/open-network-bridge/validation/CanonicalClient.lean",
+      "projects/open-network-bridge/validation/OrdinaryClient.lean"
+    ],
+    "nontrivial_examples": "Paired disequality stub raw [3,2], tensor [2,3]; first composition 21/14, boundary swap 10/15, second composition 20/45. Empty-domain generic assignment cases explicitly covered."
+  },
+  {
+    "id": "gadget",
+    "title": "Exact fixed-gadget elimination",
+    "groups": [
+      "gadget-semantic",
+      "gadget-machine",
+      "gadget-extension",
+      "gadget-s1",
+      "gadget-field",
+      "gadget-canonical",
+      "gadget-clients"
+    ],
+    "fixed_parameters": "Finite signature/edge layouts, arity function, fixed well-formed Template family. ExactField fixes FixedField K n and rational coordinate ExactSignatureTables; no runtime language/field search.",
+    "runtime_inputs": "Original validated RawClosedNetwork encoding. Local gadget-realization identities are hypotheses; compiler correctness, output-size and machine costs are proved.",
+    "promises": "Ordered graph records with loops, parallel edges, nullary vertices and empty graphs; each repeated macro occurrence receives fresh internal-edge blocks. Prefix extension requires explicit arity agreement and exact table-prefix/local-realization hypotheses.",
+    "outputs": "Literal compiler output and exact value equality. Nat tables give F1 ParsimoniousReduction. ExactField uses the same coefficient-coordinate F.encoding on source/target and original PolyTimeOracleReduction with identity answer recovery.",
+    "resources": "No implicit equality, pinning, unary or additional kernel. S1 alignment applies to the supported canonical network image; arbitrary S1 incidence has no serializer here.",
+    "cost": "Finite Boolean-stack compiler, original encoded-length polynomial and same-run primitive bound. ExactField answer copying is charged using target outputBound; returned reduction is not LengthControlledOracleReduction. Only an already length-controlled caller is transported by the canonical inlining theorem.",
+    "direction": "Extension -> base elimination gives base FP -> extension FP and extension hardness -> base hardness. Prefix inclusion gives equivalence. This does not invert D FiniteResources strict RootCode interface without a separately proved representation/cost bridge.",
+    "clients": [
+      "Counting.Reduction.FixedGadget.Client.output_value",
+      "Counting.Reduction.FixedGadget.Client.compiler_run",
+      "Counting.Reduction.FixedGadget.Client.finite_resource_equivalent",
+      "Counting.Reduction.FixedGadget.S1Client.partition",
+      "Counting.Reduction.FixedGadget.FieldClient.repeated_oracle_run"
+    ],
+    "source_files": [
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/Basic.lean",
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/Machine.lean",
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/Extension.lean",
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/S1.lean",
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/ExactField.lean"
+    ],
+    "independent_client_files": [
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/Client.lean",
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/S1Client.lean",
+      "projects/gadget-reductions/Counting/Reduction/FixedGadget/FieldClient.lean"
+    ],
+    "nontrivial_examples": "Binary base [[1,2],[3,4]], macro square [[7,10],[15,22]], two occurrences compile to four vertices with fresh edge IDs 2 and 3, value 858. Separate S1 client retains one isolate and two independent internal pairs, six occurrences, value 98. Original 18/32 substitution client remains in All."
+  },
+  {
+    "id": "arithmetic",
+    "title": "Fixed-basis exact arithmetic and actual consumers",
+    "groups": [
+      "arithmetic",
+      "arithmetic-heights",
+      "arithmetic-lists",
+      "arithmetic-clients"
+    ],
+    "fixed_parameters": "Field K, DecidableEq K where required, Algebra Q K, finite dimension and rational Module.Basis fixed before runtime. Exact numberFieldEncoding basis retained.",
+    "runtime_inputs": "Field values or actual runtime lists/interpolation tables encoded in that fixed basis.",
+    "promises": "Field division is total: x/0=0, including 0/0. Coefficient recovery requires its original distinct-node and degree hypotheses. Nonzero divisor is needed only for the client equation equivalence, not for machine execution.",
+    "outputs": "Original FP actual TM2 certificates, same-computer outputs/time/steps/output-length and intermediate-stack bounds. Arithmetic public aliases resolve to canonical PlanarHom declarations.",
+    "resources": "No field/basis search, Holant fixed-coordinate/RootCode conversion, or free field operations. Height entry carries dimension/cleared-coordinate budgets separately.",
+    "cost": "Polynomial in the complete original serialized input. Composition client uses actual pairing/projection and machine composition. Materialized interpolation preserves equality filter, differences, products, divisions, sums and finite-alphabet refinement.",
+    "clients": [
+      "Counting.Algorithm.FieldArithmetic.Clients.Composition.outputs",
+      "Counting.Algorithm.FieldArithmetic.Clients.Composition.steps_bound",
+      "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.outputs_coefficient",
+      "Counting.Algorithm.FieldArithmetic.Clients.HeightBounds.normalized_difference_bound",
+      "Counting.Algorithm.FieldArithmetic.Acceptance.originalQuadraticViaPublicEntry"
+    ],
+    "source_files": [
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic.lean",
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Heights.lean",
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Materialized.lean",
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Clients/Composition.lean",
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Clients/Interpolation.lean"
+    ],
+    "independent_client_files": [
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Clients/Composition.lean",
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Clients/Interpolation.lean",
+      "projects/field-arithmetic/Counting/Algorithm/FieldArithmetic/Clients/HeightBounds.lean"
+    ],
+    "nontrivial_examples": "Independent normalize-and-compare computes (7-3)/2=2; zero divisor remains certified. Existing materialized quadratic data returns coefficient two through the new entry."
+  },
+  {
+    "id": "sharpp",
+    "title": "Actual public binary #P downward closure",
+    "groups": [
+      "sharpp-semantic",
+      "sharpp-machine",
+      "sharpp-transport",
+      "sharpp-clients"
+    ],
+    "fixed_parameters": "Actual F1 ParsimoniousReduction r and target SharpPWitness w on Computability.encodingList Bool. Source/target counts have codomain Nat.",
+    "runtime_inputs": "All raw List Bool instances and tagged instance/witness pairs; no extra promise or oracle.",
+    "promises": "P=q.comp L, where L is derived from the reduction program/time and q is target witness length. Actual predicate rejects too-short witnesses, uses the first t target bits, requires every remaining bit false. No supplied verifier correctness, pair lifting or cost proof is required beyond r and w.",
+    "outputs": "Explicit source SharpPWitness and InSharpP transport; ParsimoniousReduces.inSharpP and ParsimoniousEquivalent.inSharpP_iff.",
+    "resources": "Witness preservation is actual machine work through tagged/framed transducers, materialized pair lifting, length/poly evaluation, prefix/suffix scan, target verifier, Boolean conversion and finite alphabet restriction.",
+    "cost": "The verifier_time_bound is in whole pair encoded length; verifier_steps exposes the actual subrun sum, including retained witness. Pure padded-count equalities remain in Basic; machine construction is separate.",
+    "direction": "r:f->g and InSharpP(g) imply InSharpP(f), for this standard bits encoding. Arbitrary abstract codecs are not silently generalized.",
+    "clients": [
+      "Counting.SharpPClosure.Clients.nonzero_count_three",
+      "Counting.SharpPClosure.Clients.ignored_suffix_counts_twenty_four",
+      "Counting.SharpPClosure.Clients.retained_pair_output",
+      "Counting.SharpPClosure.Clients.padded_machine_output"
+    ],
+    "source_files": [
+      "projects/sharpp-closure/Counting/SharpPClosure/Basic.lean",
+      "projects/sharpp-closure/Counting/SharpPClosure/Machines.lean",
+      "projects/sharpp-closure/Counting/SharpPClosure/Transport.lean"
+    ],
+    "independent_client_files": [
+      "projects/sharpp-closure/Counting/SharpPClosure/Clients.lean"
+    ],
+    "nontrivial_examples": "Reversal-derived L(n)=2n+1 gives five source witness bits for a two-bit target; unique suffix yields count 3, ignored suffix yields 24. True padding, short/empty witness, empty prefix and zero-bit witness are checked; physical pair framing overhead is 32 transitions in the concrete run."
+  },
+  {
+    "id": "product",
+    "title": "Fixed-palette Product S1 input to canonical machine",
+    "groups": [
+      "product-frontend",
+      "product-machine",
+      "product-canonical",
+      "product-clients"
+    ],
+    "fixed_parameters": "Finite palette values:Fin q->K; machine fixes FixedField K d and rational table Fin q->Fin d->Q. Palette may contain duplicate/zero coefficients.",
+    "runtime_inputs": "Genuine S1 occurrence list for nullary scalar, unary pair, equality/disequality, explicit unary-coded variable count, finite palette addresses.",
+    "promises": "Ordered/multiple occurrences, repeated scope variable, nullary factors and isolated variables retained. Input codec is exactly the original LabelledFactor representation transported through proved inverse maps; valid encoded inputs, no extra all-malformed rejection behavior.",
+    "outputs": "Same S1 partition in F.encoding, actual clean outputs_partition, decode law, identical original machine/time and same-run transition/primitive bounds.",
+    "resources": "Uses the canonical factor-input Product solver, not RawClosedNetwork/FamilyFieldSolver. It already accepts arbitrary indexed Product factors; no incidence-to-network conversion or extra resource grant to another language is inferred.",
+    "cost": "No hidden host preprocessing: input bytes are already the original records; conversionComputes is an actual identity-machine witness. variableCount_le_inputLength charges isolates. Original physical parser, elimination, palette lookup, field arithmetic and output cleanup remain in the charged run.",
+    "direction": "Frontend value/codec transport to existing exact field-valued Holant InFP. No natural-valued #P membership or runtime-variable language/basis algorithm.",
+    "clients": [
+      "Counting.Algorithm.ProductFinitePalette.Clients.repeated_machine_run",
+      "Counting.Algorithm.ProductFinitePalette.Clients.cancellation_machine_run",
+      "Counting.Algorithm.ProductFinitePalette.Clients.repeated_cost"
+    ],
+    "source_files": [
+      "projects/product-machine-bridge/Counting/Algorithm/ProductFinitePalette/Input.lean",
+      "projects/product-machine-bridge/Counting/Algorithm/ProductFinitePalette/Machine.lean"
+    ],
+    "independent_client_files": [
+      "projects/product-machine-bridge/Counting/Algorithm/ProductFinitePalette/Clients.lean"
+    ],
+    "nontrivial_examples": "Rational palette [0,1,-1,2,3,5]: repeated occurrence/scope + isolate 228; cancellation 0; zero scalar 0; repeated nullaries 18; five isolates 32."
+  }
+]

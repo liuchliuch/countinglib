@@ -1,0 +1,173 @@
+import Counting.Bridge.OpenNetwork.All
+import Lean.Util.CollectAxioms
+import Lean.Elab.Command
+import Lean.Meta.Basic
+
+/-!
+# OpenNetwork bridge declaration audit
+
+The package inventory is generated from its exact Lake module ownership by
+`scripts/verify.py`. Audit module ownership, including private declarations,
+full declaration types, and all transitive axiom dependencies. This harness is
+adapted from the S1 audit, maintaining the same allowed logical axioms.
+-/
+
+open Lean Elab Command
+
+private def auditKind : ConstantInfo → String
+  | .axiomInfo _ => "axiom"
+  | .defnInfo _ => "definition"
+  | .thmInfo _ => "theorem"
+  | .opaqueInfo _ => "opaque"
+  | .quotInfo _ => "quotient"
+  | .inductInfo _ => "inductive"
+  | .ctorInfo _ => "constructor"
+  | .recInfo _ => "recursor"
+
+run_cmd do
+  let some sourceText ← IO.getEnv "COUNTING_AUDIT_MODULES"
+    | throwError "Missing source inventory. Run python3 scripts/verify.py."
+  let sourceModules := (sourceText.splitOn "\n").filter (· != "")
+  if sourceModules.isEmpty then
+    throwError "The local library source inventory is empty."
+  let env := (← getEnv).setExporting false
+  let importedModules := env.header.moduleNames
+  -- Check the aggregator's own dependency graph, not merely the audit file's imports.
+  let mut closure : Array Name := #[`Counting.Bridge.OpenNetwork.All]
+  let mut cursor : Nat := 0
+  while cursor < closure.size do
+    let moduleName := closure[cursor]!
+    let some moduleIdx := env.getModuleIdx? moduleName
+      | throwError "Missing imported module data: {moduleName}"
+    for dependency in env.header.moduleData[moduleIdx.toNat]!.imports do
+      unless closure.contains dependency.module do
+        closure := closure.push dependency.module
+    cursor := cursor + 1
+  for moduleName in closure do
+    IO.println <| "AUDIT_CLOSURE " ++ moduleName.toString
+  for entry in #[`Counting.Bridge.OpenNetwork, `Counting.Bridge.OpenNetwork.Corrected,
+      `Counting.Bridge.OpenNetwork.Canonical, `Counting.Bridge.OpenNetwork.Composition,
+      `Counting.Bridge.OpenNetwork.Ordinary, `Counting.Bridge.OpenNetwork.Clients,
+      `Counting.Bridge.OpenNetwork.All] do
+    let mut deps : Array Name := #[entry]
+    let mut pos := 0
+    while pos < deps.size do
+      let mod := deps[pos]!
+      let some idx := env.getModuleIdx? mod | throwError "Missing entry module: {mod}"
+      for dependency in env.header.moduleData[idx.toNat]!.imports do
+        unless deps.contains dependency.module do deps := deps.push dependency.module
+      pos := pos + 1
+    IO.println <| "AUDIT_ENTRY " ++ (Json.mkObj [
+      ("entry", toJson entry.toString), ("modules", toJson (deps.map Name.toString))]).compress
+  for sourceModule in sourceModules do
+    unless closure.any (fun n => n.toString == sourceModule) do
+      throwError "Local source module is absent from the open-network bridge acceptance import closure: {sourceModule}"
+  let ownedModules : Array Name := importedModules.filter fun n =>
+    sourceModules.contains n.toString
+  let declarations := env.constants.fold (init := #[]) fun names name _ =>
+    match env.getModuleIdxFor? name with
+    | some idx =>
+      if ownedModules.contains importedModules[idx.toNat]! then names.push name
+      else names
+    | none => names
+  let declarations := declarations.qsort Name.lt
+  if declarations.isEmpty then
+    throwError "No declarations found in local library modules."
+  -- Cross-check each module's exported constant inventory; never silently omit a name.
+  let mut codegenCount : Nat := 0
+  for moduleName in ownedModules do
+    let some idx := env.getModuleIdx? moduleName
+      | throwError "Missing owned module: {moduleName}"
+    let data := env.header.moduleData[idx.toNat]!
+    for name in data.constNames do
+      unless declarations.contains name do
+        throwError "Module-owned declaration was not enumerated: {moduleName}: {name}"
+    for name in data.extraConstNames do
+      unless declarations.contains name do
+        codegenCount := codegenCount + 1
+        IO.println <| "AUDIT_CODEGEN " ++ (Json.mkObj [
+          ("name", toJson name.toString), ("module", toJson moduleName.toString),
+          ("kind", toJson "compiler_auxiliary_without_kernel_declaration")]).compress
+    IO.println <| "AUDIT_MODULE " ++ (Json.mkObj [
+      ("name", toJson moduleName.toString),
+      ("kernel_declarations", toJson <| (declarations.filter fun name =>
+        env.getModuleIdxFor? name == some idx).size),
+      ("module_constant_names", toJson data.constNames.size),
+      ("module_extra_names", toJson data.extraConstNames.size)]).compress
+  let allowedAxioms : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut theoremCount : Nat := 0
+  let mut axiomCount : Nat := 0
+  let mut privateCount : Nat := 0
+  let mut failureCount : Nat := 0
+  let mut foreignCount : Nat := 0
+  for name in declarations do
+    let some info := env.find? name
+      | throwError "Enumerated declaration is unavailable: {name}"
+    let some idx := env.getModuleIdxFor? name
+      | throwError "Enumerated declaration has no module ownership: {name}"
+    let foreignNamespace := !(name.toString.startsWith "Counting.Bridge.OpenNetwork." ||
+        name.toString.startsWith "_private.Counting.Bridge.OpenNetwork.")
+    if foreignNamespace then foreignCount := foreignCount + 1
+    if info.isUnsafe || info.isPartial then
+      throwError "Unsafe or partial local kernel declaration: {name}"
+    if info.isTheorem then theoremCount := theoremCount + 1
+    if info.isAxiom then axiomCount := axiomCount + 1
+    if isPrivateName name then privateCount := privateCount + 1
+    let axioms ← Lean.collectAxioms name
+    let fullType ← liftTermElabM do
+      withOptions (fun options => options.setBool `pp.all true
+        |>.setBool `pp.privateNames true
+        |>.set `pp.maxSteps (10000000 : Nat)
+        |>.set `maxRecDepth (10000 : Nat)) do
+        return (← Meta.ppExpr info.type).pretty 120
+    if fullType.contains '⋯' then
+      throwError "Pretty printer omitted part of a type: {name}"
+    IO.println <| "AUDIT_DECL " ++ (Json.mkObj [
+      ("name", toJson name.toString),
+      ("module", toJson importedModules[idx.toNat]!.toString),
+      ("kind", toJson <| auditKind info),
+      ("type_hash", toJson <| toString info.type.hash),
+      ("body_hash", toJson <| (info.value? (allowOpaque := true)).map (toString ∘ Expr.hash)),
+      ("foreign_namespace", toJson foreignNamespace),
+      ("private", toJson <| isPrivateName name),
+      ("unsafe", toJson info.isUnsafe), ("partial", toJson info.isPartial),
+      ("universe_parameters", toJson <| info.levelParams.map Name.toString),
+      ("type", toJson fullType),
+      ("axioms", toJson <| axioms.map Name.toString)]).compress
+    if foreignNamespace then
+      let bodyText ← liftTermElabM do
+        withOptions (fun options => options.setBool `pp.all true
+          |>.setBool `pp.privateNames true |>.set `pp.maxSteps (10000000 : Nat)
+          |>.set `maxRecDepth (10000 : Nat)) do
+          match info.value? (allowOpaque := true) with
+          | some body => return (← Meta.ppExpr body).pretty 120
+          | none => return "<no body>"
+      IO.println <| "AUDIT_FOREIGN_DECL " ++ (Json.mkObj [
+        ("name", toJson name.toString),
+        ("observed_owner", toJson importedModules[idx.toNat]!.toString),
+        ("kind", toJson <| auditKind info), ("type", toJson fullType),
+        ("body", toJson bodyText), ("type_hash", toJson <| toString info.type.hash),
+        ("body_hash", toJson <| (info.value? (allowOpaque := true)).map (toString ∘ Expr.hash)),
+        ("type_dependencies", toJson <| info.type.getUsedConstants.map Name.toString),
+        ("body_dependencies", toJson <| ((info.value? (allowOpaque := true)).map Expr.getUsedConstants
+          |>.getD #[]).map Name.toString),
+        ("axioms", toJson <| axioms.map Name.toString),
+        ("provider_status", toJson "pending independent root compatibility audit")]).compress
+    for axiomName in axioms do
+      unless allowedAxioms.contains axiomName do
+        failureCount := failureCount + 1
+        logError m!"Disallowed transitive axiom: {name} depends on {axiomName}"
+  if axiomCount != 0 then
+    throwError "Local library declares {axiomCount} new axioms."
+  if failureCount != 0 then
+    throwError "Axiom audit failed with {failureCount} disallowed dependencies."
+  if theoremCount == 0 then
+    throwError "No theorem declarations found; refusing an empty proof audit."
+  IO.println <| "AUDIT_SUMMARY " ++ (Json.mkObj [
+    ("modules", toJson ownedModules.size), ("declarations", toJson declarations.size),
+    ("theorems", toJson theoremCount), ("private_declarations", toJson privateCount),
+    ("compiler_auxiliaries_without_kernel_declarations", toJson codegenCount),
+    ("foreign_namespace_declarations_pending_root_review", toJson foreignCount),
+    ("local_axioms", toJson axiomCount), ("disallowed_dependencies", toJson failureCount),
+    ("allowed_axioms", toJson <| allowedAxioms.map Name.toString)]).compress
+  IO.println s!"AUDIT_OK modules={ownedModules.size} declarations={declarations.size} theorems={theoremCount} local_axioms={axiomCount} allowed=[propext, Classical.choice, Quot.sound]"

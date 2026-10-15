@@ -1,0 +1,17 @@
+{
+  "source": "original sibling release; read-only",
+  "path": "/Users/liuch/draft-pinkfold/complex-csp-decidability/ComplexCSP/Algebra/Theorem52Counterexample.lean",
+  "sha256": "3b44341268de76a3f858d2fcfc8b988c8d4d3c83c842c950b4520a9509d33eb8",
+  "observed_head": null,
+  "pinned_commit": "c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec",
+  "pinned_blob_available": false,
+  "matches_pinned_commit_blob": null,
+  "root_production_provider": false,
+  "compiled_in_current_root": false,
+  "endpoints": [
+    "ComplexCSP.Theorem52Counterexample.paperSimple_iff_simple",
+    "ComplexCSP.Theorem52Counterexample.printed_theorem_5_2_counterexample",
+    "ComplexCSP.Theorem52Counterexample.doubledUnary_first_value",
+    "ComplexCSP.Theorem52Counterexample.doubledUnary_second_value"
+  ]
+}

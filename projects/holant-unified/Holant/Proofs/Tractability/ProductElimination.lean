@@ -1,0 +1,1 @@
+../../../../tractable-core/Holant/Proofs/Tractability/ProductElimination.lean

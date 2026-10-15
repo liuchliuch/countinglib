@@ -1,0 +1,8 @@
+--- upstream/PaperProofs.lean
++++ Counting/MatchgateWidth/PaperProofs.lean
+@@ -1,4 +1,4 @@
+-import PaperStatements
++import Counting.MatchgateWidth.PaperStatements
+ 
+ /-! Proofs of the independently readable paper contracts. -/
+ namespace MatchgateWidth.Paper

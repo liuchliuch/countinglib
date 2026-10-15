@@ -1,0 +1,11 @@
+import Counting.Algorithm.VariableEliminationLayout
+
+#check Counting.Algorithm.VariableEliminationLayout.EnumerationSource.prepared_eq_enumerateValues
+#check Counting.Algorithm.VariableEliminationLayout.generateFinRange_values
+#check Counting.Algorithm.VariableEliminationLayout.generateFinRange_cost
+#check Counting.Algorithm.VariableEliminationLayout.TableLayout.index_eq_assignmentIndex
+#check Counting.Algorithm.VariableEliminationLayout.CachedTable.eval_eq_legacy
+#check Counting.Algorithm.VariableEliminationLayout.TableLayout.work_address
+#check Counting.Algorithm.VariableEliminationLayout.CachedTable.work_readFin
+#check Counting.Algorithm.VariableEliminationLayout.reads_prepareReadManyFin
+#check Counting.Algorithm.VariableEliminationLayout.evaluateFin_eq_partition

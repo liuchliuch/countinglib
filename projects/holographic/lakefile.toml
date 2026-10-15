@@ -1,0 +1,25 @@
+name = "countingHolographic"
+version = "0.1.0"
+defaultTargets = ["CountingHolographic"]
+weakLeanArgs = ["-M6000", "-j1"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "d13f23b723b8a846827a245b89c10fc7d3f11612"
+
+[[require]]
+name = "partitionSemantics"
+path = "../partition-semantics"
+
+[[require]]
+name = "holantUnified"
+path = "../holant-unified"
+
+[[lean_lib]]
+name = "CountingHolographic"
+roots = []
+globs = ["Counting.Algorithm.Holographic", "Counting.Algorithm.Holographic.+"]

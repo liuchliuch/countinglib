@@ -1,0 +1,567 @@
+{
+  "observed_at": "2026-10-13T10:25:29.096391+08:00",
+  "homepage": "https://liuchliuch.github.io/",
+  "scope": "Public repositories ending in -lean; source inventory only, not a proof or CI audit.",
+  "repositories": [
+    {
+      "name": "balanced-assortments-lean",
+      "html_url": "https://github.com/liuchliuch/balanced-assortments-lean",
+      "description": "Lean 4 formalization of Cardinality-Constrained Randomized Assortments with Balanced Market Share.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "91a85d2580c27e33cecd5365f6ae55d47952ce22",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/balanced-assortments-lean/91a85d2580c27e33cecd5365f6ae55d47952ce22/README.md",
+          "sha256": "27878efaa10a09cc1e253439932b43db3f3aa942912bf4496522a9fdc26c99f6"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/balanced-assortments-lean/91a85d2580c27e33cecd5365f6ae55d47952ce22/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/balanced-assortments-lean/91a85d2580c27e33cecd5365f6ae55d47952ce22/lakefile.toml",
+          "sha256": "8cd1c0888887a9277ee79e5c647062d1429ae334639c788b214a20c87ba36704"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/balanced-assortments-lean/91a85d2580c27e33cecd5365f6ae55d47952ce22/CITATION.cff",
+          "sha256": "7f26d5e32706286888b41732a94a73668419b405982793ff278318fa1cf8543c"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "combinatorial-contracts-lean",
+      "html_url": "https://github.com/liuchliuch/combinatorial-contracts-lean",
+      "description": "Lean 4 formalization of Approximating Combinatorial Contracts with Arbitrary Costs.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "cd407a5d3241674f575a3791cf288a99e41ec883",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/combinatorial-contracts-lean/cd407a5d3241674f575a3791cf288a99e41ec883/README.md",
+          "sha256": "fd74bed46e884da87de8d4d3fe0ce6d71e082c8d89e7958f84407468bdcf5d6b"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/combinatorial-contracts-lean/cd407a5d3241674f575a3791cf288a99e41ec883/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/combinatorial-contracts-lean/cd407a5d3241674f575a3791cf288a99e41ec883/lakefile.toml",
+          "sha256": "959e27bb1cc00485ad458b391309f43eb4c6b54f9fb51af10e2042fe96ae4328"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/combinatorial-contracts-lean/cd407a5d3241674f575a3791cf288a99e41ec883/CITATION.cff",
+          "sha256": "d7374b02962e9125cd7d795911ad882ba69f205158d59c11235c63f578d46e2a"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "complex-csp-decidability-lean",
+      "html_url": "https://github.com/liuchliuch/complex-csp-decidability-lean",
+      "description": "Lean 4 formalization of From Block Orthogonality to Decidability in Complex-Weighted Counting CSP.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/README.md",
+          "sha256": "6f7468d7a00596bab849b7d33338c0f11d085bf33a74fbdf9dd1d01140fcd319"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/lakefile.toml",
+          "sha256": "462e2f089db3cb43d0e63b8d0e2efca7bdc6a734a4d044fd10a5fb6a71f00220"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/CITATION.cff",
+          "sha256": "59b36b11c9140ffbbdcbe52c4f8e913d76e5f562f06e3d4b61466c70c6e5d130"
+        },
+        "ComplexCSP/Recognition/UniformComplexityClassification.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/ComplexCSP/Recognition/UniformComplexityClassification.lean",
+          "sha256": "54c3b7d519860ce56f8ccd647957ff3b9ff5c25870ec38a002bed432e317fc0a"
+        },
+        "ComplexCSP/Instances/OrderedInstances.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/complex-csp-decidability-lean/c454c2d6426cd8b9f9bcfd3e54bd69de1dcf48ec/ComplexCSP/Instances/OrderedInstances.lean",
+          "sha256": "29f5d26d1943b18c91a253281310f3be1f72d08e0c13fdd147326c9be9a0209a"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 3387,
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "exact-hill-shares-lean",
+      "html_url": "https://github.com/liuchliuch/exact-hill-shares-lean",
+      "description": "Lean 4 formalization of exact Hill shares and simultaneous allocation guarantees.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "74bfad51ca609d75933f1e26a78ad83aebd0b1cd",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/exact-hill-shares-lean/74bfad51ca609d75933f1e26a78ad83aebd0b1cd/README.md",
+          "sha256": "7ff844ecd922c9d8004fa9d910ff2cd657e584344e73b71df416b211532d7eaa"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/exact-hill-shares-lean/74bfad51ca609d75933f1e26a78ad83aebd0b1cd/lean-toolchain",
+          "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+        },
+        "lakefile.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/exact-hill-shares-lean/74bfad51ca609d75933f1e26a78ad83aebd0b1cd/lakefile.lean",
+          "sha256": "33e4ae0cfdf0059641a079dcc309555935fe9110e04da36a9e0da4791b8d68f9"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.19.0"
+    },
+    {
+      "name": "gaussian-pca-lean",
+      "html_url": "https://github.com/liuchliuch/gaussian-pca-lean",
+      "description": "Lean 4 formalization of a correlation-gap bound for nonlinear Gaussian PCA.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "a77f21806e4619ad92d620b3cb488e37b9c2fb11",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/gaussian-pca-lean/a77f21806e4619ad92d620b3cb488e37b9c2fb11/README.md",
+          "sha256": "423b8f8e87c5c841150815a6d745576fe039a0ecfbbef0f058045d3f5fa8a739"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/gaussian-pca-lean/a77f21806e4619ad92d620b3cb488e37b9c2fb11/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/gaussian-pca-lean/a77f21806e4619ad92d620b3cb488e37b9c2fb11/lakefile.toml",
+          "sha256": "09e4ecb4b9f547cfade775e95029f30a9a34332385d5622aa7dfe94acdeef759"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "gaussian-tilt-covariance-lean",
+      "html_url": "https://github.com/liuchliuch/gaussian-tilt-covariance-lean",
+      "description": "Lean 4 formalization of covariance inflation under Gaussian tilts.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "afc52309f9290901f3358e21c4d6b12817ac2f2d",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/gaussian-tilt-covariance-lean/afc52309f9290901f3358e21c4d6b12817ac2f2d/README.md",
+          "sha256": "02b2719ffe8faecb453234df39f58369c71f46d172b64b7428f0d8eea9f9ce11"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/gaussian-tilt-covariance-lean/afc52309f9290901f3358e21c4d6b12817ac2f2d/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/gaussian-tilt-covariance-lean/afc52309f9290901f3358e21c4d6b12817ac2f2d/lakefile.toml",
+          "sha256": "fc0028112b6064f93d44b555dc12385ae1e6b0c2648726453198ef724034a0ab"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "generalized-channel-stein-lean",
+      "html_url": "https://github.com/liuchliuch/generalized-channel-stein-lean",
+      "description": "Lean 4 formalization of A Generalized Stein Lemma for Quantum Channels (arXiv:2609.30762).",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "c6723bfe69c1888e9fff32ad252506c3dd646938",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/generalized-channel-stein-lean/c6723bfe69c1888e9fff32ad252506c3dd646938/README.md",
+          "sha256": "5310ce2c990fd9e359ce08a72ea07ae3da24d599a080e03964b547f6e36079a8"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/generalized-channel-stein-lean/c6723bfe69c1888e9fff32ad252506c3dd646938/lean-toolchain",
+          "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/generalized-channel-stein-lean/c6723bfe69c1888e9fff32ad252506c3dd646938/lakefile.toml",
+          "sha256": "d6a26aa43d7c5611a96c69bd4133655f744896f2d1708d6f467a45800bb123ca"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/generalized-channel-stein-lean/c6723bfe69c1888e9fff32ad252506c3dd646938/CITATION.cff",
+          "sha256": "2fa4da4f753fb136143ad81cb70c68d67f3f38bbea5b950d8418b39f7c3fa439"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.29.0-rc6"
+    },
+    {
+      "name": "hidden-circuits-lean",
+      "html_url": "https://github.com/liuchliuch/hidden-circuits-lean",
+      "description": "Lean 4 formalization of Hidden Circuits and Exact Counting in Ordered Graphs.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "23c04437804b4a8c2385d0970285ec2b851979ac",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/hidden-circuits-lean/23c04437804b4a8c2385d0970285ec2b851979ac/README.md",
+          "sha256": "dd1cb01763246605e347be80db9b221b079164995d07cd73e44aefecf2494846"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/hidden-circuits-lean/23c04437804b4a8c2385d0970285ec2b851979ac/lean-toolchain",
+          "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/hidden-circuits-lean/23c04437804b4a8c2385d0970285ec2b851979ac/lakefile.toml",
+          "sha256": "e0515f9ba6d21f6bab14e53a3787103067d2122cb5e488a5839b7f8f084cd3f4"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 1956,
+      "lean_toolchain": "leanprover/lean4:v4.29.0-rc6"
+    },
+    {
+      "name": "holant-binary-disequality-lean",
+      "html_url": "https://github.com/liuchliuch/holant-binary-disequality-lean",
+      "description": "Lean formalization of A Dichotomy for Complex Boolean Holant with Binary Disequality (paper 1), with the manuscript and official Comparator checks.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/README.md",
+          "sha256": "1f9dda2792823211b2196616f4d7cad55d7223f27d3f47fd95f7c14243f5730f"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/lean-toolchain",
+          "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/lakefile.toml",
+          "sha256": "ac0e802b5f50c6a04745e7d5e364c59b98c03f2c996ae2054503e4e7241cc78c"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/CITATION.cff",
+          "sha256": "fb9bd09774a30c02952511b5523434810f9387ec9311e518211c9a211a37aee6"
+        },
+        "Holant/Statements.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Statements.lean",
+          "sha256": "d7eb67ecde4a21425a4a7393b41b7a63f9ace3ed74da67fc793d80a330486f78"
+        },
+        "Holant/Complexity/WitnessCounting.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Complexity/WitnessCounting.lean",
+          "sha256": "650a128d94472e751a529bdbc39784adbe042659c31c0637bc5745bafdf963a3"
+        },
+        "Holant/Complexity/OracleMachine.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Complexity/OracleMachine.lean",
+          "sha256": "e9f7fabbf2b4a7f7ca3cb10f8f26b4fb4ce54236104c821602917ae968296634"
+        },
+        "Holant/Complexity/Encoding.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Complexity/Encoding.lean",
+          "sha256": "4a366ebe37966ce6ae788094bf793e6700e0593147b2495fb648da7e774a6068"
+        },
+        "docs/statements.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/docs/statements.md",
+          "sha256": "eb19944817555a127ac3932d520ee0ea435103a92a2f82acc073b43f8d1a189a"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 7119,
+      "lean_toolchain": "leanprover/lean4:v4.34.1"
+    },
+    {
+      "name": "holant-dichotomy-lean",
+      "html_url": "https://github.com/liuchliuch/holant-dichotomy-lean",
+      "description": "Lean formalization of the full complexity dichotomy for complex-valued Boolean Holant problems.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/README.md",
+          "sha256": "ff4aed3233f34e4c18164a3823cda6cb7548f3c2e27829125d02fc10bafa3b36"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/lean-toolchain",
+          "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/lakefile.toml",
+          "sha256": "8c85e1971b5088e7d4dd887f2108bfccaf5dfebdf553a12fe5c380cef757aa57"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/CITATION.cff",
+          "sha256": "f72783ea9a4edf4924f44c47d12d14b955db8e45be6643b9cec5475af19b5c56"
+        },
+        "Paper2/PublicNativeClassification.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Paper2/PublicNativeClassification.lean",
+          "sha256": "8d8583cc1a8e18edb5621ab3db726b28f4bb5597fc428fe11aa5e3427b243a73"
+        },
+        "Paper2/PublicDichotomy.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Paper2/PublicDichotomy.lean",
+          "sha256": "9ae7b3c79db068b8fb769f18493e267f17d7da33507165344d034563585f6b24"
+        },
+        "Paper2/PublicDichotomyComplete.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Paper2/PublicDichotomyComplete.lean",
+          "sha256": "fcd88b21268217fb6aa8b58de49b72f8682e46a8de4b631b761e97f352e461b6"
+        },
+        "docs/STATEMENTS.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/holant-dichotomy-lean/97731bce1618bef0d9ee7911b6ac8bc8698077b2/docs/STATEMENTS.md",
+          "sha256": "7a9c54aa27ba70080728617e521e881b871e6d25cf365632265898f018cfc4bd"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 8122,
+      "lean_toolchain": "leanprover/lean4:v4.34.1"
+    },
+    {
+      "name": "independent-set-discovery-lean",
+      "html_url": "https://github.com/liuchliuch/independent-set-discovery-lean",
+      "description": "Lean 4 formalization of independent set discovery on biclique-free graphs.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "3cbe6004157b38bb40b48116d89d88c80f66f3d7",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/independent-set-discovery-lean/3cbe6004157b38bb40b48116d89d88c80f66f3d7/README.md",
+          "sha256": "f527532632114771ba16c7d8a18fd08e9ad4f06440ed158ca5b6b07a4fc8a767"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/independent-set-discovery-lean/3cbe6004157b38bb40b48116d89d88c80f66f3d7/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/independent-set-discovery-lean/3cbe6004157b38bb40b48116d89d88c80f66f3d7/lakefile.toml",
+          "sha256": "6b4359210ea1c74230ce888a800fa3d5357493a605eba56c5eb9d41dbd15f6e5"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "matchgate-width-lean",
+      "html_url": "https://github.com/liuchliuch/matchgate-width-lean",
+      "description": "Lean 4 formalization of When Matchgate Base Collapse Fails: A Qutrit Trichotomy and Unbounded Exact Width.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "da4f3a7beda4651a615638c361927820035e83d9",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/matchgate-width-lean/da4f3a7beda4651a615638c361927820035e83d9/README.md",
+          "sha256": "e00d06cb70d42d49b0b5b7735fc27130387e181031722674a0b7f7e43839aa3a"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/matchgate-width-lean/da4f3a7beda4651a615638c361927820035e83d9/lean-toolchain",
+          "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/matchgate-width-lean/da4f3a7beda4651a615638c361927820035e83d9/lakefile.toml",
+          "sha256": "dfba95d68b1eb7e8bd7e74a8cf766d9fa1b7c50cdb0eaac88decd3d9d8a73db7"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/matchgate-width-lean/da4f3a7beda4651a615638c361927820035e83d9/CITATION.cff",
+          "sha256": "c3aaf5e6b6027839bc9cbbcc8e04b2302b901fde2ddf8d3de3458dc071f467e3"
+        },
+        "PaperStatements.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/matchgate-width-lean/da4f3a7beda4651a615638c361927820035e83d9/PaperStatements.lean",
+          "sha256": "de03b9d884e704b60061297742612c48ccbea38835172452774cbb4fca01f5f9"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 278,
+      "lean_toolchain": "leanprover/lean4:v4.34.1"
+    },
+    {
+      "name": "narrow-dnf-lean",
+      "html_url": "https://github.com/liuchliuch/narrow-dnf-lean",
+      "description": "Lean 4 formalization of Bounded Relative Boundary Implies Narrow DNF Approximation.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "dec03993281f4577eacd4d01a7d52751bb228175",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/narrow-dnf-lean/dec03993281f4577eacd4d01a7d52751bb228175/README.md",
+          "sha256": "fecae77f7e7b92fba6f1626e57084976e7f7a74761dd84ce60cfb4a611205ef6"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/narrow-dnf-lean/dec03993281f4577eacd4d01a7d52751bb228175/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/narrow-dnf-lean/dec03993281f4577eacd4d01a7d52751bb228175/lakefile.toml",
+          "sha256": "7fb1461117f56385f6f93e8b98f22774a642009e6dd99878f67d4d21d8627765"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/narrow-dnf-lean/dec03993281f4577eacd4d01a7d52751bb228175/CITATION.cff",
+          "sha256": "0ec211f36a672f67a0922588da477ce29aba2d9886a9d7b2937e304fc24595f5"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 59,
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "nonsemialgebraic-quantum-behaviors-lean",
+      "html_url": "https://github.com/liuchliuch/nonsemialgebraic-quantum-behaviors-lean",
+      "description": "Lean 4 formalization of Quantum Behaviors Are Not Semialgebraic (arXiv:2609.18865).",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "588200d050b52af8ce359a94bdf0d249b3cd136e",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/nonsemialgebraic-quantum-behaviors-lean/588200d050b52af8ce359a94bdf0d249b3cd136e/README.md",
+          "sha256": "c37f6b31850c2428d8bf5be43aa2c58cd04dd8e2251b320d901ce2cb6ea5ee4b"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/nonsemialgebraic-quantum-behaviors-lean/588200d050b52af8ce359a94bdf0d249b3cd136e/lean-toolchain",
+          "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/nonsemialgebraic-quantum-behaviors-lean/588200d050b52af8ce359a94bdf0d249b3cd136e/lakefile.toml",
+          "sha256": "08e9b8c6ab5cdd766b21e6d946bc8ee8ccf0bfe34106bcab724dc29b00148090"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/nonsemialgebraic-quantum-behaviors-lean/588200d050b52af8ce359a94bdf0d249b3cd136e/CITATION.cff",
+          "sha256": "a532f45e5e4d23f4f135e92cbf23457849ff9befe53a7fd38a68ea7252768cbd"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.29.0-rc6"
+    },
+    {
+      "name": "optimal-qls-lean",
+      "html_url": "https://github.com/liuchliuch/optimal-qls-lean",
+      "description": "Lean 4 formalization of “Simultaneously Query-Optimal Quantum Linear-System Algorithm” (arXiv:2609.33686).",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "d58a17e711352d8b223410b52cb0fbdeb5cb82e6",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/optimal-qls-lean/d58a17e711352d8b223410b52cb0fbdeb5cb82e6/README.md",
+          "sha256": "cc555854233b941ccfffedb94cacd7be5ca0514566d2cf21a1150c6d39f0508e"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/optimal-qls-lean/d58a17e711352d8b223410b52cb0fbdeb5cb82e6/lean-toolchain",
+          "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/optimal-qls-lean/d58a17e711352d8b223410b52cb0fbdeb5cb82e6/lakefile.toml",
+          "sha256": "bcf52a5ce595fcfd827d3f055a3a05f2b8cea4262db0b5fbf0b582ee45ba4e08"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/optimal-qls-lean/d58a17e711352d8b223410b52cb0fbdeb5cb82e6/CITATION.cff",
+          "sha256": "fe809e5ba9d99c3e0f8d502a75359b29bcc8b395d968f2b77ef7becd8720d198"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.29.0-rc6"
+    },
+    {
+      "name": "planar-homomorphisms-lean",
+      "html_url": "https://github.com/liuchliuch/planar-homomorphisms-lean",
+      "description": "Lean 4 formalization of A Dichotomy for Planar Graph Homomorphisms with Nonnegative Weights.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/README.md",
+          "sha256": "b7dfbbd0d98ad5db9202784263fe1ef7f238ea656adf4c96adb28f56cfb3934a"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/lakefile.toml",
+          "sha256": "8e173b91a9cdb227460443f82412e70d8b4cc0b12ae453acb3df045ea300ba78"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/CITATION.cff",
+          "sha256": "7528f63361344424b4eee6f305c48ff6559d4a7747d5d21bd7b0aa23fc68571b"
+        },
+        "PlanarHom/Complexity.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/Complexity.lean",
+          "sha256": "889aef0247e5c21096c3c3b377a09561940cce8482e3ca7c4e4adafb4033b616"
+        },
+        "PlanarHom/OracleReductionComposition.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/OracleReductionComposition.lean",
+          "sha256": "8d3227e205c853bb3e8e7073db49c9a09f42f2366a4b7153e55fd17d6eee4d61"
+        },
+        "PlanarHom/EncodingSizeBounds.lean": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/planar-homomorphisms-lean/db68e745380769c38c8347736d2d84fcde38263c/PlanarHom/EncodingSizeBounds.lean",
+          "sha256": "387f383d5d5ec57a9cf25eea0ff5a3651cc74a96be47c182dded12b754245d1f"
+        }
+      },
+      "tree_truncated": false,
+      "lean_file_count": 4231,
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    },
+    {
+      "name": "quantum-channel-stein-lean",
+      "html_url": "https://github.com/liuchliuch/quantum-channel-stein-lean",
+      "description": "Lean 4 formalization of Quantum Channel Stein's Lemma with an Exponential Strong Converse (arXiv:2609.27196).",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "2c1e4d14a29bdf005a5cf7dea133dc93c8eddca3",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/quantum-channel-stein-lean/2c1e4d14a29bdf005a5cf7dea133dc93c8eddca3/README.md",
+          "sha256": "dec0fa7f68b46b95c147b03d2b36d1f755b8b7a238546027f7454ead0083d0c8"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/quantum-channel-stein-lean/2c1e4d14a29bdf005a5cf7dea133dc93c8eddca3/lean-toolchain",
+          "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/quantum-channel-stein-lean/2c1e4d14a29bdf005a5cf7dea133dc93c8eddca3/lakefile.toml",
+          "sha256": "461b517779bdc9031aa7c0f712340e857e429f4bd0ad1f5f8c377dbe217e7c4d"
+        },
+        "CITATION.cff": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/quantum-channel-stein-lean/2c1e4d14a29bdf005a5cf7dea133dc93c8eddca3/CITATION.cff",
+          "sha256": "222293c14c1509835c3b0e627bdf638138ea45cc27859e9ddcc29dd84809db10"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.29.0-rc6"
+    },
+    {
+      "name": "rankwidth-domination-lean",
+      "html_url": "https://github.com/liuchliuch/rankwidth-domination-lean",
+      "description": "Lean 4 formalization of domination lower bounds parameterized by rank-width.",
+      "default_branch": "main",
+      "fork": false,
+      "commit": "5464c780568ec9a85f343ef5e76906b4435a337d",
+      "license": null,
+      "files": {
+        "README.md": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/rankwidth-domination-lean/5464c780568ec9a85f343ef5e76906b4435a337d/README.md",
+          "sha256": "98f89497159c080ef6abadcccd1035588f5aa56bf3f257e1e7f77c0fe783497e"
+        },
+        "lean-toolchain": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/rankwidth-domination-lean/5464c780568ec9a85f343ef5e76906b4435a337d/lean-toolchain",
+          "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+        },
+        "lakefile.toml": {
+          "url": "https://raw.githubusercontent.com/liuchliuch/rankwidth-domination-lean/5464c780568ec9a85f343ef5e76906b4435a337d/lakefile.toml",
+          "sha256": "ff24d2c6cdd3a80cb202d8ffebcc7f6401cbee4aa5929aa34e0bc7e275a612be"
+        }
+      },
+      "lean_toolchain": "leanprover/lean4:v4.24.0"
+    }
+  ],
+  "source_metrics": {
+    "holant_shared_paths": 6429,
+    "holant_identical_blobs": 6350,
+    "holant_different_blobs": 79,
+    "csp_vendor_lean_files": 3018
+  }
+}

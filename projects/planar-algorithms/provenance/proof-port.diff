@@ -1,0 +1,1888 @@
+--- provenance/upstream/PlanarHom/ContextNatSortCorrectness.lean
++++ PlanarHom/ContextNatSortCorrectness.lean
+@@ -64,9 +64,8 @@
+     (hanti : ∀a b,cmp c a b=true→cmp c b a=true→a=b) (xs : List ℕ) :
+     sort cmp c xs=xs.mergeSort (cmp c) := by
+   let r : ℕ→ℕ→Prop:=fun a b=>cmp c a b=true
+-  letI : IsAntisymm ℕ r := ⟨hanti⟩
+   have hp:=(sort_perm cmp c xs).trans (List.mergeSort_perm xs (cmp c)).symm
+-  exact List.eq_of_perm_of_sorted (r:=r) hp
+-    (fold_sorted cmp c ht htrans xs [] (by simp)) (List.sorted_mergeSort htrans ht xs)
++  exact List.Perm.eq_of_pairwise (le := r) (fun a b _ _ => hanti a b)
++    (fold_sorted cmp c ht htrans xs [] (by simp)) (List.pairwise_mergeSort htrans ht xs) hp
+ 
+ end PlanarHom.ContextNatSortMachines
+--- provenance/upstream/PlanarHom/FiniteGraphCycleDuality.lean
++++ PlanarHom/FiniteGraphCycleDuality.lean
+@@ -121,6 +121,6 @@
+   have hh := congrFun hf e
+   change (D.coboundaryMatrix K).mulVec f e=cycle e at hh
+   rw [D.coboundaryMatrix_apply] at hh
+-  exact (by linear_combination hh)
++  simpa only [sub_sub_sub_cancel_right] using hh
+ 
+ end PlanarHom.MultiGraph
+--- provenance/upstream/PlanarHom/FinitePermutationCycleWords.lean
++++ PlanarHom/FinitePermutationCycleWords.lean
+@@ -51,7 +51,6 @@
+     (∏b : {b : A // classOf P b=classOf P a},w b.val)=((cycleWord P a).map w).prod := by
+   rw [←(cycleFiberEquiv P a).prod_comp (fun b => w b.val)]
+   have h := congrArg (fun xs : List A => (xs.map w).prod) (List.ofFn_get (cycleWord P a))
+-  dsimp only at h
+   rw [List.map_ofFn,List.prod_ofFn] at h
+   exact h
+ 
+--- provenance/upstream/PlanarHom/FinitePermutationFixedMarkers.lean
++++ PlanarHom/FinitePermutationFixedMarkers.lean
+@@ -40,7 +40,7 @@
+     (visibleWord xs).map Sum.inl=xs.filter Sum.isLeft := by
+   induction xs with
+   | nil => rfl
+-  | cons x xs ih => cases x <;> simp_all [visibleWord]
++  | cons x xs ih => cases x <;> simp_all [visibleWord,List.filter_cons,List.filterMap_cons,Sum.isLeft,Sum.getLeft?]
+ 
+  theorem visibleWord_nodup {M : Type*} {xs : List (A ⊕ M)} (hn : xs.Nodup) :
+     (visibleWord xs).Nodup := by
+@@ -57,7 +57,7 @@
+     visibleWord (xs.map (Equiv.sumCongr (Equiv.refl A) e))=visibleWord xs := by
+   induction xs with
+   | nil => rfl
+-  | cons x xs ih => cases x <;> simp_all [visibleWord]
++  | cons x xs ih => cases x <;> simp_all [visibleWord,List.filter_cons,List.filterMap_cons,Sum.isLeft,Sum.getLeft?]
+ 
+  def optionMarkerEquiv (A M : Type*) : ((A ⊕ M) ⊕ Unit) ≃ A ⊕ Option M where
+   toFun
+@@ -80,7 +80,7 @@
+   induction xs with
+   | nil => rfl
+   | cons x xs ih =>
+-      rcases x with a | (_ | m) <;> simp_all [visibleWord,eraseRight,optionMarkerEquiv]
++      rcases x with a | (_ | m) <;> simp_all [visibleWord,eraseRight,optionMarkerEquiv,List.filterMap_cons,Sum.getLeft?]
+ 
+  theorem count_erase_fixed_markers [Finite A] [Nonempty A] [DecidableEq A]
+     (M : Type w) [Finite M] (I : Equiv.Perm A)
+@@ -129,7 +129,7 @@
+       | nil => rfl
+       | cons x xs ih =>
+           rcases x with a | m
+-          · simpa only [List.map_cons,visibleWord,List.filterMap_cons,Sum.getLeft?_inl] using congrArg (List.cons a) ih
++          · simpa only [E,Equiv.sumEmpty_apply_inl,List.map_cons,visibleWord,List.filterMap_cons,Sum.getLeft?_inl] using congrArg (List.cons a) ih
+           · exact m.elim
+     rw [hw] at ht
+     simpa only [formPerm_eq_classical] using ht.symm
+--- provenance/upstream/PlanarHom/FisherCubicCodeSemantics.lean
++++ PlanarHom/FisherCubicCodeSemantics.lean
+@@ -53,7 +53,7 @@
+     ((List.finRange g.edges.length).map Sum.inl).map (edgeEntry g hg hc)=externalEdges g := by
+   rw [List.map_map]
+   unfold externalEdges
+-  rw [←List.map_coe_finRange g.edges.length,List.map_map]
++  rw [←List.map_coe_finRange_eq_range (n := g.edges.length),List.map_map]
+   apply List.map_congr_left
+   intro e he
+   exact edgeEntry_external g hg hc e
+@@ -62,10 +62,10 @@
+     ((vertexList g).map Sum.inr).map (edgeEntry g hg hc)=internalEdges g := by
+   simp only [vertexList,List.map_map,SProd.sprod,List.product,List.map_flatMap]
+   unfold internalEdges
+-  rw [←List.map_coe_finRange g.vertices,List.flatMap_map]
++  rw [←List.map_coe_finRange_eq_range (n := g.vertices),List.flatMap_map]
+   congr 1
+   funext v
+-  rw [←List.map_coe_finRange 3,List.map_map]
++  rw [←List.map_coe_finRange_eq_range (n := 3),List.map_map]
+   apply List.map_congr_left
+   intro i hi
+   exact edgeEntry_internal g hg hc (v,i)
+--- provenance/upstream/PlanarHom/FisherCubicCodeSignSemantics.lean
++++ PlanarHom/FisherCubicCodeSignSemantics.lean
+@@ -40,7 +40,7 @@
+   simp_rw [Finset.prod_image (referenceEdge_injective g hg hc).injOn]
+   simp_rw [crossing_reference g hg hc,canonicalSign_reference g hg hc]
+   unfold referenceSign
+-  rw [←List.map_coe_finRange g.edges.length]
++  rw [←List.map_coe_finRange_eq_range (n := g.edges.length)]
+   simp only [List.map_map,List.flatMap_map,Function.comp_def,List.flatMap_def,List.prod_flatten,List.map_map]
+   simp only [Function.comp_def,←Fin.prod_univ_def]
+   exact mul_comm _ _
+--- provenance/upstream/PlanarHom/FisherCubicDecoration.lean
++++ PlanarHom/FisherCubicDecoration.lean
+@@ -81,7 +81,7 @@
+   simp [MultiGraph.selectedDegree]
+   apply Finset.sum_congr rfl
+   intro e _
+-  apply congrArg₂ Nat.add <;> split_ifs <;> rfl
++  apply congrArg₂ Nat.add <;> split_ifs <;> simp_all
+ 
+ /-- Local incidence constraints are exactly the perfect-matching constraints
+ of the constructed graph. -/
+@@ -98,11 +98,11 @@
+       · convert external_degree p B (v, i) using 1
+         apply Finset.sum_congr rfl
+         intro e _
+-        apply congrArg₂ Nat.add <;> split_ifs <;> rfl
++        apply congrArg₂ Nat.add <;> split_ifs <;> simp_all
+       · convert internal_degree m v i using 1
+         apply Finset.sum_congr rfl
+         intro e _
+-        apply congrArg₂ Nat.add <;> split_ifs <;> rfl
++        apply congrArg₂ Nat.add <;> split_ifs <;> simp_all
+     _ = _ := by simp [selectedPorts]
+ 
+ theorem decorated_perfectMatching_iff [Fintype V]
+--- provenance/upstream/PlanarHom/FisherCubicOrdering.lean
++++ PlanarHom/FisherCubicOrdering.lean
+@@ -65,7 +65,8 @@
+  theorem ordering_degree (v : Fin g.vertices) :
+     (ordering g hg).degree v=(row g v.val).length := by
+   have hh:=congrArg List.length (typedRow_erase g hg v)
+-  simpa [ordering] using hh
++  change (typedRow g hg v).length = (row g v.val).length
++  simpa only [List.length_map] using hh
+ 
+  def ports (hc : ∀v,(g.toMultiGraph hg).selectedDegree Finset.univ v=3) :
+     (Fin g.vertices×Fin 3)≃(Fin g.edges.length×Bool) :=
+--- provenance/upstream/PlanarHom/FisherCubicPortIndices.lean
++++ PlanarHom/FisherCubicPortIndices.lean
+@@ -37,7 +37,7 @@
+   have hlt:i.val<(row g v.val).length:=by rw [hn]; exact i.isLt
+   have hi' : @List.idxOf _ instBEqOfDecidableEq (eraseDart (ports g hg hc (v,i))) (row g v.val)=i.val := by
+     simpa only [List.idxOf,Lean.Grind.beq_eq_decide_eq] using hi
+-  have hget:=List.getElem_idxOf (hi' ▸ hlt)
++  have hget := @List.getElem_idxOf _ instBEqOfDecidableEq _ _ _ (hi' ▸ hlt)
+   simpa [List.getD_eq_getElem?_getD,hlt,hi'] using hget
+ 
+  theorem portNumber_inverse (a : Fin g.edges.length×Bool) :
+--- provenance/upstream/PlanarHom/FisherCubicReferenceMatching.lean
++++ PlanarHom/FisherCubicReferenceMatching.lean
+@@ -36,13 +36,15 @@
+       simpa only [List.idxOf,Lean.Grind.beq_eq_decide_eq] using hh
+     _ = e.val := List.idxOf_finRange e
+ 
++set_option backward.isDefEq.respectTransparency false in
+  theorem incidenceEquiv_vertex_val (v : Fin g.vertices×Fin 3) :
+     ((incidenceEquiv g hg hc).vertex v).val=3*v.1.val+v.2.val := by
+   change ((codeIncidenceEquiv (enumeratedCode_eq g hg hc) _ _).vertex
+     ((enumeratedIncidenceEquiv _ _ _ _ _ _ _).vertex v)).val=_
+   rw [codeIncidenceEquiv_vertex_val]
+-  have hh:=vertexList_index g v
+-  simpa [enumeratedIncidenceEquiv,List.Nodup.getEquivOfForallMemList,List.idxOf,Lean.Grind.beq_eq_decide_eq] using hh
++  simp only [enumeratedIncidenceEquiv,enumeratedCode,List.Nodup.getEquivOfForallMemList,
++    Equiv.coe_fn_symm_mk]
++  simpa only [List.idxOf,Lean.Grind.beq_eq_decide_eq] using vertexList_index g v
+ 
+  theorem referenceEdge_src (e : Fin g.edges.length) :
+     (((code g).toMultiGraph (valid g hg hc)).src (referenceEdge g hg hc e)).val=portNumber g (e.val,false) := by
+--- provenance/upstream/PlanarHom/FisherCubicRowSemantics.lean
++++ PlanarHom/FisherCubicRowSemantics.lean
+@@ -66,7 +66,8 @@
+       (PlanarityLRDirect.rowNext (rows.getD q.1.val []).reverse (eraseDart a)))=k.val := by
+     rw [hprev]
+     exact hk
+-  rw [RotationRows.redecidable_row,Fisher.cubicInheritedRows_row]
++  rw [RotationRows.redecidable_row]
++  rw [Fisher.cubicInheritedRows_row (FisherCubicCode.ports g hg hc) R q]
+   rw [cubicRow,FisherCubicCode.incidenceEquiv_vertex_val]
+   have hdiv:(3*q.1.val+q.2.val)/3=q.1.val:=by omega
+   have hmod:(3*q.1.val+q.2.val)%3=q.2.val:=by omega
+--- provenance/upstream/PlanarHom/FisherCubicWeightSemantics.lean
++++ PlanarHom/FisherCubicWeightSemantics.lean
+@@ -31,10 +31,10 @@
+   apply congrArg₂ List.append
+   · simp only [typedWeight,Function.comp_def,Sum.elim_inl,List.map_const',List.length_range,List.length_finRange]
+   · simp only [vertexList,SProd.sprod,List.product,List.map_flatMap,List.map_map]
+-    rw [←List.map_coe_finRange g.vertices,List.flatMap_map]
++    rw [←List.map_coe_finRange_eq_range (n := g.vertices),List.flatMap_map]
+     congr 1
+     funext v
+-    rw [←List.map_coe_finRange 3,List.map_map]
++    rw [←List.map_coe_finRange_eq_range (n := 3),List.map_map]
+     apply List.map_congr_left
+     intro i hi
+     dsimp only [Function.comp_def,typedWeight,Sum.elim_inr]
+@@ -59,7 +59,7 @@
+     | inl e => simp [typedWeight,cubicPolynomialWeight]
+     | inr q =>
+         simp only [typedWeight,cubicPolynomialWeight,Sum.elim_inr,map_mul,portWeight,Fisher.portWeight,eraseDart]
+-        split_ifs <;> simp
++        split_ifs <;> simp_all [apply_ite, mul_ite, ite_mul]
+   rw [hw,←cubic_fisher_polynomial,cubicOriginal_ports]
+ 
+ end PlanarHom.FisherCubicCode
+--- provenance/upstream/PlanarHom/FisherExpansionCodeSemantics.lean
++++ PlanarHom/FisherExpansionCodeSemantics.lean
+@@ -33,7 +33,7 @@
+     ((List.finRange g.edges.length).map Sum.inl).map (edgeEntry g hg o)=externalEdges g rows := by
+   rw [List.map_map]
+   unfold externalEdges
+-  rw [←List.map_coe_finRange g.edges.length,List.map_map]
++  rw [←List.map_coe_finRange_eq_range (n := g.edges.length),List.map_map]
+   apply List.map_congr_left
+   intro e he
+   exact edgeEntry_external g hg o hr e
+@@ -46,14 +46,14 @@
+   unfold localEdges
+   rw [←hr.degree_eq g hg v]
+   dsimp only
+-  rw [←List.map_coe_finRange (o.degree v+1),List.map_map]
++  rw [←List.map_coe_finRange_eq_range (n := (o.degree v+1)),List.map_map]
+   rfl
+ 
+  theorem internalEdgeList_map :
+     (internalEdgeList g hg o).map (fun e=>edgeEntry g hg o (Sum.inr e))=internalEdges g rows := by
+   simp only [internalEdgeList,sigmaList,List.map_flatMap,List.map_map,Function.comp_def]
+   unfold internalEdges
+-  rw [←List.map_coe_finRange g.vertices,List.flatMap_map]
++  rw [←List.map_coe_finRange_eq_range (n := g.vertices),List.flatMap_map]
+   congr 1
+   funext v
+   exact localEdgeList_map g hg o hr v
+--- provenance/upstream/PlanarHom/FisherExpansionEnumeration.lean
++++ PlanarHom/FisherExpansionEnumeration.lean
+@@ -26,10 +26,10 @@
+  theorem vertexList_erase {rows : Rows} (hr : FisherContourOrder.Realizes g hg rows o) :
+     (vertexList g hg o).map (eraseVertex g hg o)=vertexSlots g rows := by
+   simp only [vertexList,finSigma,sigmaList,List.map_flatMap,List.map_map,Function.comp_def,eraseVertex,vertexSlots]
+-  rw [←List.map_coe_finRange g.vertices,List.flatMap_map]
++  rw [←List.map_coe_finRange_eq_range (n := g.vertices),List.flatMap_map]
+   congr 1
+   funext v
+-  rw [←hr.degree_eq g hg v,←List.map_coe_finRange (o.degree v+2),List.map_map]
++  rw [←hr.degree_eq g hg v,←List.map_coe_finRange_eq_range (n := (o.degree v+2)),List.map_map]
+   rfl
+ 
+  theorem vertexNumber_eq {rows : Rows} (hr : FisherContourOrder.Realizes g hg rows o)
+--- provenance/upstream/PlanarHom/FisherExpansionGraph.lean
++++ PlanarHom/FisherExpansionGraph.lean
+@@ -87,15 +87,16 @@
+   · unfold originalContribution
+     apply Finset.sum_congr rfl
+     intro e _
+-    apply congrArg₂ Nat.add <;> split_ifs <;> rfl
++    apply congrArg₂ Nat.add <;> split_ifs <;> simp_all
+   · simp only [expansionInternalSet, Finset.sum_filter, Fintype.sum_sigma]
+     rw [Finset.sum_eq_single v]
+     · simp only [Sigma.mk.inj_iff, true_and, heq_eq_eq]
+       rw [← Finset.sum_filter]
+-      simp
+-      apply Finset.sum_congr rfl
+-      intro e _
+-      apply congrArg₂ Nat.add <;> split_ifs <;> rfl
++      apply Finset.sum_congr
++      · ext a
++        simp only [Finset.mem_filter, Finset.mem_univ, true_and]
++      · intro e _
++        apply congrArg₂ Nat.add <;> split_ifs <;> simp_all
+     · intro u _ huv
+       apply Finset.sum_eq_zero
+       intro e _
+--- provenance/upstream/PlanarHom/FisherExpansionPlanarity.lean
++++ PlanarHom/FisherExpansionPlanarity.lean
+@@ -5,6 +5,7 @@
+ /-! Reconstructing the cubic expansion by proved planar leaf and loop attachments. -/
+ noncomputable section
+ open Classical
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace PlanarHom.Fisher
+ open MultiGraph
+@@ -221,7 +222,7 @@
+       · simp only [expansionEdgeEquiv, Equiv.coe_fn_mk, expansionEdgeMap, Sum.elim_inl,
+           Sum.elim_inr, hb, ↓reduceIte, expansionGraph, localExpansion,
+           attachedExpansion, addLeaves, addIndexedLoops, expansionVertexEquiv]
+-        simpa [hb] using (expansionVertexMap_leafRoot o p).symm
++        simpa [hb,Fin.castSucc,Fin.last] using (expansionVertexMap_leafRoot o p).symm
+     · exact (expansionVertexMap_loopRoot o (v,b)).symm
+   dst_eq := by
+     rintro (((e | ⟨v,k⟩) | p) | ⟨v,b⟩)
+@@ -231,7 +232,7 @@
+       · simp only [expansionEdgeEquiv, Equiv.coe_fn_mk, expansionEdgeMap, Sum.elim_inl,
+           Sum.elim_inr, hb, ↓reduceIte, expansionGraph, localExpansion,
+           attachedExpansion, addLeaves, addIndexedLoops, expansionVertexEquiv]
+-        simpa [hb] using (expansionVertexMap_leafRoot o p).symm
++        simpa [hb,Fin.castSucc,Fin.last] using (expansionVertexMap_leafRoot o p).symm
+       · simp [expansionEdgeEquiv, expansionEdgeMap, expansionVertexEquiv, expansionVertexMap,
+           attachedExpansion, addLeaves, addIndexedLoops, expansionGraph, localExpansion,
+           pathLoopVertex, hb]
+--- provenance/upstream/PlanarHom/FisherExpansionPortIndices.lean
++++ PlanarHom/FisherExpansionPortIndices.lean
+@@ -16,8 +16,8 @@
+     have he:=o.darts.injective (eraseDart_injective g h)
+     exact eq_of_heq (Sigma.mk.inj_iff.mp he).2
+   rw [List.map_ofFn]
+-  have hh:=List.idxOf_getElem (List.nodup_ofFn.mpr hinj) i.val (by simpa using i.isLt)
+-  simpa only [List.getElem_ofFn,Function.comp_apply,List.idxOf,Lean.Grind.beq_eq_decide_eq] using hh
++  have hh:=List.Nodup.idxOf_getElem (List.nodup_ofFn.mpr hinj) i.val (by simpa using i.isLt)
++  simpa only [List.getElem_ofFn,Function.comp_def,Fin.eta,List.idxOf,Lean.Grind.beq_eq_decide_eq] using hh
+ 
+  theorem endpoint_erase (a : Fin g.edges.length×Bool) :
+     FisherExpansionCode.endpoint g (eraseDart a)=((g.toMultiGraph hg).dartVertex a).val := by
+@@ -44,6 +44,7 @@
+   let q:=o.darts.symm a
+   have ha:o.darts q=a:=o.darts.apply_symm_apply a
+   rw [←ha,hr.portNumber_darts g hg q.1 q.2]
+-  simpa only [Equiv.symm_apply_apply] using vertexNumber_eq g hg o hr (portVertex o q)
++  rw [o.darts.symm_apply_apply q]
++  exact vertexNumber_eq g hg o hr (portVertex o q)
+ 
+ end PlanarHom.FisherExpansionCode
+--- provenance/upstream/PlanarHom/FisherExpansionRowAddresses.lean
++++ PlanarHom/FisherExpansionRowAddresses.lean
+@@ -57,14 +57,14 @@
+     (internalEdgeList g hg o).map (internalSlot g hg o)=FisherInheritedRowCode.edgeSlots g rows := by
+   simp only [internalEdgeList,sigmaList,List.map_flatMap,List.map_map,Function.comp_def]
+   unfold FisherInheritedRowCode.edgeSlots
+-  rw [←List.map_coe_finRange g.vertices,List.flatMap_map]
++  rw [←List.map_coe_finRange_eq_range (n := g.vertices),List.flatMap_map]
+   congr 1
+   funext v
+   rw [←hr.degree_eq g hg v]
+   simp only [localEdgeList,List.map_append,List.map_map,List.map_cons,List.map_nil,internalSlot,
+     Function.comp_def,Sum.elim_inl,Sum.elim_inr,Bool.false_eq_true,if_false,if_true]
+   rw [show o.degree v+3=(o.degree v+1)+1+1 by omega,List.range_succ,List.range_succ,List.map_append,List.map_append]
+-  rw [←List.map_coe_finRange (o.degree v+1),List.map_map]
++  rw [←List.map_coe_finRange_eq_range (n := (o.degree v+1)),List.map_map]
+   simp only [List.map_singleton,List.append_assoc,List.singleton_append]
+   rfl
+ 
+--- provenance/upstream/PlanarHom/FisherExpansionRowSemantics.lean
++++ PlanarHom/FisherExpansionRowSemantics.lean
+@@ -21,7 +21,7 @@
+     rw [←FisherExpansionCode.vertexList_erase g hg o hr]
+     exact List.mem_map.mpr ⟨q,FisherExpansionCode.vertexList_mem g hg o q,rfl⟩
+   have hh:=getD_map_idxOf (FisherExpansionCode.vertexSlots g rows) id (q.1.val,q.2.val) hm (0,0)
+-  simpa only [FisherExpansionCode.vertexNumber,List.map_id,List.idxOf,Lean.Grind.beq_eq_decide_eq] using hh
++  simpa only [FisherExpansionCode.vertexNumber,List.map_id,id_eq,List.idxOf,Lean.Grind.beq_eq_decide_eq] using hh
+ 
+ include hr in
+  theorem row_get (v : Fin g.vertices) (i : Fin (o.degree v)) :
+--- provenance/upstream/PlanarHom/FisherExpansionWeightSemantics.lean
++++ PlanarHom/FisherExpansionWeightSemantics.lean
+@@ -36,7 +36,7 @@
+   unfold weights edgeList
+   rw [List.map_append,List.map_map,List.map_map]
+   apply congrArg₂ List.append
+-  · rw [←List.map_coe_finRange g.edges.length,List.map_map]
++  · rw [←List.map_coe_finRange_eq_range (n := g.edges.length),List.map_map]
+     rfl
+   · have hl:=congrArg List.length (internalEdgeList_map g hg o hr)
+     simp only [List.length_map] at hl
+--- provenance/upstream/PlanarHom/FisherNumericEnumeration.lean
++++ PlanarHom/FisherNumericEnumeration.lean
+@@ -21,6 +21,7 @@
+     exact ⟨List.idxOf_lt_length_iff.mpr (hvs _),List.idxOf_lt_length_iff.mpr (hvs _),by dsimp; omega⟩
+   · simp [enumeratedCode]
+ 
++set_option backward.isDefEq.respectTransparency false in
+  def enumeratedIncidenceEquiv (G : MultiGraph V E) (vs : List V) (es : List E)
+     (hv : vs.Nodup) (he : es.Nodup) (hvs : ∀v,v∈vs) (hes : ∀e,e∈es) :
+     IncidenceEquiv G ((enumeratedCode G vs es).toMultiGraph (enumerated_valid G vs es hvs)) where
+@@ -28,10 +29,18 @@
+   edge := ((he.getEquivOfForallMemList es hes).symm).trans (finCongr (by simp [enumeratedCode]))
+   src_eq e := by
+     apply Fin.ext
+-    simp [MixedCode.toMultiGraph,enumeratedCode,List.get_eq_getElem,List.getElem_idxOf,List.Nodup.getEquivOfForallMemList]
++    dsimp only [MixedCode.toMultiGraph, enumeratedCode]
++    rw [List.get_eq_getElem, List.getElem_map]
++    change vs.idxOf (G.src (es[es.idxOf e]'(List.idxOf_lt_length_of_mem (hes e)))) =
++      vs.idxOf (G.src e)
++    rw [List.getElem_idxOf]
+   dst_eq e := by
+     apply Fin.ext
+-    simp [MixedCode.toMultiGraph,enumeratedCode,List.get_eq_getElem,List.getElem_idxOf,List.Nodup.getEquivOfForallMemList]
++    dsimp only [MixedCode.toMultiGraph, enumeratedCode]
++    rw [List.get_eq_getElem, List.getElem_map]
++    change vs.idxOf (G.dst (es[es.idxOf e]'(List.idxOf_lt_length_of_mem (hes e)))) =
++      vs.idxOf (G.dst e)
++    rw [List.getElem_idxOf]
+ 
+  def sigmaList {A : Type} {B : A→Type} (as : List A) (bs : ∀a,List (B a)) : List (Sigma B) :=
+   as.flatMap (fun a=>(bs a).map (Sigma.mk a))
+@@ -101,7 +110,7 @@
+         have hm:(a,b)∈ys.map (Prod.mk a):=List.mem_map.mpr ⟨b,hb,rfl⟩
+         rw [if_pos hm]
+         simp only [List.idxOf_cons,beq_self_eq_true,Bool.cond_true,zero_mul,zero_add]
+-        simpa only [List.idxOf,Lean.Grind.beq_eq_decide_eq] using
++        simpa only [List.idxOf,Lean.Grind.beq_eq_decide_eq,ite_true,zero_mul,zero_add] using
+           idxOf_map_injective (Prod.mk a) (fun _ _ h=>congrArg Prod.snd h) ys b
+       · have hm:(a,b)∉ys.map (Prod.mk x):=by
+           intro h
+--- provenance/upstream/PlanarHom/FisherNumericInheritedEuler.lean
++++ PlanarHom/FisherNumericInheritedEuler.lean
+@@ -9,6 +9,7 @@
+ and its realized inherited rows, from ordinary original-input planarity. -/
+ noncomputable section
+ set_option maxHeartbeats 1200000
++set_option backward.isDefEq.respectTransparency false
+ open Classical
+ namespace PlanarHom.FisherInheritedRowCode
+ open Complexity MultiGraph MultiGraph.Kasteleyn Fisher PlanarityLRRealization FinitePermutationCycles
+@@ -45,7 +46,8 @@
+         2*(expansionGraph (FisherContourOrder.ordering g hp.1)).componentCount Finset.univ := by
+     rw [RotationRows.redecidable_facePerm]
+     exact hh
+-  simpa only [Fintype.card_fin] using
++  simpa only [Fintype.card_fin,FisherExpansionCode.computedIncidenceEquiv,
++    FisherCodePipeline.intermediate] using
+     (FisherExpansionCode.computedIncidenceEquiv g hp.1).dartRelabel.euler_global _ hr
+ 
+  theorem typedInheritedRows_euler :
+@@ -68,7 +70,8 @@
+         2*(cubicDecoration p).componentCount Finset.univ := by
+     rw [RotationRows.redecidable_facePerm]
+     exact hh
+-  simpa only [Fintype.card_fin] using
++  simpa only [Fintype.card_fin,q,hq,hc,p,R,typedInheritedRows,typedCubicRows,
++    FisherCodePipeline.code] using
+     (FisherCubicCode.incidenceEquiv q hq hc).dartRelabel.euler_global _ hr
+ 
+  theorem componentEuler : PlanarityRowFaceCode.ComponentEuler (FisherCodePipeline.code g)
+--- provenance/upstream/PlanarHom/FisherProjectedOrder.lean
++++ PlanarHom/FisherProjectedOrder.lean
+@@ -60,11 +60,13 @@
+   atVertex v := increasingEnumeration (fun d : G.VertexDarts v => linearProjection a (port d.1))
+     (fun _ _ h => Subtype.ext (hinj h))
+ 
++set_option backward.isDefEq.respectTransparency false in
+ theorem projectedIncidenceOrdering_strictMono (port : E × Bool → Plane) (a : ℝ)
+     (hinj : Function.Injective (fun d => linearProjection a (port d))) (v : V) :
+     StrictMono (fun i => linearProjection a
+       (port ((projectedIncidenceOrdering (G := G) port a hinj).darts ⟨v,i⟩))) := by
+-  simpa [projectedIncidenceOrdering, IncidenceOrdering.darts] using
++  simpa [projectedIncidenceOrdering, IncidenceOrdering.darts, Equiv.trans_apply,
++    Equiv.sigmaCongrRight_apply, Equiv.sigmaFiberEquiv] using
+     increasingEnumeration_strictMono
+       (fun d : G.VertexDarts v => linearProjection a (port d.1))
+       (fun _ _ h => Subtype.ext (hinj h))
+--- provenance/upstream/PlanarHom/FixedFieldPolynomialMachines.lean
++++ PlanarHom/FixedFieldPolynomialMachines.lean
+@@ -39,7 +39,8 @@
+     (fp_const BitEncoding.rat BitEncoding.rat (basis.equivFun (1 : K) i))).comp
+     BinaryArithmetic.fp_rational_multiplication).congr (fun x => by
+       have h := congrArg (fun v : Fin dimension → ℚ => v i) (basis.equivFun.map_smul x (1 : K))
+-      simpa only [Algebra.smul_def, mul_one, Pi.smul_apply, smul_eq_mul] using h.symm)
++      simpa only [Algebra.smul_def, mul_one, Pi.smul_apply, smul_eq_mul,
++        Algebra.algebraMap_self_apply, Function.comp_def, id_eq] using h.symm)
+ 
+ theorem fp_natCast : FP BitEncoding.nat (numberFieldEncoding basis) (fun n : ℕ => (n : K)) := by
+   exact ((fp_nat_int.comp fp_int_rat).comp (fp_ratCast basis)).congr (fun n => by simp)
+--- provenance/upstream/PlanarHom/GraphComponentMachines.lean
++++ PlanarHom/GraphComponentMachines.lean
+@@ -273,15 +273,15 @@
+     (ListContextMachines.fp_mapWithContext MixedCode.encoding natCode.list MixedCode.encoding _ fp_extract)
+ 
+ noncomputable def componentsComputer :
+-    Turing.TM2ComputableInPolyTime MixedCode.encoding.toFinEncoding
+-      MixedCode.encoding.list.toFinEncoding components := Classical.choice fp_components
++    Turing.TM2ComputableInPolyTime MixedCode.encoding.encode
++      MixedCode.encoding.list.encode components := Classical.choice fp_components
+ 
+ /-- Normalize every accepted raw field/header, then run the same concrete
+ component machine. Runtime is charged against the actual original raw length. -/
+ noncomputable def componentsRawComputer :
+     Turing.TM2ComputableInPolyTime
+-      (BitEncoding.ValidWord.encoding MixedCode.encoding).toFinEncoding
+-      MixedCode.encoding.list.toFinEncoding (fun w => components w.value) :=
++      (BitEncoding.ValidWord.encoding MixedCode.encoding).encode
++      MixedCode.encoding.list.encode (fun w => components w.value) :=
+   MachineComposition.composeComputers MixedCode.normalizer componentsComputer
+ 
+ noncomputable def components_raw_outputs (raw : Bits) (g : MixedCode)
+@@ -293,7 +293,7 @@
+   let w : BitEncoding.ValidWord MixedCode.encoding := ⟨raw,⟨g,hd⟩⟩
+   have hv : w.value = g := BitEncoding.ValidWord.value_eq hd
+   have h := componentsRawComputer.outputsFun w
+-  simpa only [BitEncoding.toFinEncoding,BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe,BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw,hv,w] using h
+ 
+ end PlanarHom.GraphComponentMachines
+--- provenance/upstream/PlanarHom/GraphStretchCode.lean
++++ PlanarHom/GraphStretchCode.lean
+@@ -97,8 +97,10 @@
+     by_cases hk : p.2.val = 0
+     · simp [stretchEndpoints, MultiGraph.stretch, MultiGraph.stretchSrc, hk,
+         stretchVertexEquiv, toMultiGraph]
++      rfl
+     · simp [stretchEndpoints, MultiGraph.stretch, MultiGraph.stretchSrc, hk,
+         stretchVertexEquiv, stretchInternal]
++      rfl
+   dst_eq p := by
+     apply Fin.ext
+     change ((g.stretch n).edges.get (g.stretchEdgeEquiv n p)).2 = _
+@@ -106,8 +108,10 @@
+     by_cases hk : p.2.val = n
+     · simp [stretchEndpoints, MultiGraph.stretch, MultiGraph.stretchDst, hk,
+         stretchVertexEquiv, toMultiGraph]
++      rfl
+     · simp [stretchEndpoints, MultiGraph.stretch, MultiGraph.stretchDst, hk,
+         stretchVertexEquiv, stretchInternal]
++      rfl
+ 
+ /-- Planarity preservation for actual raw graph-code inputs, with no embedded-
+ input restriction and no planarity-recognition hypothesis. -/
+--- provenance/upstream/PlanarHom/IncomingLaneConnection.lean
++++ PlanarHom/IncomingLaneConnection.lean
+@@ -32,9 +32,9 @@
+       have hx : x∈Set.range q := ⟨0,q.source⟩
+       exact (Set.union_eq_right.mpr (Set.singleton_subset_iff.mpr hx)).symm
+   | child a p =>
+-      change Set.range (p.symm.trans q)=_
++      change Path a y at q
++      change Set.range (p.symm.trans q)=Set.range p ∪ Set.range q
+       rw [Path.trans_range,Path.symm_range]
+-      rfl
+ 
+ theorem append_injective (p : IncomingLane y) (q : Path x p.source) (hp : p.Simple)
+     (hq : Function.Injective q) (hmeet : ∀ w∈Set.range q, w∈p.trace → w=p.source) :
+--- provenance/upstream/PlanarHom/IsingEvenSubgraph.lean
++++ PlanarHom/IsingEvenSubgraph.lean
+@@ -124,7 +124,7 @@
+     G.partition (Boolean.W ρ) (fun _ => 1) =
+       (2 : ℝ) ^ Fintype.card V * ((1 + ρ) / 2) ^ Fintype.card E *
+         G.evenSubgraphSum (fun _ => (1 - ρ) / (1 + ρ)) := by
+-  simp only [partition, assignmentWeight_one]
++  simp only [partition, assignmentWeight, Finset.prod_const_one, one_mul]
+   simp_rw [ising_interaction_factor ρ hρ]
+   simp only [Finset.prod_mul_distrib, Finset.prod_const, Finset.card_univ,
+     ← Finset.mul_sum]
+--- provenance/upstream/PlanarHom/ListBlockSeparation.lean
++++ PlanarHom/ListBlockSeparation.lean
+@@ -70,7 +70,7 @@
+   have hp : xs.Pairwise (fun x y => xs.idxOf x<xs.idxOf y) := by
+     apply List.pairwise_iff_getElem.mpr
+     intro i j hi hj hij
+-    simpa only [List.idxOf_getElem hn i hi,List.idxOf_getElem hn j hj] using hij
++    simpa only [List.Nodup.idxOf_getElem hn i hi,List.Nodup.idxOf_getElem hn j hj] using hij
+   exact hp.forall_sublist h
+ 
+ end PlanarHom.PlanarityLRRealization
+--- provenance/upstream/PlanarHom/ListInfixRankInterval.lean
++++ PlanarHom/ListInfixRankInterval.lean
+@@ -49,7 +49,7 @@
+   have hr : xs.Pairwise (fun x y=>xs.idxOf x<xs.idxOf y) := by
+     rw [List.pairwise_iff_getElem]
+     intro i j hi hj hij
+-    simpa only [List.idxOf_getElem hn] using hij
++    simpa only [List.Nodup.idxOf_getElem hn] using hij
+   have hs := hr.sublist hsub
+   have hab := (List.pairwise_cons.mp hs).1 b (by simp)
+   have hbc := (List.pairwise_cons.mp (List.pairwise_cons.mp hs).2).1 c (by simp)
+--- provenance/upstream/PlanarHom/ListPairSublistOrder.lean
++++ PlanarHom/ListPairSublistOrder.lean
+@@ -8,7 +8,7 @@
+   induction h with
+   | slnil => simp
+   | @cons xs ys a h ih => exact ih.trans (List.sublist_append_right (f a) (ys.flatMap f))
+-  | @cons₂ xs ys a h ih => exact ih.append_left (f a)
++  | @cons_cons xs ys a h ih => exact ih.append_left (f a)
+ 
+  theorem member_flatMap_sublist {A B : Type} (f : A→List B) {a : A} {xs : List A} (ha : a∈xs) :
+     (f a).Sublist (xs.flatMap f) := by
+--- provenance/upstream/PlanarHom/MaterializedCoefficientHeights.lean
++++ PlanarHom/MaterializedCoefficientHeights.lean
+@@ -85,7 +85,7 @@
+   have hp := Certificate.product_bounded data (fun i => if b i then 1 else -nodes i)
+     (fun i => factorCertificate data (certificate basis (nodes i)) (b i)) (List.ofFn id)
+     (by nlinarith : 1 ≤ Certificate.heightConstant data * H) (fun i => factorCertificate_bounded data _ _ (ha i))
+-  simpa only [List.length_ofFn] using hp
++  simpa only [Certificate.Bounded, choiceCertificate, List.length_ofFn] using hp
+ 
+ /-- Sum all selected product numerators once, preserving their shared denominator. -/
+ def coefficientCertificate (data : ClearedCoordinates basis (fun k : Fin dimension => basis k))
+--- provenance/upstream/PlanarHom/NatWordComparisonMachines.lean
++++ PlanarHom/NatWordComparisonMachines.lean
+@@ -35,7 +35,7 @@
+     (ListContextFilterMachines.fp_filterWithContext ec pairCode _ hvalid)
+   have hm:=(hy₀.pair hfiltered).comp (ListContextMachines.fp_mapWithContext ec pairCode pairCode _ hvalue)
+   exact hm.congr (fun p=>by
+-    simpa only [Function.comp_apply,PfaffianList.lookup,List.getD_eq_getElem?_getD] using indexedZip_eq p.1 p.2)
++    simpa only [Function.comp_apply,PfaffianList.lookup,List.getD_eq_getElem?_getD,indexedZip] using indexedZip_eq p.1 p.2)
+ 
+  def lexCombine (p : ℕ×ℕ) (rest : Bool) : Bool := decide (p.1<p.2) || ((p.1==p.2) && rest)
+ 
+@@ -85,6 +85,6 @@
+   have hr:=(fp_snd BitEncoding.nat.list BitEncoding.nat.list).comp (ListCodecMachines.fp_length BitEncoding.nat)
+   have hlen:=(hl.pair hr).comp PfaffianList.fp_nat_eq
+   exact ((hall.pair hlen).comp (fp_bool_gate (fun p=>p.1 && p.2))).congr (fun p=>by
+-    simpa only [Function.comp_apply,List.all_map,id_eq] using zip_all_eq p.1 p.2)
++    simpa only [Function.comp_apply,Function.comp_def,List.all_map,id_eq] using zip_all_eq p.1 p.2)
+ 
+ end PlanarHom.NatWordComparisonMachines
+--- provenance/upstream/PlanarHom/NoncrossingBouquetAdjacentPair.lean
++++ PlanarHom/NoncrossingBouquetAdjacentPair.lean
+@@ -26,7 +26,7 @@
+     (hfull : ∀a,a∈word) (e : E) : lowerRank word e<upperRank word e := by
+   have hn : word.idxOf (e,true)≠word.idxOf (e,false) := by
+     intro he
+-    have hh := (List.idxOf_inj (hfull (e,true)) (hfull (e,false))).mp he
++    have hh := (List.idxOf_inj (hfull (e,true))).mp he
+     cases congrArg Prod.snd hh
+   unfold lowerRank upperRank
+   rcases lt_or_gt_of_ne hn with h | h
+@@ -56,7 +56,7 @@
+   have hgap : lowerRank word e+1<upperRank word e := by omega
+   have hlen : lowerRank word e+1<word.length := hgap.trans (upperRank_lt_length word hfull e)
+   let a := word[lowerRank word e+1]
+-  have har : word.idxOf a=lowerRank word e+1 := List.idxOf_getElem hn _ hlen
++  have har : word.idxOf a=lowerRank word e+1 := List.Nodup.idxOf_getElem hn _ hlen
+   have haf : word.idxOf a=lowerRank word a.1 ∨ word.idxOf a=upperRank word a.1 := endpoint_rank word a.1 a.2
+   have hne : e≠a.1 := by
+     intro hh
+--- provenance/upstream/PlanarHom/NoncrossingBouquetErase.lean
++++ PlanarHom/NoncrossingBouquetErase.lean
+@@ -49,7 +49,7 @@
+   have hs : word.Pairwise (fun a b=>word.idxOf a<word.idxOf b) := by
+     rw [List.pairwise_iff_getElem]
+     intro i j hi hj hij
+-    simpa only [List.idxOf_getElem hn] using hij
++    simpa only [List.Nodup.idxOf_getElem hn] using hij
+   have hm : ((eraseOccurrence e word).map (remainingLift e)).Sublist word := by
+     rw [eraseOccurrence_map]
+     exact List.filter_sublist
+--- provenance/upstream/PlanarHom/OccurrenceAlternatingCycleWords.lean
++++ PlanarHom/OccurrenceAlternatingCycleWords.lean
+@@ -47,7 +47,7 @@
+ theorem left_word (c : DirectedSimpleCycle G) (heven : Even c.length) : G.dartWord c.leftDarts=c.vertexWord := by
+   have hh:=congrArg (List.map c.vertexAt) (range_pair_flatMap (c.length/2))
+   rw [c.half_twice heven] at hh
+-  simpa only [leftDarts,dartWord,pairWord,List.flatMap_map,List.map_map,Function.comp_def,
++  simpa only [vertexWord,leftDarts,dartWord,pairWord,List.flatMap_map,List.map_map,Function.comp_def,
+     dartAt_tail,dartAt_head,List.map_flatMap,List.map_cons,List.map_nil] using hh
+ 
+ theorem right_word (c : DirectedSimpleCycle G) (heven : Even c.length) :
+--- provenance/upstream/PlanarHom/OccurrenceAlternatingWordPartition.lean
++++ PlanarHom/OccurrenceAlternatingWordPartition.lean
+@@ -85,7 +85,7 @@
+ theorem left_right_edge_nodup (c : AlternatingCycleFlip G M N) :
+     ((c.cycle.leftDarts++c.cycle.rightDarts).map Prod.fst).Nodup := by
+   apply ((c.cycle.left_right_perm c.even_length).map Prod.fst).nodup_iff.mpr
+-  simpa only [cycleDarts,List.map_ofFn] using List.nodup_ofFn.mpr c.cycle.edge_injective
++  simpa only [cycleDarts,List.map_ofFn,Function.comp_def] using List.nodup_ofFn.mpr c.cycle.edge_injective
+ 
+ theorem left_common_edge_nodup (c : AlternatingCycleFlip G M N) :
+     ((c.cycle.leftDarts++c.commonDarts).map Prod.fst).Nodup := by
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynCircleFans.lean
++++ PlanarHom/OccurrenceKasteleynCircleFans.lean
+@@ -39,6 +39,7 @@
+ def port (a : Dart E) (s : I) : Plane :=
+   C.band Function.injective_id a.1 (if a.2 then 0 else 1,s)
+ 
++set_option backward.isDefEq.respectTransparency false in
+ theorem port_formula (a : Dart E) (s : I) :
+     C.port a s = d.drawing.point (G.dartPair a).1 + C.radius • normalizedFan F a s := by
+   rcases a with ⟨e,b⟩
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynDartWords.lean
++++ PlanarHom/OccurrenceKasteleynDartWords.lean
+@@ -29,8 +29,8 @@
+     (hd : d ∈ ds) : G.src d.1 ∈ G.dartWord ds := by
+   have hm : G.dartPair d ∈ ds.map G.dartPair := List.mem_map.mpr ⟨d,hd,rfl⟩
+   cases h : d.2
+-  · simpa [dartPair,h] using snd_mem_pairWord hm
+-  · simpa [dartPair,h] using fst_mem_pairWord hm
++  · simpa [dartWord,dartPair,h] using snd_mem_pairWord hm
++  · simpa [dartWord,dartPair,h] using fst_mem_pairWord hm
+ 
+ /-- Distinct endpoint words exclude loops and repeated use of one occurrence. -/
+ theorem dartEdges_nodup (G : MultiGraph V E) (ds : List (Dart E))
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynFanOrientation.lean
++++ PlanarHom/OccurrenceKasteleynFanOrientation.lean
+@@ -54,7 +54,7 @@
+   split_ifs with hside
+   · have hcross : 0<cross (diskMap (0,H.height a 0)) (diskMap (0,H.height a t)) := by
+       rw [H.cross_height]
+-      exact div_pos (by simpa only [hside,if_true] using hraw) hlen
++      exact div_pos (by simpa only [hside,if_true,Set.Icc.coe_zero] using hraw) hlen
+     rw [diskMap_boundary_cross] at hcross
+     have hnum := (lt_div_iff₀ hden).mp hcross
+     have hd : 0<2*(H.height a t-H.height a 0) :=
+@@ -65,7 +65,7 @@
+     · exact False.elim (lt_asymm hearly (hm (show (0:I)<t from ht)))
+   · have hcross : cross (diskMap (0,H.height a 0)) (diskMap (0,H.height a t))<0 := by
+       rw [H.cross_height]
+-      exact div_neg_of_neg_of_pos (by simpa only [hside,if_false] using hraw) hlen
++      exact div_neg_of_neg_of_pos (by simpa only [hside,if_false,Set.Icc.coe_zero] using hraw) hlen
+     rw [diskMap_boundary_cross] at hcross
+     have hnum := (div_lt_iff₀ hden).mp hcross
+     have hd : 2*(H.height a t-H.height a 0)<0 :=
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynHostFanChart.lean
++++ PlanarHom/OccurrenceKasteleynHostFanChart.lean
+@@ -147,7 +147,7 @@
+       (decide (H.lower a≤H.lower b) || decide (H.lower b≤H.lower a))=true := by
+     simp only [Bool.or_eq_true,decide_eq_true_eq]
+     exact le_total _ _
+-  have hh := List.sorted_mergeSort htrans htotal (Finset.univ.toList : List (HostDart G v))
++  have hh := List.pairwise_mergeSort htrans htotal (Finset.univ.toList : List (HostDart G v))
+   apply hh.imp
+   intro a b h
+   exact of_decide_eq_true h
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynOrientationIteration.lean
++++ PlanarHom/OccurrenceKasteleynOrientationIteration.lean
+@@ -231,9 +231,12 @@
+     (computeOrientation table).length ≤ table.length := by
+   rw [← computeOrientationIterative_eq_computeOrientation]
+   have h := repairLog_foldl_length table (peelState table).2.2 []
++  simp only [List.length_nil,Nat.zero_add] at h
+   have hs := peelStep_iterate_stack_length table table.length (table.map Prod.fst) []
+-  simpa only [computeOrientationIterative,peelState,initialOrientationState,
+-    List.length_nil,Nat.zero_add,Nat.add_zero] using h.trans (by simpa only [List.length_nil,Nat.zero_add,Nat.add_zero] using hs)
++  have hs' : (peelState table).2.2.length ≤ table.length := by
++    simpa only [peelState,initialOrientationState,List.length_nil,
++      Nat.zero_add,Nat.add_zero] using hs
++  simpa only [computeOrientationIterative,List.length_nil,Nat.add_zero] using h.trans hs'
+ 
+ /-- Output indices are copied from original input darts; their numeric word sizes
+ cannot grow through arithmetic or fabricated labels. -/
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynOrientationLog.lean
++++ PlanarHom/OccurrenceKasteleynOrientationLog.lean
+@@ -18,7 +18,7 @@
+ /-- A list is a toggle history, not a set of reversed occurrences. -/
+ def logOrientation (log : List Nat) (e : Nat) : Bool := !((log.count e).bodd)
+ 
+-@[simp] theorem logOrientation_nil (e : Nat) : logOrientation [] e = true := rfl
++@[simp] theorem logOrientation_nil (e : Nat) : logOrientation [] e = true := by simp [logOrientation]
+ 
+ theorem logOrientation_cons (a : Nat) (log : List Nat) (e : Nat) :
+     logOrientation (a::log) e = if a=e then !(logOrientation log e) else logOrientation log e := by
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynPeeling.lean
++++ PlanarHom/OccurrenceKasteleynPeeling.lean
+@@ -46,7 +46,7 @@
+     boundaryParity orientation ds =
+       (ds.length.bodd ^^ (ds.countP (fun a => orientation a.1 == a.2)).bodd) := by
+   induction ds with
+-  | nil => rfl
++  | nil => simp [boundaryParity]
+   | cons a ds ih =>
+     simp only [boundaryParity_cons,List.length_cons,Nat.bodd_succ,List.countP_cons,ih]
+     cases orientation a.1 <;> cases a.2 <;>
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynPeelingSemantics.lean
++++ PlanarHom/OccurrenceKasteleynPeelingSemantics.lean
+@@ -116,11 +116,11 @@
+ theorem orientLogAux_semantics (boundary : Boundaries Nat Nat) (n : Nat) (fs : List Nat) :
+     logOrientation (orientLogAux boundary n fs) = orientAux boundary n fs (fun _ => true) := by
+   induction n generalizing fs with
+-  | zero => rfl
++  | zero => funext e; exact logOrientation_nil e
+   | succ n ih =>
+     simp only [orientLogAux,orientAux]
+     cases hp : pickPivot boundary fs with
+-    | none => rfl
++    | none => funext e; exact logOrientation_nil e
+     | some p =>
+       simp only
+       unfold repairFace
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynRecenteredCollars.lean
++++ PlanarHom/OccurrenceKasteleynRecenteredCollars.lean
+@@ -221,8 +221,8 @@
+     d.centerDrawing.Cofacial (G.src e) (G.dst e) := by
+   refine ⟨d.sideWitness positive e,
+     d.sideRegion_subset_compl positive e (d.sideWitness_mem positive e),?_,?_⟩
+-  · simpa only [d.centerDrawing.curve_zero] using d.curve_mem_closure_sideFace positive e 0
+-  · simpa only [d.centerDrawing.curve_one] using d.curve_mem_closure_sideFace positive e 1
++  · simpa only [sideFace,d.centerDrawing.curve_zero] using d.curve_mem_closure_sideFace positive e 0
++  · simpa only [sideFace,d.centerDrawing.curve_one] using d.curve_mem_closure_sideFace positive e 1
+ 
+ end RibbonDrawing
+ end PlanarHom.MultiGraph
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynRootReturnPaths.lean
++++ PlanarHom/OccurrenceKasteleynRootReturnPaths.lean
+@@ -25,7 +25,7 @@
+ 
+ theorem separated_of_labels_ne {x y : C.PortArrival tree.root} (hx : x∈R.outputs) (hy : y∈R.outputs)
+     (hne : x.label≠y.label) : Disjoint x.trace y.trace :=
+-  R.separated.forall (fun _ _ h => h.symm) hx hy (fun h => hne (congrArg PortArrival.label h))
++  (@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ R.separated) hx hy (fun h => hne (congrArg PortArrival.label h))
+ 
+ theorem output_edge_not_tree {x : C.PortArrival tree.root} (hx : x∈R.outputs) : x.label.1∉tree.edges :=
+   ((R.labels x.label).mp (List.mem_map.mpr ⟨x,hx,rfl⟩)).2
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynRootRouting.lean
++++ PlanarHom/OccurrenceKasteleynRootRouting.lean
+@@ -74,8 +74,8 @@
+   · rcases C.rootArrivalBlock_cases charts ht routes b y hy with ⟨k,hk,_,hy⟩ | ⟨rfl,hb⟩
+     · by_cases hck : c=k
+       · subst k
+-        exact (C.childArrivals_separated charts ht routes c hc).forall (fun _ _ h => h.symm) hx hy hne
+-      · exact ((C.branchRegions_disjoint ht).forall (fun _ _ h => h.symm) hc hk hck).mono
++        exact (@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ (C.childArrivals_separated charts ht routes c hc)) hx hy hne
++      · exact ((@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ (C.branchRegions_disjoint ht)) hc hk hck).mono
+           (C.childArrivals_support charts ht routes c hc x hx) (C.childArrivals_support charts ht routes k hk y hy)
+     · exact C.child_local_disjoint charts ht routes c hc x hx b hb
+   · rcases C.rootArrivalBlock_cases charts ht routes b y hy with ⟨k,hk,_,hy⟩ | ⟨rfl,_⟩
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynRootRoutingLabels.lean
++++ PlanarHom/OccurrenceKasteleynRootRoutingLabels.lean
+@@ -54,7 +54,7 @@
+   · subst k
+     exact hedge he
+   · have hdis: c.2.vertices.Disjoint k.2.vertices :=
+-      (child_vertices_disjoint ht).forall (fun _ _ h=>h.symm) hc hk hck
++      (@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ (child_vertices_disjoint ht)) hc hk hck
+     have hends:=branch_endpoints ht k hk a.1 he
+     rcases dart_host_endpoints (G:=G) a with hs | hd
+     · rcases hends.1 with hs' | hs'
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynTablePrimitives.lean
++++ PlanarHom/OccurrenceKasteleynTablePrimitives.lean
+@@ -27,7 +27,7 @@
+  theorem incidenceParity_eq_count (e : ℕ) (ds : List (Dart ℕ)) :
+     incidenceParity e ds = ((ds.map Prod.fst).count e).bodd := by
+   induction ds with
+-  | nil => rfl
++  | nil => simp [incidenceParity]
+   | cons a ds ih =>
+     by_cases h : a.1=e <;> simp [incidenceParity,ih,h,Nat.bodd_succ]
+ 
+--- provenance/upstream/PlanarHom/OccurrenceKasteleynTreeRouting.lean
++++ PlanarHom/OccurrenceKasteleynTreeRouting.lean
+@@ -41,7 +41,7 @@
+ 
+ theorem output_separated (R : C.RoutedBranch charts tree parent)
+     {x y : C.PortArrival (G.src parent)} (hx : x∈R.outputs) (hy : y∈R.outputs) (hne : x≠y) :
+-    Disjoint x.trace y.trace := R.separated.forall (fun _ _ h => h.symm) hx hy hne
++    Disjoint x.trace y.trace := (@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ R.separated) hx hy hne
+ 
+ end RoutedBranch
+ 
+@@ -168,8 +168,8 @@
+   · rcases C.nodeArrivalBlock_cases charts ht routes parent b y hy with ⟨k,hk,_,hy⟩ | ⟨rfl,_,hb⟩
+     · by_cases hck : c=k
+       · subst k
+-        exact (C.childArrivals_separated charts ht routes c hc).forall (fun _ _ h => h.symm) hx hy hne
+-      · exact ((C.branchRegions_disjoint ht).forall (fun _ _ h => h.symm) hc hk hck).mono
++        exact (@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ (C.childArrivals_separated charts ht routes c hc)) hx hy hne
++      · exact ((@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ (C.branchRegions_disjoint ht)) hc hk hck).mono
+           (C.childArrivals_support charts ht routes c hc x hx) (C.childArrivals_support charts ht routes k hk y hy)
+     · exact C.child_local_disjoint charts ht routes c hc x hx b hb
+   · rcases C.nodeArrivalBlock_cases charts ht routes parent b y hy with ⟨k,hk,_,hy⟩ | ⟨rfl,_,_⟩
+--- provenance/upstream/PlanarHom/OccurrenceMatchingAlternatingCycle.lean
++++ PlanarHom/OccurrenceMatchingAlternatingCycle.lean
+@@ -34,10 +34,8 @@
+     rcases dart_eq_or_reverse_of_fst (hM.walkDart hN v i.val) (hM.walkDart hN v j.val) hij with h | h
+     · apply hinj
+       have hh:=congrArg (fun a:Dart E=>(G.dartPair a).1) h
+-      dsimp only at hh
+       simpa only [walkDart_host] using hh
+     · have hh:=congrArg (fun a:Dart E=>(G.dartPair a).1) h
+-      dsimp only at hh
+       rw [walkDart_host,dartPair_reverse_fst,walkDart_head,hM.walkVertex_cycleNext hN v n hn hreturn j] at hh
+       have hi:=hinj hh
+       rw [hi] at hparity
+--- provenance/upstream/PlanarHom/OccurrenceMatchingWalk.lean
++++ PlanarHom/OccurrenceMatchingWalk.lean
+@@ -69,7 +69,7 @@
+   hM.stepPort_host hN _
+ 
+ theorem walkDart_head (v : V) (n : ℕ) : (G.dartPair (hM.walkDart hN v n)).2=hM.walkVertex hN v (n+1) := by
+-  simpa only [walkVertex,walkState_succ] using hM.stepPort_head hN (hM.walkState hN v n)
++  simpa only [walkDart,walkVertex,walkState_succ] using hM.stepPort_head hN (hM.walkState hN v n)
+ 
+ theorem walkVertex_succ_ne (v : V) (n : ℕ) : hM.walkVertex hN v (n+1)≠hM.walkVertex hN v n :=
+ by
+--- provenance/upstream/PlanarHom/OccurrenceMatchingWalkCycle.lean
++++ PlanarHom/OccurrenceMatchingWalkCycle.lean
+@@ -51,7 +51,6 @@
+     have hd:=hM.stepPort_backtrack hN (hM.walkState hN v i) (hM.walkState hN v t) hc hv
+     change hM.walkDart hN v i=((hM.walkDart hN v t).1,!(hM.walkDart hN v t).2) at hd
+     have hend:=congrArg (fun a:Dart E=>(G.dartPair a).2) hd
+-    dsimp only at hend
+     rw [walkDart_head,dartPair_reverse_snd,walkDart_host] at hend
+     have hit:=hprefix (i+1) t hi1 ht hend
+     have hflip : (hM.walkState hN v t).2= !(hM.walkState hN v i).2 := by
+--- provenance/upstream/PlanarHom/OccurrencePfaffianEliminationAlgorithm.lean
++++ PlanarHom/OccurrencePfaffianEliminationAlgorithm.lean
+@@ -1,4 +1,4 @@
+-import PlanarHom.OccurrencePfaffianPairings
++import Mathlib.Data.Matrix.Basic
+ import Mathlib.Algebra.Ring.Parity
+ import Mathlib.Tactic.Linarith
+ 
+--- provenance/upstream/PlanarHom/OccurrencePfaffianEvaluationProgram.lean
++++ PlanarHom/OccurrencePfaffianEvaluationProgram.lean
+@@ -90,7 +90,7 @@
+  theorem normalizeGrid_eq_matrixRows (g : Grid K) :
+     normalizeGrid g = matrixRows (fun (i j : Fin g.length) => skewEntry g i.val j.val) := by
+   simp only [normalizeGrid, matrixRows, List.ofFn_eq_map]
+-  rw [← List.map_coe_finRange g.length]
++  rw [← List.map_coe_finRange_eq_range (n := g.length)]
+   simp only [List.map_map, Function.comp_def]
+ 
+  theorem normalizeGrid_matrixRows {n : ℕ} (A : Matrix (Fin n) (Fin n) K)
+@@ -98,7 +98,7 @@
+     normalizeGrid (matrixRows A) = matrixRows A := by
+   simp only [normalizeGrid, matrixRows_length]
+   simp only [matrixRows, List.ofFn_eq_map]
+-  rw [← List.map_coe_finRange n]
++  rw [← List.map_coe_finRange_eq_range (n := n)]
+   simp only [List.map_map, Function.comp_def]
+   apply List.map_congr_left
+   intro i hi
+--- provenance/upstream/PlanarHom/OccurrencePfaffianExpansionSigns.lean
++++ PlanarHom/OccurrencePfaffianExpansionSigns.lean
+@@ -123,10 +123,10 @@
+   rw [Finset.sum_comm]
+   apply Finset.sum_congr rfl
+   intro q hq
+-  simp only [endpointCount, pairGraph, Finset.sum_add_distrib]
+-  rw [Finset.sum_ite_eq _ q.1 (fun _ => (1 : ℕ)),
+-    Finset.sum_ite_eq _ q.2 (fun _ => (1 : ℕ))]
+-  simp [(hsupport q hq).1, (hsupport q hq).2]
++  simp only [endpointCount, Finset.sum_add_distrib]
++  rw [Finset.sum_ite_eq _ ((pairGraph V).src q) (fun _ => (1 : ℕ)),
++    Finset.sum_ite_eq _ ((pairGraph V).dst q) (fun _ => (1 : ℕ))]
++  simp [pairGraph, (hsupport q hq).1, (hsupport q hq).2]
+ 
+ /-- Degree one at every active vertex strictly inside the interval turns
+ endpoint incidence into the interval cardinality. No global matching structure
+--- provenance/upstream/PlanarHom/OccurrencePfaffianIterationBounds.lean
++++ PlanarHom/OccurrencePfaffianIterationBounds.lean
+@@ -24,7 +24,7 @@
+     exact hq A _ (matrixState_iterate A hskew hdiag i)
+   have hh := hr (factorTrace s t) N (q.eval N) (by simpa [factorTrace_length] using hn) hf
+   rw [accumulator_eq_product]
+-  simpa only [initialState, one_mul, eval_comp, eval_add, eval_X] using hh
++  simpa only [s, N, initialState, one_mul, eval_comp, eval_add, eval_X] using hh
+ 
+  theorem exists_iteration_state_encoding_polynomial :
+     ∃ p : Polynomial ℕ, ∀ {n : ℕ} (A : Matrix (Fin n) (Fin n) K),
+@@ -52,7 +52,7 @@
+         obtain ⟨i,rfl⟩ := List.mem_ofFn.mp hrow
+         obtain ⟨j,rfl⟩ := List.mem_ofFn.mp hx
+         exact hq A B active hschur i j)
+-    simpa only [pg,eval_add,eval_mul,eval_C,eval_X,eval_one] using hh
++    simpa only [gridEncoding,pg,eval_add,eval_mul,eval_C,eval_X,eval_one] using hh
+   have hactive : (BitEncoding.nat.list.encode s.2.1).length ≤ pa.eval N := by
+     change (BitEncoding.nat.list.encode (step^[t] (initialState (matrixRows A))).2.1).length ≤ _
+     rw [hx]
+--- provenance/upstream/PlanarHom/OccurrenceSkewCodeSemantics.lean
++++ PlanarHom/OccurrenceSkewCodeSemantics.lean
+@@ -159,7 +159,7 @@
+     grid p = PfaffianList.matrixRows ((p.1.toMultiGraph hp).occurrenceSkewMatrix
+       (fun e => logOrientation p.2.1 e.val) (fun e => p.2.2.getD e.val 0)) := by
+   simp only [grid, PfaffianList.matrixRows, List.ofFn_eq_map]
+-  rw [← List.map_coe_finRange p.1.vertices]
++  rw [← List.map_coe_finRange_eq_range (n := p.1.vertices)]
+   simp only [List.map_map, Function.comp_def]
+   apply List.map_congr_left
+   intro u hu
+--- provenance/upstream/PlanarHom/PfaffianMinorHeights.lean
++++ PlanarHom/PfaffianMinorHeights.lean
+@@ -100,13 +100,13 @@
+       ((Certificate.heightConstant data * H ^ (n*n+1)) ^ (n+1))
+       ((Certificate.heightConstant data * H ^ (n*n+1)) ^ (n+1)) := by
+   have he (i j : Fin n) : (entryCertificate (basis := basis) A i j).Bounded (H ^ (n*n+1)) (H ^ (n*n+1)) := by
+-    simpa only [Fintype.card_prod, Fintype.card_fin] using
++    simpa only [entryCertificate, Fintype.card_prod, Fintype.card_fin] using
+       commonCertificate_bounded (fun p : Fin n × Fin n => A p.1 p.2)
+         (fun p => certificate basis (A p.1 p.2)) hH (fun p => ha p.1 p.2) (i,j)
+   have hp := Certificate.product_bounded data (fun i => A (σ i) i)
+     (fun i => entryCertificate A (σ i) i) (List.ofFn id)
+     (Nat.one_le_pow _ _ hH) (fun i => he (σ i) i)
+-  simpa only [List.length_ofFn] using hp
++  simpa only [Certificate.Bounded, monomialCertificate, List.length_ofFn] using hp
+ 
+ /-- Sum the signed integer numerators once, preserving their common denominator. -/
+ def determinantCertificate
+@@ -200,7 +200,7 @@
+ 
+ theorem dimension_le_matrixInputLength (basis : Module.Basis (Fin dimension) ℚ K)
+     {n : ℕ} (A : Matrix (Fin n) (Fin n) K) : n ≤ matrixInputLength basis A := by
+-  simpa only [List.length_ofFn] using (numberFieldEncoding basis).list.list_length_le
++  simpa only [matrixInputLength, List.length_ofFn] using (numberFieldEncoding basis).list.list_length_le
+     (List.ofFn (fun i => List.ofFn (A i)))
+ 
+ theorem entry_length_le_matrixInputLength (basis : Module.Basis (Fin dimension) ℚ K)
+--- provenance/upstream/PlanarHom/PfaffianPivotShear.lean
++++ PlanarHom/PfaffianPivotShear.lean
+@@ -1,4 +1,4 @@
+-import PlanarHom.PfaffianEliminationHeights
++import PlanarHom.OccurrencePfaffianEliminationAlgorithm
+ import PlanarHom.OccurrencePfaffianVertexLinearity
+ 
+ /-! Algebraic assembly of pivot isolation by elementary vertex shears. -/
+--- provenance/upstream/PlanarHom/PfaffianSchurMinors.lean
++++ PlanarHom/PfaffianSchurMinors.lean
+@@ -94,8 +94,9 @@
+       !![0, -(A i j)⁻¹; (A i j)⁻¹, 0] := by
+     apply inv_eq_left_inv
+     ext a b
++    rw [Matrix.mul_apply]
+     fin_cases a <;> fin_cases b <;>
+-      simp [Matrix.mul_apply, Fin.sum_univ_two, hdiag, hskew i j, hp]
++      simp [Fin.sum_univ_two, hdiag, hskew i j, hp]
+   ext u v
+   simp only [schurResidual, hinv, Matrix.sub_apply, Matrix.mul_apply, Fin.sum_univ_two]
+   change A u v - ((A u i * 0 + A u j * (A i j)⁻¹) * A i v +
+--- provenance/upstream/PlanarHom/PlanarAxialCollapse.lean
++++ PlanarHom/PlanarAxialCollapse.lean
+@@ -191,6 +191,7 @@
+     simp [hzero]
+   have hf1 : factor δ c = 1 := by
+     apply (smul_left_injective ℝ hc0)
++    change factor δ c • c = c at hc
+     simpa only [one_smul] using hc
+   let f : ℝ → ℝ := fun t => factor δ (t • c) * t
+   have hcont : Continuous f := ((continuous_factor δ).comp (continuous_id.smul continuous_const)).mul continuous_id
+--- provenance/upstream/PlanarHom/PlanarityCircleCrossing.lean
++++ PlanarHom/PlanarityCircleCrossing.lean
+@@ -144,9 +144,9 @@
+     (hα : ∀ t, Inside t → R<rayLength (α t-v))
+     (hβ : ∀ t, Inside t → R<rayLength (β t-v)) : ∃ s t, α s=β t := by
+   let A : C(I,Plane) := ⟨fun t => R⁻¹ • (α t-v),
+-    continuous_const.smul (α.continuous.sub continuous_const)⟩
++    by fun_prop⟩
+   let B : C(I,Plane) := ⟨fun t => R⁻¹ • (β t-v),
+-    continuous_const.smul (β.continuous.sub continuous_const)⟩
++    by fun_prop⟩
+   have hnorm (p : Plane) (hp : R<rayLength (p-v)) :
+       1<(R⁻¹ • (p-v)).1^2+(R⁻¹ • (p-v)).2^2 := by
+     have hh : 1<rayLength (R⁻¹ • (p-v)) := by
+--- provenance/upstream/PlanarHom/PlanarityDepthFirstSearchAncestors.lean
++++ PlanarHom/PlanarityDepthFirstSearchAncestors.lean
+@@ -50,7 +50,9 @@
+             · exact Or.inl huv
+             · exact Or.inr (Or.inl ⟨r,List.mem_cons_of_mem _ hr,heq,hm⟩)
+             · exact Or.inr (Or.inr ⟨r,List.mem_cons_of_mem _ hr,heq,hm⟩)
+-      · simpa only [step,hw,ht,hn,↓reduceIte] using he
++      · simp only [step,hw,ht,hn,↓reduceIte]
++        change EdgeComparable g s
++        exact he
+ 
+  theorem edgeComparable_iterate (g : MixedCode) (n : ℕ) :
+     EdgeComparable g ((step g)^[n] (initial g)) := by
+--- provenance/upstream/PlanarHom/PlanarityDepthFirstSearchRuntimeBounds.lean
++++ PlanarHom/PlanarityDepthFirstSearchRuntimeBounds.lean
+@@ -32,7 +32,7 @@
+     (BitEncoding.nat.list.encode path).length≤pathPolynomial.eval (inputLength g) := by
+   exact list_encoding_polynomial BitEncoding.nat path X X (inputLength g)
+     (by simpa only [eval_X] using (goodPath_length g h).trans (vertices_le_input g))
+-    (fun v hv=>by simpa only [eval_X] using small_of_le_vertices g (h.2 v hv).le)
++    (fun v hv=>by simpa only [eval_X,SmallNat] using small_of_le_vertices g (h.2 v hv).le)
+ 
+  theorem task_word (g : MixedCode) (t : Task) (hs : SmallNat g t.vertex ∧ SmallNat g t.edge)
+     (hp : GoodPath g t.path) : (taskCode.encode t).length≤taskPolynomial.eval (inputLength g) := by
+@@ -77,7 +77,7 @@
+     (by simpa only [eval_X] using (goodSeen_length g s hstack.goodSeen).trans hn)
+     (fun r hr=>discovery_word g r (hsmall.discovered r hr) (hsource.record_path r hr))
+   have hf := list_encoding_polynomial BitEncoding.nat s.finished clockPolynomial X N
+-    ((iterate_finished_length g t).trans htq) (fun x hx=>by simpa only [eval_X] using hsmall.finished x hx)
++    ((iterate_finished_length g t).trans htq) (fun x hx=>by simpa only [eval_X,SmallNat] using hsmall.finished x hx)
+   change (stateCode.encode s).length≤statePolynomial.eval N
+   simp only [stateCode,statePartsCode,BitEncoding.retract,stateParts,BitEncoding.prod_length,
+     statePolynomial,eval_add,eval_mul,eval_C]
+--- provenance/upstream/PlanarHom/PlanarityFaceLabels.lean
++++ PlanarHom/PlanarityFaceLabels.lean
+@@ -108,10 +108,10 @@
+     have hidx:(representatives g bits).idxOf b=f := by
+       obtain ⟨hi,he⟩:=List.getElem?_eq_some_iff.mp hf
+       rw [← he]
+-      simpa only [dart_idxOf_decidable] using List.idxOf_getElem (representatives_nodup g bits) f hi
++      simpa only [dart_idxOf_decidable] using List.Nodup.idxOf_getElem (representatives_nodup g bits) f hi
+     change representative g bits a=b ↔ (representatives g bits).idxOf (representative g bits a)=f
+     rw [← hidx]
+-    simpa only [dart_idxOf_decidable] using (List.idxOf_inj (representative_mem_of_valid g hg bits ha) hb).symm
++    simpa only [dart_idxOf_decidable] using (List.idxOf_inj (representative_mem_of_valid g hg bits ha)).symm
+ 
+  theorem boundaryById_nodup (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (bits : List Bool) (f : ℕ) : (boundaryById g bits f).Nodup := by
+--- provenance/upstream/PlanarHom/PlanarityFaceTableMaterialization.lean
++++ PlanarHom/PlanarityFaceTableMaterialization.lean
+@@ -13,12 +13,12 @@
+   rw [representative_fixed_of_mem g bits (List.mem_of_getElem? hf)]
+   obtain ⟨hi,he⟩:=List.getElem?_eq_some_iff.mp hf
+   rw [← he]
+-  simpa only [dart_idxOf_decidable] using List.idxOf_getElem (representatives_nodup g bits) f hi
++  simpa only [dart_idxOf_decidable] using List.Nodup.idxOf_getElem (representatives_nodup g bits) f hi
+ 
+  theorem faceId_injective (g : MixedCode) (bits : List Bool) {a b : PlanarityRotationCode.Dart}
+     (ha : a∈representatives g bits) (hb : b∈representatives g bits)
+     (h : faceId g bits a=faceId g bits b) : a=b := by
+-  apply (List.idxOf_inj ha hb).mp
++  apply (List.idxOf_inj ha).mp
+   simpa only [faceId,representative_fixed_of_mem g bits ha,
+     representative_fixed_of_mem g bits hb,dart_idxOf_decidable] using h
+ 
+--- provenance/upstream/PlanarHom/PlanarityLRAlignedForkOrder.lean
++++ PlanarHom/PlanarityLRAlignedForkOrder.lean
+@@ -79,9 +79,9 @@
+     rw [(outgoing_spec g he).2.2] at hbdesc
+     rw [(outgoing_spec g hf).2.2] at hcdesc
+     have hbP : b ∈ returns g p := (returns_tree_iff g hp.1 b).mpr
+-      ⟨mem_returns_back g e hb,by simpa only [hp.2.1] using hbdesc,by simpa only [hp.2.2] using hlt⟩
++      ⟨mem_returns_back g e hb,by simpa only [Desc,hp.2.1] using hbdesc,by simpa only [hp.2.2] using hlt⟩
+     have hcP : c ∈ returns g p := (returns_tree_iff g hp.1 c).mpr
+-      ⟨mem_returns_back g f hc,by simpa only [hp.2.1] using hcdesc,by simpa only [hp.2.2,← hbc] using hlt⟩
++      ⟨mem_returns_back g f hc,by simpa only [Desc,hp.2.1] using hcdesc,by simpa only [hp.2.2,← hbc] using hlt⟩
+     have hlower : targetHeight g b≤lowpoint g p := by
+       apply (le_lowpoint_iff g p _).mpr
+       refine ⟨?_,?_⟩
+--- provenance/upstream/PlanarHom/PlanarityLRAlignmentSafety.lean
++++ PlanarHom/PlanarityLRAlignmentSafety.lean
+@@ -105,7 +105,7 @@
+     have hh := lowpoint_descendant_mono g hg he hf2.1 (hf2.2.2.symm ▸ h)
+     omega
+   have hvsb : Desc g v (source g b) := by
+-    simpa only [hf1.2.2] using returns_source_descendant g hg f₁ hbm.1
++    simpa only [Desc,hf1.2.2] using returns_source_descendant g hg f₁ hbm.1
+   have hve : Desc g v (target g e) := (desc_comparable g hsb hvsb hbR.2.1).resolve_right hno
+   have hve' : v ∈ ancestors g (target g e) := by
+     rcases hve with h | h
+--- provenance/upstream/PlanarHom/PlanarityLRBackPortNoncrossing.lean
++++ PlanarHom/PlanarityLRBackPortNoncrossing.lean
+@@ -131,7 +131,7 @@
+       (contourKey g bits (outward g c)) (contourKey g bits (reverse (outward g c))) := by
+   have hidx : (backEvents g bits).idxOf b≠(backEvents g bits).idxOf c := by
+     intro h
+-    exact hne ((List.idxOf_inj ((mem_backEvents g bits b).mpr hb) ((mem_backEvents g bits c).mpr hc)).mp h)
++    exact hne ((List.idxOf_inj ((mem_backEvents g bits b).mpr hb)).mp h)
+   rcases lt_or_gt_of_ne hidx with h | h
+   · exact back_port_key_noncrossing_of_rank g hg bits hLR halign hb hc hr h
+   · exact (back_port_key_noncrossing_of_rank g hg bits hLR halign hc hb hr.symm h).symm
+--- provenance/upstream/PlanarHom/PlanarityLRBackWords.lean
++++ PlanarHom/PlanarityLRBackWords.lean
+@@ -62,8 +62,7 @@
+     have hi:(orderedOutgoing g bits (source g c)).idxOf b=(orderedOutgoing g bits (source g c)).idxOf c := by
+       simpa only [backWord,hs,List.append_right_inj,List.singleton_inj] using hw
+     apply (List.idxOf_inj (l := orderedOutgoing g bits (source g c))
+-      (by simpa only [hs] using backEdge_mem_orderedOutgoing g bits hb)
+-      (backEdge_mem_orderedOutgoing g bits hc)).mp hi
++      (by simpa only [hs] using backEdge_mem_orderedOutgoing g bits hb)).mp hi
+   · obtain ⟨w,hw,hpw,hwv,hwh⟩:=exists_child_toward g hvc ha
+     have hwpos:0<height g w:=by omega
+     have hpw' : (treeWord g bits w).IsPrefix (backWord g bits c) :=
+@@ -80,7 +79,7 @@
+     have hmem:parentEdge g w∈orderedOutgoing g bits (source g b) := by
+       simpa only [hpw] using parentEdge_mem_orderedOutgoing g hg bits hw hwpos
+     have hedge:b=parentEdge g w:=
+-      (List.idxOf_inj (backEdge_mem_orderedOutgoing g bits hb) hmem).mp hi
++      (List.idxOf_inj (backEdge_mem_orderedOutgoing g bits hb)).mp hi
+     have ht:=(parentEdge_tree g hg hw hwpos).1
+     have hf:=(of_decide_eq_true hb).2.1
+     rw [hedge,ht] at hf
+--- provenance/upstream/PlanarHom/PlanarityLRBranchEventOrder.lean
++++ PlanarHom/PlanarityLRBranchEventOrder.lean
+@@ -73,7 +73,7 @@
+       (orderedOutgoing g bits (source g f)).idxOf f := by
+     intro hh
+     apply hne
+-    exact (List.idxOf_inj heMem hfMem).mp (by simpa only [hsource] using hh)
++    exact (List.idxOf_inj heMem).mp (by simpa only [hsource] using hh)
+   by_contra hn
+   have hrev : (orderedOutgoing g bits (source g f)).idxOf f<
+       (orderedOutgoing g bits (source g e)).idxOf e := by omega
+--- provenance/upstream/PlanarHom/PlanarityLRComponentConnected.lean
++++ PlanarHom/PlanarityLRComponentConnected.lean
+@@ -57,8 +57,11 @@
+             rw [hparent,←hn]
+             exact parentVertex_height_lt g v.val.isLt hpos
+           have hprev := ih _ hlt p rfl
+-          exact Relation.EqvGen.trans root p v hprev
+-            (by simpa only [htarget] using dartPair_connected (componentGraph g hg r.val) a)
++          have hconn := dartPair_connected (componentGraph g hg r.val) a
++          change Relation.EqvGen ((componentGraph g hg r.val).selectedPair Finset.univ)
++            p ((componentGraph g hg r.val).dartPair (reversePerm _ a)).1 at hconn
++          rw [htarget] at hconn
++          exact Relation.EqvGen.trans root p v hprev hconn
+   intro u v
+   exact Relation.EqvGen.trans u root v (Relation.EqvGen.symm root u (hall _ u rfl)) (hall _ v rfl)
+ 
+--- provenance/upstream/PlanarHom/PlanarityLRComponentCycleFlip.lean
++++ PlanarHom/PlanarityLRComponentCycleFlip.lean
+@@ -38,5 +38,6 @@
+       boundarySign (fun e : Fin g.edges.length=>orientation e.val) flip.cycle.cycleDarts := by
+   simp [boundarySign,MultiGraph.DirectedSimpleCycle.cycleDarts,List.map_ofFn,componentFlip,
+     DirectedSimpleCycle.inComponent,componentOrientation,dartSign,Function.comp_def]
++  rfl
+ 
+ end PlanarHom.PlanarityLRRealization
+--- provenance/upstream/PlanarHom/PlanarityLRComponentFaceProducts.lean
++++ PlanarHom/PlanarityLRComponentFaceProducts.lean
+@@ -24,6 +24,10 @@
+   have hh := (hodd _ hmem).boundarySign
+   have hp := boundaryById_perm_componentFaceWord g hg bits r a
+   rw [boundarySign_perm orientation hp,hp.length_eq,List.length_map] at hh
++  have hsign : dartSign (componentOrientation g r orientation) =
++      fun x : Dart (ComponentEdge g r) => if orientation x.1.val.val = x.2 then (1 : ℤ) else -1 := rfl
++  unfold boundarySign
++  rw [hsign]
+   simpa only [boundarySign,List.map_map,Function.comp_def,dartSign,componentOrientation,
+     eraseDart,componentDartLift] using hh
+ 
+--- provenance/upstream/PlanarHom/PlanarityLRComponentMatching.lean
++++ PlanarHom/PlanarityLRComponentMatching.lean
+@@ -97,7 +97,7 @@
+     induction n with
+     | zero => rfl
+     | succ n ih => rw [Function.iterate_succ_apply',hstep,ih]
+-  simpa only [Equiv.Perm.iterate_eq_pow,hni] using hi n
++  simpa only [Equiv.Perm.iterate_eq_pow,hni,componentIndex,i₀] using hi n
+ 
+  theorem edge_component (i : Fin c.length) :
+     componentRoot g (source g (c.dart i).1.val)=(componentIndex g hg c).val := by
+--- provenance/upstream/PlanarHom/PlanarityLRContourCycles.lean
++++ PlanarHom/PlanarityLRContourCycles.lean
+@@ -24,7 +24,10 @@
+   refine ⟨a.1,?_⟩
+   rcases PlanarityRotationCode.dart_outward_cases g (eraseDart a) with h | h
+   · exact Or.inl (eraseDart_injective g (h.trans (erase_typedOutward g a.1).symm))
+-  · exact Or.inr (eraseDart_injective g (by simpa only [erase_reversePerm,erase_typedOutward] using h))
++  · apply Or.inr
++    apply eraseDart_injective g
++    rw [erase_reversePerm,erase_typedOutward]
++    exact h
+ 
+ def dfsContourForRows (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut) (rows : RotationRows (g.toMultiGraph hg)) :
+     Equiv.Perm (Dart (Fin g.edges.length)) :=
+--- provenance/upstream/PlanarHom/PlanarityLRContourEventOrder.lean
++++ PlanarHom/PlanarityLRContourEventOrder.lean
+@@ -21,9 +21,10 @@
+     (bits : List Bool) (a : Dart (Fin g.edges.length)) (hstart : RootFirst g bits (eraseDart a)) :
+     contourBackEvents g hg bits a=componentBackEvents g bits (componentRoot g (dartHost g a)) := by
+   let r : ℕ→ℕ→Prop:=fun e f=>eventLE g bits e f=true
+-  letI : IsAntisymm ℕ r:=⟨eventLE_antisymm g bits⟩
+-  exact List.eq_of_perm_of_sorted (r := r) (contourBackEvents_perm g hg bits a)
++  exact List.Perm.eq_of_pairwise (le := r)
++    (fun e f _ _ => eventLE_antisymm g bits e f)
+     (contourBackEvents_sorted g hg bits a hstart) ((backEvents_sorted g bits).filter _)
++    (contourBackEvents_perm g hg bits a)
+ 
+  theorem contourOutwardBackDarts_eq (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (bits : List Bool) (a : Dart (Fin g.edges.length)) (hstart : RootFirst g bits (eraseDart a)) :
+--- provenance/upstream/PlanarHom/PlanarityLRContourKeySteps.lean
++++ PlanarHom/PlanarityLRContourKeySteps.lean
+@@ -27,7 +27,7 @@
+   have hparent:reverse (outward g (parentEdge g v))∈visitRow g bits v := by
+     rw [visitRow_parent_last g bits hp]
+     simp
+-  exact (List.idxOf_inj ha hparent).mp heq
++  exact (List.idxOf_inj ha).mp heq
+ 
+  theorem rotation_wrap_root (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (bits : List Bool) {a : Dart} (ha : a.1<g.edges.length)
+--- provenance/upstream/PlanarHom/PlanarityLRContourSubtreeIntervals.lean
++++ PlanarHom/PlanarityLRContourSubtreeIntervals.lean
+@@ -62,7 +62,6 @@
+   apply FinitePermutationCut.iterate_cut_interval (dfsContourForRows g hg rows)
+     (fun a => Desc g (target g e.val) (dartHost g a)) (typedOutward g e)
+     (reversePerm _ (typedOutward g e)) _ _ _ _ _ k hk hbk i hi
+-  all_goals dsimp only
+   · rw [dartHost_typedOutward]
+     exact tree_child_not_desc_source g hg he
+   · rw [dfsContourForRows_host_tree g hg rows _ he,dartHost_reverse_typedOutward]
+--- provenance/upstream/PlanarHom/PlanarityLRDartConnectivity.lean
++++ PlanarHom/PlanarityLRDartConnectivity.lean
+@@ -44,10 +44,13 @@
+         have he : e < g.edges.length := (of_decide_eq_true hp.1).1
+         let p : Dart (Fin g.edges.length) := liftDart (PlanarityRotationCode.outward g e) he
+         have hph : dartHost g p = parentVertex g (dartHost g a) := by
+-          simp only [dartHost,p,erase_liftDart,PlanarityRotationCode.host_outward]
++          change PlanarityRotationCode.host g (PlanarityRotationCode.outward g e) = _
++          rw [PlanarityRotationCode.host_outward]
+           exact hp.2.2
+         have hrh : dartHost g (reversePerm _ p) = dartHost g a := by
+-          simp only [dartHost,p,erase_reversePerm,erase_liftDart,PlanarityRotationCode.host_reverse_outward]
++          change PlanarityRotationCode.host g
++            (PlanarityRotationCode.reverse (PlanarityRotationCode.outward g e)) = _
++          rw [PlanarityRotationCode.host_reverse_outward]
+           exact hp.2.1
+         have hlt : height g (dartHost g p) < n := by
+           rw [hph,← hn]
+@@ -67,7 +70,8 @@
+   obtain ⟨a',ha',haa'⟩ := dart_to_componentRoot g hg a
+   obtain ⟨b',hb',hbb'⟩ := dart_to_componentRoot g hg b
+   have hab : DartAdjacent g a' b' := Or.inr (ha'.trans (hroot.trans hb'.symm))
++  letI : Std.Symm (DartAdjacent g) := ⟨fun _ _ h => DartAdjacent.symm g h⟩
+   exact haa'.trans ((Relation.ReflTransGen.single hab).trans
+-    (Relation.ReflTransGen.symmetric (DartAdjacent.symm g) hbb'))
++    (Relation.ReflTransGen.symmetric.symm _ _ hbb'))
+ 
+ end PlanarHom.PlanarityLRRealization
+--- provenance/upstream/PlanarHom/PlanarityLRDirectedExcursions.lean
++++ PlanarHom/PlanarityLRDirectedExcursions.lean
+@@ -65,6 +65,6 @@
+   refine ⟨hd.1,desc_trans g ((dfsGraph g hg).dartPair a).1.isLt ?_ hd.2⟩
+   have ht : Desc g (source g child.val) (target g child.val) :=
+     Or.inr (tree_source_ancestor g hg hs.1)
+-  simpa only [hs.2] using ht
++  simpa only [hs.2,dfsTarget] using ht
+ 
+ end PlanarHom.PlanarityLRRealization
+--- provenance/upstream/PlanarHom/PlanarityLREscapeEventOrder.lean
++++ PlanarHom/PlanarityLREscapeEventOrder.lean
+@@ -60,7 +60,7 @@
+   have hranks : (backEvents g bits).Pairwise (fun b c => (backEvents g bits).idxOf b < (backEvents g bits).idxOf c) := by
+     rw [List.pairwise_iff_getElem]
+     intro i j hi hj hij
+-    simpa only [List.idxOf_getElem (backEvents_nodup g bits)] using hij
++    simpa only [List.Nodup.idxOf_getElem (backEvents_nodup g bits)] using hij
+   apply (hranks.filter (fun b => ancestor g v (source g b) && decide (targetHeight g b < height g v))).imp_of_mem
+   intro b c hb hc hbc
+   exact escaping_event_rank_semantics g hg bits hLR halign
+--- provenance/upstream/PlanarHom/PlanarityLRExcursionClassification.lean
++++ PlanarHom/PlanarityLRExcursionClassification.lean
+@@ -105,7 +105,7 @@
+       exact hb
+     have hd : Desc g (target g e.val) (dartHost g b) := by
+       have hdec := (Bool.and_eq_true_iff.mp hbkeep).2
+-      simpa only [decide_eq_true_eq] using hdec
++      simpa only [Desc,decide_eq_true_eq] using hdec
+     rw [←heq] at hd
+     have := ((hcut _ hidx).mp hd).2
+     omega
+@@ -170,6 +170,6 @@
+   · have hno := (hcut i (by omega)).mpr ⟨by omega,by omega⟩
+     apply hno
+     have hdec := (Bool.and_eq_true_iff.mp hbkeep).2
+-    simpa only [decide_eq_true_eq] using hdec
++    simpa only [Desc,decide_eq_true_eq] using hdec
+ 
+ end PlanarHom.PlanarityLRRealization
+--- provenance/upstream/PlanarHom/PlanarityLRForestFaceCount.lean
++++ PlanarHom/PlanarityLRForestFaceCount.lean
+@@ -119,7 +119,7 @@
+   | nil => rfl
+   | cons a xs ih =>
+       rcases a with ⟨e,b⟩
+-      cases he : selected e <;> simp_all [visibleWord,partitionDartEquiv]
++      cases he : selected e <;> simp_all [visibleWord,partitionDartEquiv,List.filterMap_cons,Sum.getLeft?]
+ 
+  theorem visibleContourWord_erase {V E : Type*} {G : MultiGraph V E} [DecidableEq (Dart E)]
+     (rows : RotationRows G) (selected : E → Bool) (a : Dart E) :
+@@ -144,7 +144,7 @@
+     exact List.mem_map.mpr ⟨(partitionDartEquiv selected).symm x,
+       mem_fullContourWord C a _ hsingle,Equiv.apply_symm_apply _ _⟩
+   apply NoncrossingBouquet.count_eq_card_add_one _ (visibleWord_nodup hn) (visibleWord_full hfull)
+-  simpa only [List.idxOf,Lean.Grind.beq_eq_decide_eq] using horder
++  simpa only [visibleContourWord,C,List.idxOf,Lean.Grind.beq_eq_decide_eq] using horder
+ 
+  theorem count_faces_of_key_noncrossing {E K : Type*} [Finite E] [DecidableEq E] [LinearOrder K]
+     (R : Equiv.Perm (Dart E)) (selected : E → Bool) (a : Dart E)
+--- provenance/upstream/PlanarHom/PlanarityLRForkOrderSemantics.lean
++++ PlanarHom/PlanarityLRForkOrderSemantics.lean
+@@ -7,8 +7,10 @@
+ 
+ theorem nestingLE_lowpoint_le (g : MixedCode) {e f : ℕ} (h : nestingLE g e f=true) :
+     lowpoint g e≤lowpoint g f := by
+-  simp only [nestingLE,decide_eq_true_eq,nestingDepth] at h
+-  split_ifs at h <;> omega
++  unfold nestingLE at h
++  have hh := of_decide_eq_true h
++  simp only [nestingDepth] at hh
++  split_ifs at hh <;> omega
+ 
+ theorem nestingLE_chordal_of_equal_lowpoint (g : MixedCode) {e f : ℕ}
+     (h : nestingLE g e f=true) (hl : lowpoint g e=lowpoint g f) (he : chordal g e=true) : chordal g f=true := by
+--- provenance/upstream/PlanarHom/PlanarityLRGeneralBranchOrder.lean
++++ PlanarHom/PlanarityLRGeneralBranchOrder.lean
+@@ -41,7 +41,7 @@
+   have hem := (mem_orderedOutgoing g bits v e).mpr H.outgoing
+   have hfm := (mem_orderedOutgoing g bits v f).mpr K.outgoing
+   have hidx : (orderedOutgoing g bits v).idxOf e≠(orderedOutgoing g bits v).idxOf f :=
+-    fun h => hne ((List.idxOf_inj hem hfm).mp h)
++    fun h => hne ((List.idxOf_inj hem).mp h)
+   by_contra hno
+   have hrev : (orderedOutgoing g bits v).idxOf f < (orderedOutgoing g bits v).idxOf e := by omega
+   have hcb := rank_lt_of_backWord_lt g bits hc hb (K.backWord_lt hg bits H hc hb hrev)
+--- provenance/upstream/PlanarHom/PlanarityLRIncomingMateOrder.lean
++++ PlanarHom/PlanarityLRIncomingMateOrder.lean
+@@ -55,7 +55,7 @@
+   by_contra hr
+   rcases lt_or_eq_of_le (Nat.le_of_not_gt hr) with hr | hr
+   · exact (lt_asymm h (incoming_mates_reverse_key_order g hg bits hb hc he hs hr)).elim
+-  · have heq:=(List.idxOf_inj ((mem_backEvents g bits b).mpr hb) ((mem_backEvents g bits c).mpr hc)).mp hr
++  · have heq:=(List.idxOf_inj ((mem_backEvents g bits b).mpr hb)).mp hr
+     subst c
+     exact (lt_irrefl _ h).elim
+ 
+--- provenance/upstream/PlanarHom/PlanarityLRNecessityReturnCuts.lean
++++ PlanarHom/PlanarityLRNecessityReturnCuts.lean
+@@ -64,9 +64,9 @@
+   have htb := (source_target_valid g hg (returns_valid g e hb)).2
+   have htc := (source_target_valid g hg (returns_valid g f hc)).2
+   have hvsb : Desc g v (source g b) := by
+-    simpa only [(outgoing_spec g he).2.2] using returns_source_descendant g hg e hb
++    simpa only [Desc,(outgoing_spec g he).2.2] using returns_source_descendant g hg e hb
+   have hvsc : Desc g v (source g c) := by
+-    simpa only [(outgoing_spec g hf).2.2] using returns_source_descendant g hg f hc
++    simpa only [Desc,(outgoing_spec g hf).2.2] using returns_source_descendant g hg f hc
+   have htbv : Desc g (target g b) v := by
+     simpa only [(outgoing_spec g he).2.2] using returns_target_desc_source g hg e hb
+   have hlt : height g (target g b)<height g v := by
+--- provenance/upstream/PlanarHom/PlanarityLRNesting.lean
++++ PlanarHom/PlanarityLRNesting.lean
+@@ -120,7 +120,7 @@
+ 
+ theorem nestingOutgoing_sorted (g : MixedCode) (v : ℕ) :
+     (nestingOutgoing g v).Pairwise (fun a b => nestingLE g a b = true) :=
+-  List.sorted_mergeSort (nestingLE_trans g) (nestingLE_total g) _
++  List.pairwise_mergeSort (nestingLE_trans g) (nestingLE_total g) _
+ 
+ theorem nestingOutgoing_perm (g : MixedCode) (v : ℕ) : (nestingOutgoing g v).Perm (outgoing g v) :=
+   List.mergeSort_perm _ _
+--- provenance/upstream/PlanarHom/PlanarityLROutgoingOrder.lean
++++ PlanarHom/PlanarityLROutgoingOrder.lean
+@@ -44,7 +44,8 @@
+ 
+ theorem nestingLE_of_lowpoint_lt (g : MixedCode) {e f : ℕ} (h : lowpoint g e < lowpoint g f) :
+     nestingLE g e f=true := by
+-  simp only [nestingLE,decide_eq_true_eq,nestingDepth]
++  simp only [nestingLE,nestingDepth]
++  apply decide_eq_true
+   left
+   split_ifs <;> omega
+ 
+--- provenance/upstream/PlanarHom/PlanarityLRReturnEventOrder.lean
++++ PlanarHom/PlanarityLRReturnEventOrder.lean
+@@ -64,7 +64,7 @@
+   have hranks : (backEvents g bits).Pairwise (fun b c => (backEvents g bits).idxOf b < (backEvents g bits).idxOf c) := by
+     rw [List.pairwise_iff_getElem]
+     intro i j hi hj hij
+-    simpa only [List.idxOf_getElem (backEvents_nodup g bits)] using hij
++    simpa only [List.Nodup.idxOf_getElem (backEvents_nodup g bits)] using hij
+   apply (hranks.filter (fun b => decide (b ∈ returns g t))).imp_of_mem
+   intro b c hb hc hbc
+   exact tree_return_rank_semantics g hg bits hLR halign ht
+--- provenance/upstream/PlanarHom/PlanarityLRReturnRankSides.lean
++++ PlanarHom/PlanarityLRReturnRankSides.lean
+@@ -42,23 +42,23 @@
+       (W.idxOf (b,true)<W.idxOf (b,false) ∧ W.idxOf (c,true)<W.idxOf (b,false)) := by
+     apply directedSubtreePorts_outside_rank g hg rows r hr p hp.1 hpr (b,true) (b,false) (c,true)
+       (hbm true) (hbm false) (hcm true)
+-    · simpa only [hpt] using hcut.1
+-    · simpa only [hpt] using hcut.2.1
+-    · simpa only [hpt] using hcut.2.2.1
++    · simpa only [hpt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.1
++    · simpa only [hpt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.1
++    · simpa only [hpt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.2.1
+   have ho₁ : (W.idxOf (c,false)<W.idxOf (b,false) ∧ W.idxOf (c,false)<W.idxOf (b,true)) ∨
+       (W.idxOf (b,false)<W.idxOf (c,false) ∧ W.idxOf (b,true)<W.idxOf (c,false)) := by
+     apply directedSubtreePorts_outside_rank g hg rows r hr q hq.1 hqroot (b,false) (c,false) (b,true)
+       (hbm false) (hcm false) (hbm true)
+-    · simpa only [hqt] using (show Desc g (target g b.val) (target g b.val) from Or.inl rfl)
+-    · simpa only [hqt] using hcut.2.2.2.1
+-    · simpa only [hqt] using hcut.2.2.2.2.2.1
++    · simpa only [hqt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using (show Desc g (target g b.val) (target g b.val) from Or.inl rfl)
++    · simpa only [hqt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.2.2.1
++    · simpa only [hqt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.2.2.2.2.1
+   have ho₂ : (W.idxOf (c,false)<W.idxOf (b,true) ∧ W.idxOf (c,false)<W.idxOf (c,true)) ∨
+       (W.idxOf (b,true)<W.idxOf (c,false) ∧ W.idxOf (c,true)<W.idxOf (c,false)) := by
+     apply directedSubtreePorts_outside_rank g hg rows r hr q hq.1 hqroot (b,true) (c,false) (c,true)
+       (hbm true) (hcm false) (hcm true)
+-    · simpa only [hqt] using hcut.2.2.2.1
+-    · simpa only [hqt] using hcut.2.2.2.2.1
+-    · simpa only [hqt] using hcut.2.2.2.2.2.1
++    · simpa only [hqt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.2.2.1
++    · simpa only [hqt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.2.2.2.1
++    · simpa only [hqt,dfsGraph,MultiGraph.dartPair,Bool.false_eq_true,ite_false,ite_true] using hcut.2.2.2.2.2.1
+   have hne : b≠c := fun h => hcut.2.2.2.2.2.2.2 (congrArg Fin.val h)
+   have hn := pairNonalternating_of_word W (hnonalt r hr) b c hne hbm hcm
+   have hs : W.idxOf (b,true)≠W.idxOf (c,true) := by
+--- provenance/upstream/PlanarHom/PlanarityLRRowRelabel.lean
++++ PlanarHom/PlanarityLRRowRelabel.lean
+@@ -18,7 +18,7 @@
+     row.Pairwise (fun a b=>rowIndex row a<rowIndex row b) := by
+   apply List.pairwise_iff_getElem.mpr
+   intro i j hi hj hij
+-  simpa only [rowIndex,List.idxOf_getElem hn] using hij
++  simpa only [rowIndex,List.Nodup.idxOf_getElem hn] using hij
+ 
+  theorem outward_localRank_pairwise (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (bits : List Bool) {v : ℕ} (hv : v<g.vertices) :
+--- provenance/upstream/PlanarHom/PlanarityLRSubtreeIntervals.lean
++++ PlanarHom/PlanarityLRSubtreeIntervals.lean
+@@ -8,7 +8,7 @@
+ 
+  theorem backEvents_sorted (g : MixedCode) (bits : List Bool) :
+     (backEvents g bits).Pairwise (fun a b=>eventLE g bits a b=true) :=
+-   List.sorted_mergeSort (eventLE_trans g bits) (eventLE_total g bits) _
++   List.pairwise_mergeSort (eventLE_trans g bits) (eventLE_total g bits) _
+ 
+  theorem eventLE_of_rank_le (g : MixedCode) (bits : List Bool) {a b : ℕ}
+     (ha : isBack g a=true) (hb : isBack g b=true)
+@@ -21,7 +21,7 @@
+     have hs:=(List.pairwise_iff_getElem.mp (backEvents_sorted g bits))
+       ((backEvents g bits).idxOf a) ((backEvents g bits).idxOf b) hi hj h
+     simpa only [List.getElem_idxOf] using hs
+-  · have he:=(List.idxOf_inj ham hbm).mp h
++  · have he:=(List.idxOf_inj ham).mp h
+     subst b
+     exact (eventLE_iff g bits a a).mpr (Or.inr ⟨rfl,le_rfl⟩)
+ 
+--- provenance/upstream/PlanarHom/PlanarityLRTreeInsertion.lean
++++ PlanarHom/PlanarityLRTreeInsertion.lean
+@@ -34,7 +34,7 @@
+ 
+ theorem treeInsertionOrder_sorted (g : MixedCode) :
+     (treeInsertionOrder g).Pairwise (fun e f => targetHeight g e ≤ targetHeight g f) := by
+-  have h := List.sorted_mergeSort (treeDepthLE_trans g) (treeDepthLE_total g)
++  have h := List.pairwise_mergeSort (treeDepthLE_trans g) (treeDepthLE_total g)
+     ((List.range g.edges.length).filter (isTree g))
+   apply h.imp
+   intro e f h
+--- provenance/upstream/PlanarHom/PlanarityLRTreeWords.lean
++++ PlanarHom/PlanarityLRTreeWords.lean
+@@ -36,7 +36,7 @@
+       apply parentEdge_injective g hu hv hpu hpv
+       have hmu : parentEdge g u∈orderedOutgoing g bits (parentVertex g v) := by
+         simpa only [hparents] using parentEdge_mem_orderedOutgoing g hg bits hu hpu
+-      exact (List.idxOf_inj hmu (parentEdge_mem_orderedOutgoing g hg bits hv hpv)).mp
++      exact (List.idxOf_inj hmu).mp
+         (by simpa only [hparents] using hs.2)
+ 
+  theorem treeWord_prefix_iff_desc (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+--- provenance/upstream/PlanarHom/PlanarityLRVisitRanks.lean
++++ PlanarHom/PlanarityLRVisitRanks.lean
+@@ -13,7 +13,7 @@
+   have hf:=List.formPerm_apply_getElem row hn (rowIndex row a) hi
+   rw [he] at hf
+   rw [hf]
+-  exact List.idxOf_getElem hn _ hm
++  exact List.Nodup.idxOf_getElem hn _ hm
+ 
+  theorem directRotation_eq_visitRow_formPerm (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (bits : List Bool) {a : Dart} (ha : a.1<g.edges.length) :
+@@ -33,8 +33,8 @@
+ 
+  theorem rowIndex_last (row : List Dart) (a : Dart) (hn : (row++[a]).Nodup) :
+     rowIndex (row++[a]) a=row.length := by
+-  have hh:=List.idxOf_getElem hn row.length (by simp)
+-  simpa only [List.getElem_concat_length rfl] using hh
++  have hh:=List.Nodup.idxOf_getElem hn row.length (by simp)
++  simpa only [rowIndex,List.getElem_concat_length rfl] using hh
+ 
+  theorem localRank_parent_last (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (bits : List Bool) {v : ℕ} (hv : v<g.vertices) (hp : 0<height g v) :
+--- provenance/upstream/PlanarHom/PlanarityLRWordSubtrees.lean
++++ PlanarHom/PlanarityLRWordSubtrees.lean
+@@ -30,7 +30,7 @@
+     have hmem:parentEdge g w∈orderedOutgoing g bits (source g b) := by
+       simpa only [hpw] using parentEdge_mem_orderedOutgoing g hg bits hw hwpos
+     have hedge:b=parentEdge g w:=
+-      (List.idxOf_inj (backEdge_mem_orderedOutgoing g bits hb) hmem).mp hi
++      (List.idxOf_inj (backEdge_mem_orderedOutgoing g bits hb)).mp hi
+     have ht:=(parentEdge_tree g hg hw hwpos).1
+     have hf:=(of_decide_eq_true hb).2.1
+     rw [hedge,ht] at hf
+--- provenance/upstream/PlanarHom/PlanarityRowComponentFaceProducts.lean
++++ PlanarHom/PlanarityRowComponentFaceProducts.lean
+@@ -21,6 +21,10 @@
+   have hh := (hodd _ hmem).boundarySign
+   have hp := boundaryById_perm_componentFaceWord g hg rows R hrows r a
+   rw [boundarySign_perm orientation hp,hp.length_eq,List.length_map] at hh
++  have hsign : dartSign (componentOrientation g r orientation) =
++      fun x : Dart (ComponentEdge g r) => if orientation x.1.val.val = x.2 then (1 : ℤ) else -1 := rfl
++  unfold boundarySign
++  rw [hsign]
+   simpa only [boundarySign,List.map_map,Function.comp_def,dartSign,componentOrientation,
+     eraseDart,componentDartLift] using hh
+ 
+--- provenance/upstream/PlanarHom/PlanarityRowFaceLabels.lean
++++ PlanarHom/PlanarityRowFaceLabels.lean
+@@ -108,10 +108,10 @@
+     have hidx:(representatives g rows).idxOf b=f := by
+       obtain ⟨hi,he⟩:=List.getElem?_eq_some_iff.mp hf
+       rw [← he]
+-      simpa only [dart_idxOf_decidable] using List.idxOf_getElem (representatives_nodup g rows) f hi
++      simpa only [dart_idxOf_decidable] using List.Nodup.idxOf_getElem (representatives_nodup g rows) f hi
+     change representative g rows a=b ↔ (representatives g rows).idxOf (representative g rows a)=f
+     rw [← hidx]
+-    simpa only [dart_idxOf_decidable] using (List.idxOf_inj (representative_mem_of_valid g hg rows R hrows ha) hb).symm
++    simpa only [dart_idxOf_decidable] using (List.idxOf_inj (representative_mem_of_valid g hg rows R hrows ha)).symm
+ 
+  theorem boundaryById_nodup (g : MixedCode) {bt ut : ℕ} (hg : g.Valid bt ut)
+     (rows : Rows) (R : RotationRows (g.toMultiGraph hg)) (hrows : Realizes g hg rows R) (f : ℕ) : (boundaryById g rows f).Nodup := by
+--- provenance/upstream/PlanarHom/PlanarityRowFacePrimitives.lean
++++ PlanarHom/PlanarityRowFacePrimitives.lean
+@@ -20,7 +20,6 @@
+  theorem member_encoding_le {A : Type} (e : BitEncoding A) (xs : List A) (a : A) (ha : a∈xs) :
+     (e.encode a).length≤(e.list.encode xs).length := by
+   have hh:=ListMapMachines.mem_le_sum_map (fun a=>(e.encode a).length) ha
+-  dsimp only at hh
+   have he:(e.list.encode xs).length=2*(BitEncoding.nat.encode xs.length).length+1+
+       2*(xs.map (fun a=>(e.encode a).length)).sum+xs.length := by
+     simp [BitEncoding.list,BitEncoding.frames_length,List.map_map,Function.comp_def]
+--- provenance/upstream/PlanarHom/PlanarityRowFaceTableMaterialization.lean
++++ PlanarHom/PlanarityRowFaceTableMaterialization.lean
+@@ -13,12 +13,12 @@
+   rw [representative_fixed_of_mem g rows (List.mem_of_getElem? hf)]
+   obtain ⟨hi,he⟩:=List.getElem?_eq_some_iff.mp hf
+   rw [← he]
+-  simpa only [dart_idxOf_decidable] using List.idxOf_getElem (representatives_nodup g rows) f hi
++  simpa only [dart_idxOf_decidable] using List.Nodup.idxOf_getElem (representatives_nodup g rows) f hi
+ 
+  theorem faceId_injective (g : MixedCode) (rows : Rows) {a b : PlanarityRotationCode.Dart}
+     (ha : a∈representatives g rows) (hb : b∈representatives g rows)
+     (h : faceId g rows a=faceId g rows b) : a=b := by
+-  apply (List.idxOf_inj ha hb).mp
++  apply (List.idxOf_inj ha).mp
+   simpa only [faceId,representative_fixed_of_mem g rows ha,
+     representative_fixed_of_mem g rows hb,dart_idxOf_decidable] using h
+ 
+--- provenance/upstream/PlanarHom/PlanarityRowGlobalEuler.lean
++++ PlanarHom/PlanarityRowGlobalEuler.lean
+@@ -31,7 +31,9 @@
+     letI := componentEdge_nonempty_of_incident g hg hinc r
+     let a : Dart (ComponentEdge g r.val.val) := (Classical.choice inferInstance,true)
+     have h := (componentRows g hg r.val.val R).euler_le a (componentGraph_connected g hg r.val r.property)
+-    simpa only [L,U,Nat.card_eq_fintype_card,count,RotationRows.Face,RotationRows.facePerm,componentFace] using h
++    simp only [L,U,count,RotationRows.Face,RotationRows.facePerm,componentFace,Equiv.Perm.mul_def,Fintype.card_eq_nat_card] at h ⊢
++    convert h using 2
++    exact Fintype.card_eq_nat_card.symm
+   have hsum : (∑r : Root g,L r)=∑r : Root g,U r := by
+     simp only [L,U,Finset.sum_add_distrib,Finset.sum_const,Finset.card_univ,smul_eq_mul]
+     rw [←vertices_eq_sum_components g,←edges_eq_sum_components g hg,←face_count_eq_sum_components g hg R]
+--- provenance/upstream/PlanarHom/PlanarityRowPfaffianOrientation.lean
++++ PlanarHom/PlanarityRowPfaffianOrientation.lean
+@@ -34,7 +34,10 @@
+   have heuler : Fintype.card (ComponentVertex g r.val)+Fintype.card cr.Face=
+       Fintype.card (ComponentEdge g r.val)+2 := by
+     have hh := hEuler r hr ⟨base.1⟩
+-    simpa only [count,Nat.card_eq_fintype_card,RotationRows.Face,cr,componentFace,RotationRows.facePerm] using hh
++    simp only [count,Fintype.card_eq_nat_card,RotationRows.Face,cr,componentFace,
++      RotationRows.facePerm,Equiv.Perm.mul_def] at hh ⊢
++    convert hh using 2
++    exact Fintype.card_eq_nat_card
+   have hfaces : ∀q : cr.Face,q≠cr.faceOf omitted →
+       (∏a : {a : Dart (ComponentEdge g r.val) // cr.faceOf a=q},
+         dartSign (componentOrientation g r.val (logOrientation (orientationLog g rows))) a.val)=
+--- provenance/upstream/PlanarHom/PottsRandomCluster.lean
++++ PlanarHom/PottsRandomCluster.lean
+@@ -105,6 +105,7 @@
+   rw [Fintype.card_subtype] at hc
+   rw [hc, Nat.cast_pow]
+ 
++set_option backward.isDefEq.respectTransparency false in
+ /-- Fortuin–Kasteleyn expansion for the literal I+J interaction, over all
+ subsets of edge occurrences. There is no positivity or nonempty-color premise. -/
+ theorem potts_randomCluster [Fintype V] [Fintype E] [Fintype C] [CommSemiring R]
+@@ -119,8 +120,8 @@
+ 
+ theorem componentCount_antitone [Fintype V] (G : MultiGraph V E)
+     {A B : Finset E} (hAB : A ⊆ B) : G.componentCount B ≤ G.componentCount A := by
+-  let f : G.Components A → G.Components B := Quotient.map id (fun _ _ h =>
+-    Relation.EqvGen.mono (fun _ _ ⟨e, he, hu, hv⟩ => ⟨e, hAB he, hu, hv⟩) h)
++  let f : G.Components A → G.Components B := Quotient.map id (fun u v h =>
++    Relation.EqvGen.mono (fun _ _ ⟨e, he, hu, hv⟩ => ⟨e, hAB he, hu, hv⟩) u v h)
+   apply Fintype.card_le_of_surjective f
+   intro x
+   induction x using Quotient.inductionOn with
+--- provenance/upstream/PlanarHom/RadialPottsAssemblyCircleCoordinates.lean
++++ PlanarHom/RadialPottsAssemblyCircleCoordinates.lean
+@@ -79,7 +79,7 @@
+   have hd : 0<rayLength p-p.2 := sub_pos.mpr (rayLength_gt_y hp)
+   constructor
+   · exact div_pos_iff_of_pos_right hd
+-  · simpa only [zero_mul] using (div_lt_iff₀ hd : p.1/(rayLength p-p.2)<0 ↔ p.1<0*(rayLength p-p.2))
++  · simpa only [circleHeight,zero_mul] using (div_lt_iff₀ hd : p.1/(rayLength p-p.2)<0 ↔ p.1<0*(rayLength p-p.2))
+ 
+ /-- Within either rightward or leftward clusters, strict clockwise determinant
+ order gives strict decreasing boundary height. -/
+--- provenance/upstream/PlanarHom/RadialPottsAssemblyRibbonCircleClip.lean
++++ PlanarHom/RadialPottsAssemblyRibbonCircleClip.lean
+@@ -73,7 +73,7 @@
+         simpa only [lo,if_pos he] using hb.1
+       · intro he
+         simpa only [hi,if_pos he] using hb.2
+-    obtain ⟨r,hr,hsep⟩ := EMetric.exists_pos_forall_lt_edist hS isClosed_singleton hdis
++    obtain ⟨r,hr,hsep⟩ := Metric.exists_pos_forall_lt_edist hS isClosed_singleton hdis
+     refine ⟨r,hr,?_⟩
+     intro e t s hsrc hdst
+     have hlo : lo e ≤ t := by dsimp [lo]; split_ifs with he; exact hsrc he; exact bot_le
+@@ -286,7 +286,7 @@
+         simpa only [right,ContinuousMap.coe_mk,unitInterval.symm_symm] using hh
+       have hh := (F (e,false)).after_circleCut τ r hr (hsmall (e,false))
+         (unitInterval.symm t) s ((show (unitInterval.symm t : ℝ) ≤ δ from htδ.le).trans (hδfan (e,false))) hct
+-      simpa only [outgoingParameter,Bool.false_eq_true,if_false,unitInterval.symm_symm] using hh
++      simpa only [outgoingParameter,MultiGraph.dartPair,Bool.false_eq_true,if_false,unitInterval.symm_symm] using hh
+     · have hm := hmargin e t s v (fun he => not_lt.mp (fun h => hs ⟨he,h⟩))
+         (fun he => not_lt.mp (fun h => hd ⟨he,h⟩))
+       have hn := norm_le_rayLength ((D.sideRibbon positive).band e (t,τ s)-d.drawing.point v)
+--- provenance/upstream/PlanarHom/RadialPottsAssemblyRibbonMiddle.lean
++++ PlanarHom/RadialPottsAssemblyRibbonMiddle.lean
+@@ -1,4 +1,5 @@
+ import PlanarHom.OccurrenceKasteleynPolygonalCollars
++import Mathlib.Topology.MetricSpace.HausdorffDistance
+ 
+ /-!
+ NEW compatibility adaptation: only the import has changed. The recovered proof
+@@ -259,12 +260,12 @@
+     rintro x hx ⟨v,rfl⟩
+     obtain ⟨e,p,hp⟩ := Set.mem_iUnion.mp hx
+     exact R.middleBand_avoids a b hab ha hb e p v hp
+-  obtain ⟨r,hr,hsep⟩ := EMetric.exists_pos_forall_lt_edist hS hH hdis
++  obtain ⟨r,hr,hsep⟩ := Metric.exists_pos_forall_lt_edist hS hH hdis
+   refine ⟨r,hr,?_⟩
+   intro e p v
+   have hh := hsep _ (Set.mem_iUnion.mpr ⟨e,p,rfl⟩) _ ⟨v,rfl⟩
+   have hreal := (ENNReal.toReal_lt_toReal (by simp) (edist_ne_top _ _)).mpr hh
+-  simpa using hreal
++  simpa [edist_dist] using hreal
+ 
+ end PlanarHom.MultiGraph.RibbonDrawing
+ 
+@@ -317,11 +318,11 @@
+     rintro x hx ⟨v,rfl⟩
+     obtain ⟨e,p,hp⟩ := Set.mem_iUnion.mp hx
+     exact R.clippedBand_avoids (a e) (b e) (hab e) (ha e) (hb e) e p v hp
+-  obtain ⟨r,hr,hsep⟩ := EMetric.exists_pos_forall_lt_edist hS hH hdis
++  obtain ⟨r,hr,hsep⟩ := Metric.exists_pos_forall_lt_edist hS hH hdis
+   refine ⟨r,hr,?_⟩
+   intro e p v
+   have hh := hsep _ (Set.mem_iUnion.mpr ⟨e,p,rfl⟩) _ ⟨v,rfl⟩
+   have hreal := (ENNReal.toReal_lt_toReal (by simp) (edist_ne_top _ _)).mpr hh
+-  simpa using hreal
++  simpa [edist_dist] using hreal
+ 
+ end PlanarHom.MultiGraph.RibbonDrawing
+--- provenance/upstream/PlanarHom/RootedOccurrenceTree.lean
++++ PlanarHom/RootedOccurrenceTree.lean
+@@ -19,8 +19,7 @@
+   | .node v children => v :: children.flatMap (fun c => vertices c.2)
+ termination_by t => sizeOf t
+ decreasing_by
+-  rename_i children hc
+-  have h := List.sizeOf_lt_sizeOf_of_mem hc
++  have h := List.sizeOf_lt_of_mem (show c ∈ children by assumption)
+   rcases c with ⟨e,t⟩
+   simp only [Prod.mk.sizeOf_spec,RootedOccurrenceTree.node.sizeOf_spec] at *
+   omega
+@@ -29,8 +28,7 @@
+   | .node _ children => children.flatMap (fun c => c.1 :: edges c.2)
+ termination_by t => sizeOf t
+ decreasing_by
+-  rename_i children hc
+-  have h := List.sizeOf_lt_sizeOf_of_mem hc
++  have h := List.sizeOf_lt_of_mem (show c ∈ children by assumption)
+   rcases c with ⟨e,t⟩
+   simp only [Prod.mk.sizeOf_spec,RootedOccurrenceTree.node.sizeOf_spec] at *
+   omega
+@@ -39,8 +37,7 @@
+   | .node v children => ∀ c∈children, G.src c.1=v ∧ G.dst c.1=c.2.root ∧ Compatible G c.2
+ termination_by t => sizeOf t
+ decreasing_by
+-  rename_i children hc
+-  have h := List.sizeOf_lt_sizeOf_of_mem hc
++  have h := List.sizeOf_lt_of_mem (show c ∈ children by assumption)
+   rcases c with ⟨e,t⟩
+   simp only [Prod.mk.sizeOf_spec,RootedOccurrenceTree.node.sizeOf_spec] at *
+   omega
+--- provenance/upstream/PlanarHom/RootedOccurrenceTreeBoundaryLabels.lean
++++ PlanarHom/RootedOccurrenceTreeBoundaryLabels.lean
+@@ -38,7 +38,7 @@
+     · subst k
+       exact hedge he
+     · have hdis: c.2.vertices.Disjoint k.2.vertices :=
+-        (child_vertices_disjoint ht).forall (fun _ _ h=>h.symm) hc hk hck
++        (@List.Pairwise.forall _ _ _ ⟨fun _ _ h => h.symm⟩ (child_vertices_disjoint ht)) hc hk hck
+       have hends:=branch_endpoints ht k hk a.1 he
+       rcases dart_host_endpoints (G:=G) a with hs | hd
+       · rcases hends.1 with hs' | hs'
+--- provenance/upstream/PlanarHom/RootedOccurrenceTreeLookup.lean
++++ PlanarHom/RootedOccurrenceTreeLookup.lean
+@@ -84,7 +84,7 @@
+       rw [edges_node] at he
+       obtain ⟨c,hc,he⟩:=List.mem_flatMap.mp he
+       rcases List.mem_cons.mp he with he | he
+-      · exact ⟨c.2,by simpa only [he,Prod.mk.eta] using hc⟩
++      · exact ⟨c.2,by simpa only [childPairs,he,Prod.mk.eta] using hc⟩
+       · exact ((child_edges_nonincident_root ht c hc e he).1 hs).elim
+     · rintro ⟨u,hu⟩
+       rw [edges_node]
+--- provenance/upstream/PlanarHom/RotationEvenSubgraphFaceCut.lean
++++ PlanarHom/RotationEvenSubgraphFaceCut.lean
+@@ -41,7 +41,13 @@
+ 
+ private theorem zmod2_cut_xor (x y : ZMod 2) (p : Prop) [Decidable p]
+     (h : x-y=if p then 1 else 0) : (decide (x=1) ^^ decide (y=1))=decide p := by
+-  fin_cases x <;> fin_cases y <;> by_cases hp : p <;> norm_num [hp] at *
++  have h1 : ∀ x y : ZMod 2, x - y = 1 →
++      (decide (x = 1) ^^ decide (y = 1)) = true := by decide
++  have h0 : ∀ x y : ZMod 2, x - y = 0 →
++      (decide (x = 1) ^^ decide (y = 1)) = false := by decide
++  by_cases hp : p
++  · simpa only [hp,decide_true] using h1 x y (by simpa only [hp,if_true] using h)
++  · simpa only [hp,decide_false] using h0 x y (by simpa only [hp,if_false] using h)
+ 
+ /-- Genuine cut existence for every even edge subset of the actual rotation.
+ The arbitrary omitted face lies on the false side by construction. -/
+--- provenance/upstream/PlanarHom/RotationFaceCutSigns.lean
++++ PlanarHom/RotationFaceCutSigns.lean
+@@ -132,10 +132,9 @@
+   have hp := FinitePermutationCycles.product_eq_sign C.selectedFace (fun a=>dartSign orientation a.val) hfaces
+   rw [C.selected_product orientation,C.selectedFace_eq,Equiv.Perm.sign_trans,
+     C.sign_selectedInsideReverse] at hp
+-  norm_cast at hp
+   have hn : (-1:ℤ)^C.internalCount≠0 := pow_ne_zero _ (by norm_num)
+   apply mul_left_cancel₀ hn
+-  simpa only [mul_comm] using hp
++  simpa only [Units.val_mul,Units.val_pow_eq_pow_val,Units.coe_neg_one,mul_comm] using hp
+ 
+ set_option maxHeartbeats 1000000 in
+ /-- Restrict the actual full face equations to the derived side, which excludes
+--- provenance/upstream/PlanarHom/SelectedStretchCode.lean
++++ PlanarHom/SelectedStretchCode.lean
+@@ -111,6 +111,7 @@
+   · intro i hi hj
+     simp
+ 
++set_option backward.isDefEq.respectTransparency false in
+ /-- Equality of the incidence-indexed definition with its arithmetic list
+ implementation. This is the bridge used by the ordinary polynomial machine. -/
+ theorem stretchLabel_edges_eq_flatMap (g : MixedCode) (selected replacement n : ℕ) :
+--- provenance/upstream/PlanarHom/SelectedStretchMachines.lean
++++ PlanarHom/SelectedStretchMachines.lean
+@@ -150,8 +150,8 @@
+   rfl
+ 
+ noncomputable def stretchLabelComputer (selected replacement : ℕ) :
+-    Turing.TM2ComputableInPolyTime (BitEncoding.unaryNat.prod encoding).toFinEncoding
+-      encoding.toFinEncoding (fun p => p.2.stretchLabel selected replacement p.1) :=
++    Turing.TM2ComputableInPolyTime (BitEncoding.unaryNat.prod encoding).encode
++      encoding.encode (fun p => p.2.stretchLabel selected replacement p.1) :=
+   Classical.choice (fp_stretchLabel selected replacement)
+ 
+ /-- The paper's positive path length, with a total length-one fallback at zero. -/
+@@ -165,14 +165,14 @@
+     (fp_snd BitEncoding.unaryNat encoding)).comp (fp_stretchLabel selected replacement))
+ 
+ noncomputable def stretchLabelLengthComputer (selected replacement : ℕ) :
+-    Turing.TM2ComputableInPolyTime (BitEncoding.unaryNat.prod encoding).toFinEncoding
+-      encoding.toFinEncoding (fun p => p.2.stretchLabelLength selected replacement p.1) :=
++    Turing.TM2ComputableInPolyTime (BitEncoding.unaryNat.prod encoding).encode
++      encoding.encode (fun p => p.2.stretchLabelLength selected replacement p.1) :=
+   Classical.choice (fp_stretchLabelLength selected replacement)
+ 
+ noncomputable def stretchLabelLengthRawComputer (selected replacement : ℕ) :
+     Turing.TM2ComputableInPolyTime
+-      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).toFinEncoding
+-      encoding.toFinEncoding
++      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).encode
++      encoding.encode
+       (fun w => w.value.2.stretchLabelLength selected replacement w.value.1) :=
+   MachineComposition.composeComputers
+     (BitEncoding.prodNormalizer BitEncoding.unaryNormalizer normalizer)
+@@ -188,15 +188,15 @@
+   let w : BitEncoding.ValidWord (BitEncoding.unaryNat.prod encoding) := ⟨raw,⟨(h,g),hd⟩⟩
+   have hv : w.value=(h,g) := BitEncoding.ValidWord.value_eq hd
+   have hout := (stretchLabelLengthRawComputer selected replacement).outputsFun w
+-  simpa only [BitEncoding.toFinEncoding, BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe, BitEncoding.encode, BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw, w, hv] using hout
+ 
+ /-- The normalizer reads every successfully decoded raw parameter/graph pair;
+ the compiler is therefore not restricted to canonical input codewords. -/
+ noncomputable def stretchLabelRawComputer (selected replacement : ℕ) :
+     Turing.TM2ComputableInPolyTime
+-      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).toFinEncoding
+-      encoding.toFinEncoding
++      (BitEncoding.ValidWord.encoding (BitEncoding.unaryNat.prod encoding)).encode
++      encoding.encode
+       (fun w => w.value.2.stretchLabel selected replacement w.value.1) :=
+   MachineComposition.composeComputers
+     (BitEncoding.prodNormalizer BitEncoding.unaryNormalizer normalizer)
+@@ -212,7 +212,7 @@
+   let w : BitEncoding.ValidWord (BitEncoding.unaryNat.prod encoding) := ⟨raw,⟨(n,g),hd⟩⟩
+   have hv : w.value=(n,g) := BitEncoding.ValidWord.value_eq hd
+   have h := (stretchLabelRawComputer selected replacement).outputsFun w
+-  simpa only [BitEncoding.toFinEncoding, BitEncoding.ValidWord.encoding,
++  simpa only [Equiv.invFun_as_coe, BitEncoding.encode, BitEncoding.ValidWord.encoding,
+     BitEncoding.ValidWord.raw, w, hv] using h
+ 
+ end PlanarHom.Complexity.MixedCode

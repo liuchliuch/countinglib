@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this formalization."
+type: software
+repository-code: "https://github.com/liuchliuch/holant-dichotomy-lean"
+title: "A Full Complexity Dichotomy for Boolean Holant in Lean"
+license: Apache-2.0
+authors:
+  - family-names: Liu
+    given-names: Chenghua
+  - family-names: Meng
+    given-names: Boning
+  - family-names: Wang
+    given-names: Juqiu
+preferred-citation:
+  type: article
+  title: "A Full Complexity Dichotomy for Complex-Valued Boolean Holant Problems"
+  year: 2026
+  journal: arXiv
+  doi: "10.48550/arXiv.2610.00081"
+  url: "https://arxiv.org/abs/2610.00081v1"
+  authors:
+    - family-names: Liu
+      given-names: Chenghua
+    - family-names: Meng
+      given-names: Boning
+    - family-names: Wang
+      given-names: Juqiu

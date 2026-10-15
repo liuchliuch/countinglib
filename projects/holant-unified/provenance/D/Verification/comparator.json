@@ -1,0 +1,14 @@
+{
+  "challenge_module": "Verification.Challenge",
+  "solution_module": "Verification.Solution",
+  "theorem_names": [
+    "Paper2.Verification.Theorems.main_classification",
+    "Paper2.Verification.Theorems.mountain_classification",
+    "Paper2.Verification.Theorems.native_classification"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

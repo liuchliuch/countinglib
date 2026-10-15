@@ -1,0 +1,105 @@
+{
+  "repository": "https://github.com/liuchliuch/holant-dichotomy-lean",
+  "upstream_label": "D",
+  "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+  "path": "Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+  "source_url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+  "git_blob_sha1": "4e5da143ada48cce1494fe5dfbb61297cd01b2f4",
+  "sha256": "0feaad6d48236cdecc5bc1286cfbb4b9c14745b30cafe3b8437d56c07e21de7b",
+  "size_bytes": 3317,
+  "tree_manifest": ".cache/upstream/holant-dichotomy-lean/tree.json",
+  "tree_manifest_relative_to": "repository root",
+  "tree_manifest_sha256": "a344515854341e72575c4277787580f1946f59052ebb4757d182fdd6b27a12f3",
+  "local_reference": "/Users/liuch/draft-pinkfold/paper2-release-staging-20261010/Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+  "local_reference_matches_tree_blob": true,
+  "verification_method": "Read the cached non-truncated fixed-commit tree manifest, then verified SHA-1 of the Git blob header plus local source bytes against the manifest before extraction. The upstream LICENSE was checked the same way.",
+  "license": {
+    "name": "Apache License 2.0",
+    "source_path": "LICENSE",
+    "source_url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/LICENSE",
+    "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "local_reference_matches_tree_blob": true,
+    "note": "License identified from the checked upstream LICENSE contents; no new copyright or authorship claim was introduced."
+  },
+  "source_lean_toolchain": "leanprover/lean4:v4.34.1",
+  "source_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "target_lean_toolchain": "leanprover/lean4:v4.34.1",
+  "target_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "target_path": "Counting/Algorithm/Interpolation/Core.lean",
+  "target_sha256": "07f83469953faad8cb4b6f5e9bb7a21b586b399e2e64956c002884df807cab30",
+  "declaration_mapping": [
+    {
+      "source": "Holant.Complexity.BinaryInterpolation.interpolationDenominator",
+      "target": "Counting.Algorithm.Interpolation.interpolationDenominator",
+      "source_lines": [
+        13,
+        14
+      ],
+      "target_line": 35,
+      "declaration_unchanged_modulo_whitespace": true
+    },
+    {
+      "source": "Holant.Complexity.BinaryInterpolation.recoverTop",
+      "target": "Counting.Algorithm.Interpolation.recoverTop",
+      "source_lines": [
+        16,
+        17
+      ],
+      "target_line": 39,
+      "declaration_unchanged_modulo_whitespace": true
+    },
+    {
+      "source": "Holant.Complexity.BinaryInterpolation.interpolationDenominator_ne_zero",
+      "target": "Counting.Algorithm.Interpolation.interpolationDenominator_ne_zero",
+      "source_lines": [
+        19,
+        25
+      ],
+      "target_line": 43,
+      "declaration_unchanged_modulo_whitespace": true
+    },
+    {
+      "source": "Holant.Complexity.BinaryInterpolation.recoverTop_eq_coefficient",
+      "target": "Counting.Algorithm.Interpolation.recoverTop_eq_coefficient",
+      "source_lines": [
+        30,
+        40
+      ],
+      "target_line": 54,
+      "declaration_unchanged_modulo_whitespace": true
+    }
+  ],
+  "direct_imports": [
+    "Mathlib.LinearAlgebra.Lagrange"
+  ],
+  "mathlib_proof_dependencies": [
+    "Lagrange.coeff_eq_sum",
+    "Polynomial.degree_le_natDegree",
+    "Finset.prod_ne_zero_iff"
+  ],
+  "migration_edits": [
+    "Extracted exactly four field-polynomial declarations and changed the namespace from Holant.Complexity.BinaryInterpolation to Counting.Algorithm.Interpolation.",
+    "Removed unused variable n and imports Holant.Complexity.BinaryInterpolation.NetworkPolynomial and Mathlib.GroupTheory.OrderOfElement.",
+    "Preserved all four declaration statements and definition/proof bodies modulo whitespace, with this comparison checked mechanically.",
+    "Added provenance and scope documentation; left denominator_factors, network_interpolation, and geometric_nodes_injective outside this core module."
+  ],
+  "semantic_scope": "For any field K and m + 1 injectively chosen nodes, the finite Lagrange arithmetic expression recovers coefficient m of any polynomial with natDegree at most m. Includes m = 0 and polynomials of degree less than m. It does not assert an effective field representation, execution complexity, oracle realization, or a polynomial bit-cost bound.",
+  "validation": {
+    "date": "2026-10-13",
+    "declarations_equal_modulo_whitespace": true,
+    "compile_command": "./scripts/lake lean Counting/Algorithm/Interpolation/Core.lean",
+    "compile_working_directory": "/Users/liuch/draft-pinkfold/counting-complexity/projects/interpolation",
+    "compile_status": "passed",
+    "axiom_audit_status": "Passed as part of the complete local module-ownership and transitive-axiom audit; see validation/result.json and validation/audit.log.",
+    "compile_exit_code": 0,
+    "compile_output": "No diagnostics."
+  },
+  "same_blob_upstream": {
+    "repository": "https://github.com/liuchliuch/holant-binary-disequality-lean",
+    "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+    "path": "Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+    "git_blob_sha1": "4e5da143ada48cce1494fe5dfbb61297cd01b2f4",
+    "verification": "Fixed B tree.json entry matches the verified D blob; the D bytes remain the selected source."
+  }
+}

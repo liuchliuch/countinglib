@@ -1,0 +1,138 @@
+[
+  {
+    "module": "Counting.Reuse",
+    "kind": "ordinary aggregate"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork",
+    "kind": "raw semantic"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.Canonical",
+    "kind": "native canonical; no aliases"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.Corrected",
+    "kind": "corrected semantic"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.Composition",
+    "kind": "composition semantic"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.Ordinary",
+    "kind": "compatibility semantic"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.All",
+    "kind": "acceptance aggregate"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget",
+    "kind": "ordinary semantic alias import"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.Basic",
+    "kind": "exact semantic"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.Machine",
+    "kind": "machine"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.Extension",
+    "kind": "machine extension"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.S1",
+    "kind": "semantic alignment"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.ExactField",
+    "kind": "field oracle machine"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.All",
+    "kind": "acceptance aggregate"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic",
+    "kind": "arithmetic machine"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic.Heights",
+    "kind": "optional encoding bounds"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic.Materialized",
+    "kind": "optional list machines"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic.Acceptance",
+    "kind": "acceptance aggregate"
+  },
+  {
+    "module": "Counting.SharpPClosure.Basic",
+    "kind": "pure counting"
+  },
+  {
+    "module": "Counting.SharpPClosure.Machines",
+    "kind": "machine"
+  },
+  {
+    "module": "Counting.SharpPClosure",
+    "kind": "ordinary machine aggregate"
+  },
+  {
+    "module": "Counting.SharpPClosure.Clients",
+    "kind": "acceptance client aggregate"
+  },
+  {
+    "module": "Counting.Algorithm.ProductFinitePalette",
+    "kind": "ordinary semantic alias import"
+  },
+  {
+    "module": "Counting.Algorithm.ProductFinitePalette.Input",
+    "kind": "semantic frontend"
+  },
+  {
+    "module": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "kind": "machine"
+  },
+  {
+    "module": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "kind": "acceptance client aggregate"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.Assignments",
+    "kind": "supporting public entry"
+  },
+  {
+    "module": "Counting.Bridge.OpenNetwork.Clients",
+    "kind": "independent client"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.Client",
+    "kind": "independent client"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.S1Client",
+    "kind": "independent client"
+  },
+  {
+    "module": "Counting.Reduction.FixedGadget.FieldClient",
+    "kind": "independent client"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "kind": "independent client"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "kind": "independent client"
+  },
+  {
+    "module": "Counting.Algorithm.FieldArithmetic.Clients.HeightBounds",
+    "kind": "independent client"
+  }
+]

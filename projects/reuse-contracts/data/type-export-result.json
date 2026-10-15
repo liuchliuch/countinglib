@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-14T13:54:27.855479+00:00",
+  "scope": "Actual current Lean environment full-type/specification-body extraction and exporter lossless Expr/JSON roundtrip. Not independent kernel replay or paper-statement correspondence.",
+  "command": [
+    "scripts/lake",
+    "-q",
+    "lean",
+    "projects/reuse-contracts/tools/ExportTypes.lean"
+  ],
+  "environment": {
+    "COUNTING_REUSE_REQUEST": "/Users/liuch/draft-pinkfold/counting-complexity/projects/reuse-contracts/data/type-request.json",
+    "COUNTING_REUSE_OUTPUT": "/Users/liuch/draft-pinkfold/counting-complexity/projects/reuse-contracts/data/exported-types.jsonl"
+  },
+  "exit_code": 0,
+  "requested_declarations": 66,
+  "files": {
+    "projects/reuse-contracts/data/type-request.json": "359218eef785532158ed2c1a4104727617fd446077b71d470c683c4479099dd7",
+    "projects/reuse-contracts/data/exported-types.jsonl": "8c5e3bdabfe289565fdb5788bffdf75e31b3dde45e6f3f722051eca320e2af2f",
+    "projects/reuse-contracts/tools/ExportTypes.lean": "fe5ed002899b6c3bed27b9332a51b508dc7db85fed04444078ef59079498beb4",
+    "projects/reuse-contracts/data/type-export.log": "ce10f108b31be075dc246df0ae8050b75885f21898f00296fbce28f25baa91a3"
+  },
+  "prior_invocation": {
+    "exit_code": 1,
+    "detail": "An extra --run argument was incompatible with this elaboration-time run_cmd exporter. It produced no type output; the successful invocation omits that argument."
+  }
+}

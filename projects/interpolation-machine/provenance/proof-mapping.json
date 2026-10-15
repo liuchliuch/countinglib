@@ -1,0 +1,947 @@
+{
+  "upstream_repository": "https://github.com/liuchliuch/holant-dichotomy-lean",
+  "upstream_D_commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+  "unique_provider": "../holant-unified",
+  "references": [
+    {
+      "module": "Holant.Complexity.BinaryInterpolation.LagrangeValues",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+      "sha256": "0feaad6d48236cdecc5bc1286cfbb4b9c14745b30cafe3b8437d56c07e21de7b",
+      "used_declaration_suffixes": [
+        "recoverTop",
+        "recoverTop_eq_coefficient"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryInterpolation.CommonDenominator",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryInterpolation/CommonDenominator.lean",
+      "sha256": "47ae6303a7a62ce7e13e380c8a73c1f6f1144c92ed70faaa5d2769470bf8a506",
+      "used_declaration_suffixes": [
+        "recover_normalized_common",
+        "queryDenominator_ne_zero"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryInterpolation.WeightFormulas",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryInterpolation/WeightFormulas.lean",
+      "sha256": "49b07cf48afd1854958357c6945edd74811c233127ab843c0edfe3a0bb435b7a",
+      "used_declaration_suffixes": [
+        "nodes",
+        "scales"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Compile",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryInterpolation/WeightCompiler/Compile.lean",
+      "sha256": "8b587879edc20d1705ad7bbf967011f672fb67c342517cd12144b2c83f3a32fd",
+      "used_declaration_suffixes": [
+        "computes",
+        "transition_bound"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Bounds",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryInterpolation/WeightCompiler/Bounds.lean",
+      "sha256": "6dad23a18088ba5a1f839c3e21a1e014a6ec2be6a836bb13e49f89e96b2a1afb",
+      "used_declaration_suffixes": [
+        "quartic_output_bound"
+      ]
+    },
+    {
+      "module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Proofs/BinaryInterpolation/PostprocessBounds.lean",
+      "sha256": "b137ab4639561cdaa98d8d3d67d301148c569492c9731dc067410a6702b5bd36",
+      "used_declaration_suffixes": [
+        "reference_run",
+        "trace_bound",
+        "execute_reference"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryInterpolation.DivisionStack",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryInterpolation/DivisionStack.lean",
+      "sha256": "93fa10898dd83ecd90a278516c66f1f1888028bad0af24620913822ebcfc05f2",
+      "used_declaration_suffixes": [
+        "computes"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryCompose.Interface",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryCompose/Interface.lean",
+      "sha256": "c18126664620a4d1987975c6a48a5735a364616f43819a65ea23ad773421ed4f",
+      "used_declaration_suffixes": [
+        "Machine",
+        "Computes.toPolyTime"
+      ]
+    },
+    {
+      "module": "Holant.Complexity.BinaryCompose.Composition",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Complexity/BinaryCompose/Composition.lean",
+      "sha256": "a292e037a5eec7883fb8822013532ab50bdea4f01670d6b40dabe0dd621b4229",
+      "used_declaration_suffixes": [
+        "Machine.compose_correct"
+      ]
+    },
+    {
+      "module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Proofs/BinaryInterpolation/MachineCapstone.lean",
+      "sha256": "35df5824e02035fa152657889eb81dec01292e9017e75e61f51bf6716154d85f",
+      "used_declaration_suffixes": [
+        "certified",
+        "post_outputs",
+        "execution",
+        "reduction"
+      ]
+    },
+    {
+      "module": "Holant.Proofs.BinaryInterpolation.PostprocessCorrectness",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Proofs/BinaryInterpolation/PostprocessCorrectness.lean",
+      "sha256": "ec84f2cb2ddbdf479059142644607e765abac4a7bd767c298318dddb93b0c836",
+      "used_declaration_suffixes": [
+        "generated_stack",
+        "denominator_nonzero"
+      ]
+    },
+    {
+      "module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Proofs/BinaryInterpolation/FieldSource.lean",
+      "sha256": "e30946d48e4be910266f2ef1358d15f2df1bda50725bbfd87df5d67fe0a6fd6f",
+      "used_declaration_suffixes": [
+        "recovery",
+        "reduction",
+        "denominator_nonzero"
+      ]
+    },
+    {
+      "module": "Holant.Proofs.Algorithms.TransformRecognition.RationalCompiler",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/Proofs/Algorithms/TransformRecognition/RationalCompiler.lean",
+      "sha256": "55e5a5e89efdf85dc5ad8315f4d0f63b638c030ac500ae9f741fb928e9121bb3",
+      "used_declaration_suffixes": [
+        "field"
+      ]
+    },
+    {
+      "module": "Holant.OneHot.ArithmeticSizeEncoding",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/holant-unified/Holant/OneHot/ArithmeticSizeEncoding.lean",
+      "sha256": "9d7c566342423e3ec22cc12223b6c0a2e20be632289461538f6a5ddcf7a543f4",
+      "used_declaration_suffixes": [
+        "bitBound_affine"
+      ]
+    }
+  ],
+  "upstream_mappings": [
+    {
+      "new_declaration": "Holant.Complexity.BinaryCompose.Machine",
+      "new_module": "Holant.Complexity.BinaryCompose.Interface",
+      "kind": "inductive",
+      "private": false,
+      "type_hash": "1772266319",
+      "body_hash": null,
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryCompose.Machine",
+      "old_module": "Holant.Complexity.BinaryCompose.Interface",
+      "canonical_manifest_path": "Holant/Complexity/BinaryCompose/Interface.lean",
+      "source": "D",
+      "source_sha256": "c18126664620a4d1987975c6a48a5735a364616f43819a65ea23ad773421ed4f"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.queryDenominator_ne_zero",
+      "new_module": "Holant.Complexity.BinaryInterpolation.CommonDenominator",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "254358630",
+      "body_hash": "901469112",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.queryDenominator_ne_zero",
+      "old_module": "Holant.Complexity.BinaryInterpolation.CommonDenominator",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/CommonDenominator.lean",
+      "source": "D",
+      "source_sha256": "47ae6303a7a62ce7e13e380c8a73c1f6f1144c92ed70faaa5d2769470bf8a506"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.recoverTop",
+      "new_module": "Holant.Complexity.BinaryInterpolation.LagrangeValues",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "3759286107",
+      "body_hash": "1780145377",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.recoverTop",
+      "old_module": "Holant.Complexity.BinaryInterpolation.LagrangeValues",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+      "source": "D",
+      "source_sha256": "0feaad6d48236cdecc5bc1286cfbb4b9c14745b30cafe3b8437d56c07e21de7b"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.recoverTop_eq_coefficient",
+      "new_module": "Holant.Complexity.BinaryInterpolation.LagrangeValues",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "3754197220",
+      "body_hash": "3904446586",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.recoverTop_eq_coefficient",
+      "old_module": "Holant.Complexity.BinaryInterpolation.LagrangeValues",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/LagrangeValues.lean",
+      "source": "D",
+      "source_sha256": "0feaad6d48236cdecc5bc1286cfbb4b9c14745b30cafe3b8437d56c07e21de7b"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.recover_normalized_common",
+      "new_module": "Holant.Complexity.BinaryInterpolation.CommonDenominator",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "918285699",
+      "body_hash": "3170082013",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.recover_normalized_common",
+      "old_module": "Holant.Complexity.BinaryInterpolation.CommonDenominator",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/CommonDenominator.lean",
+      "source": "D",
+      "source_sha256": "47ae6303a7a62ce7e13e380c8a73c1f6f1144c92ed70faaa5d2769470bf8a506"
+    },
+    {
+      "new_declaration": "Holant.OneHot.ArithmeticSize.bitBound_affine",
+      "new_module": "Holant.OneHot.ArithmeticSizeEncoding",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "347231723",
+      "body_hash": "3009969650",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.OneHot.ArithmeticSize.bitBound_affine",
+      "old_module": "Holant.OneHot.ArithmeticSizeEncoding",
+      "canonical_manifest_path": "Holant/OneHot/ArithmeticSizeEncoding.lean",
+      "source": "D",
+      "source_sha256": "9d7c566342423e3ec22cc12223b6c0a2e20be632289461538f6a5ddcf7a543f4"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryCompose.Computes.toPolyTime",
+      "new_module": "Holant.Complexity.BinaryCompose.Interface",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "76709950",
+      "body_hash": "3008319985",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryCompose.Computes.toPolyTime",
+      "old_module": "Holant.Complexity.BinaryCompose.Interface",
+      "canonical_manifest_path": "Holant/Complexity/BinaryCompose/Interface.lean",
+      "source": "D",
+      "source_sha256": "c18126664620a4d1987975c6a48a5735a364616f43819a65ea23ad773421ed4f"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryCompose.Machine.compose_correct",
+      "new_module": "Holant.Complexity.BinaryCompose.Composition",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "985644760",
+      "body_hash": "3792791773",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryCompose.Machine.compose_correct",
+      "old_module": "Holant.Complexity.BinaryCompose.Composition",
+      "canonical_manifest_path": "Holant/Complexity/BinaryCompose/Composition.lean",
+      "source": "D",
+      "source_sha256": "a292e037a5eec7883fb8822013532ab50bdea4f01670d6b40dabe0dd621b4229"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.DivisionStack.computes",
+      "new_module": "Holant.Complexity.BinaryInterpolation.DivisionStack",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "1251326711",
+      "body_hash": "3355106836",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.DivisionStack.computes",
+      "old_module": "Holant.Complexity.BinaryInterpolation.DivisionStack",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/DivisionStack.lean",
+      "source": "D",
+      "source_sha256": "93fa10898dd83ecd90a278516c66f1f1888028bad0af24620913822ebcfc05f2"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.WeightCompiler.computes",
+      "new_module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Compile",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "1522694362",
+      "body_hash": "2614554040",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.WeightCompiler.computes",
+      "old_module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Compile",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/WeightCompiler/Compile.lean",
+      "source": "D",
+      "source_sha256": "8b587879edc20d1705ad7bbf967011f672fb67c342517cd12144b2c83f3a32fd"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.WeightCompiler.quartic_output_bound",
+      "new_module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Bounds",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "4113239011",
+      "body_hash": "3228719500",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.WeightCompiler.quartic_output_bound",
+      "old_module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Bounds",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/WeightCompiler/Bounds.lean",
+      "source": "D",
+      "source_sha256": "6dad23a18088ba5a1f839c3e21a1e014a6ec2be6a836bb13e49f89e96b2a1afb"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.WeightCompiler.transition_bound",
+      "new_module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Compile",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "4108780511",
+      "body_hash": "3790298780",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.WeightCompiler.transition_bound",
+      "old_module": "Holant.Complexity.BinaryInterpolation.WeightCompiler.Compile",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/WeightCompiler/Compile.lean",
+      "source": "D",
+      "source_sha256": "8b587879edc20d1705ad7bbf967011f672fb67c342517cd12144b2c83f3a32fd"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.WeightFormulas.nodes",
+      "new_module": "Holant.Complexity.BinaryInterpolation.WeightFormulas",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "3401468201",
+      "body_hash": "3309660667",
+      "transitive_axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.WeightFormulas.nodes",
+      "old_module": "Holant.Complexity.BinaryInterpolation.WeightFormulas",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/WeightFormulas.lean",
+      "source": "D",
+      "source_sha256": "49b07cf48afd1854958357c6945edd74811c233127ab843c0edfe3a0bb435b7a"
+    },
+    {
+      "new_declaration": "Holant.Complexity.BinaryInterpolation.WeightFormulas.scales",
+      "new_module": "Holant.Complexity.BinaryInterpolation.WeightFormulas",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "1050654159",
+      "body_hash": "3794648193",
+      "transitive_axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.Complexity.BinaryInterpolation.WeightFormulas.scales",
+      "old_module": "Holant.Complexity.BinaryInterpolation.WeightFormulas",
+      "canonical_manifest_path": "Holant/Complexity/BinaryInterpolation/WeightFormulas.lean",
+      "source": "D",
+      "source_sha256": "49b07cf48afd1854958357c6945edd74811c233127ab843c0edfe3a0bb435b7a"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.FieldSource.denominator_nonzero",
+      "new_module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "1258998900",
+      "body_hash": "1349549144",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.FieldSource.denominator_nonzero",
+      "old_module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/FieldSource.lean",
+      "source": "D",
+      "source_sha256": "e30946d48e4be910266f2ef1358d15f2df1bda50725bbfd87df5d67fe0a6fd6f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.FieldSource.recovery",
+      "new_module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "3916598801",
+      "body_hash": "548686649",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.FieldSource.recovery",
+      "old_module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/FieldSource.lean",
+      "source": "D",
+      "source_sha256": "e30946d48e4be910266f2ef1358d15f2df1bda50725bbfd87df5d67fe0a6fd6f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.FieldSource.reduction",
+      "new_module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "2514216769",
+      "body_hash": "1382170507",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.FieldSource.reduction",
+      "old_module": "Holant.Proofs.BinaryInterpolation.FieldSource",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/FieldSource.lean",
+      "source": "D",
+      "source_sha256": "e30946d48e4be910266f2ef1358d15f2df1bda50725bbfd87df5d67fe0a6fd6f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.certified",
+      "new_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "3425894426",
+      "body_hash": "1606279863",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.certified",
+      "old_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/MachineCapstone.lean",
+      "source": "D",
+      "source_sha256": "35df5824e02035fa152657889eb81dec01292e9017e75e61f51bf6716154d85f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.execution",
+      "new_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "1379964427",
+      "body_hash": "552544673",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.execution",
+      "old_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/MachineCapstone.lean",
+      "source": "D",
+      "source_sha256": "35df5824e02035fa152657889eb81dec01292e9017e75e61f51bf6716154d85f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.post_outputs",
+      "new_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "4183110136",
+      "body_hash": "3342645644",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.post_outputs",
+      "old_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/MachineCapstone.lean",
+      "source": "D",
+      "source_sha256": "35df5824e02035fa152657889eb81dec01292e9017e75e61f51bf6716154d85f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.reduction",
+      "new_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "3130239473",
+      "body_hash": "2479476346",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.MachineCapstone.reduction",
+      "old_module": "Holant.Proofs.BinaryInterpolation.MachineCapstone",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/MachineCapstone.lean",
+      "source": "D",
+      "source_sha256": "35df5824e02035fa152657889eb81dec01292e9017e75e61f51bf6716154d85f"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessBounds.execute_reference",
+      "new_module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "3462307114",
+      "body_hash": "3912747326",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessBounds.execute_reference",
+      "old_module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/PostprocessBounds.lean",
+      "source": "D",
+      "source_sha256": "b137ab4639561cdaa98d8d3d67d301148c569492c9731dc067410a6702b5bd36"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessBounds.reference_run",
+      "new_module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "3238616036",
+      "body_hash": "2608002647",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessBounds.reference_run",
+      "old_module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/PostprocessBounds.lean",
+      "source": "D",
+      "source_sha256": "b137ab4639561cdaa98d8d3d67d301148c569492c9731dc067410a6702b5bd36"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessBounds.trace_bound",
+      "new_module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "1011849583",
+      "body_hash": "933548580",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessBounds.trace_bound",
+      "old_module": "Holant.Proofs.BinaryInterpolation.PostprocessBounds",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/PostprocessBounds.lean",
+      "source": "D",
+      "source_sha256": "b137ab4639561cdaa98d8d3d67d301148c569492c9731dc067410a6702b5bd36"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessCorrectness.denominator_nonzero",
+      "new_module": "Holant.Proofs.BinaryInterpolation.PostprocessCorrectness",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "1436798140",
+      "body_hash": "1702649032",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessCorrectness.denominator_nonzero",
+      "old_module": "Holant.Proofs.BinaryInterpolation.PostprocessCorrectness",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/PostprocessCorrectness.lean",
+      "source": "D",
+      "source_sha256": "ec84f2cb2ddbdf479059142644607e765abac4a7bd767c298318dddb93b0c836"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessCorrectness.generated_stack",
+      "new_module": "Holant.Proofs.BinaryInterpolation.PostprocessCorrectness",
+      "kind": "theorem",
+      "private": false,
+      "type_hash": "1039568672",
+      "body_hash": "4054905710",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.BinaryInterpolation.PostprocessCorrectness.generated_stack",
+      "old_module": "Holant.Proofs.BinaryInterpolation.PostprocessCorrectness",
+      "canonical_manifest_path": "Holant/Proofs/BinaryInterpolation/PostprocessCorrectness.lean",
+      "source": "D",
+      "source_sha256": "ec84f2cb2ddbdf479059142644607e765abac4a7bd767c298318dddb93b0c836"
+    },
+    {
+      "new_declaration": "Holant.LocalDrafts.MainChain.TransformRecognition.RationalCompiler.field",
+      "new_module": "Holant.Proofs.Algorithms.TransformRecognition.RationalCompiler",
+      "kind": "definition",
+      "private": false,
+      "type_hash": "3518025703",
+      "body_hash": "2393428022",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "mapping_kind": "retained_canonical_module_identity",
+      "old_declaration": "Holant.LocalDrafts.MainChain.TransformRecognition.RationalCompiler.field",
+      "old_module": "Holant.Proofs.Algorithms.TransformRecognition.RationalCompiler",
+      "canonical_manifest_path": "Holant/Proofs/Algorithms/TransformRecognition/RationalCompiler.lean",
+      "source": "D",
+      "source_sha256": "55e5a5e89efdf85dc5ad8315f4d0f63b638c030ac500ae9f741fb928e9121bb3"
+    }
+  ],
+  "materialized_references": [
+    {
+      "module": "PlanarHom.MaterializedFieldListMachines",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/MaterializedFieldListMachines.lean",
+      "sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+      "git_blob_sha1": "fa5cfef8dd37102a6a1ac91ce7c78faf4978daf5",
+      "declarations": [
+        "fp_product",
+        "fp_sum"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.MaterializedFieldListMachines",
+        "path": "PlanarHom/MaterializedFieldListMachines.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.MaterializedFieldHeights",
+          "PlanarHom.FixedFieldArithmeticMachines",
+          "PlanarHom.ListContextMachines"
+        ],
+        "git_blob": "fa5cfef8dd37102a6a1ac91ce7c78faf4978daf5",
+        "sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+        "bytes": 3648,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "A1 4.34 source port with canonical namespace restored",
+        "reused_source": "projects/pfaffian/PfaffianPort/MaterializedFieldListMachines.lean",
+        "reused_sha256": "218f31794831a95bc211fa40a4c603b3e7956543bde9efb16aa1851590afbb69",
+        "initial_port_sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+        "ported_sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+        "ported_bytes": 3648,
+        "changed_from_canonical": false
+      }
+    },
+    {
+      "module": "PlanarHom.MaterializedFieldHeights",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/MaterializedFieldHeights.lean",
+      "sha256": "55874f77d003407cb8758774a86e2423812727c2e8a26707503033536f0bd5ab",
+      "git_blob_sha1": "f3384cca0e2c49d10a77513f690a5d26f04e97ec",
+      "declarations": [
+        "exists_polynomial_prefix_encoding_bound"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.MaterializedFieldHeights",
+        "path": "PlanarHom/MaterializedFieldHeights.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.CanonicalCoordinateHeights",
+          "PlanarHom.AlphabetCoordinateCertificates"
+        ],
+        "git_blob": "5bb96989d188616d38a40c83dbda39a277f559c0",
+        "sha256": "f29a469af06f38968e4c9529e83c72e4ce2ff877b88ebe5846929e21f2cf0df7",
+        "bytes": 7984,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "A1 4.34 source port with canonical namespace restored",
+        "reused_source": "projects/pfaffian/PfaffianPort/MaterializedFieldHeights.lean",
+        "reused_sha256": "e25babb4ae377c6b0f282d8e31727194d6b34e92490cf1ba2341ef7df8220fac",
+        "initial_port_sha256": "55874f77d003407cb8758774a86e2423812727c2e8a26707503033536f0bd5ab",
+        "ported_sha256": "55874f77d003407cb8758774a86e2423812727c2e8a26707503033536f0bd5ab",
+        "ported_bytes": 8043,
+        "changed_from_canonical": true
+      }
+    },
+    {
+      "module": "PlanarHom.FixedFieldArithmeticMachines",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/FixedFieldArithmeticMachines.lean",
+      "sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+      "git_blob_sha1": "403450f91aebf92e82db6a7a6e86ce582cede5b3",
+      "declarations": [
+        "fp_subtraction",
+        "fp_division",
+        "fp_equality"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.FixedFieldArithmeticMachines",
+        "path": "PlanarHom/FixedFieldArithmeticMachines.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.FixedFieldArithmeticBits",
+          "PlanarHom.FixedVectorMachines",
+          "PlanarHom.FiniteRationalCircuits"
+        ],
+        "git_blob": "403450f91aebf92e82db6a7a6e86ce582cede5b3",
+        "sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+        "bytes": 5821,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "A1 4.34 source port with canonical namespace restored",
+        "reused_source": "projects/pfaffian/PfaffianPort/FixedFieldArithmeticMachines.lean",
+        "reused_sha256": "46c139202ba44c82b1668c9661ef37dbc37309987844d7aee860154174145250",
+        "initial_port_sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+        "ported_sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+        "ported_bytes": 5821,
+        "changed_from_canonical": false
+      }
+    },
+    {
+      "module": "PlanarHom.ListContextMachines",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/ListContextMachines.lean",
+      "sha256": "253cec6fbff6e81274deee0543a053c70887d5d58d78e922004326971ceecc92",
+      "git_blob_sha1": "a90d28f2d5fa299d2d89e127f0e79ed4662a44f7",
+      "declarations": [
+        "fp_mapWithContext"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.ListContextMachines",
+        "path": "PlanarHom/ListContextMachines.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.ListFlattenMachines"
+        ],
+        "git_blob": "43de622c5d605d8bc4ebc153a704effafce06953",
+        "sha256": "315ea85e8e40f918f0e49d2689a51d43991ac63908b5791f473fd35a384b7dea",
+        "bytes": 5192,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "A1 4.34 source port with canonical namespace restored",
+        "reused_source": "projects/pfaffian/PfaffianPort/ListContextMachines.lean",
+        "reused_sha256": "46f024ded8f24369d453e7025d91905a5217d3f48cf9d3ddff0ab31e5c783350",
+        "initial_port_sha256": "253cec6fbff6e81274deee0543a053c70887d5d58d78e922004326971ceecc92",
+        "ported_sha256": "253cec6fbff6e81274deee0543a053c70887d5d58d78e922004326971ceecc92",
+        "ported_bytes": 5144,
+        "changed_from_canonical": true
+      }
+    },
+    {
+      "module": "PlanarHom.ListContextFilterMachines",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/ListContextFilterMachines.lean",
+      "sha256": "289ca46f90723cc6a635b7a04fbbc00d3c3c65eb13eec394c35ea20252723092",
+      "git_blob_sha1": "57c55e837b41012d95d52aac86f3c31980a3d5df",
+      "declarations": [
+        "fp_filterWithContext"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.ListContextFilterMachines",
+        "path": "PlanarHom/ListContextFilterMachines.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.ListContextMachines",
+          "PlanarHom.ListFilterMachines"
+        ],
+        "git_blob": "57c55e837b41012d95d52aac86f3c31980a3d5df",
+        "sha256": "289ca46f90723cc6a635b7a04fbbc00d3c3c65eb13eec394c35ea20252723092",
+        "bytes": 1249,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "canonical original source, uncompiled",
+        "reused_source": null,
+        "reused_sha256": null,
+        "initial_port_sha256": "289ca46f90723cc6a635b7a04fbbc00d3c3c65eb13eec394c35ea20252723092",
+        "ported_sha256": "289ca46f90723cc6a635b7a04fbbc00d3c3c65eb13eec394c35ea20252723092",
+        "ported_bytes": 1249,
+        "changed_from_canonical": false
+      }
+    },
+    {
+      "module": "PlanarHom.LagrangeRecoveryListSemantics",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/LagrangeRecoveryListSemantics.lean",
+      "sha256": "f090fec7a2d9882cb382c42f208301f7719c32300ecf59819c4407c2bcfac485",
+      "git_blob_sha1": "973cee8f7b3aa5412636435e652f7c1bbc15aa60",
+      "declarations": [
+        "filtered_product: small semantic proof adapted without importing its machine closure"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.LagrangeRecoveryListSemantics",
+        "path": "PlanarHom/LagrangeRecoveryListSemantics.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.LagrangeRecoveryMachines",
+          "PlanarHom.LagrangeRecovery",
+          "PlanarHom.RepresentativeWordCertificates"
+        ],
+        "git_blob": "973cee8f7b3aa5412636435e652f7c1bbc15aa60",
+        "sha256": "f090fec7a2d9882cb382c42f208301f7719c32300ecf59819c4407c2bcfac485",
+        "bytes": 4726,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "canonical original source, uncompiled",
+        "reused_source": null,
+        "reused_sha256": null,
+        "initial_port_sha256": "f090fec7a2d9882cb382c42f208301f7719c32300ecf59819c4407c2bcfac485",
+        "ported_sha256": "f090fec7a2d9882cb382c42f208301f7719c32300ecf59819c4407c2bcfac485",
+        "ported_bytes": 4726,
+        "changed_from_canonical": false
+      }
+    },
+    {
+      "module": "PlanarHom.LagrangeRecoveryMachines",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-machines/PlanarHom/LagrangeRecoveryMachines.lean",
+      "sha256": "da7ae1805692fb58e0fd2295e1ad3d050fa3b671c87040db54f717bdaf5c12a7",
+      "git_blob_sha1": "c8793d6817206fa4c31e6842c9d95cbbf0e87fd5",
+      "declarations": [
+        "fp_otherNodes: same projection/map/equality/filter proof specialized to ordinary runtime tables"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.LagrangeRecoveryMachines",
+        "path": "PlanarHom/LagrangeRecoveryMachines.lean",
+        "imports": [
+          "Init",
+          "Init",
+          "PlanarHom.LagrangeCoefficientMachines",
+          "PlanarHom.MaterializedFieldListMachines",
+          "PlanarHom.ListContextFilterMachines",
+          "PlanarHom.FieldDotProductMachines"
+        ],
+        "git_blob": "c8793d6817206fa4c31e6842c9d95cbbf0e87fd5",
+        "sha256": "da7ae1805692fb58e0fd2295e1ad3d050fa3b671c87040db54f717bdaf5c12a7",
+        "bytes": 6396,
+        "canonical_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "initial_port_origin": "canonical original source, uncompiled",
+        "reused_source": null,
+        "reused_sha256": null,
+        "initial_port_sha256": "da7ae1805692fb58e0fd2295e1ad3d050fa3b671c87040db54f717bdaf5c12a7",
+        "ported_sha256": "da7ae1805692fb58e0fd2295e1ad3d050fa3b671c87040db54f717bdaf5c12a7",
+        "ported_bytes": 6396,
+        "changed_from_canonical": false
+      }
+    },
+    {
+      "module": "PlanarHom.FiniteReachableAlphabetMachines",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-homomorphisms/PlanarHom/FiniteReachableAlphabetMachines.lean",
+      "sha256": "5a884a9aaaf81d8a39409e50cacd7b579a12ea58b97f22f71c4dd9a068617600",
+      "git_blob_sha1": "49b853ffcc1feb3f251114decf56efbd69d8b02a",
+      "declarations": [
+        "restrictComputer",
+        "alphabetFintype",
+        "restrictComputer_steps"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.FiniteReachableAlphabetMachines",
+        "upstream_path": "PlanarHom/FiniteReachableAlphabetMachines.lean",
+        "git_blob_sha1": "684061b43e5c3c60fde46a7edc390b4527fe3fee",
+        "sha256": "d5a51c4f7a8e266341e9fcc2dc80356858755c797c8e725413787e04dc508a12",
+        "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "port": "encode-function API and import relocation"
+      }
+    },
+    {
+      "module": "PlanarHom.MachineComposition",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/foundations/PlanarHom/MachineComposition.lean",
+      "sha256": "80686bb5df7bc8ab06d0c8f389b4afd57591432143cb9a07c641d2a4c6a95934",
+      "git_blob_sha1": "d3103ddef9179de068b0ca17d43a3f283714aaf6",
+      "declarations": [
+        "composeComputers",
+        "iterate_length_le",
+        "encoded_output_length_le"
+      ],
+      "canonical_provenance": {
+        "module": "PlanarHom.MachineComposition",
+        "upstream_path": "PlanarHom/MachineComposition.lean",
+        "git_blob_sha1": "72246016d1133e70c55de398199cc297a9034a11",
+        "sha256": "fc52820eeb8f1102723d961d76a7e65ab22e750ee3670a483e2cbc69ccdfa40b",
+        "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+        "provider": "../foundations"
+      }
+    },
+    {
+      "module": "Counting.Algorithm.Interpolation.Algorithm",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/interpolation/Counting/Algorithm/Interpolation/Algorithm.lean",
+      "sha256": "263c5ab6ddd028105083558fdad0a8fe45b507f59bb23e6e0d5725706046060e",
+      "git_blob_sha1": "373b05ea40c8d75f93e53089295226af8fced2de",
+      "declarations": [
+        "evaluate_eq_recoverTop",
+        "evaluate_eq_coefficient"
+      ],
+      "canonical_provenance": null
+    },
+    {
+      "module": "Counting.Algorithm.Interpolation.Core",
+      "provider_path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/interpolation/Counting/Algorithm/Interpolation/Core.lean",
+      "sha256": "07f83469953faad8cb4b6f5e9bb7a21b586b399e2e64956c002884df807cab30",
+      "git_blob_sha1": "80dd75a29527a75baeb19b7360c40f78e058ea3f",
+      "declarations": [
+        "interpolationDenominator_ne_zero"
+      ],
+      "canonical_provenance": null
+    }
+  ],
+  "public_mapping": {
+    "Semantics.result_eq_evaluate": "I1 evaluate_eq_recoverTop plus H1 recover_normalized_common; no new Lagrange proof",
+    "Postprocessor.outputs": "H1 execute_reference then DivisionStack.computes, physically composed with compose_correct",
+    "Compiler.outputs_coefficient": "Actual unary code generator preserving answers, then postprocessor, then I1 coefficient correctness",
+    "Graph.intermediate_width": "sample_answers_bound/trace_bound/structural_bounds derive polynomial width from graph-code length",
+    "Graph.reduction": "Same MC machine, oracle codec and time polynomial; identifies the public source value",
+    "FieldSource.evaluate_eq_source": "H1 spectral pencil supplies separation/scales; original exact-field recovery theorem",
+    "Clients.rationalField": "Reuses H1 rational presentation; no duplicate provider declaration",
+    "Materialized.recover_eq_evaluate": "Paired runtime table and ordinary filtered-product identity; distinct nodes, including zero, connect to I1",
+    "Materialized.fp_otherNodes": "Small original projection/map/equality/context-filter composition specialized without importing shifted recovery",
+    "Materialized.fp_recover": "Actual context filter/difference map/product/division/row map/sum computers; no supplied evaluator",
+    "Materialized.computer": "PH reachable-symbol finite-alphabet restriction retains input/output codecs, time and exact steps",
+    "Materialized.denominator_prefix_bound/sum_prefix_bound": "PM canonical rational-coordinate prefix height bounds, composed with actual preparatory machine output bounds",
+    "Materialized.intermediate_stack_bound": "F1 actual finite-syntax machine push bound on every reached configuration, charged to complete table input"
+  },
+  "boundaries": [
+    "No arbitrary field InFP; machine field and rational basis are fixed",
+    "Fixed-schedule Compiler arbitrary samples retain a sum-product height certificate; Materialized has unconditional total input-bitlength FP",
+    "Graph instances discharge answer heights using their actual fixed signature tables and original input length",
+    "Fixed-schedule stacks are Bool; Materialized uses the canonical PH finite-support compiler",
+    "Materialized accepts paired node/sample rows; no mismatched independent lists are truncated",
+    "Duplicate keys remain in the total table domain, but interpolation correctness requires injectivity; no duplicate-rejecting bit machine is claimed",
+    "H1 and PH number-field codecs are separate; no unproved codec equivalence is assumed"
+  ]
+}

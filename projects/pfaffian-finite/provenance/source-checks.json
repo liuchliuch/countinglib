@@ -1,0 +1,60 @@
+{
+  "upstream_commit": "db68e745380769c38c8347736d2d84fcde38263c",
+  "sources": [
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-homomorphisms/PlanarHom/FiniteReachableAlphabetMachines.lean",
+      "bytes": 12329,
+      "sha256": "5a884a9aaaf81d8a39409e50cacd7b579a12ea58b97f22f71c4dd9a068617600"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-homomorphisms/provenance/upstream/PlanarHom/FiniteReachableAlphabetMachines.lean",
+      "bytes": 12345,
+      "sha256": "d5a51c4f7a8e266341e9fcc2dc80356858755c797c8e725413787e04dc508a12"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/foundations/PlanarHom/MachineComposition.lean",
+      "bytes": 34769,
+      "sha256": "80686bb5df7bc8ab06d0c8f389b4afd57591432143cb9a07c641d2a4c6a95934"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/foundations/Counting/Computation/PolyTime.lean",
+      "bytes": 4269,
+      "sha256": "fd864c8839670e187e46e0bd5a463b77c62f2f4284da82e172f1ac24b0fcc68e"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/Counting/Algorithm/Pfaffian/FiniteAlphabet.lean",
+      "bytes": 9046,
+      "sha256": "4f1ad6cdc5a751dec7a2bd43c08bdaab03f96a9ad2903ae2000fbb269923115b"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/Counting/Algorithm/Pfaffian/Evaluator.lean",
+      "bytes": 4608,
+      "sha256": "a63c23f0f40a3d216c2d3d52e9c2d211eccee7d5d834ed578eb62394bf2709b7"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/Counting/Algorithm/Pfaffian/Examples.lean",
+      "bytes": 3284,
+      "sha256": "00b5c60c90b0e93b83ccf75325e357ea7322d4195a0f7179bd47d36841c3a378"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianEvaluationMachines.lean",
+      "bytes": 6209,
+      "sha256": "33c2699cdf5b962bf951221d3c1a9577b7ad6ca12ef31310d58e0004ccd925d0"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/OccurrencePfaffianListStep.lean",
+      "bytes": 8896,
+      "sha256": "813549fa1c09330b2dd1c1267fb91260db994587d32861a87e3fdb103bce31b3"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/provenance/upstream/PlanarHom/OccurrencePfaffianEvaluationMachines.lean",
+      "bytes": 6194,
+      "sha256": "f908423a63c2df9702a8640acaf6baca11953e18e492b131eccc2d0ab83f4366"
+    },
+    {
+      "path": "/Users/liuch/draft-pinkfold/counting-complexity/projects/pfaffian/PfaffianPort/Complexity.lean",
+      "bytes": 27785,
+      "sha256": "842ca4ac1a713fd104f5c55e2c4720caf306fa9e4233a134f561f66de470d30c"
+    }
+  ]
+}

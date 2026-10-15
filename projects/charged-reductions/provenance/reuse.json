@@ -1,0 +1,63 @@
+{
+  "kind": "New public charged compiler and proofs, imported canonical providers without copying declarations",
+  "owned_modules": [
+    "Counting.Reduction.OneQuery",
+    "Counting.Reduction.OneQuery.Canonical",
+    "Counting.Reduction.OneQuery.Run",
+    "Counting.Reduction.OneQuery.Compiler",
+    "Counting.Reduction.OneQuery.SharpP",
+    "Counting.Reduction.OneQuery.Composition",
+    "Counting.Reduction.OneQuery.Clients"
+  ],
+  "public_extension_exact_allowlist": [
+    "Counting.Complexity.ParsimoniousReduction.toCharged"
+  ],
+  "providers": [
+    {
+      "path": "../foundations/Counting/Complexity/Reduction.lean",
+      "sha256": "495cca40a9cf18eb645f6fa961987cacbcf10513808f162e9697f237d1100a0c"
+    },
+    {
+      "path": "../foundations/Counting/Complexity/SharpP.lean",
+      "sha256": "c386d7ad99a06216a999fa3355492cb1220fe6d8ca4656d83458b2e7df41508a"
+    },
+    {
+      "path": "../foundations/Counting/Computation/PolyTime.lean",
+      "sha256": "fd864c8839670e187e46e0bd5a463b77c62f2f4284da82e172f1ac24b0fcc68e"
+    },
+    {
+      "path": "../planar-homomorphisms/PlanarHom/Complexity.lean",
+      "sha256": "4d394f0d7794ac66ac1205d0148654e9c8b375fa6cdc9c0c8ae8ab854a5d6a60"
+    },
+    {
+      "path": "../planar-homomorphisms/PlanarHom/OracleReductionComposition.lean",
+      "sha256": "2610e409a37a29d932c1ac0aa29e7b64ade13fb3a324f43f93fd8cb4a8be14e1"
+    },
+    {
+      "path": "../planar-homomorphisms/PlanarHom/OracleSubstitution.lean",
+      "sha256": "df76a99bf7200f4fb51270de63d15d23ad2bfa19b44419d3f49d7a80aa296fe0"
+    },
+    {
+      "path": "../planar-homomorphisms/PlanarHom/BinaryGcdBits.lean",
+      "sha256": "0a3b9675517ceb8c7e74a22a852db00e4e78a31f024c61bc265d46ef248ce46f"
+    },
+    {
+      "path": "../planar-homomorphisms/Counting/Bridge/PlanarHomSharpP.lean",
+      "sha256": "87b2b15e2b449d29492fdef72cabd3444ab98aa5a68a33fc161ab19a5adae750"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/OraclePrecomposition.lean",
+      "sha256": "05034d29d5bacbdb655b5c4a73ecbab1ee3fe239d9d02af1c3e2dce7fcc52558"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/PromisedFPReductionClosure.lean",
+      "sha256": "db3ff09a9062adc9ff8d84a85e87e42c1eaf95fe199ff37e971316277cd74348"
+    },
+    {
+      "path": "../planar-homomorphisms/PlanarHom/OracleSubstitutionOnTrace.lean",
+      "sha256": "ece41b5273a12dae6da788087bd9e2144c6f6e57905d79c3bde2c6561dca8d55"
+    }
+  ],
+  "frozen_pm_manifest": "../planar-machines/reports/FROZEN.sha256",
+  "frozen_pm_manifest_sha256": "fc7f20e6453b17bac6a53440a23cbabd25ebcb7be2e4cfadd0f6ff21ba6ae61f"
+}

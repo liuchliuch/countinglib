@@ -1,0 +1,29 @@
+name = "planar-homomorphisms"
+version = "0.1.0"
+defaultTargets = ["PlanarHom", "Audit"]
+# Match the source verifier's stack allowance for generated proof tables.
+weakLeanArgs = ["-s", "65536"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+[[lean_lib]]
+name = "PlanarHom"
+
+[[lean_lib]]
+name = "Audit"
+roots = ["Audit.Contracts", "Audit.Solutions", "Audit.Check", "Audit.Inventory", "Audit.ReviewedStatements", "Audit.ReviewedSolutions", "Audit.ReviewedCheck"]
+
+[[lean_lib]]
+name = "ComparatorChallenge"
+roots = ["Audit.Official.Challenge"]
+
+[[lean_lib]]
+name = "ComparatorSolution"
+roots = ["Audit.Official.Solution"]
+
+[[lean_lib]]
+name = "ComparatorNegativeControls"
+roots = ["Audit.Official.NegativePremise", "Audit.Official.NegativeAxiom"]

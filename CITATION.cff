@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this release and the relevant research papers when using CountingLib."
+type: software
+title: "CountingLib: Counting Complexity in Lean"
+version: 0.1.0
+date-released: 2026-10-15
+repository-code: "https://github.com/liuchliuch/countinglib"
+url: "https://github.com/liuchliuch/countinglib/releases/tag/v0.1.0"
+authors:
+  - name: "CountingLib contributors"
+abstract: "Reusable counting semantics, reductions, verified algorithms, and classification theorems in Lean."

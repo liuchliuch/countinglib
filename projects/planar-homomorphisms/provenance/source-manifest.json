@@ -1,0 +1,428 @@
+[
+  {
+    "module": "PlanarHom.ArithmeticCircuitPrimitives",
+    "upstream_path": "PlanarHom/ArithmeticCircuitPrimitives.lean",
+    "git_blob_sha1": "cd7ef81fa1ec54ac5eb191c9d5612b572154a541",
+    "sha256": "f1f43d194b15b478f3b637ec1e34c6d714090f44ed6820d279f94bc752aed0cf",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "258b0c6713fa5c5a7d49b69eaa8ded88a6e79e6758f3662be253499dbbf3a37d"
+  },
+  {
+    "module": "PlanarHom.Basic",
+    "upstream_path": "PlanarHom/Basic.lean",
+    "git_blob_sha1": "cba53da433c9e4da76ddcd46caa4ca5dd12b378f",
+    "sha256": "d0edf2b6c8fa92b1bb442e171417f77d22aed5b2e431d3bffd2e55beb4ab7eae",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "zero-declaration S1 shim"
+  },
+  {
+    "module": "PlanarHom.BinaryAdditionBits",
+    "upstream_path": "PlanarHom/BinaryAdditionBits.lean",
+    "git_blob_sha1": "48a6d5e7d8b324149fb831584c40b1146bc5ffda",
+    "sha256": "cc406eed0798f49a4ef8c860e60a304152ba69fa55a037eaa77e796ae26e3527",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "54bd198d75f4241b77a22e25200b40e4d348558d63c6f3a60ee2492220f3dc01"
+  },
+  {
+    "module": "PlanarHom.BinaryAdditionMachine",
+    "upstream_path": "PlanarHom/BinaryAdditionMachine.lean",
+    "git_blob_sha1": "740c32d3cd8f43b9efbcb68996a8ed0eb8587adb",
+    "sha256": "e7c007e4b414c665b9a7bd807dcbe52471738d47abfa16b5099bcfea010f9576",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "a21b21af91d2869c08b6e06ced81b0f8b1c2e7e76d719d02c94a75f1e62cb348"
+  },
+  {
+    "module": "PlanarHom.BinaryArithmetic",
+    "upstream_path": "PlanarHom/BinaryArithmetic.lean",
+    "git_blob_sha1": "d563daed7acb364fa0f9b6f63a7e7c2ed7ecd649",
+    "sha256": "394b2fd8b085520394da6fb93934972e4187d1d497f1e256a8bccb8dc24f65d8",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "03cf9dde8ff9292d046782bc09faea95c07f72e1b599f6b89c74d86748040d0d"
+  },
+  {
+    "module": "PlanarHom.BinaryDivisionBits",
+    "upstream_path": "PlanarHom/BinaryDivisionBits.lean",
+    "git_blob_sha1": "71ed5c3c3a3e3794b65ad86237c08d54c14d9d0c",
+    "sha256": "7275aa5cd23b9eb2b218bb6bd45240ced41a7c00a17bc9e2617b31050ed9dff9",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "fff95da0c14c3a98dcd024e2bca39e4c0fe93007938d1f5903b1c31d6f5d4de9"
+  },
+  {
+    "module": "PlanarHom.BinaryDivisionMachine",
+    "upstream_path": "PlanarHom/BinaryDivisionMachine.lean",
+    "git_blob_sha1": "6cff3cfb1b85b58418e61d55044d1ea8cf37df03",
+    "sha256": "8f080c260812e3d67d7d2aaf557e9d9bff073a9532a74d0c63f38a4c037d8166",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "0b0f1092b3ce764023f71a0fbf3dada6d9d29629f42dddf723d9e8541919967c"
+  },
+  {
+    "module": "PlanarHom.BinaryGcdBits",
+    "upstream_path": "PlanarHom/BinaryGcdBits.lean",
+    "git_blob_sha1": "86c0651e8aeadf63fed809f63a526b2a329250fd",
+    "sha256": "0a3b9675517ceb8c7e74a22a852db00e4e78a31f024c61bc265d46ef248ce46f",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "909a5ed572bc734100507daaaae89335d8b7a05acdb25586204b60d099cc82f0"
+  },
+  {
+    "module": "PlanarHom.BinaryGcdMachine",
+    "upstream_path": "PlanarHom/BinaryGcdMachine.lean",
+    "git_blob_sha1": "97ac85bf1ae9c6ff91ade7f75f962b448bf3f442",
+    "sha256": "991db19204d78555c868cc00f08d47e6e5b9a3929b2bbf3a41abd4155235e74f",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "8041f300d583246baef131804f138ee324041f45e37f0df6e92bd8795b8d2d19"
+  },
+  {
+    "module": "PlanarHom.BinaryMultiplicationBits",
+    "upstream_path": "PlanarHom/BinaryMultiplicationBits.lean",
+    "git_blob_sha1": "a46b269c08bc5c7402b3891db5dc40ba0fda7533",
+    "sha256": "b1da7d09f500ab78e06d6cce0a7f01ba43e617b62adaa3fe3ab9bb4e940ee7e0",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "75847ada8bd1db103e05aea49e2d032a399486c64f2054c366a8311b38b699ed"
+  },
+  {
+    "module": "PlanarHom.BinaryMultiplicationMachine",
+    "upstream_path": "PlanarHom/BinaryMultiplicationMachine.lean",
+    "git_blob_sha1": "f2849d17ee88336dde81cd92466623686481ca4e",
+    "sha256": "b28cf7b906e8ed8d90c586490e44f7ad0cb0857092b660d70e6cc67ab56f38d1",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "f8b5b3eeb4eb441ab6059ca515f32c3de6bce78b8d583030ab9f1f6a30835f01"
+  },
+  {
+    "module": "PlanarHom.BinarySubtractionBits",
+    "upstream_path": "PlanarHom/BinarySubtractionBits.lean",
+    "git_blob_sha1": "0e000959b3c8573363e349ebebe4bccabeba964d",
+    "sha256": "b260e8beca1f77d63b097ae54bd0169eefbeb27bb88ffe6bd26b35d1b71e1842",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "b09e39a277720b00e7ab8962a0476354402177191249d9e88074f86c35673ed3"
+  },
+  {
+    "module": "PlanarHom.BinarySubtractionMachine",
+    "upstream_path": "PlanarHom/BinarySubtractionMachine.lean",
+    "git_blob_sha1": "da04077f37296e1d21da40d1256084d5f41a11bc",
+    "sha256": "1fe5ec5527556833c83200714c31cab00ca22059d8d179725ffe1b5072b65bf6",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "702a453c0259ed51a983d4ccef5aa54f1048cd45cd65252f70bddd56c7b9b32f"
+  },
+  {
+    "module": "PlanarHom.BitMachineSubroutine",
+    "upstream_path": "PlanarHom/BitMachineSubroutine.lean",
+    "git_blob_sha1": "ba5fc94716d323f45ab748254b88ffef0cf8f03c",
+    "sha256": "51474be788380abebeccc8acc1053e93eda796edfdd5fee54c9e2a4a9f221da5",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "24531b3aaccaba60684a12c276e03e9159aefaaabb412f1b4343b800543c081f"
+  },
+  {
+    "module": "PlanarHom.BoundedIterationMachine",
+    "upstream_path": "PlanarHom/BoundedIterationMachine.lean",
+    "git_blob_sha1": "2e457d8c5a3b5667264c2976df33e5e9fdf60927",
+    "sha256": "7a8e2efa22483b3f17389ef7372790a478595f55eb451a51c4a3b53af9f7b509",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "102ea1537a90e8b99f5e1417e88a9d483530362f7fc38e9a405100ae2c26be39"
+  },
+  {
+    "module": "PlanarHom.CertificateGeneratorCorrectness",
+    "upstream_path": "PlanarHom/CertificateGeneratorCorrectness.lean",
+    "git_blob_sha1": "ebb67970d7fc02354e295b47f5df6b888ad61660",
+    "sha256": "03c482920d1be676cf92a81155a04fa426b179c0e3cb62b15e4ad883dd6e5af6",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.CertificateGeneratorMachine",
+    "upstream_path": "PlanarHom/CertificateGeneratorMachine.lean",
+    "git_blob_sha1": "d80322d90dea4305f13bd663153eb7306d69c833",
+    "sha256": "0bc89537087eb91aa62c2774ae328c70087324a79a2b5d1fc9944c333b40a007",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.CertificateNondeterministicCompiler",
+    "upstream_path": "PlanarHom/CertificateNondeterministicCompiler.lean",
+    "git_blob_sha1": "0efef460b7798b8c5137a60b4fe33003fed260d1",
+    "sha256": "651efec16d1f0e381aca3fbe81946e63189b9c00970225eb821e2147db376ed4",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.CertificateWordCount",
+    "upstream_path": "PlanarHom/CertificateWordCount.lean",
+    "git_blob_sha1": "8ce6dc1b4f80ee6161a6dde91d10a1165750da0e",
+    "sha256": "bd508d51f6cb7d8504e0f960472982b2b451e74c658e348512e949b01913a997",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.Complexity",
+    "upstream_path": "PlanarHom/Complexity.lean",
+    "git_blob_sha1": "285abd88c06d54ef1b7d3bd9e7858a6a76b2d6c7",
+    "sha256": "889aef0247e5c21096c3c3b377a09561940cce8482e3ca7c4e4adafb4033b616",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "842ca4ac1a713fd104f5c55e2c4720caf306fa9e4233a134f561f66de470d30c"
+  },
+  {
+    "module": "PlanarHom.ConstantMachines",
+    "upstream_path": "PlanarHom/ConstantMachines.lean",
+    "git_blob_sha1": "58206f00d38a8f0fc59e8ac70eff1431e01cff64",
+    "sha256": "fb8f9b666380971f1a7337e7fc9c083c4c420f38574828f2a06b562b472ef273",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "494bcc7d9c332a0435e8bbb77b522b5d9cbc90b66d7486c8c83b6b6190cf76e0"
+  },
+  {
+    "module": "PlanarHom.FiniteReachableAlphabetMachines",
+    "upstream_path": "PlanarHom/FiniteReachableAlphabetMachines.lean",
+    "git_blob_sha1": "684061b43e5c3c60fde46a7edc390b4527fe3fee",
+    "sha256": "d5a51c4f7a8e266341e9fcc2dc80356858755c797c8e725413787e04dc508a12",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.InputLengthMachine",
+    "upstream_path": "PlanarHom/InputLengthMachine.lean",
+    "git_blob_sha1": "dd5c83b599e1ed656f710406ac71007e961e2856",
+    "sha256": "62e7d8a093286dbb0d57e17817db245a571fa02787f18ba3096291334cfdbd0b",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "d9277c05025bb15115b6d6ac6467bea1a845bd340e40d6cee96703e1f9e0f0b6"
+  },
+  {
+    "module": "PlanarHom.MachineCodeTransport",
+    "upstream_path": "PlanarHom/MachineCodeTransport.lean",
+    "git_blob_sha1": "e82b6a7f40223c0c0d0325a7ae9af73655ae203d",
+    "sha256": "0fd5eb1a6b3abc4d701d9c4a6d19083609d230adfa3572f3bbf14242011d557e",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "b5078346754b577d29a9f4b5af18f1a00396989d5ffcf72de5f177440a9bdea5"
+  },
+  {
+    "module": "PlanarHom.MachineComposition",
+    "upstream_path": "PlanarHom/MachineComposition.lean",
+    "git_blob_sha1": "72246016d1133e70c55de398199cc297a9034a11",
+    "sha256": "fc52820eeb8f1102723d961d76a7e65ab22e750ee3670a483e2cbc69ccdfa40b",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "provider": "../foundations"
+  },
+  {
+    "module": "PlanarHom.MachineOutputTransport",
+    "upstream_path": "PlanarHom/MachineOutputTransport.lean",
+    "git_blob_sha1": "5fd4138ae325a4aa8f243ade9a983e7657a22cee",
+    "sha256": "0797dd0e85eec1efb4b92e9c862de76abf83e96bd5db0f8c4c277433943030d2",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "7d97c5ce5ad9221483aa02c0fe84635d60d79a6532898c9b2d37ccee502f9b7d"
+  },
+  {
+    "module": "PlanarHom.MachinePairing",
+    "upstream_path": "PlanarHom/MachinePairing.lean",
+    "git_blob_sha1": "fbc4b71a6f132c008d376bc377e6e9909663b68f",
+    "sha256": "052c9df76368db81601d8cb9f95a301936da7dc525bb8b5ea7de21afddb81ae7",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "417d69c9005f13afe7f69801cbfc93634f5f3c503629ecd5cb9e9df31840a4bc"
+  },
+  {
+    "module": "PlanarHom.NondeterministicCertificateBridge",
+    "upstream_path": "PlanarHom/NondeterministicCertificateBridge.lean",
+    "git_blob_sha1": "97c154ac2bdd6133c9f3481a2a04cc57c02117d0",
+    "sha256": "a39acf6104db05aea4f623adbcf980b0414e2ea0d2af668695d69d93fe249b58",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.NondeterministicComputationTree",
+    "upstream_path": "PlanarHom/NondeterministicComputationTree.lean",
+    "git_blob_sha1": "b039d16ae80a68ae1e75401d86663de350fb0da7",
+    "sha256": "36761f90acd8939426f24baa30fa0066bdfbbef6cd1ddf4d5039c1982401c047",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.NondeterministicReplayCompiler",
+    "upstream_path": "PlanarHom/NondeterministicReplayCompiler.lean",
+    "git_blob_sha1": "4cab978b3e1fab0f382c097e1ad6c7cac4012d90",
+    "sha256": "9f8e1a31ed2e7751396a1af0690fc2b40f1cc7c427980820488b3e6a9cf4f232",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.NondeterministicRunCombinators",
+    "upstream_path": "PlanarHom/NondeterministicRunCombinators.lean",
+    "git_blob_sha1": "b1dae254a2b43c198229ac4ca4ba3af31b19dbbc",
+    "sha256": "f36796c4773fddfde6d067cf99c8e9ebcaae9865f0ae7580bc033ff8ab2f5700",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.NondeterministicSharpP",
+    "upstream_path": "PlanarHom/NondeterministicSharpP.lean",
+    "git_blob_sha1": "4f4a83745496bf1cb8a4ed736309315a7c02136d",
+    "sha256": "e6460a2a06e279beb74dc3dc21c7191d8035a471c178823876d5f219e51516b9",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.NondeterministicTM2",
+    "upstream_path": "PlanarHom/NondeterministicTM2.lean",
+    "git_blob_sha1": "c34fa8fa10dd132a41089d58baee1298ac6a18be",
+    "sha256": "5054b6b3a6fe14a12ae9aaf1b693bd45328eec079f722353ccc02c09d992e4fa",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.OracleAccounting",
+    "upstream_path": "PlanarHom/OracleAccounting.lean",
+    "git_blob_sha1": "e085e164cbfaabb9f169a17361d2793dfb79d350",
+    "sha256": "b012b3ce93f07614ce1d7e22df8134ff224bad6145aca4a0f74fadd3d8afde0a",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "bb01947cbb83ad90e1a1adf94785e75a0ae535f78216ea2dd588ca54b614f9d3"
+  },
+  {
+    "module": "PlanarHom.OracleReductionComposition",
+    "upstream_path": "PlanarHom/OracleReductionComposition.lean",
+    "git_blob_sha1": "2fca3eedd30b07d41f1c2729139dafb6ec655e93",
+    "sha256": "8d3227e205c853bb3e8e7073db49c9a09f42f2366a4b7153e55fd17d6eee4d61",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "75c98170af2871a34acecb5144a13480431ea547df594715f7fc6a7cf715a5c0"
+  },
+  {
+    "module": "PlanarHom.OracleRunAccounting",
+    "upstream_path": "PlanarHom/OracleRunAccounting.lean",
+    "git_blob_sha1": "92482190b7d82b7eee40fb370a330da6d887fa27",
+    "sha256": "ebb42bdd0f9a7c6318847fc43036af1fdb4fd5880161ef5f5d363603605262cc",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "137d1a48b1555f6dd3eeedddddbd3bb69071ff21cd40aee7399b263bde52f5c3"
+  },
+  {
+    "module": "PlanarHom.OracleSubstitution",
+    "upstream_path": "PlanarHom/OracleSubstitution.lean",
+    "git_blob_sha1": "6d09304092d27c55e9f88f89194e8d39ce783015",
+    "sha256": "55a3d0348daeec79f60e7bb3944184b0134bf239315505e49693cd7fad9780d8",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "fbcdaac64a300ccce6e333d20ba9563c47d9f74d04ed7eb48261a0e285590300"
+  },
+  {
+    "module": "PlanarHom.OracleSubstitutionOnTrace",
+    "upstream_path": "PlanarHom/OracleSubstitutionOnTrace.lean",
+    "git_blob_sha1": "5b1fe4319d0c36d1dbd2ccd146812737522e9099",
+    "sha256": "0b23b627f4cb6d067d45dcf38c218f6814e8d8a2f0a91729448c927638f0e479",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "2de680198d0de89e6b9434fd2ec4164b4a480fca03214dff01046c0e12f5e5ef"
+  },
+  {
+    "module": "PlanarHom.PairProjectionMachines",
+    "upstream_path": "PlanarHom/PairProjectionMachines.lean",
+    "git_blob_sha1": "2d63b113af2676a1f53b4c061c661401ae32096e",
+    "sha256": "aa5190d78fbd122d7e8e5f6e074b1c7dc79157feb8553fb5be2973e35bed9241",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "e224ab62cbf98aa856c0f74667d82232a8df2f28ed22129b90727b326cdaef21"
+  },
+  {
+    "module": "PlanarHom.RationalMultiplicationBits",
+    "upstream_path": "PlanarHom/RationalMultiplicationBits.lean",
+    "git_blob_sha1": "4147b331b011f08f8fdd15f8d3fd307ef3ba47bc",
+    "sha256": "1f98671592e67ff55797e4e767ee297dff509250cfe2a8a5d3886e10090be673",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "bee10540045766dd5a232613e089f32debff0b7412d8dd0b8703f35dd9a1f1b5"
+  },
+  {
+    "module": "PlanarHom.RationalMultiplicationMachine",
+    "upstream_path": "PlanarHom/RationalMultiplicationMachine.lean",
+    "git_blob_sha1": "cec319977440ce6ce2a5367e1241f73c5d3ac982",
+    "sha256": "7284719fefd387cae7676050cbaaa2fb7dfe13fa71b79199cac93ae6cc229b12",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "d06dd1f3c167869570bbb56ae1f6954a81e11a437cd8b9cdd7014dbbced5580b"
+  },
+  {
+    "module": "PlanarHom.RationalNormalizationBits",
+    "upstream_path": "PlanarHom/RationalNormalizationBits.lean",
+    "git_blob_sha1": "51f398271bb4a944b17872c4724617abc3a9221a",
+    "sha256": "7bda449c96229c7012a463de0c7433dbe5a3658f4de34aed9588a38674c5df8a",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "2234c1af256aae0bd99a2eda978af1076c2c4fd8f2d4d876d711c9449cabe620"
+  },
+  {
+    "module": "PlanarHom.RationalNormalizationMachine",
+    "upstream_path": "PlanarHom/RationalNormalizationMachine.lean",
+    "git_blob_sha1": "1a52e1e8d23e04cc1b65be537b7ca4284e945931",
+    "sha256": "95ac8d85bfe7e374711ba0e5c27f5f523e208d8ca804812ee5e420cafc44b2a4",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "bae37097168d9aa83f9213bc5e6aff7cd74c5c4afabd2944cb291f975b014273"
+  },
+  {
+    "module": "PlanarHom.RelationalStackTransfer",
+    "upstream_path": "PlanarHom/RelationalStackTransfer.lean",
+    "git_blob_sha1": "84024305bb8087f71df5882ff4affe0fe98ab375",
+    "sha256": "68f06fb98bf1afa5598b62ae0f46543979a17561178295d309b85a957ddac0ba",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "5a1fef66add28a26990ea42b1f375f85d66e874b06c6963bace8496f94f48444"
+  },
+  {
+    "module": "PlanarHom.RestrictedIterationMachine",
+    "upstream_path": "PlanarHom/RestrictedIterationMachine.lean",
+    "git_blob_sha1": "8034cc1166506d4e3efa9367ad96203ddea0a23f",
+    "sha256": "ecaed4bcefac8643b99bdc5b6d4b3249d65563056825ea7d8df04ccdb7911ace",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "8343c6e59562df61c46bc1b7e1f79840c0461bb9eb48997fdff676f50e07cca0"
+  },
+  {
+    "module": "PlanarHom.ReturningBitSubroutine",
+    "upstream_path": "PlanarHom/ReturningBitSubroutine.lean",
+    "git_blob_sha1": "e1150319991ad18e9b49d6cbe869b62e53fc8e85",
+    "sha256": "7882aedebbfaf9ceca48899291168599aef7d6db26164f5b36dede246754ac9c",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "0e597c7339a35d42f70a1d1e95e570a1a0ad3a2be4f5ca76b18f67dc71f29344"
+  },
+  {
+    "module": "PlanarHom.SharpPBridge",
+    "upstream_path": "PlanarHom/SharpPBridge.lean",
+    "git_blob_sha1": "0137f34c0bd3a24f643eff1d6acd0eedda5da975",
+    "sha256": "56854fced7f02ccca9fc224a68b8a85a3ce553ed271556bfd38fe10054e409b4",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  },
+  {
+    "module": "PlanarHom.StackTransfer",
+    "upstream_path": "PlanarHom/StackTransfer.lean",
+    "git_blob_sha1": "69c82d63cba14e75ab9a3165aac647af0025faed",
+    "sha256": "e81eb49b97d6e4aa07bfc27b240b926872cc596b0ea7276bd4bd42e314e23482",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "reused accepted A1 migration adaptations; original namespaces restored",
+    "patch_provider_sha256": "39c45b03cd5bfb0dae464c9dba158c1adc9e9140938b56447469c20e32204ad2"
+  },
+  {
+    "module": "PlanarHom.UnaryPolynomialMachines",
+    "upstream_path": "PlanarHom/UnaryPolynomialMachines.lean",
+    "git_blob_sha1": "04799d7a96cbe5aee514ee0de780945fcf36ee61",
+    "sha256": "bd3ceb96d678ea99516a8d379b6a02a3363cca1d6e39bc9c84ce81df250ef88d",
+    "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+    "port": "encode-function API and import relocation"
+  }
+]

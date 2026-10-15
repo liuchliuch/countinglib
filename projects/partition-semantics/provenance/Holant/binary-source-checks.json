@@ -1,0 +1,37 @@
+[
+  {
+    "source": "Holant/Signature.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Signature.lean",
+    "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+    "sha256": "c6340ad84662fc877b158109fe84a255baa613b40d3f837766464d49d6514820",
+    "matches_full_holant_source": true
+  },
+  {
+    "source": "Holant/Tensor.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Tensor.lean",
+    "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+    "sha256": "2d0dbc2979f63175cefb8a3716af557c65aa601860187d9012c1ef5adddd446b",
+    "matches_full_holant_source": true
+  },
+  {
+    "source": "Holant/Network.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/Network.lean",
+    "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+    "sha256": "b063244d4ffdd32ba151449dc6333dc6c210535d99b480be1ffe66f98c92eb18",
+    "matches_full_holant_source": true
+  },
+  {
+    "source": "Holant/OpenNetwork.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/OpenNetwork.lean",
+    "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+    "sha256": "321df01d4ff1bcad2ccf6de8b17592462ca107cf7a4e17267017a845ae1c366f",
+    "matches_full_holant_source": true
+  },
+  {
+    "source": "Holant/BoundaryAction.lean",
+    "url": "https://raw.githubusercontent.com/liuchliuch/holant-binary-disequality-lean/ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711/Holant/BoundaryAction.lean",
+    "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+    "sha256": "53ae7381ecce35d67c3ecd0f283eab8decdb1d76cbfd6a67dd9e66615998dc40",
+    "matches_full_holant_source": true
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "kind": "New independent target and proofs; existing declarations imported without copying",
+  "owned_modules": [
+    "Counting.CookLevin",
+    "Counting.CookLevin.Target",
+    "Counting.CookLevin.Compiler",
+    "Counting.CookLevin.Evaluator",
+    "Counting.CookLevin.Padding",
+    "Counting.CookLevin.Membership",
+    "Counting.CookLevin.Reduction",
+    "Counting.CookLevin.Clients"
+  ],
+  "providers": [
+    {
+      "path": "../planar-machines/PlanarHom/CountingCookLevinNorCircuit.lean",
+      "sha256": "8a39235ad4c93a8e32aab50115234bbd39efafde4114821761a4f1b3ae05ab04"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/CountingCookLevinUniformSizes.lean",
+      "sha256": "a8b62f8449e575b7f69d60d381850ffa691476d5b2395ce385ea3e8458b698be"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/CountingCookLevinSerializedCorrectness.lean",
+      "sha256": "b6b8ce6a17d4f0edae584bf21fbdf51b4a26151cc54987929509fabc107933f1"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/OccurrencePfaffianListPrimitives.lean",
+      "sha256": "6fa3b3996657ffecdb9202b287ff2b8771422358fab849f4552c3433462383b7"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/ListFoldMachines.lean",
+      "sha256": "337bdd5defbaba0375bea31af69555d59d678e5d318152b5042ed6f2f53023a3"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/ListDropMachines.lean",
+      "sha256": "c04f0b346b3240fec8eca06f257b60042c61bb8e8a02bba2b45efde8d3709ec9"
+    },
+    {
+      "path": "../planar-machines/PlanarHom/RawBooleanListMachine.lean",
+      "sha256": "c297da98b850683be57d374fe3741da5d2568205cafa49a5525a8e02eb127d38"
+    },
+    {
+      "path": "../foundations/Counting/Foundation/Witness.lean",
+      "sha256": "445f44cef18428e489ae6a429f9d511ced71837d95a96f423655cd856cef661b"
+    },
+    {
+      "path": "../foundations/Counting/Complexity/Reduction.lean",
+      "sha256": "495cca40a9cf18eb645f6fa961987cacbcf10513808f162e9697f237d1100a0c"
+    },
+    {
+      "path": "../foundations/Counting/Complexity/SharpP.lean",
+      "sha256": "c386d7ad99a06216a999fa3355492cb1220fe6d8ca4656d83458b2e7df41508a"
+    },
+    {
+      "path": "../witness-machines/Counting/WitnessMachines/TaggedToFramed.lean",
+      "sha256": "c5f732e5768cc52fcd3e67cb88bf724b079c6ef1e3df93273dc8841ecfd3d464"
+    },
+    {
+      "path": "../witness-machines/Counting/Bridge/WitnessSharpP.lean",
+      "sha256": "a43a855b0338d639a0cdd4a3d6b06091d259ddfb5e6e4ded83f4ee8799f2b6dc"
+    },
+    {
+      "path": "../planar-homomorphisms/Counting/Bridge/PlanarHomSharpP.lean",
+      "sha256": "87b2b15e2b449d29492fdef72cabd3444ab98aa5a68a33fc161ab19a5adae750"
+    }
+  ],
+  "frozen_pm_manifest": "../planar-machines/reports/FROZEN.sha256",
+  "frozen_pm_manifest_sha256": "fc7f20e6453b17bac6a53440a23cbabd25ebcb7be2e4cfadd0f6ff21ba6ae61f"
+}

@@ -1,0 +1,16 @@
+name = "graphCSPReduction"
+version = "0.1.0"
+defaultTargets = ["CountingGraphCSP"]
+
+[[require]]
+name = "countingFoundations"
+path = "../foundations"
+
+[[require]]
+name = "partitionSemantics"
+path = "../partition-semantics"
+
+[[lean_lib]]
+name = "CountingGraphCSP"
+roots = []
+globs = ["Counting.GraphCSP", "Counting.GraphCSP.+"]

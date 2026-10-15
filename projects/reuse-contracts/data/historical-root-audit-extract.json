@@ -1,0 +1,803 @@
+{
+  "status": "historical INT9 extract; not a new audit",
+  "source": "validation/all/audit-declarations.jsonl",
+  "type_hash_semantics": "Lean.Expr structural hash, not full type or cryptographic proof certificate",
+  "records": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Complexity.Classification",
+      "name": "ComplexCSP.ComplexityClassification.degree_conditions",
+      "type_hash": "2834183151",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Complexity.Classification",
+      "name": "ComplexCSP.ComplexityClassification.degree_jointBO",
+      "type_hash": "2318075783",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Complexity.Classification",
+      "name": "ComplexCSP.ComplexityClassification.ordinary_conditions",
+      "type_hash": "3651472620",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Complexity.Classification",
+      "name": "ComplexCSP.ComplexityClassification.ordinary_jointBO",
+      "type_hash": "2114620099",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Instances.IsomorphismCompleteness",
+      "name": "ComplexCSP.PinnedIsomorphism.all_instance_completeness",
+      "type_hash": "2296164836",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Instances.IsomorphismCompleteness",
+      "name": "ComplexCSP.PinnedIsomorphism.all_instance_pinned_iso_iff",
+      "type_hash": "1971397722",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Instances.IsomorphismCompleteness",
+      "name": "ComplexCSP.PinnedIsomorphism.pinnedIsoCheck_correct_all_instances",
+      "type_hash": "406112884",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Recognition.UniformComplexityClassification",
+      "name": "ComplexCSP.Recognition.encodedDegreeGlobalTest_complexity",
+      "type_hash": "871567612",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Recognition.UniformComplexityClassification",
+      "name": "ComplexCSP.Recognition.encodedGlobalTest_complexity",
+      "type_hash": "2688105568",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.DegreeStructuralCollapse",
+      "name": "Counting.ComplexCSP.degree_conditions_at_one",
+      "type_hash": "2494199840",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.DegreeStructuralCollapse",
+      "name": "Counting.ComplexCSP.degree_structural_collapse",
+      "type_hash": "1336507048",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.StructuralCollapse",
+      "name": "Counting.ComplexCSP.jointBO_global_maltsev",
+      "type_hash": "3773752075",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.StructuralCollapse",
+      "name": "Counting.ComplexCSP.jointBO_global_type_partition",
+      "type_hash": "1534044063",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.StructuralCollapse",
+      "name": "Counting.ComplexCSP.structural_collapse",
+      "type_hash": "3770311567",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.binary_context_alternative",
+      "type_hash": "2012848971",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.connection_prime_collapse",
+      "type_hash": "466259153",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.field_preserving_realization",
+      "type_hash": "1944089219",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.flag_family_unbounded",
+      "type_hash": "758680762",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.integer_unbounded_width",
+      "type_hash": "149210061",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.labelwise_cover_compression",
+      "type_hash": "816307346",
+      "universe_parameters": [
+        "u_1"
+      ]
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.no_domain_only_width_bound",
+      "type_hash": "3038411237",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.qutrit_support_trichotomy",
+      "type_hash": "3861496016",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.MatchgateWidth.Main",
+      "name": "Counting.MatchgateWidth.transcendental_companion",
+      "type_hash": "2919915841",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Holant.Statements",
+      "name": "Holant.Statements.BinaryDisequality",
+      "type_hash": "99470102",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Holant.Statements",
+      "name": "Holant.Statements.LiteralEquality",
+      "type_hash": "99470102",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Holant.Statements",
+      "name": "Holant.Statements.Quaternary",
+      "type_hash": "99470102",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Holant.Statements",
+      "name": "Holant.Statements.TractableEvaluation",
+      "type_hash": "99470102",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_10_10",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_10_5",
+      "type_hash": "3944470172",
+      "universe_parameters": [
+        "u_1"
+      ]
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_10_7",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_3_1",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_3_2",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_3_3",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_3_3_family",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_4_2",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Counting.MatchgateWidth.PaperStatements",
+      "name": "MatchgateWidth.Paper.claim_9_1",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Paper2.Problem",
+      "name": "Paper2.Problem.InFP",
+      "type_hash": "850296903",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "Paper2.Problem",
+      "name": "Paper2.Problem.SharpPHard",
+      "type_hash": "850296903",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Paper2.PublicNativeClassification",
+      "name": "Paper2.PublicDichotomy.main_theorem_with_native_recognition",
+      "type_hash": "1294654150",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Paper2.PublicNativeClassification",
+      "name": "Paper2.PublicDichotomy.theorem_9_2",
+      "type_hash": "3882631725",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "PlanarHom.MainDichotomyScope",
+      "name": "PlanarHom.MainDichotomyScope.Theorem11Statement",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "definition",
+      "module": "PlanarHom.MainDichotomyScope",
+      "name": "PlanarHom.MainDichotomyScope.Theorem13Statement",
+      "type_hash": "3944470172",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "PlanarHom.MainDichotomiesClosed",
+      "name": "PlanarHom.MainDichotomyScope.theorem11",
+      "type_hash": "3202073369",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "PlanarHom.MainDichotomiesClosed",
+      "name": "PlanarHom.MainDichotomyScope.theorem13",
+      "type_hash": "1523018425",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "ComplexCSP.Recognition.CharacterComparison",
+      "name": "ComplexCSP.Recognition.PinnedMonomial.characters_eq_iff_all_tensor_instances",
+      "type_hash": "2810539308",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.Recognition",
+      "name": "Counting.ComplexCSP.Recognition.decode_encode",
+      "type_hash": "2127585582",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.Recognition",
+      "name": "Counting.ComplexCSP.Recognition.recognizeDegree_correct",
+      "type_hash": "3303600952",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.Recognition",
+      "name": "Counting.ComplexCSP.Recognition.recognize_correct",
+      "type_hash": "359372759",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.ComplexCSP.Recognition",
+      "name": "Counting.ComplexCSP.Recognition.representation_unique",
+      "type_hash": "1758195669",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.binaryDisequality",
+      "type_hash": "739475243",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.binaryDisequality_uniform",
+      "type_hash": "2774140397",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.literalEquality",
+      "type_hash": "251120310",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.literalEquality_uniform",
+      "type_hash": "3045236154",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.quaternary",
+      "type_hash": "3141208962",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.quaternary_uniform",
+      "type_hash": "478428827",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.tractableEvaluation",
+      "type_hash": "1424299700",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.BinaryDisequality",
+      "name": "Counting.HolantUnified.BinaryDisequality.tractableEvaluation_uniform",
+      "type_hash": "3619757803",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.both_dichotomies",
+      "type_hash": "615131714",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.main_theorem_with_native_recognition",
+      "type_hash": "1294654150",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.native_dichotomy",
+      "type_hash": "2172623359",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.native_hardness",
+      "type_hash": "3505127047",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.native_inFP",
+      "type_hash": "15006637",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.ordinary_dichotomy",
+      "type_hash": "794036413",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.ordinary_hardness",
+      "type_hash": "456851590",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.ordinary_inFP",
+      "type_hash": "3464755217",
+      "universe_parameters": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "kind": "theorem",
+      "module": "Counting.HolantUnified.FullDichotomy",
+      "name": "Counting.HolantUnified.FullDichotomy.theorem_9_2",
+      "type_hash": "3882631725",
+      "universe_parameters": []
+    }
+  ]
+}

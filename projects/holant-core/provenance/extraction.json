@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T07:20:09.502408+00:00",
+  "scope": "Six byte-exact canonical modules relocated from H1; source and contracts unchanged",
+  "canonical_manifest_sha256": "66b7c23da901cdeb05a71752c75df8c230c139c55c3afc43db4aa8af503166d7",
+  "files": [
+    {
+      "path": "Holant/Signature.lean",
+      "module": "Holant.Signature",
+      "source": "D",
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "git_blob_sha1": "5c6eac8a18cbdc522689774045001616a9fe80da",
+      "sha256": "c6340ad84662fc877b158109fe84a255baa613b40d3f837766464d49d6514820",
+      "bytes": 1685,
+      "decision": "shared-identical",
+      "origins": [
+        {
+          "source": "D",
+          "repository": "holant-dichotomy-lean",
+          "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+          "git_blob_sha1": "5c6eac8a18cbdc522689774045001616a9fe80da"
+        },
+        {
+          "source": "B",
+          "repository": "holant-binary-disequality-lean",
+          "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+          "git_blob_sha1": "5c6eac8a18cbdc522689774045001616a9fe80da"
+        }
+      ],
+      "production_status": "inventory-only; production membership is determined by data/proof-closure*",
+      "provider": "countingHolantCore",
+      "canonical_path": "projects/holant-core/Holant/Signature.lean",
+      "historical_h1_archive": "projects/holant-unified/provenance/shared-core-extraction/Holant/Signature.lean.source"
+    },
+    {
+      "path": "Holant/Tensor.lean",
+      "module": "Holant.Tensor",
+      "source": "D",
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "git_blob_sha1": "4dd9ad4313671f2c1ac0eb5d53663ea1fc0b33f7",
+      "sha256": "2d0dbc2979f63175cefb8a3716af557c65aa601860187d9012c1ef5adddd446b",
+      "bytes": 3542,
+      "decision": "shared-identical",
+      "origins": [
+        {
+          "source": "D",
+          "repository": "holant-dichotomy-lean",
+          "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+          "git_blob_sha1": "4dd9ad4313671f2c1ac0eb5d53663ea1fc0b33f7"
+        },
+        {
+          "source": "B",
+          "repository": "holant-binary-disequality-lean",
+          "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+          "git_blob_sha1": "4dd9ad4313671f2c1ac0eb5d53663ea1fc0b33f7"
+        }
+      ],
+      "production_status": "inventory-only; production membership is determined by data/proof-closure*",
+      "provider": "countingHolantCore",
+      "canonical_path": "projects/holant-core/Holant/Tensor.lean",
+      "historical_h1_archive": "projects/holant-unified/provenance/shared-core-extraction/Holant/Tensor.lean.source"
+    },
+    {
+      "path": "Holant/Network.lean",
+      "module": "Holant.Network",
+      "source": "D",
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "git_blob_sha1": "edfb8dc34b57ec33a4c7532eaafa73e180dec7e7",
+      "sha256": "b063244d4ffdd32ba151449dc6333dc6c210535d99b480be1ffe66f98c92eb18",
+      "bytes": 3170,
+      "decision": "shared-identical",
+      "origins": [
+        {
+          "source": "D",
+          "repository": "holant-dichotomy-lean",
+          "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+          "git_blob_sha1": "edfb8dc34b57ec33a4c7532eaafa73e180dec7e7"
+        },
+        {
+          "source": "B",
+          "repository": "holant-binary-disequality-lean",
+          "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+          "git_blob_sha1": "edfb8dc34b57ec33a4c7532eaafa73e180dec7e7"
+        }
+      ],
+      "production_status": "inventory-only; production membership is determined by data/proof-closure*",
+      "provider": "countingHolantCore",
+      "canonical_path": "projects/holant-core/Holant/Network.lean",
+      "historical_h1_archive": "projects/holant-unified/provenance/shared-core-extraction/Holant/Network.lean.source"
+    },
+    {
+      "path": "Holant/Complexity/Encoding.lean",
+      "module": "Holant.Complexity.Encoding",
+      "source": "D",
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "git_blob_sha1": "5d48ca6221a28fc52e2024d33e99f6c47a0b6d4f",
+      "sha256": "4a366ebe37966ce6ae788094bf793e6700e0593147b2495fb648da7e774a6068",
+      "bytes": 2912,
+      "decision": "shared-identical",
+      "origins": [
+        {
+          "source": "D",
+          "repository": "holant-dichotomy-lean",
+          "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+          "git_blob_sha1": "5d48ca6221a28fc52e2024d33e99f6c47a0b6d4f"
+        },
+        {
+          "source": "B",
+          "repository": "holant-binary-disequality-lean",
+          "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+          "git_blob_sha1": "5d48ca6221a28fc52e2024d33e99f6c47a0b6d4f"
+        }
+      ],
+      "production_status": "inventory-only; production membership is determined by data/proof-closure*",
+      "provider": "countingHolantCore",
+      "canonical_path": "projects/holant-core/Holant/Complexity/Encoding.lean",
+      "historical_h1_archive": "projects/holant-unified/provenance/shared-core-extraction/Holant/Complexity/Encoding.lean.source"
+    },
+    {
+      "path": "Holant/Complexity/ConstantMachine.lean",
+      "module": "Holant.Complexity.ConstantMachine",
+      "source": "D",
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "git_blob_sha1": "7598934b455a1e12296ea22b2514ebe58a141f0e",
+      "sha256": "f2f7ce47f295f4655999583ee6f1d49c1e024111ab6c0e944e9246f04dd13415",
+      "bytes": 3031,
+      "decision": "shared-identical",
+      "origins": [
+        {
+          "source": "D",
+          "repository": "holant-dichotomy-lean",
+          "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+          "git_blob_sha1": "7598934b455a1e12296ea22b2514ebe58a141f0e"
+        },
+        {
+          "source": "B",
+          "repository": "holant-binary-disequality-lean",
+          "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+          "git_blob_sha1": "7598934b455a1e12296ea22b2514ebe58a141f0e"
+        }
+      ],
+      "production_status": "inventory-only; production membership is determined by data/proof-closure*",
+      "provider": "countingHolantCore",
+      "canonical_path": "projects/holant-core/Holant/Complexity/ConstantMachine.lean",
+      "historical_h1_archive": "projects/holant-unified/provenance/shared-core-extraction/Holant/Complexity/ConstantMachine.lean.source"
+    },
+    {
+      "path": "Holant/Complexity/WitnessCounting.lean",
+      "module": "Holant.Complexity.WitnessCounting",
+      "source": "D",
+      "repository": "holant-dichotomy-lean",
+      "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+      "git_blob_sha1": "aa581db1125d3af3e62afb9d434ddeed51144ba8",
+      "sha256": "650a128d94472e751a529bdbc39784adbe042659c31c0637bc5745bafdf963a3",
+      "bytes": 5808,
+      "decision": "shared-identical",
+      "origins": [
+        {
+          "source": "D",
+          "repository": "holant-dichotomy-lean",
+          "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+          "git_blob_sha1": "aa581db1125d3af3e62afb9d434ddeed51144ba8"
+        },
+        {
+          "source": "B",
+          "repository": "holant-binary-disequality-lean",
+          "commit": "ec3e598e380c57e1c4d1a3c73a4ad1b4f7eed711",
+          "git_blob_sha1": "aa581db1125d3af3e62afb9d434ddeed51144ba8"
+        }
+      ],
+      "production_status": "inventory-only; production membership is determined by data/proof-closure*",
+      "provider": "countingHolantCore",
+      "canonical_path": "projects/holant-core/Holant/Complexity/WitnessCounting.lean",
+      "historical_h1_archive": "projects/holant-unified/provenance/shared-core-extraction/Holant/Complexity/WitnessCounting.lean.source"
+    }
+  ]
+}

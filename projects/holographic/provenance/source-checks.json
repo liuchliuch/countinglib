@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-10-13T11:29:13.464843+00:00",
+  "fixed_tree_sha": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+  "fixed_tree_index_sha256": "a344515854341e72575c4277787580f1946f59052ebb4757d182fdd6b27a12f3",
+  "checks": [
+    {
+      "provider": "../holant-unified/Holant/Holographic.lean",
+      "sha256": "28aae671a3d5e2e0b7d89525bf096028311bbb7fefa9eb281a7c8fccd59aab8f",
+      "matches_mapping": true,
+      "git_blob_sha1": "70b0015b935ff195cb0f9ddbd1d65c7c7a628eda",
+      "matches_fixed_release_tree": true
+    },
+    {
+      "provider": "../holant-unified/Holant/BoundaryAction.lean",
+      "sha256": "53ae7381ecce35d67c3ecd0f283eab8decdb1d76cbfd6a67dd9e66615998dc40",
+      "matches_mapping": true,
+      "git_blob_sha1": "01f4dec4bb281d4044bdeb79c22c5d8adf11d52c",
+      "matches_fixed_release_tree": true
+    },
+    {
+      "provider": "../holant-unified/Holant/Kernel.lean",
+      "sha256": "c78531dd613e9789f054181b1aa169c24079cd03eb3ed59ff0b31f0283b0312d",
+      "matches_mapping": true,
+      "git_blob_sha1": "54f79a69621f283aa71248332316f6ed31121f41",
+      "matches_fixed_release_tree": true
+    },
+    {
+      "provider": "../holant-unified/Holant/Proofs/Algorithms/HolographicTransport.lean",
+      "sha256": "cb777fb0a6c259bbcfb528ac5c4de97c367d3c5b4b5c78df3bcecda089f12cf7",
+      "matches_mapping": true,
+      "git_blob_sha1": "f9c936dd37f6adcb2eb13954b997e42f906b95be",
+      "matches_fixed_release_tree": true
+    },
+    {
+      "provider": "../holant-unified/Holant/Proofs/Closure/ClosurePhysicalBridgeHolographicOpenAlgebra.lean",
+      "sha256": "e04f631029ebea6936af818495ec8de304aab6b16f8eee111b48f3c30e73f969",
+      "matches_mapping": true,
+      "git_blob_sha1": "bdfe7f1bd54999ccda48ef9b66a610740f8af58f",
+      "matches_fixed_release_tree": true
+    },
+    {
+      "provider": "../holant-unified/Holant/Proofs/Closure/ClosurePhysicalBridgeHolographicOpen.lean",
+      "sha256": "25a236bffc688ad7b61397eeb7aae4ee12f438c392534a62e6d7f295c09d5537",
+      "matches_mapping": true,
+      "git_blob_sha1": "6c82ee9caa34d095709334df0aad51eda40a3ddb",
+      "matches_fixed_release_tree": true
+    },
+    {
+      "provider": "../partition-semantics/Counting/Model/Basic.lean",
+      "sha256": "67593d1247a0b1f3fb19512b226959b85faeff5f3cb092c009f3be4ff4654a1d",
+      "matches_mapping": true
+    },
+    {
+      "provider": "../partition-semantics/Counting/Model/Holant.lean",
+      "sha256": "19290cbcdd309d0d5fb364f622ee9118fe0c59d0424aaad9dde2d796fbdb362e",
+      "matches_mapping": true
+    },
+    {
+      "provider": "../partition-semantics/Counting/Model/FiniteSums.lean",
+      "sha256": "9de97f84289e6de03eef1856eb8a99eea1704f16e4d153baec1970abde0ee575",
+      "matches_mapping": true
+    },
+    {
+      "provider": "../partition-semantics/Counting/Bridge/Holant.lean",
+      "sha256": "0ccff604ff303982b21c37e748d896073fc400820694e864ad4e1d1c42ff067a",
+      "matches_mapping": true
+    }
+  ]
+}

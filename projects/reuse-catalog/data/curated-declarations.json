@@ -1,0 +1,1290 @@
+[
+  {
+    "name": "Counting.Bridge.OpenNetwork.BoundaryComplement.Hidden",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork.Assignments",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.BoundaryComplement.Hidden"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.BoundaryComplement.assignments",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork.Assignments",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.BoundaryComplement.assignments"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.BoundaryComplement.compatibleAssignments",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork.Assignments",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.BoundaryComplement.compatibleAssignments"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.BoundaryComplement.sum_extend",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork.Assignments",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.BoundaryComplement.sum_extend"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.assignmentEquiv",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.assignmentEquiv"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.toOpenInstance",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.toOpenInstance"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.occurrences_length",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.occurrences_length"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_toOpenInstance",
+    "group": "open-raw",
+    "entry": "Counting.Bridge.OpenNetwork",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_toOpenInstance"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.toTensorInstance",
+    "group": "open-corrected",
+    "entry": "Counting.Bridge.OpenNetwork.Corrected",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.toTensorInstance"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.tensor_occurrences_length",
+    "group": "open-corrected",
+    "entry": "Counting.Bridge.OpenNetwork.Corrected",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.tensor_occurrences_length"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_toTensorInstance_action",
+    "group": "open-corrected",
+    "entry": "Counting.Bridge.OpenNetwork.Corrected",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_toTensorInstance_action"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_toTensorInstance",
+    "group": "open-corrected",
+    "entry": "Counting.Bridge.OpenNetwork.Corrected",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_toTensorInstance"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_tensor_eq_raw_of_ordinary",
+    "group": "open-corrected",
+    "entry": "Counting.Bridge.OpenNetwork.Corrected",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_tensor_eq_raw_of_ordinary"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_tensor_eq_raw_closed",
+    "group": "open-corrected",
+    "entry": "Counting.Bridge.OpenNetwork.Corrected",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_tensor_eq_raw_closed"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.disjoint",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.disjoint"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.raw_disjoint",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.raw_disjoint"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.tensor_disjoint",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.tensor_disjoint"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.disjointInstance",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.disjointInstance"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_disjoint_commutes",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_disjoint_commutes"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.disjointTensorInstance",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.disjointTensorInstance"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_disjointTensor_commutes",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_disjointTensor_commutes"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_reorder_commutes",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_reorder_commutes"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_tensor_reorder_commutes",
+    "group": "open-composition",
+    "entry": "Counting.Bridge.OpenNetwork.Composition",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_tensor_reorder_commutes"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.noFreeOfOrdinary",
+    "group": "open-ordinary",
+    "entry": "Counting.Bridge.OpenNetwork.Ordinary",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.noFreeOfOrdinary"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.ordinaryNetwork",
+    "group": "open-ordinary",
+    "entry": "Counting.Bridge.OpenNetwork.Ordinary",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.ordinaryNetwork"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_ordinary_raw",
+    "group": "open-ordinary",
+    "entry": "Counting.Bridge.OpenNetwork.Ordinary",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_ordinary_raw"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_ordinary_tensor",
+    "group": "open-ordinary",
+    "entry": "Counting.Bridge.OpenNetwork.Ordinary",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_ordinary_tensor"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.partition_closed",
+    "group": "open-ordinary",
+    "entry": "Counting.Bridge.OpenNetwork.Ordinary",
+    "role": "public",
+    "public_spelling": "Counting.Bridge.OpenNetwork.partition_closed"
+  },
+  {
+    "name": "Holant.OpenNetwork.raw",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.OpenNetwork.raw"
+  },
+  {
+    "name": "Holant.OpenNetwork.boundaryKernel",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.OpenNetwork.boundaryKernel"
+  },
+  {
+    "name": "Holant.OpenNetwork.tensor",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.OpenNetwork.tensor"
+  },
+  {
+    "name": "Holant.Signature.coordinateAction",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.Signature.coordinateAction"
+  },
+  {
+    "name": "Holant.OpenNetworkComposition.realizes_tensor",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.OpenNetworkComposition.realizes_tensor"
+  },
+  {
+    "name": "Holant.OpenNetworkComposition.realizesUpTo_tensor",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.OpenNetworkComposition.realizesUpTo_tensor"
+  },
+  {
+    "name": "Holant.Dihedral.CompatibleClosure.reorderOpen_raw",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.Dihedral.CompatibleClosure.reorderOpen_raw"
+  },
+  {
+    "name": "Holant.Dihedral.CompatibleClosure.reorderOpen_tensor",
+    "group": "open-canonical",
+    "entry": "Counting.Bridge.OpenNetwork.Canonical",
+    "role": "canonical",
+    "public_spelling": "Holant.Dihedral.CompatibleClosure.reorderOpen_tensor"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.stub_paired",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.stub_paired"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.stub_boundaryKernel_nonidentity",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.stub_boundaryKernel_nonidentity"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.stub_raw_ne_tensor",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.stub_raw_ne_tensor"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.first_composition_raw",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.first_composition_raw"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.first_composition_tensor",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.first_composition_tensor"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.boundary_reorder_raw",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.boundary_reorder_raw"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.boundary_reorder_tensor",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.boundary_reorder_tensor"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.second_composition_raw",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.second_composition_raw"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.Clients.second_composition_tensor",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.Clients.second_composition_tensor"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.EdgeCases.empty_domain_no_ports",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.All",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.EdgeCases.empty_domain_no_ports"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.EdgeCases.empty_domain_hidden_port",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.All",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.EdgeCases.empty_domain_hidden_port"
+  },
+  {
+    "name": "Counting.Bridge.OpenNetwork.EdgeCases.empty_corrected",
+    "group": "open-clients",
+    "entry": "Counting.Bridge.OpenNetwork.All",
+    "role": "client",
+    "public_spelling": "Counting.Bridge.OpenNetwork.EdgeCases.empty_corrected"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Input",
+    "group": "gadget-semantic",
+    "entry": "Counting.Reduction.FixedGadget.Basic",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.Input"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.compile",
+    "group": "gadget-semantic",
+    "entry": "Counting.Reduction.FixedGadget.Basic",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.compile"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.value",
+    "group": "gadget-semantic",
+    "entry": "Counting.Reduction.FixedGadget.Basic",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.value"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.macroSignatures",
+    "group": "gadget-semantic",
+    "entry": "Counting.Reduction.FixedGadget.Basic",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.macroSignatures"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.value_compile",
+    "group": "gadget-semantic",
+    "entry": "Counting.Reduction.FixedGadget.Basic",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.value_compile"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.value_compile_macros",
+    "group": "gadget-semantic",
+    "entry": "Counting.Reduction.FixedGadget.Basic",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.value_compile_macros"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.computes",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.computes"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.compiler_inFP",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.compiler_inFP"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.output_length_static",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.output_length_static"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.primitive_bound",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.primitive_bound"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.parsimonious",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.parsimonious"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.inFP_of_base",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.inFP_of_base"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.hard_base_of_extension",
+    "group": "gadget-machine",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.hard_base_of_extension"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.includePrefix_bits",
+    "group": "gadget-extension",
+    "entry": "Counting.Reduction.FixedGadget.Extension",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.includePrefix_bits"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.includePrefixPolyTime",
+    "group": "gadget-extension",
+    "entry": "Counting.Reduction.FixedGadget.Extension",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.includePrefixPolyTime"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.extension_inFP_iff",
+    "group": "gadget-extension",
+    "entry": "Counting.Reduction.FixedGadget.Extension",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.extension_inFP_iff"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.extension_equivalent",
+    "group": "gadget-extension",
+    "entry": "Counting.Reduction.FixedGadget.Extension",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.extension_equivalent"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.extension_hard_iff",
+    "group": "gadget-extension",
+    "entry": "Counting.Reduction.FixedGadget.Extension",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.extension_hard_iff"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.templatePresentation",
+    "group": "gadget-s1",
+    "entry": "Counting.Reduction.FixedGadget.S1",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.templatePresentation"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.templatePresentation_table",
+    "group": "gadget-s1",
+    "entry": "Counting.Reduction.FixedGadget.S1",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.templatePresentation_table"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.partition_compile_network",
+    "group": "gadget-s1",
+    "entry": "Counting.Reduction.FixedGadget.S1",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.partition_compile_network"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.substitution_alignment",
+    "group": "gadget-s1",
+    "entry": "Counting.Reduction.FixedGadget.S1",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.substitution_alignment"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.exactSource",
+    "group": "gadget-field",
+    "entry": "Counting.Reduction.FixedGadget.ExactField",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.exactSource"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.exact_value",
+    "group": "gadget-field",
+    "entry": "Counting.Reduction.FixedGadget.ExactField",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.exact_value"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.exactReduction",
+    "group": "gadget-field",
+    "entry": "Counting.Reduction.FixedGadget.ExactField",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.exactReduction"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.exactReduction_time",
+    "group": "gadget-field",
+    "entry": "Counting.Reduction.FixedGadget.ExactField",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.exactReduction_time"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.exact_inFP_of_base",
+    "group": "gadget-field",
+    "entry": "Counting.Reduction.FixedGadget.ExactField",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.exact_inFP_of_base"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.exactHardnessTransport",
+    "group": "gadget-field",
+    "entry": "Counting.Reduction.FixedGadget.ExactField",
+    "role": "public",
+    "public_spelling": "Counting.Reduction.FixedGadget.exactHardnessTransport"
+  },
+  {
+    "name": "Holant.Complexity.FixedGadgetSubstitution.replace",
+    "group": "gadget-canonical",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.Complexity.FixedGadgetSubstitution.replace"
+  },
+  {
+    "name": "Holant.Complexity.FixedGadgetSubstitution.query_wellFormed",
+    "group": "gadget-canonical",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.Complexity.FixedGadgetSubstitution.query_wellFormed"
+  },
+  {
+    "name": "Holant.Complexity.FixedGadgetSubstitution.replacement_partition",
+    "group": "gadget-canonical",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.Complexity.FixedGadgetSubstitution.replacement_partition"
+  },
+  {
+    "name": "Holant.Complexity.FixedGadgetSubstitution.replace_length_le",
+    "group": "gadget-canonical",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.Complexity.FixedGadgetSubstitution.replace_length_le"
+  },
+  {
+    "name": "Holant.Complexity.FixedGadgetSubstitution.Compiler.computes",
+    "group": "gadget-canonical",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.Complexity.FixedGadgetSubstitution.Compiler.computes"
+  },
+  {
+    "name": "Holant.Complexity.FixedGadgetSubstitution.Compiler.primitive_bound",
+    "group": "gadget-canonical",
+    "entry": "Counting.Reduction.FixedGadget.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.Complexity.FixedGadgetSubstitution.Compiler.primitive_bound"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.output_records",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.output_records"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.independent_internal_copies",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.independent_internal_copies"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.output_codec_roundtrip",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.output_codec_roundtrip"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.output_value",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.output_value"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.compiler_run",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.compiler_run"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.output_encoded_bound",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.output_encoded_bound"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.finite_resource_equivalent",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.finite_resource_equivalent"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.Client.nullary_zero_value",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.Client.nullary_zero_value"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.S1Client.total_hidden",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.S1Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.S1Client.total_hidden"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.S1Client.compiled_occurrences",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.S1Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.S1Client.compiled_occurrences"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.S1Client.partition",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.S1Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.S1Client.partition"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.S1Client.at_false",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.S1Client",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.S1Client.at_false"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.FieldClient.repeated_exact",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.FieldClient",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.FieldClient.repeated_exact"
+  },
+  {
+    "name": "Counting.Reduction.FixedGadget.FieldClient.repeated_oracle_run",
+    "group": "gadget-clients",
+    "entry": "Counting.Reduction.FixedGadget.FieldClient",
+    "role": "client",
+    "public_spelling": "Counting.Reduction.FixedGadget.FieldClient.repeated_oracle_run"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_coordinate",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_coordinate"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_of_coordinates",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_of_coordinates"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_addition",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_addition"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_negation",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_negation"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_subtraction",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_subtraction"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_multiplication",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_multiplication"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_inverse",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_inverse"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_division",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_division"
+  },
+  {
+    "name": "PlanarHom.FixedFieldArithmetic.fp_equality",
+    "group": "arithmetic",
+    "entry": "Counting.Algorithm.FieldArithmetic",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.fp_equality"
+  },
+  {
+    "name": "PlanarHom.UniformFieldHeights.canonical_bounded",
+    "group": "arithmetic-heights",
+    "entry": "Counting.Algorithm.FieldArithmetic.Heights",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Heights.canonical_bounded"
+  },
+  {
+    "name": "PlanarHom.UniformFieldHeights.encoding_length_uniform",
+    "group": "arithmetic-heights",
+    "entry": "Counting.Algorithm.FieldArithmetic.Heights",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Heights.encoding_length_uniform"
+  },
+  {
+    "name": "PlanarHom.UniformFieldHeights.inverse_neg_encoding_bound",
+    "group": "arithmetic-heights",
+    "entry": "Counting.Algorithm.FieldArithmetic.Heights",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Heights.inverse_neg_encoding_bound"
+  },
+  {
+    "name": "PlanarHom.UniformFieldHeights.operations_encoding_bound",
+    "group": "arithmetic-heights",
+    "entry": "Counting.Algorithm.FieldArithmetic.Heights",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Heights.operations_encoding_bound"
+  },
+  {
+    "name": "PlanarHom.MaterializedFieldListMachines.fp_sum",
+    "group": "arithmetic-lists",
+    "entry": "Counting.Algorithm.FieldArithmetic.Materialized",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Materialized.fp_sum"
+  },
+  {
+    "name": "PlanarHom.MaterializedFieldListMachines.fp_product",
+    "group": "arithmetic-lists",
+    "entry": "Counting.Algorithm.FieldArithmetic.Materialized",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Materialized.fp_product"
+  },
+  {
+    "name": "PlanarHom.MaterializedFieldHeights.exists_polynomial_prefix_encoding_bound",
+    "group": "arithmetic-lists",
+    "entry": "Counting.Algorithm.FieldArithmetic.Materialized",
+    "role": "canonical-export-alias",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Materialized.exists_polynomial_prefix_encoding_bound"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.normalizeAndCompare",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.normalizeAndCompare"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.fp_normalizeAndCompare",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.fp_normalizeAndCompare"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.computer",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.computer"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.outputs",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.outputs"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.steps_bound",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.steps_bound"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.output_length_bound",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.output_length_bound"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.check_affine_equation",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.check_affine_equation"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Composition.zero_divisor_outputs",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Composition",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Composition.zero_divisor_outputs"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.fp_recover",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.fp_recover"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.computer",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.computer"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.outputs_coefficient",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.outputs_coefficient"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.computer_time",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.computer_time"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.computer_steps",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.computer_steps"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.intermediate_stack_bound",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.Interpolation.intermediate_stack_bound"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Clients.HeightBounds.normalized_difference_bound",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Clients.HeightBounds",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Clients.HeightBounds.normalized_difference_bound"
+  },
+  {
+    "name": "Counting.Algorithm.FieldArithmetic.Acceptance.originalQuadraticViaPublicEntry",
+    "group": "arithmetic-clients",
+    "entry": "Counting.Algorithm.FieldArithmetic.Acceptance",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.FieldArithmetic.Acceptance.originalQuadraticViaPublicEntry"
+  },
+  {
+    "name": "Counting.SharpPClosure.paddedAccept",
+    "group": "sharpp-semantic",
+    "entry": "Counting.SharpPClosure.Basic",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.paddedAccept"
+  },
+  {
+    "name": "Counting.SharpPClosure.witnessCount_paddedAccept",
+    "group": "sharpp-semantic",
+    "entry": "Counting.SharpPClosure.Basic",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.witnessCount_paddedAccept"
+  },
+  {
+    "name": "Counting.SharpPClosure.ignoredSuffix_inflation",
+    "group": "sharpp-semantic",
+    "entry": "Counting.SharpPClosure.Basic",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.ignoredSuffix_inflation"
+  },
+  {
+    "name": "Counting.SharpPClosure.padVerifier",
+    "group": "sharpp-machine",
+    "entry": "Counting.SharpPClosure.Machines",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.padVerifier"
+  },
+  {
+    "name": "Counting.SharpPClosure.fp_padVerifier",
+    "group": "sharpp-machine",
+    "entry": "Counting.SharpPClosure.Machines",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.fp_padVerifier"
+  },
+  {
+    "name": "Counting.SharpPClosure.liftComputer",
+    "group": "sharpp-machine",
+    "entry": "Counting.SharpPClosure.Machines",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.liftComputer"
+  },
+  {
+    "name": "Counting.SharpPClosure.liftComputer_steps",
+    "group": "sharpp-machine",
+    "entry": "Counting.SharpPClosure.Machines",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.liftComputer_steps"
+  },
+  {
+    "name": "Counting.SharpPClosure.liftComputer_time_bound",
+    "group": "sharpp-machine",
+    "entry": "Counting.SharpPClosure.Machines",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.liftComputer_time_bound"
+  },
+  {
+    "name": "Counting.SharpPClosure.sourceWitnessLength",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.sourceWitnessLength"
+  },
+  {
+    "name": "Counting.SharpPClosure.targetWitnessLength_le",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.targetWitnessLength_le"
+  },
+  {
+    "name": "Counting.SharpPClosure.transportAccept",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.transportAccept"
+  },
+  {
+    "name": "Counting.SharpPClosure.verifier",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.verifier"
+  },
+  {
+    "name": "Counting.SharpPClosure.verifier_steps",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.verifier_steps"
+  },
+  {
+    "name": "Counting.SharpPClosure.verifier_time_bound",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.verifier_time_bound"
+  },
+  {
+    "name": "Counting.SharpPClosure.transportAccept_count",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.SharpPClosure.transportAccept_count"
+  },
+  {
+    "name": "Counting.Complexity.ParsimoniousReduction.sharpPWitness",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.Complexity.ParsimoniousReduction.sharpPWitness"
+  },
+  {
+    "name": "Counting.Complexity.ParsimoniousReduction.inSharpP",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.Complexity.ParsimoniousReduction.inSharpP"
+  },
+  {
+    "name": "Counting.Complexity.ParsimoniousReduces.inSharpP",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.Complexity.ParsimoniousReduces.inSharpP"
+  },
+  {
+    "name": "Counting.Complexity.ParsimoniousEquivalent.inSharpP_iff",
+    "group": "sharpp-transport",
+    "entry": "Counting.SharpPClosure",
+    "role": "public",
+    "public_spelling": "Counting.Complexity.ParsimoniousEquivalent.inSharpP_iff"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.nonzero_count_three",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.nonzero_count_three"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.ignored_suffix_counts_twenty_four",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.ignored_suffix_counts_twenty_four"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.inflation_is_detected",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.inflation_is_detected"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.rejects_true_padding",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.rejects_true_padding"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.rejects_short_witness",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.rejects_short_witness"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.zeroBit_count_one",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.zeroBit_count_one"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.retained_pair_output",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.retained_pair_output"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.padded_machine_output",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.padded_machine_output"
+  },
+  {
+    "name": "Counting.SharpPClosure.Clients.retained_pair_steps",
+    "group": "sharpp-clients",
+    "entry": "Counting.SharpPClosure.Clients",
+    "role": "client",
+    "public_spelling": "Counting.SharpPClosure.Clients.retained_pair_steps"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Input",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Input"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.language",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.language"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Input.toPublic_partition",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Input.toPublic_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Input.compile",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Input.compile"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Input.compile_partition",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Input.compile_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.restore_input",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.restore_input"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.compile_input",
+    "group": "product-frontend",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Input",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.compile_input"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.inputEncoding",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.inputEncoding"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.decode_encode_input",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.decode_encode_input"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.variableCount_le_inputLength",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.variableCount_le_inputLength"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.conversionComputes",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.conversionComputes"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.computes",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.computes"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.same_machine",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.same_machine"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.same_time",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.same_time"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.inFP",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.inFP"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.outputs_partition",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.outputs_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.transitions_le",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.transitions_le"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.primitive_bound",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.primitive_bound"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.answerBits_decode",
+    "group": "product-machine",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "public",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.answerBits_decode"
+  },
+  {
+    "name": "Holant.LocalDrafts.Tractability.ProductMachine.FiniteLabels.computes",
+    "group": "product-canonical",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Machine",
+    "role": "canonical",
+    "public_spelling": "Holant.LocalDrafts.Tractability.ProductMachine.FiniteLabels.computes"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.repeated_partition",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.repeated_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.cancellation_partition",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.cancellation_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.zero_partition",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.zero_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.nullary_partition",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.nullary_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.isolated_partition",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.isolated_partition"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.repeated_machine_run",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.repeated_machine_run"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.cancellation_machine_run",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.cancellation_machine_run"
+  },
+  {
+    "name": "Counting.Algorithm.ProductFinitePalette.Clients.repeated_cost",
+    "group": "product-clients",
+    "entry": "Counting.Algorithm.ProductFinitePalette.Clients",
+    "role": "client",
+    "public_spelling": "Counting.Algorithm.ProductFinitePalette.Clients.repeated_cost"
+  }
+]

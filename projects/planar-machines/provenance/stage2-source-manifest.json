@@ -1,0 +1,415 @@
+{
+  "commit": "db68e745380769c38c8347736d2d84fcde38263c",
+  "base_provider": "/Users/liuch/draft-pinkfold/counting-complexity/projects/planar-homomorphisms",
+  "base_provider_freeze_sha256": "6b93937ca9a60b0795a77300ae6f51417eaee470cc160abebe0e361008cb4e25",
+  "base_modules": [
+    "PlanarHom.ArithmeticCircuitPrimitives",
+    "PlanarHom.Basic",
+    "PlanarHom.BinaryAdditionBits",
+    "PlanarHom.BinaryAdditionMachine",
+    "PlanarHom.BinaryArithmetic",
+    "PlanarHom.BinaryDivisionBits",
+    "PlanarHom.BinaryDivisionMachine",
+    "PlanarHom.BinaryGcdBits",
+    "PlanarHom.BinaryGcdMachine",
+    "PlanarHom.BinaryMultiplicationBits",
+    "PlanarHom.BinaryMultiplicationMachine",
+    "PlanarHom.BinarySubtractionBits",
+    "PlanarHom.BinarySubtractionMachine",
+    "PlanarHom.BitMachineSubroutine",
+    "PlanarHom.BoundedIterationMachine",
+    "PlanarHom.CertificateGeneratorCorrectness",
+    "PlanarHom.CertificateGeneratorMachine",
+    "PlanarHom.CertificateNondeterministicCompiler",
+    "PlanarHom.CertificateWordCount",
+    "PlanarHom.Complexity",
+    "PlanarHom.ConstantMachines",
+    "PlanarHom.FiniteReachableAlphabetMachines",
+    "PlanarHom.InputLengthMachine",
+    "PlanarHom.MachineCodeTransport",
+    "PlanarHom.MachineComposition",
+    "PlanarHom.MachineOutputTransport",
+    "PlanarHom.MachinePairing",
+    "PlanarHom.NondeterministicCertificateBridge",
+    "PlanarHom.NondeterministicComputationTree",
+    "PlanarHom.NondeterministicReplayCompiler",
+    "PlanarHom.NondeterministicRunCombinators",
+    "PlanarHom.NondeterministicSharpP",
+    "PlanarHom.NondeterministicTM2",
+    "PlanarHom.OracleAccounting",
+    "PlanarHom.OracleReductionComposition",
+    "PlanarHom.OracleRunAccounting",
+    "PlanarHom.OracleSubstitution",
+    "PlanarHom.OracleSubstitutionOnTrace",
+    "PlanarHom.PairProjectionMachines",
+    "PlanarHom.RationalMultiplicationBits",
+    "PlanarHom.RationalMultiplicationMachine",
+    "PlanarHom.RationalNormalizationBits",
+    "PlanarHom.RationalNormalizationMachine",
+    "PlanarHom.RelationalStackTransfer",
+    "PlanarHom.RestrictedIterationMachine",
+    "PlanarHom.ReturningBitSubroutine",
+    "PlanarHom.SharpPBridge",
+    "PlanarHom.StackTransfer",
+    "PlanarHom.UnaryPolynomialMachines"
+  ],
+  "target_modules": [
+    "PlanarHom.ArithmeticCircuitPrimitives",
+    "PlanarHom.Basic",
+    "PlanarHom.BinaryAdditionBits",
+    "PlanarHom.BinaryAdditionMachine",
+    "PlanarHom.BinaryArithmetic",
+    "PlanarHom.BinaryDivisionBits",
+    "PlanarHom.BinaryDivisionMachine",
+    "PlanarHom.BinaryGcdBits",
+    "PlanarHom.BinaryGcdMachine",
+    "PlanarHom.BinaryMultiplicationBits",
+    "PlanarHom.BinaryMultiplicationMachine",
+    "PlanarHom.BinarySubtractionBits",
+    "PlanarHom.BinarySubtractionMachine",
+    "PlanarHom.BitMachineSubroutine",
+    "PlanarHom.BoundedIterationMachine",
+    "PlanarHom.CertificateGeneratorCorrectness",
+    "PlanarHom.CertificateGeneratorMachine",
+    "PlanarHom.CertificateNondeterministicCompiler",
+    "PlanarHom.CertificateWordCount",
+    "PlanarHom.Complexity",
+    "PlanarHom.ConstantMachines",
+    "PlanarHom.FiniteReachableAlphabetMachines",
+    "PlanarHom.InputLengthMachine",
+    "PlanarHom.MachineCodeTransport",
+    "PlanarHom.MachineComposition",
+    "PlanarHom.MachineOutputTransport",
+    "PlanarHom.MachinePairing",
+    "PlanarHom.NondeterministicBlockSimulation",
+    "PlanarHom.NondeterministicCertificateBridge",
+    "PlanarHom.NondeterministicComputationTree",
+    "PlanarHom.NondeterministicReplayCompiler",
+    "PlanarHom.NondeterministicRunCombinators",
+    "PlanarHom.NondeterministicSharpP",
+    "PlanarHom.NondeterministicTM2",
+    "PlanarHom.NondeterministicTM2SpaceBounds",
+    "PlanarHom.OracleAccounting",
+    "PlanarHom.OracleReductionComposition",
+    "PlanarHom.OracleRunAccounting",
+    "PlanarHom.OracleSubstitution",
+    "PlanarHom.OracleSubstitutionOnTrace",
+    "PlanarHom.PairProjectionMachines",
+    "PlanarHom.RationalMultiplicationBits",
+    "PlanarHom.RationalMultiplicationMachine",
+    "PlanarHom.RationalNormalizationBits",
+    "PlanarHom.RationalNormalizationMachine",
+    "PlanarHom.RelationalStackTransfer",
+    "PlanarHom.RestrictedIterationMachine",
+    "PlanarHom.ReturningBitSubroutine",
+    "PlanarHom.SharpPBridge",
+    "PlanarHom.SingleTapeNondeterministic",
+    "PlanarHom.SingleTapeSharpPBridge",
+    "PlanarHom.SingleTapeSharpPHardness",
+    "PlanarHom.SingleTapeToNondeterministicTM2",
+    "PlanarHom.StackTransfer",
+    "PlanarHom.TM1FiniteControl",
+    "PlanarHom.TM1PrimitiveTimeBounds",
+    "PlanarHom.TM2SingleTapeClock",
+    "PlanarHom.TM2SingleTapeCompiler",
+    "PlanarHom.TM2SingleTapeCounting",
+    "PlanarHom.TM2SingleTapeInputOutput",
+    "PlanarHom.TM2SingleTapeLoading",
+    "PlanarHom.TM2SingleTapeLoadingRuns",
+    "PlanarHom.TM2SingleTapePrimitiveRuns",
+    "PlanarHom.TM2TapeBoundaryRuns",
+    "PlanarHom.TM2TapeScanBounds",
+    "PlanarHom.TM2TapeStatementBounds",
+    "PlanarHom.TapeMirrorCompiler",
+    "PlanarHom.UnaryPolynomialMachines"
+  ],
+  "new_sources": [
+    {
+      "module": "PlanarHom.NondeterministicBlockSimulation",
+      "git_blob_sha1": "c2ae69a5e97743bac446e1ed6310f66ebcced6c9",
+      "sha256": "b3cf9600c352c0f120f48cc1686debfb815c3f602918f320cf78eb660dafa4c4",
+      "lines": 119,
+      "imports": [
+        [
+          "PlanarHom.NondeterministicRunCombinators"
+        ],
+        [
+          "Mathlib.Tactic.Ring"
+        ],
+        [
+          "Mathlib.Tactic.Linarith"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.NondeterministicTM2SpaceBounds",
+      "git_blob_sha1": "932c08611117ac380728a17fd53d98a24b3a717f",
+      "sha256": "5c1a7a8ab36ae042aadd7f5a671402bf963b40e2af74eed96bd88924a71ce0fa",
+      "lines": 108,
+      "imports": [
+        [
+          "PlanarHom.NondeterministicTM2"
+        ],
+        [
+          "PlanarHom.MachineComposition"
+        ],
+        [
+          "PlanarHom.TM2TapeStatementBounds"
+        ],
+        [
+          "Mathlib.Tactic.Linarith"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.SingleTapeNondeterministic",
+      "git_blob_sha1": "cacd847102a0b8f69f5efa26434d9089ddd331b6",
+      "sha256": "6c49f6d55fce8c7ee416a203e7cbc2006233f0301cde43c7741f5baecf65cad0",
+      "lines": 109,
+      "imports": [
+        [
+          "PlanarHom.NondeterministicSharpP"
+        ],
+        [
+          "PlanarHom.NondeterministicRunCombinators"
+        ],
+        [
+          "Mathlib.Computability.Tape"
+        ],
+        [
+          "Mathlib.Data.Fintype.Prod"
+        ],
+        [
+          "Mathlib.Tactic.DeriveFintype"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.SingleTapeSharpPBridge",
+      "git_blob_sha1": "07fc010502bec13d56bdafd88a1ea7a1183fc4b1",
+      "sha256": "7ed755a22e50cef99dc2c91e6b5277b1fd1faedd3c6fa01b4031f08604329bf4",
+      "lines": 58,
+      "imports": [
+        [
+          "PlanarHom.TM2SingleTapeCounting"
+        ],
+        [
+          "PlanarHom.SingleTapeSharpPHardness"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.SingleTapeSharpPHardness",
+      "git_blob_sha1": "30dc2b83d7f7a1e1aa76d42e5ff14dbdeaab21f2",
+      "sha256": "daffc5a5bb138b21fce2424855fd56c5abe18fc9905ce9a52d63871b5ea0826a",
+      "lines": 38,
+      "imports": [
+        [
+          "PlanarHom.SharpPBridge"
+        ],
+        [
+          "PlanarHom.SingleTapeToNondeterministicTM2"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.SingleTapeToNondeterministicTM2",
+      "git_blob_sha1": "8122ef952f63e2a4425339e374a7106036cb455f",
+      "sha256": "37733ad4633edbec7a9b44fe4ee3141e718f909df40577eb5dd113b03ca60a79",
+      "lines": 420,
+      "imports": [
+        [
+          "PlanarHom.SingleTapeNondeterministic"
+        ],
+        [
+          "Mathlib.Tactic.Ring"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM1FiniteControl",
+      "git_blob_sha1": "3b87576b9ae7e8ca875e39a237608306fceeb8af",
+      "sha256": "f8b4e91bec0a83020da15deab8fd119ff7431f718531b4b90f4ee52bf89d099a",
+      "lines": 560,
+      "imports": [
+        [
+          "PlanarHom.TM1PrimitiveTimeBounds"
+        ],
+        [
+          "PlanarHom.SingleTapeNondeterministic"
+        ],
+        [
+          "PlanarHom.NondeterministicBlockSimulation"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM1PrimitiveTimeBounds",
+      "git_blob_sha1": "091140a170c9f491c93e1f6a93142f2258ee2744",
+      "sha256": "b0d3f88ab2bf2d21d0ff9e0f5cd56128c3a6b0a6333c0f4cc33577bca22a0be9",
+      "lines": 112,
+      "imports": [
+        [
+          "PlanarHom.MachineComposition"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapeClock",
+      "git_blob_sha1": "ada29c336c881d46cc9a5e6e3bbe35fe8db8e07b",
+      "sha256": "181539bbc39b60421f71ddf664ba4315d49d3cc124496e685718f49ac35cc6e0",
+      "lines": 57,
+      "imports": [
+        [
+          "PlanarHom.NondeterministicTM2SpaceBounds"
+        ],
+        [
+          "PlanarHom.TM2SingleTapeCompiler"
+        ],
+        [
+          "Mathlib.Tactic.Ring"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapeCompiler",
+      "git_blob_sha1": "58c40929b55af3882721bb645a9bedfa0ef1479d",
+      "sha256": "1809a7b7e30a1a33571b0655112195e8afb3b2c73b7aea706a75942c78ac9fca",
+      "lines": 164,
+      "imports": [
+        [
+          "PlanarHom.TM1FiniteControl"
+        ],
+        [
+          "PlanarHom.TM2SingleTapeLoading"
+        ],
+        [
+          "PlanarHom.TM2TapeBoundaryRuns"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapeCounting",
+      "git_blob_sha1": "819ea51fb9339855dfa7d45a0f5699c55adc1445",
+      "sha256": "f71b2ee5f845f349a267c6744d63c843a158c67d27562289151d31cc1eb4281f",
+      "lines": 116,
+      "imports": [
+        [
+          "PlanarHom.TM2SingleTapePrimitiveRuns"
+        ],
+        [
+          "PlanarHom.TM2SingleTapeInputOutput"
+        ],
+        [
+          "PlanarHom.TM2SingleTapeClock"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapeInputOutput",
+      "git_blob_sha1": "f9ccaf04aac0cb902062dc71d153f8290c7ed57e",
+      "sha256": "211c0413b1ada4455ff7b03038573d03fd7cab39a966a25a0c367c1cde9ec960",
+      "lines": 168,
+      "imports": [
+        [
+          "PlanarHom.TM2SingleTapeCompiler"
+        ],
+        [
+          "PlanarHom.TM2SingleTapeLoadingRuns"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapeLoading",
+      "git_blob_sha1": "7ddab8d8223cd221668e70022a7a06436dc1a0d1",
+      "sha256": "9e9e0b3eec515a15ae4654b51c72ae97e7f6331c466f3a41bdcc464694ea1827",
+      "lines": 315,
+      "imports": [
+        [
+          "PlanarHom.SingleTapeNondeterministic"
+        ],
+        [
+          "PlanarHom.TapeMirrorCompiler"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapeLoadingRuns",
+      "git_blob_sha1": "b56be366025fda6057dc4b1cf361fff039131d17",
+      "sha256": "66e0ec44e0bc8f578fec13c3ed90fbe51298fe0563040b2a26b6c58ebeb27b59",
+      "lines": 105,
+      "imports": [
+        [
+          "PlanarHom.TM2SingleTapeLoading"
+        ],
+        [
+          "PlanarHom.NondeterministicBlockSimulation"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2SingleTapePrimitiveRuns",
+      "git_blob_sha1": "0b673cf966afcbf052ce66fa2d79ed26ac8a5350",
+      "sha256": "06c06d6df7feacf6c496f70081af91c75366a0790e301a5c8679238ffa3aeed8",
+      "lines": 171,
+      "imports": [
+        [
+          "PlanarHom.TM2SingleTapeCompiler"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2TapeBoundaryRuns",
+      "git_blob_sha1": "8d586d92f5461f36e573e84413990d8d1e43cb10",
+      "sha256": "df764e9efe182a5085d1e62784f24401defb8f2dc538d082b3e7b45649959040",
+      "lines": 143,
+      "imports": [
+        [
+          "PlanarHom.TM2TapeStatementBounds"
+        ],
+        [
+          "PlanarHom.NondeterministicBlockSimulation"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2TapeScanBounds",
+      "git_blob_sha1": "3c5f69e4bc6c22462ca2900c1afc9e552e843674",
+      "sha256": "94ac1cf8fef8f161509c0c3f07720e5e133463ddb48676ccb6e6978641e22c6b",
+      "lines": 105,
+      "imports": [
+        [
+          "PlanarHom.MachineComposition"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TM2TapeStatementBounds",
+      "git_blob_sha1": "7e164623c8bed4ec4719149b1e2ac5d45693d764",
+      "sha256": "b95fe005ac8dff529bccd9141958d3d47f09639edeb3e3c81cdb8091fe7409bd",
+      "lines": 116,
+      "imports": [
+        [
+          "PlanarHom.TM2TapeScanBounds"
+        ],
+        [
+          "Mathlib.Tactic.Linarith"
+        ],
+        [
+          "Mathlib.Tactic.Ring"
+        ]
+      ]
+    },
+    {
+      "module": "PlanarHom.TapeMirrorCompiler",
+      "git_blob_sha1": "e610b4f3eb61a37ba264e10df8db8159af16a474",
+      "sha256": "93739a06c9029e68ee701e8c9beee0290bf5b55a81fd66d9d119cf7b13b57d68",
+      "lines": 71,
+      "imports": [
+        [
+          "PlanarHom.MachineComposition"
+        ]
+      ]
+    }
+  ]
+}

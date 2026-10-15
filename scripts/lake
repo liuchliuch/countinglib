@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+# Use the already installed fallback only for this process, if available.
+counting_git_dir="${HOME}/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+if [ -x "$counting_git_dir/git" ]; then
+  export PATH="$counting_git_dir:$PATH"
+fi
+export PATH="${HOME}/.elan/bin:$PATH"
+# Lake constructs the module map for this workspace; do not inherit another one.
+unset LEAN_PATH LEAN_SRC_PATH
+exec lake "$@"

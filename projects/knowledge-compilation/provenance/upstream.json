@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-13",
+  "status": "target-source-port-counting-and-finite-semantics-stage",
+  "not_a_fresh_build_or_axiom_audit": true,
+  "root_module": "ProofChecker.Count.Pog",
+  "pinned_commits": {
+    "cpog": "a97ed8543d8368a234f715cf8b1a7aa38bc96c3d",
+    "leansat": "1e13508a3f8d035175e86f4eaeda0193945f0eeb"
+  },
+  "local_source_modules": 11,
+  "source_lines": 3667,
+  "provider_counts": {
+    "cpog": 3,
+    "leansat": 8
+  },
+  "sources": {
+    "LeanSAT.Data.Cnf": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Data/Cnf.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Data/Cnf.lean",
+      "source_sha256": "5fb9c32670aca6b4dfa8ee030455c6ab53a98de18a04d4720d8500128ce4c1ba",
+      "line_count": 316,
+      "imports": [
+        "LeanSAT.Upstream.ToMathlib",
+        "LeanSAT.Model.PropFun",
+        "LeanSAT.Model.PropVars"
+      ],
+      "apache_header_present": true,
+      "production_path": "LeanSAT/Data/Cnf.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "LeanSAT.Data.ICnf": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Data/ICnf.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Data/ICnf.lean",
+      "source_sha256": "b525aa3e3a60065e669932237c7a9debea2d5b5feb1aca7d06f61ba7ebd4f7a4",
+      "line_count": 101,
+      "imports": [
+        "LeanSAT.Data.Cnf",
+        "LeanSAT.Model.PropAssn",
+        "LeanSAT.Model.PropFun",
+        "LeanSAT.Upstream.ToStd",
+        "LeanSAT.Upstream.ToMathlib"
+      ],
+      "apache_header_present": true,
+      "production_path": "LeanSAT/Data/ICnf.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "LeanSAT.Model.PropAssn": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Model/PropAssn.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Model/PropAssn.lean",
+      "source_sha256": "461f5e7ecd382cb4f5781dfa8c65ade2c7b60ffacf953db4f322480a2e3a7430",
+      "line_count": 68,
+      "imports": [
+        "Mathlib.Data.Set.Basic"
+      ],
+      "apache_header_present": false,
+      "production_path": "LeanSAT/Model/PropAssn.lean",
+      "reuse": "independent replacement; upstream source not copied"
+    },
+    "LeanSAT.Model.PropForm": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Model/PropForm.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Model/PropForm.lean",
+      "source_sha256": "8725faba67a5f434e5bd0ece9e1f0ddfb1f6b1a83dee3c7f896a6eb326720b18",
+      "line_count": 235,
+      "imports": [
+        "Mathlib.Data.Set.Basic",
+        "LeanSAT.Upstream.ToMathlib",
+        "LeanSAT.Model.PropAssn"
+      ],
+      "apache_header_present": true,
+      "production_path": "LeanSAT/Model/PropForm.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "LeanSAT.Model.PropFun": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Model/PropFun.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Model/PropFun.lean",
+      "source_sha256": "91fb342218d3974ea69d4326dd8e11f7ead81b8829ad6c1971be3779062a1c34",
+      "line_count": 325,
+      "imports": [
+        "LeanSAT.Model.PropForm"
+      ],
+      "apache_header_present": true,
+      "production_path": "LeanSAT/Model/PropFun.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "LeanSAT.Model.PropVars": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Model/PropVars.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Model/PropVars.lean",
+      "source_sha256": "53f26991d09a766dc48e6a44b418a21d69e110cc640318f37419f88a5be522cb",
+      "line_count": 383,
+      "imports": [
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Data.Set.Finite",
+        "Mathlib.Tactic.ByContra",
+        "LeanSAT.Model.PropFun"
+      ],
+      "apache_header_present": true,
+      "production_path": "LeanSAT/Model/PropVars.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "LeanSAT.Upstream.ToMathlib": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Upstream/ToMathlib.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Upstream/ToMathlib.lean",
+      "source_sha256": "9b427efc60832b0a6463e4ee26206f6593c44c50cf540974b2f489935354d56c",
+      "line_count": 41,
+      "imports": [
+        "Mathlib.Tactic.Linarith"
+      ],
+      "apache_header_present": true,
+      "production_path": "LeanSAT/Upstream/ToMathlib.lean",
+      "reuse": "Apache-2.0 source port, header preserved",
+      "modified_from_snapshot": false
+    },
+    "LeanSAT.Upstream.ToStd": {
+      "provider": "leansat",
+      "repository_path": "LeanSAT/Upstream/ToStd.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/leansat-cpog/LeanSAT/Upstream/ToStd.lean",
+      "source_sha256": "5ff629058ebb57e3229bd1e92fbb20db365911742f245a114e749a8b594eeb69",
+      "line_count": 611,
+      "imports": [
+        "Std",
+        "Mathlib.Tactic",
+        "Init.Data.Nat.Basic"
+      ],
+      "apache_header_present": false,
+      "production_path": "LeanSAT/Upstream/ToStd.lean",
+      "reuse": "independent replacement; upstream source not copied"
+    },
+    "ProofChecker.Count.Pog": {
+      "provider": "cpog",
+      "repository_path": "VerifiedChecker/ProofChecker/Count/Pog.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/cpog-head/VerifiedChecker/ProofChecker/Count/Pog.lean",
+      "source_sha256": "9a6a1d4af34bea30cc9e06c775410adfdbdad93a7194919f065e094ce1af2ab2",
+      "line_count": 342,
+      "imports": [
+        "ProofChecker.Data.Pog",
+        "ProofChecker.Count.PropForm"
+      ],
+      "apache_header_present": true,
+      "production_path": "ProofChecker/Count/Pog.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "ProofChecker.Count.PropForm": {
+      "provider": "cpog",
+      "repository_path": "VerifiedChecker/ProofChecker/Count/PropForm.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/cpog-head/VerifiedChecker/ProofChecker/Count/PropForm.lean",
+      "source_sha256": "5375e3ecb1dc3115ca88e0f0e6ca6adb1fca2244ba80dbf5438f14a2fa8de834",
+      "line_count": 589,
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Algebra.BigOperators.Ring",
+        "ProofChecker.Data.Pog"
+      ],
+      "apache_header_present": true,
+      "production_path": "ProofChecker/Count/PropForm.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    },
+    "ProofChecker.Data.Pog": {
+      "provider": "cpog",
+      "repository_path": "VerifiedChecker/ProofChecker/Data/Pog.lean",
+      "local_snapshot": ".cache/algorithm-audit/external/cpog-head/VerifiedChecker/ProofChecker/Data/Pog.lean",
+      "source_sha256": "5b9c6e99e3502a14ad94ca618ffb8b8a89c68b8849402c13d164339ac7c8bbf2",
+      "line_count": 656,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.PNat.Basic",
+        "Mathlib.Algebra.BigOperators.Basic",
+        "LeanSAT.Model.PropVars",
+        "LeanSAT.Data.ICnf"
+      ],
+      "apache_header_present": true,
+      "production_path": "ProofChecker/Data/Pog.lean",
+      "reuse": "Apache-2.0 source port; original header and file-local modification notice preserved",
+      "modified_from_snapshot": true
+    }
+  },
+  "external_imports": [
+    "Init.Data.Nat.Basic",
+    "Mathlib.Algebra.BigOperators.Basic",
+    "Mathlib.Algebra.BigOperators.Ring",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.PNat.Basic",
+    "Mathlib.Data.Set.Basic",
+    "Mathlib.Data.Set.Finite",
+    "Mathlib.Tactic",
+    "Mathlib.Tactic.ByContra",
+    "Mathlib.Tactic.Linarith",
+    "Std"
+  ],
+  "missing_direct_mathlib_imports_on_target": [
+    "Mathlib.Algebra.BigOperators.Basic",
+    "Mathlib.Algebra.BigOperators.Ring",
+    "Mathlib.Data.Set.Finite"
+  ],
+  "target_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_boundary_observations": [
+    "The actual local counting closure is three CPOG modules plus eight pinned LeanSAT modules, not the whole checker.",
+    "LeanSAT.Upstream.ToStd and LeanSAT.Model.PropAssn have no explicit per-file Apache grant in this snapshot; their upstream bodies are not copied into production.",
+    "The old compatibility module includes many global declarations now provided by core/mathlib; do not copy its 611 lines wholesale. Resolve the actually used API against the target toolchain.",
+    "Weighted semantics use complementary weights w and 1-w over a CommRing; independent literal weights and zero pair sums require a separate bridge.",
+    "Parser, certificate checker, and CNF-to-POG compiler are outside this counting-only source closure."
+  ],
+  "native_old_toolchain_fresh_build": false,
+  "evidence_note": "This provenance inventory is not a build receipt. Target source-build and axiom-audit evidence is validation/result.json; no old-toolchain fresh build was performed."
+}

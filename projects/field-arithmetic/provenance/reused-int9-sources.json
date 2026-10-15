@@ -1,0 +1,576 @@
+{
+  "scope": "Previously accepted unchanged INT9 provider source rows for this package closure; snapshot, not fresh compilation.",
+  "original_ledger": "validation/all/sources.json",
+  "original_ledger_sha256": "5680a661cf3c1dd2e38b1aa0ca1a966f2f46b47f01282e45ab7a999b3c8f8ad0",
+  "original_receipt": "validation/all/result.json",
+  "original_receipt_sha256": "1a79c5e0bcafa73bda913abe30e59eaacb33eff3ba00e260d1fdcfa388be913a",
+  "modules": [
+    {
+      "module": "Counting.Algorithm.Interpolation.Algorithm",
+      "path": "projects/interpolation/Counting/Algorithm/Interpolation/Algorithm.lean",
+      "package": "countingInterpolation",
+      "sha256": "263c5ab6ddd028105083558fdad0a8fe45b507f59bb23e6e0d5725706046060e",
+      "library": "CountingInterpolation"
+    },
+    {
+      "module": "Counting.Algorithm.Interpolation.Core",
+      "path": "projects/interpolation/Counting/Algorithm/Interpolation/Core.lean",
+      "package": "countingInterpolation",
+      "sha256": "07f83469953faad8cb4b6f5e9bb7a21b586b399e2e64956c002884df807cab30",
+      "library": "CountingInterpolation"
+    },
+    {
+      "module": "Counting.Algorithm.Interpolation.Program",
+      "path": "projects/interpolation/Counting/Algorithm/Interpolation/Program.lean",
+      "package": "countingInterpolation",
+      "sha256": "c35fd1c80af33c046fccfee5059a2b55b48d558dde9ede13678af53e4bf1e024",
+      "library": "CountingInterpolation"
+    },
+    {
+      "module": "Counting.Algorithm.InterpolationMachine.Materialized.Clients",
+      "path": "projects/interpolation-machine/Counting/Algorithm/InterpolationMachine/Materialized/Clients.lean",
+      "package": "countingInterpolationMachine",
+      "sha256": "64c1237b2b016d66efc4c0dbc3962983795bc03629ec6d7424c2f280e9673c3f",
+      "library": "CountingInterpolationMachine"
+    },
+    {
+      "module": "Counting.Algorithm.InterpolationMachine.Materialized.Machine",
+      "path": "projects/interpolation-machine/Counting/Algorithm/InterpolationMachine/Materialized/Machine.lean",
+      "package": "countingInterpolationMachine",
+      "sha256": "285d0892f97a66b5362b30800b176d615aed4e78f47bc167a90d08aca779bcc5",
+      "library": "CountingInterpolationMachine"
+    },
+    {
+      "module": "Counting.Algorithm.InterpolationMachine.Materialized.Semantics",
+      "path": "projects/interpolation-machine/Counting/Algorithm/InterpolationMachine/Materialized/Semantics.lean",
+      "package": "countingInterpolationMachine",
+      "sha256": "47d5185fd8d783845ceddc54fe47fcabfa73e6dcc0d4dbabd59a03a8981a96ea",
+      "library": "CountingInterpolationMachine"
+    },
+    {
+      "module": "Counting.Upstream.PlanarHom",
+      "path": "projects/partition-semantics/Counting/Upstream/PlanarHom.lean",
+      "package": "partitionSemantics",
+      "sha256": "d0edf2b6c8fa92b1bb442e171417f77d22aed5b2e431d3bffd2e55beb4ab7eae",
+      "library": "CountingPartitionSemantics"
+    },
+    {
+      "module": "Holant.Complexity.ConstantMachine",
+      "path": "projects/holant-core/Holant/Complexity/ConstantMachine.lean",
+      "package": "countingHolantCore",
+      "sha256": "f2f7ce47f295f4655999583ee6f1d49c1e024111ab6c0e944e9246f04dd13415",
+      "library": "CountingHolantCore"
+    },
+    {
+      "module": "Holant.Complexity.Encoding",
+      "path": "projects/holant-core/Holant/Complexity/Encoding.lean",
+      "package": "countingHolantCore",
+      "sha256": "4a366ebe37966ce6ae788094bf793e6700e0593147b2495fb648da7e774a6068",
+      "library": "CountingHolantCore"
+    },
+    {
+      "module": "PlanarHom.AlphabetCoordinateCertificates",
+      "path": "projects/planar-machines/PlanarHom/AlphabetCoordinateCertificates.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "8b008d381d28beb5698fdd362c558b535cc71da6df1f57c000385d233e142934",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ArithmeticCircuitPrimitives",
+      "path": "projects/planar-homomorphisms/PlanarHom/ArithmeticCircuitPrimitives.lean",
+      "package": "countingPlanarHom",
+      "sha256": "5651e690ada5ca7843b75e18811916ffbfe6c738f3691e67bfb616efb1e47aed",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.Basic",
+      "path": "projects/planar-homomorphisms/PlanarHom/Basic.lean",
+      "package": "countingPlanarHom",
+      "sha256": "3f718bab73d59dc55214f3642b83c0b2e2c7d69c994e3c1d2e5d38ae64c17ba2",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryAdditionBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryAdditionBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "cc406eed0798f49a4ef8c860e60a304152ba69fa55a037eaa77e796ae26e3527",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryAdditionMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryAdditionMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "11345ad07efa766c892ee36dbdff55f64075ab0bd4a44dd7b0737c69cb5980f3",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryArithmetic",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryArithmetic.lean",
+      "package": "countingPlanarHom",
+      "sha256": "bb348f0ee86de039ccdc3601ed4e9261f79cdf983e530a45a6505a912f42aecc",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryDivisionBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryDivisionBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "7275aa5cd23b9eb2b218bb6bd45240ced41a7c00a17bc9e2617b31050ed9dff9",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryDivisionMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryDivisionMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "bba06b566d127033769c2f22c852b82003edb06bebea7de6a7beb4711565e127",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryGcdBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryGcdBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "0a3b9675517ceb8c7e74a22a852db00e4e78a31f024c61bc265d46ef248ce46f",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryGcdMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryGcdMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "dcb00a124a5d4e12e6f715903ea222832c937fb103e10cf8e25d658ab8154e04",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryMultiplicationBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryMultiplicationBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "b1da7d09f500ab78e06d6cce0a7f01ba43e617b62adaa3fe3ab9bb4e940ee7e0",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinaryMultiplicationMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinaryMultiplicationMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "d29befbf115d3d56c705c7c1e934c9154fbc6116e44c0330396ad5bf45d4aa08",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinarySubtractionBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinarySubtractionBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "b260e8beca1f77d63b097ae54bd0169eefbeb27bb88ffe6bd26b35d1b71e1842",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BinarySubtractionMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/BinarySubtractionMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "7dfa1d0d876a52c83a6b8f1519cb19b3004ed2e44e4158d1c81042188f71a722",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.BitMachineSubroutine",
+      "path": "projects/planar-homomorphisms/PlanarHom/BitMachineSubroutine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "51474be788380abebeccc8acc1053e93eda796edfdd5fee54c9e2a4a9f221da5",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.CanonicalCoordinateHeights",
+      "path": "projects/planar-machines/PlanarHom/CanonicalCoordinateHeights.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "1029261f0ebb1fb8a3525b3a384df675c296d26c44848f052b7813f3b1a45628",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.CodecSizeBounds",
+      "path": "projects/planar-machines/PlanarHom/CodecSizeBounds.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "092ab404dfe1570f54a6bd7ecac0df5fa057677a970511700ad240e7ee79ebc0",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.CoefficientListHeights",
+      "path": "projects/planar-machines/PlanarHom/CoefficientListHeights.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "641ba1e897fe3dccc3c8ca2dcbcf636d277df4f4328da8d39e002b9a9ac32312",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.Complexity",
+      "path": "projects/planar-homomorphisms/PlanarHom/Complexity.lean",
+      "package": "countingPlanarHom",
+      "sha256": "4d394f0d7794ac66ac1205d0148654e9c8b375fa6cdc9c0c8ae8ab854a5d6a60",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.ConditionalMachines",
+      "path": "projects/planar-machines/PlanarHom/ConditionalMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "388c83a23ad9d4f7e01fad16a6e48b9d09fa413249b890cc0e48c40d2a01490e",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ConstantMachines",
+      "path": "projects/planar-homomorphisms/PlanarHom/ConstantMachines.lean",
+      "package": "countingPlanarHom",
+      "sha256": "24e568fa8484efc75378af83a28f9ee366e0b33bf44dbec97dcacbfa49cc5691",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.EncodingSizeBounds",
+      "path": "projects/planar-machines/PlanarHom/EncodingSizeBounds.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "387f383d5d5ec57a9cf25eea0ff5a3651cc74a96be47c182dded12b754245d1f",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FieldCoordinateCertificates",
+      "path": "projects/planar-machines/PlanarHom/FieldCoordinateCertificates.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "c4c80d942abf3636200465bd2eff606ec9af91e1e466b484062cb4e69f7e2b66",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FieldCoordinateHeights",
+      "path": "projects/planar-machines/PlanarHom/FieldCoordinateHeights.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "d64cbe1a28508df257297d0a81ae01a88e7eb6e1084384151ad03eee5d9a9588",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FieldExpressionHeights",
+      "path": "projects/planar-machines/PlanarHom/FieldExpressionHeights.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "94d7c64f9c28243e4ee31af2a91e88fb5bd8d0bdcd7b89909affe9a4a9033163",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FiniteRationalCircuits",
+      "path": "projects/planar-machines/PlanarHom/FiniteRationalCircuits.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "cfedae983f8424cb02e453b239ef13f73de344386bd096538dd688bb19d1693e",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FiniteReachableAlphabetMachines",
+      "path": "projects/planar-homomorphisms/PlanarHom/FiniteReachableAlphabetMachines.lean",
+      "package": "countingPlanarHom",
+      "sha256": "5a884a9aaaf81d8a39409e50cacd7b579a12ea58b97f22f71c4dd9a068617600",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.FixedAlphabetOutputBounds",
+      "path": "projects/planar-machines/PlanarHom/FixedAlphabetOutputBounds.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "6702226e4f1b0641866e3a69d8418fa5f8117ab16c60d06a32f9055252894358",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FixedFieldArithmeticBits",
+      "path": "projects/planar-machines/PlanarHom/FixedFieldArithmeticBits.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "5eeb2976693fc27d835322be12925662f9ad6b790229e1daedb1d8478111a674",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FixedFieldArithmeticMachines",
+      "path": "projects/planar-machines/PlanarHom/FixedFieldArithmeticMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "d2d914f281300a63182441d90b2919a20e12301231f94fbf34d92515433fb3e2",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.FixedVectorMachines",
+      "path": "projects/planar-machines/PlanarHom/FixedVectorMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "b71376bec6fce5c6ede30bc623c12e8092b666648112f638c8100c6c79e9c5c7",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.GraphParallelCode",
+      "path": "projects/planar-machines/PlanarHom/GraphParallelCode.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "692110f2e702b9db9e5353f07ebc693fc0f6900c1f5e3621b730ba8a06b24c67",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.IntegerCoordinateBounds",
+      "path": "projects/planar-machines/PlanarHom/IntegerCoordinateBounds.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "b5033209954c8d32157aaae8ce46042e8a00e4fb0c018c45baf21667422c729f",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.IntegerLinearSystemBounds",
+      "path": "projects/planar-machines/PlanarHom/IntegerLinearSystemBounds.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "59403bfea21ffaf8db1b905b9eda6646e67b2708969ba71d9f0e746af4003cd3",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.LagrangeCoefficientHeights",
+      "path": "projects/planar-machines/PlanarHom/LagrangeCoefficientHeights.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "2ed1d8c2b81959c67c48dfaa8a8305be570ea4d70d7b93b6f8c5cbebf5dc16b0",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.LagrangeCoefficientMachines",
+      "path": "projects/planar-machines/PlanarHom/LagrangeCoefficientMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "9195af282c1cb12d4d9dd96a0178a66e867258af0003be3a459a134f8763612a",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.LinearFactorCoefficientMachines",
+      "path": "projects/planar-machines/PlanarHom/LinearFactorCoefficientMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "06470f0af0d4e41756815e10acd911e50883cbed0ebd86d1f8ef3e9bfc8d9a70",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListCodecMachines",
+      "path": "projects/planar-machines/PlanarHom/ListCodecMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "a0b3565a5f92120f60f855049dcffcd7296877cdc1fc5d2a38699d511341f8d5",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListContextFilterMachines",
+      "path": "projects/planar-machines/PlanarHom/ListContextFilterMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "289ca46f90723cc6a635b7a04fbbc00d3c3c65eb13eec394c35ea20252723092",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListContextMachines",
+      "path": "projects/planar-machines/PlanarHom/ListContextMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "253cec6fbff6e81274deee0543a053c70887d5d58d78e922004326971ceecc92",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListFilterMachines",
+      "path": "projects/planar-machines/PlanarHom/ListFilterMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "8ef4f254f1c6850a498921b54a57d8ab7b586bcb47b1411c211f94970a520e83",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListFlattenMachines",
+      "path": "projects/planar-machines/PlanarHom/ListFlattenMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "d75167c79861d614976405a75895f4c4763139132cb1f18ddab5359367be8861",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListFoldMachines",
+      "path": "projects/planar-machines/PlanarHom/ListFoldMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "337bdd5defbaba0375bea31af69555d59d678e5d318152b5042ed6f2f53023a3",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListMapMachines",
+      "path": "projects/planar-machines/PlanarHom/ListMapMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "9216789c24d0a79ca580d3b1274d8d2be14a7cfab8a972a9b0fa2da4010a576c",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ListMutationMachines",
+      "path": "projects/planar-machines/PlanarHom/ListMutationMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "cef27dcb4ac68076c6a87d0817fb0bc77ed2b16e019ef62625f60fe9a7252593",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.MachineCodeTransport",
+      "path": "projects/planar-homomorphisms/PlanarHom/MachineCodeTransport.lean",
+      "package": "countingPlanarHom",
+      "sha256": "d1a99167fa4964957375331c73b94ac345d073cad1f460c66e0699e18a133402",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.MachineComposition",
+      "path": "projects/foundations/PlanarHom/MachineComposition.lean",
+      "package": "countingFoundations",
+      "sha256": "80686bb5df7bc8ab06d0c8f389b4afd57591432143cb9a07c641d2a4c6a95934",
+      "library": "PlanarHom"
+    },
+    {
+      "module": "PlanarHom.MachineOutputTransport",
+      "path": "projects/planar-homomorphisms/PlanarHom/MachineOutputTransport.lean",
+      "package": "countingPlanarHom",
+      "sha256": "4502ae7d383300142fc48f061c9e73f6652b7e9e7ee0b319a100bd687de9dd03",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.MachinePairing",
+      "path": "projects/planar-homomorphisms/PlanarHom/MachinePairing.lean",
+      "package": "countingPlanarHom",
+      "sha256": "5fceae9757c6ef3e4cc1b4d2e8b11049d43ddb6914b47254d20681ae545aeedd",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.MaterializedCoefficientHeights",
+      "path": "projects/planar-algorithms/PlanarHom/MaterializedCoefficientHeights.lean",
+      "package": "countingPlanarAlgorithms",
+      "sha256": "d14a14bba55c97e676b1f3fd2ee852307c7e04a5a5d11d70a0ab60d9bbd8d5b7",
+      "library": "CountingPlanarAlgorithmsSource"
+    },
+    {
+      "module": "PlanarHom.MaterializedFieldHeights",
+      "path": "projects/planar-machines/PlanarHom/MaterializedFieldHeights.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "55874f77d003407cb8758774a86e2423812727c2e8a26707503033536f0bd5ab",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.MaterializedFieldListMachines",
+      "path": "projects/planar-machines/PlanarHom/MaterializedFieldListMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "f7c677b9efd853ce43f8fe485650d48b7f5b3046f482c7b2636d0d8848c68012",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.OracleAccounting",
+      "path": "projects/planar-homomorphisms/PlanarHom/OracleAccounting.lean",
+      "package": "countingPlanarHom",
+      "sha256": "b012b3ce93f07614ce1d7e22df8134ff224bad6145aca4a0f74fadd3d8afde0a",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.OracleReductionComposition",
+      "path": "projects/planar-homomorphisms/PlanarHom/OracleReductionComposition.lean",
+      "package": "countingPlanarHom",
+      "sha256": "2610e409a37a29d932c1ac0aa29e7b64ade13fb3a324f43f93fd8cb4a8be14e1",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.OracleRunAccounting",
+      "path": "projects/planar-homomorphisms/PlanarHom/OracleRunAccounting.lean",
+      "package": "countingPlanarHom",
+      "sha256": "ebb42bdd0f9a7c6318847fc43036af1fdb4fd5880161ef5f5d363603605262cc",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.OracleSubstitution",
+      "path": "projects/planar-homomorphisms/PlanarHom/OracleSubstitution.lean",
+      "package": "countingPlanarHom",
+      "sha256": "df76a99bf7200f4fb51270de63d15d23ad2bfa19b44419d3f49d7a80aa296fe0",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.OracleSubstitutionOnTrace",
+      "path": "projects/planar-homomorphisms/PlanarHom/OracleSubstitutionOnTrace.lean",
+      "package": "countingPlanarHom",
+      "sha256": "ece41b5273a12dae6da788087bd9e2144c6f6e57905d79c3bde2c6561dca8d55",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.PairProjectionMachines",
+      "path": "projects/planar-homomorphisms/PlanarHom/PairProjectionMachines.lean",
+      "package": "countingPlanarHom",
+      "sha256": "98da405e9114093f1215ee3ae63d0659767193d12e40bab88dcb34c1693c7411",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.PolynomialChoiceExpansion",
+      "path": "projects/planar-machines/PlanarHom/PolynomialChoiceExpansion.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "ce8a921c2987c73e493e1142616c8bf08d8a070c394c7a98aac3247997b8e30a",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.RationalCircuits",
+      "path": "projects/planar-machines/PlanarHom/RationalCircuits.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "acddd0edb48ccf7873c4bf87f88296c60f96d2a08f745e18b70e09696c361a42",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.RationalMultiplicationBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/RationalMultiplicationBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "1f98671592e67ff55797e4e767ee297dff509250cfe2a8a5d3886e10090be673",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.RationalMultiplicationMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/RationalMultiplicationMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "8154baa753c8aac2e696c550c4cf71d8f4e00dc6005cfc083ec5fa7acde8d7f0",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.RationalNormalizationBits",
+      "path": "projects/planar-homomorphisms/PlanarHom/RationalNormalizationBits.lean",
+      "package": "countingPlanarHom",
+      "sha256": "2a99a9de54f0c31a58ba2ee2472bafe65cb566370358d8470ff513175745f283",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.RationalNormalizationMachine",
+      "path": "projects/planar-homomorphisms/PlanarHom/RationalNormalizationMachine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "63e79e8e9ce348b3696cf4e3b89306a37cef4dd7b744525c69dc21eb10167e47",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.RelationalStackTransfer",
+      "path": "projects/planar-homomorphisms/PlanarHom/RelationalStackTransfer.lean",
+      "package": "countingPlanarHom",
+      "sha256": "68f06fb98bf1afa5598b62ae0f46543979a17561178295d309b85a957ddac0ba",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.RestrictedListFoldMachines",
+      "path": "projects/planar-machines/PlanarHom/RestrictedListFoldMachines.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "6e819a5e33a6a85369da0340196b3767e9976549af43fc2fdc5f4d1f7267dba5",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.ReturningBitSubroutine",
+      "path": "projects/planar-homomorphisms/PlanarHom/ReturningBitSubroutine.lean",
+      "package": "countingPlanarHom",
+      "sha256": "4827c1936ed804afd61e3b9b54dbffd7f0212f82eb129ea2e2d5137ac8d96737",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.SignedIntegerAdditionBits",
+      "path": "projects/planar-machines/PlanarHom/SignedIntegerAdditionBits.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "f3c22d28f408023b7d62b1a820ef35e230e83677d09c91a652d1654b3090df2a",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.SignedIntegerAdditionMachine",
+      "path": "projects/planar-machines/PlanarHom/SignedIntegerAdditionMachine.lean",
+      "package": "countingPlanarMachines",
+      "sha256": "8cb9d50dada1fb4c46b384809af78ee5228f6d22b7124d78b4262df2d531ad83",
+      "library": "CountingPlanarMachines"
+    },
+    {
+      "module": "PlanarHom.StackTransfer",
+      "path": "projects/planar-homomorphisms/PlanarHom/StackTransfer.lean",
+      "package": "countingPlanarHom",
+      "sha256": "e81eb49b97d6e4aa07bfc27b240b926872cc596b0ea7276bd4bd42e314e23482",
+      "library": "CountingPlanarHomSource"
+    },
+    {
+      "module": "PlanarHom.UniformFieldArithmeticHeights",
+      "path": "projects/planar-algorithms/PlanarHom/UniformFieldArithmeticHeights.lean",
+      "package": "countingPlanarAlgorithms",
+      "sha256": "d2d572ec025eb6571d1900a1c53115c2fbc7443bc2f5829090b11d924eb36431",
+      "library": "CountingPlanarAlgorithmsSource"
+    },
+    {
+      "module": "PlanarHom.UniformFieldHeights",
+      "path": "projects/planar-algorithms/PlanarHom/UniformFieldHeights.lean",
+      "package": "countingPlanarAlgorithms",
+      "sha256": "2b4c82af71d2cef696034cbc1751aec6d48b3379bb8bd3f5f49a4270514e5008",
+      "library": "CountingPlanarAlgorithmsSource"
+    }
+  ]
+}

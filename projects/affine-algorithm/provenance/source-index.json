@@ -1,0 +1,290 @@
+[
+  {
+    "id": "affine_definition",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Tractable/Affine.lean",
+    "git_blob_sha1": "4ac0a2eeac7c4f10e179681e7b13945281ab80d6",
+    "sha256": "69976f4705232e239810728eaadf636827e054c6c5062ab0e20d7d874edafc93",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Tractable/Affine.lean",
+    "declarations": [
+      {
+        "name": "AffineSystem",
+        "lines": [
+          27
+        ]
+      },
+      {
+        "name": "QuadraticPhase",
+        "lines": [
+          52
+        ]
+      },
+      {
+        "name": "affineFormula",
+        "lines": [
+          94
+        ]
+      },
+      {
+        "name": "Affine",
+        "lines": [
+          99
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Tractable/Affine.lean"
+  },
+  {
+    "id": "affine_constraint",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/Constraint.lean",
+    "git_blob_sha1": "f6d3641053b6b0c026ffdc18de7f9da27f1d9ca9",
+    "sha256": "1b89c28b5dd528f0e99b6e4f3e87f12433561053e6bc439264f5bbb14a619d13",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/Constraint.lean",
+    "declarations": [
+      {
+        "name": "pivot",
+        "lines": [
+          31
+        ]
+      },
+      {
+        "name": "badRow",
+        "lines": [
+          49
+        ]
+      },
+      {
+        "name": "partition_eliminate",
+        "lines": [
+          142
+        ]
+      },
+      {
+        "name": "partition_badRow",
+        "lines": [
+          157
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/Constraint.lean"
+  },
+  {
+    "id": "affine_free_phase",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/FreePhase.lean",
+    "git_blob_sha1": "aca11c9084bf4c716c6f27f40c5e71108b5669f5",
+    "sha256": "840ea25a434e92a2e0fac8a3109e264306a5537491b5c4b6f2b04bde1be47bf9",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/FreePhase.lean",
+    "declarations": [
+      {
+        "name": "multiplier",
+        "lines": [
+          51
+        ]
+      },
+      {
+        "name": "nextSupport",
+        "lines": [
+          55
+        ]
+      },
+      {
+        "name": "nextPhase",
+        "lines": [
+          60
+        ]
+      },
+      {
+        "name": "value_eliminate",
+        "lines": [
+          82
+        ]
+      },
+      {
+        "name": "trivial_parity_bad",
+        "lines": [
+          153
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/FreePhase.lean"
+  },
+  {
+    "id": "affine_elimination",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/Elimination.lean",
+    "git_blob_sha1": "e52969e129508fda4d640655e36238f0bed723a7",
+    "sha256": "605e521c8dbf718dd94aa80e86479a3a9843fa264b7c8285f02ed38e8feeeb6b",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/Elimination.lean",
+    "declarations": [
+      {
+        "name": "evaluate",
+        "lines": [
+          9
+        ]
+      },
+      {
+        "name": "evaluate_eq_partition",
+        "lines": [
+          26
+        ]
+      },
+      {
+        "name": "rounds_le",
+        "lines": [
+          55
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/Elimination.lean"
+  },
+  {
+    "id": "affine_finite_core",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/FiniteCore.lean",
+    "git_blob_sha1": "d82b1743206db23efd051f2b60717c18b097aa03",
+    "sha256": "1b5fc14810435fd5b9855a994001d344cf7e0d60ca78354dedea828ee0956404",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/FiniteCore.lean",
+    "declarations": [
+      {
+        "name": "reconstruct",
+        "lines": [
+          32
+        ]
+      },
+      {
+        "name": "phaseStep",
+        "lines": [
+          73
+        ]
+      },
+      {
+        "name": "freeSupport",
+        "lines": [
+          105
+        ]
+      },
+      {
+        "name": "freePhase",
+        "lines": [
+          110
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/FiniteCore.lean"
+  },
+  {
+    "id": "affine_wire_loop",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/WireLoop.lean",
+    "git_blob_sha1": "96c66249a4824a45d176912853ccc6a31e7db20c",
+    "sha256": "1c235489d40ee1907c9541c8cf29e7a279099cb8b8d1550a1907e7ee5936f546",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/WireLoop.lean",
+    "declarations": [
+      {
+        "name": "whole_run",
+        "lines": [
+          86
+        ]
+      },
+      {
+        "name": "computes",
+        "lines": [
+          113
+        ]
+      },
+      {
+        "name": "terminal",
+        "lines": [
+          125
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/WireLoop.lean"
+  },
+  {
+    "id": "affine_raw_machine",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/RawMachine.lean",
+    "git_blob_sha1": "06c65573728080e440aafdf6fe15e4136b6671fd",
+    "sha256": "5209f975d7fd7287d20a5524e7d876c24e8371d6efe78dd6f098d9fec7553ac1",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/RawMachine.lean",
+    "declarations": [
+      {
+        "name": "codeComputes",
+        "lines": [
+          16
+        ]
+      },
+      {
+        "name": "computes",
+        "lines": [
+          24
+        ]
+      },
+      {
+        "name": "primitive_bound",
+        "lines": [
+          30
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/RawMachine.lean"
+  },
+  {
+    "id": "affine_solver",
+    "repository": "holant-dichotomy-lean",
+    "commit": "97731bce1618bef0d9ee7911b6ac8bc8698077b2",
+    "path": "Holant/Proofs/Tractability/AffineMachine/FamilySolver.lean",
+    "git_blob_sha1": "2b1257055c68e75346987bfae76c51415fc91ab7",
+    "sha256": "d6083c0b278b4f710df039de0b722e4bde422b8c68c0bcaead000e9197eb557e",
+    "url": "https://github.com/liuchliuch/holant-dichotomy-lean/blob/97731bce1618bef0d9ee7911b6ac8bc8698077b2/Holant/Proofs/Tractability/AffineMachine/FamilySolver.lean",
+    "declarations": [
+      {
+        "name": "intermediate_bits",
+        "lines": [
+          19
+        ]
+      },
+      {
+        "name": "coordinate_trace",
+        "lines": [
+          49
+        ]
+      },
+      {
+        "name": "common_embedding",
+        "lines": [
+          81
+        ]
+      },
+      {
+        "name": "computedValue_exact",
+        "lines": [
+          88
+        ]
+      },
+      {
+        "name": "computes",
+        "lines": [
+          96
+        ]
+      },
+      {
+        "name": "inFP",
+        "lines": [
+          107
+        ]
+      }
+    ],
+    "snapshot": ".cache/algorithm-audit/tractable/source/D/Holant/Proofs/Tractability/AffineMachine/FamilySolver.lean"
+  }
+]

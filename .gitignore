@@ -1,0 +1,29 @@
+.cache/
+.lake/
+__pycache__/
+*.pyc
+.DS_Store
+projects/**/.lake/
+projects/**/.cache/
+
+# Reproducible bulk proof ledgers and local build diagnostics. Keep source
+# manifests, compact result summaries, provenance and the verification programs.
+*.log
+validation/**/audit-*.jsonl
+validation/**/import-graph.jsonl
+validation/**/artifact-sha256.json
+validation/**/audit-request.json
+validation/**/import-request.json
+validation/.verify-lock/
+projects/**/.validation/
+projects/**/.finite-development/
+projects/holant-unified/data/audit-declarations.jsonl
+projects/holant-unified/data/audit-codegen.jsonl
+projects/holant-unified/data/declaration-mapping.jsonl
+projects/pfaffian/audit/declarations.json
+projects/pfaffian/audit/declaration-mapping.json
+projects/karp-luby/validation/declarations.json
+projects/karp-luby/validation/compiler-auxiliaries.json
+
+# Local source-candidate preparation metadata.
+.publication/

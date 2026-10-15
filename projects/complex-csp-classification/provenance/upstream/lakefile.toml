@@ -1,0 +1,33 @@
+name = "complex-csp-decidability"
+version = "0.1.0"
+defaultTargets = ["ComplexCSP"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+[[require]]
+name = "Comparator"
+git = "https://github.com/leanprover/comparator.git"
+rev = "97ef939c9fe3f8abf93e4adb654517476da7a66f"
+
+[[lean_lib]]
+name = "PlanarHom"
+srcDir = "vendor/plgh"
+globs = ["PlanarHom.*"]
+moreLeanArgs = ["-s", "65536", "-j", "1"]
+
+[[lean_lib]]
+name = "ComplexCSP"
+moreLeanArgs = ["-s", "65536", "-j", "1"]
+
+[[lean_lib]]
+name = "verification"
+globs = ["verification.*"]
+moreLeanArgs = ["-s", "65536", "-j", "1"]
+
+[[lean_lib]]
+name = "tests"
+globs = ["tests.*"]
+moreLeanArgs = ["-s", "65536", "-j", "1"]

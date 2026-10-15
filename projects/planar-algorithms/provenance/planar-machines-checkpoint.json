@@ -1,0 +1,10 @@
+{
+  "provider": "countingPlanarMachines",
+  "canonical_owned_modules": 220,
+  "frozen_files": 1294,
+  "checked_records": {
+    "reports/FROZEN.sha256": "fc7f20e6453b17bac6a53440a23cbabd25ebcb7be2e4cfadd0f6ff21ba6ae61f",
+    "validation/complete220/result.json": "48057f4d5d8a9630b9c6d12dd77125dc53e2a1787c735b0ace08ca4bc71b049f",
+    "reports/complete220/checkpoint.json": "17b5998986c52ff52e51c3db0ce5c562735dfc8fc4e381e03bcccf99231b520c"
+  }
+}

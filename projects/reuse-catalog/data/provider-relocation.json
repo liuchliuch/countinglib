@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "scope": "18 same-byte modules now uniquely owned by tractable-core. Source movement is not import slimming.",
+  "modules": [
+    {
+      "module": "Holant.Kernel",
+      "old_path": "projects/holant-unified/Holant/Kernel.lean",
+      "new_path": "projects/tractable-core/Holant/Kernel.lean",
+      "source_sha256": "c78531dd613e9789f054181b1aa169c24079cd03eb3ed59ff0b31f0283b0312d",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Kernel",
+        "path": "projects/tractable-core/Holant/Kernel.lean",
+        "package": "countingTractableCore",
+        "sha256": "c78531dd613e9789f054181b1aa169c24079cd03eb3ed59ff0b31f0283b0312d",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.AffineMachine.Constraint",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/AffineMachine/Constraint.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Constraint.lean",
+      "source_sha256": "1b89c28b5dd528f0e99b6e4f3e87f12433561053e6bc439264f5bbb14a619d13",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.AffineMachine.Constraint",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Constraint.lean",
+        "package": "countingTractableCore",
+        "sha256": "1b89c28b5dd528f0e99b6e4f3e87f12433561053e6bc439264f5bbb14a619d13",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.AffineMachine.Elimination",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/AffineMachine/Elimination.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Elimination.lean",
+      "source_sha256": "605e521c8dbf718dd94aa80e86479a3a9843fa264b7c8285f02ed38e8feeeb6b",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.AffineMachine.Elimination",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Elimination.lean",
+        "package": "countingTractableCore",
+        "sha256": "605e521c8dbf718dd94aa80e86479a3a9843fa264b7c8285f02ed38e8feeeb6b",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.AffineMachine.FreePhase",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/AffineMachine/FreePhase.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/FreePhase.lean",
+      "source_sha256": "840ea25a434e92a2e0fac8a3109e264306a5537491b5c4b6f2b04bde1be47bf9",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.AffineMachine.FreePhase",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/FreePhase.lean",
+        "package": "countingTractableCore",
+        "sha256": "840ea25a434e92a2e0fac8a3109e264306a5537491b5c4b6f2b04bde1be47bf9",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.AffineMachine.Model",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/AffineMachine/Model.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Model.lean",
+      "source_sha256": "f5d7874c3d43862ed789318367bd6fbf429b7dcaa42c5761585179bcd516fb27",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.AffineMachine.Model",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Model.lean",
+        "package": "countingTractableCore",
+        "sha256": "f5d7874c3d43862ed789318367bd6fbf429b7dcaa42c5761585179bcd516fb27",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.AffineMachine.Reconstruction",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/AffineMachine/Reconstruction.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Reconstruction.lean",
+      "source_sha256": "cc29346183ae35e280b5e7f6737f0e854f745f3ff652dd02a9b0b3a166bb6d62",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.AffineMachine.Reconstruction",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/AffineMachine/Reconstruction.lean",
+        "package": "countingTractableCore",
+        "sha256": "cc29346183ae35e280b5e7f6737f0e854f745f3ff652dd02a9b0b3a166bb6d62",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.ProductElimination",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/ProductElimination.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/ProductElimination.lean",
+      "source_sha256": "0061d366ced065727fb0e7093a96f5ea02d3e381ce4e3baed090238cdedc1947",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.ProductElimination",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/ProductElimination.lean",
+        "package": "countingTractableCore",
+        "sha256": "0061d366ced065727fb0e7093a96f5ea02d3e381ce4e3baed090238cdedc1947",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Proofs.Tractability.ProductEliminationBounds",
+      "old_path": "projects/holant-unified/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+      "new_path": "projects/tractable-core/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+      "source_sha256": "4da4fbe113531e6381ac67744ac6f51695777a626ae22ead92cfd3875eaa6500",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Proofs.Tractability.ProductEliminationBounds",
+        "path": "projects/tractable-core/Holant/Proofs/Tractability/ProductEliminationBounds.lean",
+        "package": "countingTractableCore",
+        "sha256": "4da4fbe113531e6381ac67744ac6f51695777a626ae22ead92cfd3875eaa6500",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.Affine",
+      "old_path": "projects/holant-unified/Holant/Tractable/Affine.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/Affine.lean",
+      "source_sha256": "69976f4705232e239810728eaadf636827e054c6c5062ab0e20d7d874edafc93",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.Affine",
+        "path": "projects/tractable-core/Holant/Tractable/Affine.lean",
+        "package": "countingTractableCore",
+        "sha256": "69976f4705232e239810728eaadf636827e054c6c5062ab0e20d7d874edafc93",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.AffineOperations",
+      "old_path": "projects/holant-unified/Holant/Tractable/AffineOperations.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/AffineOperations.lean",
+      "source_sha256": "4cf7f334575859146aa363a3cd0d577d2f33892b923c47664cb1b1a1d3db568c",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.AffineOperations",
+        "path": "projects/tractable-core/Holant/Tractable/AffineOperations.lean",
+        "package": "countingTractableCore",
+        "sha256": "4cf7f334575859146aa363a3cd0d577d2f33892b923c47664cb1b1a1d3db568c",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.AffinePhase.Roots",
+      "old_path": "projects/holant-unified/Holant/Tractable/AffinePhase/Roots.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/AffinePhase/Roots.lean",
+      "source_sha256": "c9d10318c8bc0fd0ac9ee8661b2799b500e8b06190bb9e2e086052d3ff2bf940",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.AffinePhase.Roots",
+        "path": "projects/tractable-core/Holant/Tractable/AffinePhase/Roots.lean",
+        "package": "countingTractableCore",
+        "sha256": "c9d10318c8bc0fd0ac9ee8661b2799b500e8b06190bb9e2e086052d3ff2bf940",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.AffinePhaseCriterion",
+      "old_path": "projects/holant-unified/Holant/Tractable/AffinePhaseCriterion.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/AffinePhaseCriterion.lean",
+      "source_sha256": "6f888e26dba033479f2f047a8b68dcfb5bab691fa72c90147069c0c51b1391d9",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.AffinePhaseCriterion",
+        "path": "projects/tractable-core/Holant/Tractable/AffinePhaseCriterion.lean",
+        "package": "countingTractableCore",
+        "sha256": "6f888e26dba033479f2f047a8b68dcfb5bab691fa72c90147069c0c51b1391d9",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.Product",
+      "old_path": "projects/holant-unified/Holant/Tractable/Product.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/Product.lean",
+      "source_sha256": "01efdb408076f3090fb707efd573d9b5b867b1c8b2a0a055bda5909baf738745",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.Product",
+        "path": "projects/tractable-core/Holant/Tractable/Product.lean",
+        "package": "countingTractableCore",
+        "sha256": "01efdb408076f3090fb707efd573d9b5b867b1c8b2a0a055bda5909baf738745",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.Scalars",
+      "old_path": "projects/holant-unified/Holant/Tractable/Scalars.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/Scalars.lean",
+      "source_sha256": "9f740f4b8003d1605d147b1f4b390ab99ba8803152aa7a8197cccee060d6303b",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.Scalars",
+        "path": "projects/tractable-core/Holant/Tractable/Scalars.lean",
+        "package": "countingTractableCore",
+        "sha256": "9f740f4b8003d1605d147b1f4b390ab99ba8803152aa7a8197cccee060d6303b",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.TwoTranslate",
+      "old_path": "projects/holant-unified/Holant/Tractable/TwoTranslate.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/TwoTranslate.lean",
+      "source_sha256": "52c1d23fe3462c426192b408d19d6ef87e0d682e78dfa5e6fd08eed1e6cacf36",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.TwoTranslate",
+        "path": "projects/tractable-core/Holant/Tractable/TwoTranslate.lean",
+        "package": "countingTractableCore",
+        "sha256": "52c1d23fe3462c426192b408d19d6ef87e0d682e78dfa5e6fd08eed1e6cacf36",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.TwoTranslate.Derivative",
+      "old_path": "projects/holant-unified/Holant/Tractable/TwoTranslate/Derivative.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/TwoTranslate/Derivative.lean",
+      "source_sha256": "e980cf6ea1cd5e2d05d3f04f294552bc38c3cefd464ed4f0b441a008d204cb56",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.TwoTranslate.Derivative",
+        "path": "projects/tractable-core/Holant/Tractable/TwoTranslate/Derivative.lean",
+        "package": "countingTractableCore",
+        "sha256": "e980cf6ea1cd5e2d05d3f04f294552bc38c3cefd464ed4f0b441a008d204cb56",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.TwoTranslate.Phase",
+      "old_path": "projects/holant-unified/Holant/Tractable/TwoTranslate/Phase.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/TwoTranslate/Phase.lean",
+      "source_sha256": "2d70fd3f4d8003bfc13256667dbf03b061ff81591d73f420e5ee0439222b88a4",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.TwoTranslate.Phase",
+        "path": "projects/tractable-core/Holant/Tractable/TwoTranslate/Phase.lean",
+        "package": "countingTractableCore",
+        "sha256": "2d70fd3f4d8003bfc13256667dbf03b061ff81591d73f420e5ee0439222b88a4",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    },
+    {
+      "module": "Holant.Tractable.TwoTranslate.Support",
+      "old_path": "projects/holant-unified/Holant/Tractable/TwoTranslate/Support.lean",
+      "new_path": "projects/tractable-core/Holant/Tractable/TwoTranslate/Support.lean",
+      "source_sha256": "8fb4906fbe81f00437e3a3c512b28f89f54fdd71f58d489a1d3b0515843c97b1",
+      "old_path_role": "Non-owned compatibility symlink to the single canonical new source",
+      "new_provider": "countingTractableCore",
+      "current_audit_provider": {
+        "module": "Holant.Tractable.TwoTranslate.Support",
+        "path": "projects/tractable-core/Holant/Tractable/TwoTranslate/Support.lean",
+        "package": "countingTractableCore",
+        "sha256": "8fb4906fbe81f00437e3a3c512b28f89f54fdd71f58d489a1d3b0515843c97b1",
+        "library": "CountingTractableCore"
+      },
+      "old_path_owned": false,
+      "unchanged_source_from_INT9": true
+    }
+  ]
+}

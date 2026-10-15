@@ -1,0 +1,24 @@
+import Counting.Algorithm.VariableElimination
+
+#check Counting.Algorithm.VariableElimination.DenseTable.eval_tabulate
+#check Counting.Algorithm.VariableElimination.weight_eliminate
+#check Counting.Algorithm.VariableElimination.partition_eliminate
+#check Counting.Algorithm.VariableElimination.EliminationSequence.partition_transform
+#check Counting.Algorithm.VariableElimination.EliminationOrder.evaluate_eq_partition
+#check Counting.Algorithm.VariableElimination.run_pinnedFactors
+#check Counting.Algorithm.VariableElimination.EliminationOrder.evaluateMeasured_eq_partition
+
+#check Counting.Algorithm.VariableElimination.assignmentIndex_lt
+#check Counting.Algorithm.VariableElimination.getElem_enumerateAssignments_assignmentIndex
+#check Counting.Algorithm.VariableElimination.idxOf_enumerateAssignments_eq_assignmentIndex
+#check Counting.Algorithm.VariableElimination.DenseTable.evalIndexed_eq_eval
+#check Counting.Algorithm.VariableElimination.assignmentIndexFin_eq_assignmentIndex
+#check Counting.Algorithm.VariableElimination.DenseTable.evalFinIndexed_eq_evalIndexed
+#check Counting.Algorithm.VariableElimination.comparisons_measuredAssignmentIndex_le
+#check Counting.Algorithm.VariableElimination.comparisons_measuredAssignmentIndexFin
+#check Counting.Algorithm.VariableElimination.DenseTable.value_evalIndexedMeasured
+#check Counting.Algorithm.VariableElimination.DenseTable.arrayReads_evalFinIndexedMeasured
+#check Counting.Algorithm.VariableElimination.IndexedExamples.general_addresses
+#check Counting.Algorithm.VariableElimination.IndexedExamples.arbitrary_array_compatible
+#check Counting.Algorithm.VariableElimination.IndexedExamples.empty_coordinate_read
+#check Counting.Algorithm.VariableElimination.IndexedExamples.generic_table_read_counts
